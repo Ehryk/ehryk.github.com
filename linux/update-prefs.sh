@@ -19,7 +19,7 @@ git pull
 
 #copy user files
 echo -n "Updating ~/.bashrc ..."
-if [ ~/ == /root/ ]
+if [ ~/ = /root/ ]
 then cp ~/Projects/ehryk.github.com/linux/bashrc_root ~/.bashrc
 else cp ~/Projects/ehryk.github.com/linux/bashrc ~/.bashrc
 fi
@@ -44,7 +44,7 @@ fi
 #copy root files if home is not root
 if [ ~/ != /root/ ]
 then
-  echo "Home is not /root ."
+  echo " - Home is not /root - "
   
   echo -n "Updating /root/.bashrc ..."
   cp ~/Projects/ehryk.github.com/linux/bashrc_root /root/.bashrc
