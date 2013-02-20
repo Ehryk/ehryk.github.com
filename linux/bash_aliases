@@ -28,11 +28,13 @@ alias j='jobs -l'
 alias killjobs='kill &(jobs -p) && sleep 3s && kill -9 $(jobs -p)'
 alias resume='fg'
 alias path='echo -e ${PATH//:/\\n}'
-alias now='date +"%T"'
+alias now='date +%T'
 alias nowtime=now
-alias nowdate='date +"%d-%m-%Y"'
+alias nowdate='date +%d-%m-%Y'
 
-alias tarball='tar -xvfz'
+alias tarball='tar -xvf'
+alias clipf='xclip -sel clip <'
+function clip() { echo -n "$@" | xclip -sel clip && echo "Copied to Clipboard."; }
 
 alias vi=vim
 alias svi='sudo vim'

@@ -54,3 +54,5 @@ then
   cp ~/Projects/ehryk.github.com/linux/bash_aliases /root/.bash_aliases
   echo " Done."
 fi
+
+echo "--- Updating Preferences Complete ---"
