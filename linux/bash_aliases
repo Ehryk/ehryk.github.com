@@ -29,6 +29,8 @@ alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 
+alias tarball='tar -xvfz'
+
 alias vi=vim
 alias svi='sudo vim'
 alias vis='vim "+set si"'
