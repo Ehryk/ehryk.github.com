@@ -1,0 +1,98 @@
+
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../..'
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias bc='bc -l'
+function md4()    { echo -n "$@" | openssl sha1 -md4    | cut -f2 -d'='; }
+function md5()    { echo -n "$@" | openssl sha1 -md5    | cut -f2 -d'='; }
+function sha()    { echo -n "$@" | openssl sha1 -sha    | cut -f2 -d'='; }
+function sha1()   { echo -n "$@" | openssl sha1 -sha1   | cut -f2 -d'='; }
+function sha224() { echo -n "$@" | openssl sha1 -sha224 | cut -f2 -d'='; }
+function sha256() { echo -n "$@" | openssl sha1 -sha256 | cut -f2 -d'='; }
+function sha384() { echo -n "$@" | openssl sha1 -sha384 | cut -f2 -d'='; }
+function sha512() { echo -n "$@" | openssl sha1 -sha512 | cut -f2 -d'='; }
+alias mkdir='mkdir -pv'
+alias diff='colordiff'
+alias mount='mount |column -t'
+alias h='history'
+alias j='jobs -l'
+alias killjobs='kill &(jobs -p) && sleep 3s && kill -9 $(jobs -p)'
+alias resume='fg'
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+alias vi=vim
+alias svi='sudo vim'
+alias vis='vim "+set si"'
+alias edit='vim'
+
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+
+alias ports='netstat -tulanp'
+alias ipt='sudo /sbin/iptables'
+alias firewall=iptlist
+
+alias header='curl -I'
+alias headerc='curl -I --compress'
+
+alias rm='rm -I --preserve-root'
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+alias apt-get='sudo apt-get'
+alias lu='lsusb'
+alias c='clear'
+alias cls='clear'
+
+alias ls='ls --color=auto'
+alias l.='ls -d .* --color=auto'
+
+alias playavi='mplayer *.avi'
+alias playwav='for i in *.wav; do mplayer "$i"; done'
+alias playmp3='for i in *.mp3; do mplayer "$i"; done'
+
+alias music='mplayer --shuffle *'
+
+alias iwconfig='iwconfig wlan0'
+
+alias meminfo='free -m -l -t'
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+alias cpuinfo='lscpu'
+alias gpuinfo='grep -i --color memory /var/log/Xorg.0.log'
+
+alias wget='wget -c'
+alias chrome='/opt/google/chrome/chrome'
+alias browser='chrome'
+
+alias top='atop'
+
+alias root='echo You already are!'
+alias update='apt-get update && apt-get upgrade'
+
+#if user is not root, pass these commands via sudo #
+if [ $UID -ne 0 ]; then
+	alias reboot='sudo /sbin/reboot'
+	alias poweroff='sudo /sbin/poweroff'
+	alias halt='sudo /sbin/halt'
+	alias shutdown='sudo /sbin/shutdown'
+	alias update='sudo apt-get update && sudo apt-get upgrade'
+	alias root='sudo -i'
+fi
+
