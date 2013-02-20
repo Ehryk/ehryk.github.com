@@ -17,9 +17,12 @@ echo -n "Updating ~/Projects/ehryk.github.com/ : "
 cd ~/Projects/ehryk.github.com
 git pull
 
-#copy files
+#copy user files
 echo -n "Updating ~/.bashrc ..."
-cp ~/Projects/ehryk.github.com/linux/bashrc ~/.bashrc
+if [ ~/ == /root/ ]
+then cp ~/Projects/ehryk.github.com/linux/bashrc_root ~/.bashrc
+else cp ~/Projects/ehryk.github.com/linux/bashrc ~/.bashrc
+fi
 echo " Done."
 
 echo -n "Updating ~/.bash_aliases ..."
@@ -38,3 +41,16 @@ then
   echo " Done."
 fi
 
+#copy root files if home is not root
+if [ ~/ != /root/ ]
+then
+  echo "Home is not /root ."
+  
+  echo -n "Updating /root/.bashrc ..."
+  cp ~/Projects/ehryk.github.com/linux/bashrc_root /root/.bashrc
+  echo " Done."
+
+  echo -n "Updating /root/.bash_aliases ..."
+  cp ~/Projects/ehryk.github.com/linux/bash_aliases /root/.bash_aliases
+  echo " Done."
+fi
