@@ -1,0 +1,17 @@
+[user]
+	name = Ehryk
+	email = rhaistlin@gmail.com
+[http]
+	sslVerify = false
+[alias]
+	st = status
+	c = commit
+	ci = commit
+	co = checkout
+	br = branch
+	a = add
+	s = status
+[merge]
+	conflictstyle = diff3
+[push]
+	default = simple
