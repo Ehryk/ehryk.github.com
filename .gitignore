@@ -1,0 +1,4 @@
+#Ignore Temp Files
+*~
+*.swp
+*.swo
