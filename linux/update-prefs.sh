@@ -55,4 +55,8 @@ then
   echo " Done."
 fi
 
+echo -n "Adding to Startup *under construction* ..."
+#./add-startup.sh
+echo " Done."
+
 echo "--- Updating Preferences Complete ---"
