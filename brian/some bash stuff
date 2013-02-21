@@ -1,0 +1,186 @@
+#! /bin/bash 
+exit 0; # this is to prevent running this file as a script
+
+
+# Apache Benchmarking.. This will run 10 requests, 5 concurrently to google.com
+ab -n 10 -c 5 http://www.google.com
+
+# This will tell you how long it took to execute a command
+time find / -name "*.cfm" -maxdepth 4
+
+#This will keep a file open and reading to stdout
+tail -f [file name ]
+
+# User created permission MASK.. Files created automatically use this mask
+umask 22
+
+
+# hexdump .. output file in hex format
+hexdump [file name]
+
+# xxd output file or something from stdin to bits / hex or whatever
+echo "asdf" | xxd -b
+
+
+# ldd - print shared library dependencies
+ldd `which curl`
+
+
+
+
+
+# types of "files" 
+$ ls -l
+> drwxrw-r--   3 bbird       wheel ...
+
+#  Symbol  Meaning
+#  ------------------
+#  -       Regular file
+#  d       Directory
+#  l       Link
+#  c       Special file
+#  s       Socket
+#  p       Named pipe
+#  b       Block device 
+
+
+
+
+# **** IO Redirection ****************************************************************************************
+# **** http://tldp.org/LDP/abs/html/io-redirection.html ******************************************************
+# Learn about file descriptors for this to make sense :
+
+
+# Redirect stdin to a file. From this point on, all stdin comes from that file, rather than its normal source (usually keyboard input).
+$ exec <filename
+
+
+
+
+# *** Throttle your internet connection ******************************
+ipfw pipe 1 config bw 50KBytes/s >/dev/null
+ipfw add 1 pipe 1 src-port 80
+ipfw add 1 pipe 1 dst-port 80
+
+ipfw delete 1
+
+# Per ipfw manual, use pfctl as ipfw is deprecated
+
+
+
+
+
+
+
+# *** Create a TCP pipe  ******************************
+# exec 3 is a file descriptor ( 0 stdin, 1 stdout, 2 stderr )
+# /dev/[udp or tcp]/[ip address]/[port]
+exec 3<> /dev/udp/127.0.0.1/1234
+
+#Now you can send data to file descriptor 3 or listen to that port 
+echo "This is a test" >&3
+
+#close the pipe
+exec 3>&-
+exec 3<&-
+
+
+
+
+
+
+# *** fifo , mkfifo ****************************************
+# Create a pipe, listne to it and send stuff to it
+mkfifo my_pipe_name
+tail -f my_pipe_name
+
+# In a new terminal window :
+echo "Hey yo" > my_pipe_name
+
+# remove it :
+rm my_pipe_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+# *** ***********
+#Pull file 
+#rsync user@host:source destination
+rsync brian@10.1.1.221:/Users/bbird/Desktop/myfile.txt /tmp/myfile.txt
+
+# ** 
+# unlock files in a directory ( this may or may not be recursive )
+chflags -R nouchg /Path/To/Locked/Files
+
+
+
+
+#! Find text in a file 
+find . -iname "*.xml" -type f | xargs -I file grep -l "walleye" file && echo file
+
+
+
+
+# Display Large Text
+osascript -e 'tell application "Quicksilver" to show large type "Hello, world."'
+
+
+# Hex To Number 
+let x=$1
+echo $x
+echo "\n\n"
+printf "%X" 0x7B  # same as C's printf()
+echo "\n\n"
+
+
+# ******************************************************************************************
+# ** MINI SHELL SCRIPTS ********************************************************************
+
+#IP Scanner Tool
+is_alive_ping() {
+  ping -c 1 -t 3 $1 > /dev/null
+  # [ $? -eq 0 ] && echo Node with IP: $i is up.
+  if [ $? -eq 0 ]
+  then 
+  	echo $i
+  else 
+  	echo -ne '\r scanning' $i
+  fi
+}
+
+declare -a ips
+ips[]
+for i in 10.0.0.{1..255} 
+do
+	is_alive_ping $i
+	# & disown
+done
+
+
+
+# *** Check if program exists *************
+# Write a string to standard output that indicates the pathname or command that will be used by the shell ...
+$ command -v sendmail
+> /usr/sbin/sendmail
+$ command -v foo
+>
+
+# So a shell script could contain one of the following lines :
+
+# /bin/bash
+command -v foo > /dev/null 2>&1 || { echo >&2 "DOES NOT EXIST"; exit 1; }
+
+# /bin/bash
+command -v sendmail > /dev/null 2>&1 && { echo >&2 "DOES EXIST"; exit 0; }
+
+
+
