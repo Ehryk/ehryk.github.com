@@ -1,0 +1,191 @@
+#! /bin/bash
+## VARIABLES ################################################################
+loginurl="https://www.extranet.com/"
+username="bbird"
+password="xxxxx"
+url="http://www.extranet.com/util/filemover/"
+cookie=~/sh/prdfilemover-cookie/cookie.txt
+run=1
+destinations[0]='other'
+destinations[1]='fan'
+destinations[2]='flight'
+destinations[3]='mobile'
+destinations[4]='gen'
+verbosemode=0
+loggedinstatus=0
+#create fd 7. This is the verbose fd
+exec 7<> /dev/null
+
+## FUNCTIONS
+## MENUS ################################################################
+showfilemovemenu() {
+	clear
+	echo "FILE MOVER -------------- "
+	echo -ne "1:	Fan\n2:	Flight\n3:	Mobile\n4:	General\n5:	Back\n"
+	read dest
+	if [[ "$dest" -lt 5 ]]; then
+		runmover ${destinations[dest]} $dest
+	fi
+}
+showmainmenu() {
+	clear
+	echo -en "FILE MOVER -------------- "
+	if [[ "$verbosemode" -gt 0 ]]; then
+		echo -en "(verbose mode)"
+	fi
+	echo -e "\n1:	Run File Mover"
+	echo "2:	Print Logged In Status"
+	echo -e "3:	Exit\n\n"
+}
+#### ACTIONS ################################################################
+
+runmover() {
+	# Arguments 	Descriptions
+	# 1 			name of site being moved ( flight, fan etc. ) This if for display purposes 
+	# 2				the index in the destinations array.. corresponds with the form key/value pair that is part of the request 
+	#				-- in other words it represents the checkbox names that are checked in teh file mover form
+	# 3				If this is present the script exits, otherwise it shows the menu
+
+	echo -ne "\tmoving $1..."
+	
+	curl -d process="1" -d delete="on" -d source$2="on" -d dest$2_1="on" -d dest$2_2="on" -d dest$2_3="on" -d dest$2_4="on" -d dest$2_5="on" -d cfmcache="on" --cookie $cookie $url > /dev/null 2>&1
+	#curl -d process="1" -d delete="on" -d source$2="on" -d dest$2_1="on" -d dest$2_2="on" -d dest$2_3="on" -d dest$2_4="on" -d dest$2_5="on" --cookie $cookie $url > /dev/null 2>&1
+
+	echo -ne "done"
+	~/sh/growl -nosticky -moderate "File mover copied to $1"
+	sleep 1
+	if [[ $3 ]]; then 
+		echo ""
+		exit 0
+	fi
+	showfilemovemenu
+}
+usage() {
+	echo " THIS IS A PRODUCTION FILE MOVER "
+	echo " OPTIONS : "
+	echo "   -v          verbose mode"
+	echo -e "   -h/-help    print this usage\n\n"
+	echo " SHORTCUTS:"
+	echo "  when the script starts, if any of these optiosn are"
+	echo "  passed, it will skip the menus and just run the file"
+	echo "  mover, once you confirm that the right destination"
+	echo -e "  was passed\n"
+	echo "   -gen             	 General"
+	echo "   -fl 	             flight"
+	echo "   -fan			     fan"
+	echo "   -mobile             Mobile"
+	echo ""
+	exit 0
+}
+getdestinationidbystring() {
+	idx=0
+	for a in ${destinations[*]} ; do
+		if [[ "-$a" = $1* ]]; then
+			echo $idx
+		fi
+		let idx++
+	done
+	exit 0
+}
+# LOGGIN IN ################################################################
+showlogin() {
+	echo -ne "\nyou are not logged in... would you like to login? [y/n] "
+	read doesuserwanttologin
+	if [[ "$doesuserwanttologin" = "y" ]]; then
+		login	
+	else
+		clear
+		exit 0
+	fi
+}
+login() {
+	echo -en "attempting to login..."
+	curl --cookie-jar $cookie -d processLogin="1" -d username=$username -d password=$password $loginurl
+	echo -en "done"
+	loggedinstatus=1
+	sleep 2
+}
+printstatus() {
+	showmainmenu
+	echo -ne "Checking Status ..."
+	loggedinstatus=$(getloggedinstatus)
+	if [[ "$loggedinstatus" -eq 1 ]]; then
+		echo -n "logged in"
+	else
+		echo -n "NOT logged in"
+	fi
+	sleep 2
+}
+getloggedinstatus() {
+	if [[ `curl --silent --cookie $cookie $url | egrep -i 'logged in as (.*)$'` ]]; then
+		echo 1
+	else
+		echo 0
+	fi
+}
+checkstatus() {
+	echo -ne "Checking if you are logged in..."
+	loggedinstatus=$(getloggedinstatus)
+	if [[ "$loggedinstatus" -eq 0 ]]; then
+		showlogin
+	else 
+		echo -ne "done"
+		sleep 1
+	fi
+}
+printdate() {
+	date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+}
+
+#### main ################################################################
+main() {
+	while [ "$run" -gt 0 ]; do	
+		showmainmenu		
+		read action
+		if [[ "$action" -eq 11 ]]; then
+			echo -en "\r attempting to login ... "
+			login
+		elif [[ "$action" -eq 1 ]]; then
+			showfilemovemenu
+		elif [[ "$action" -eq 2 ]]; then
+			printstatus
+		else
+			run=0
+		fi
+	done
+	clear
+	exit 0	
+}
+# START SCRIPT EXECUTION ################################################################
+
+## GET ARGS
+while [[ "Y$1" = Y-* ]]
+do
+	if [[ "Y$1" = Y-v* ]]; then
+		# redirect fd 7 to stdout 
+		exec 7<> 1
+		shift
+	elif [[ "Y$1" = Y-h* ]]; then
+		usage 
+		# no shift needed. Usage will exit the script
+	## START UP SHORTCUTS
+	elif [[ "Y$1" = Y-g* ||  "Y$1" = Y-m* ||  "Y$1" = Y-fa* ||  "Y$1" = Y-fl* ]]; then
+		#getdestinationidbystring $1
+		did=$(getdestinationidbystring $1)
+		echo ""
+		printdate
+		checkstatus
+		sleep 1 
+		runmover ${destinations[did]} $did e
+		#echo 'runmover ' ${destinations[did]} $did e
+
+		exit 0
+	fi
+done
+
+## Check loggedin status
+clear
+echo "FILE MOVER -------------- "
+checkstatus
+
+main

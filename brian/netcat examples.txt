@@ -1,0 +1,57 @@
+#! /bin/bash
+
+#Netcat usage examples
+
+
+#Connect to TCP port 80 on host example.com:
+nc -vv example.com 80
+
+#Port scan TCP ports 7 through 1023 on host example.com
+nc -v -z example.com 7-1023
+
+#Port scan TCP ports 7 through 1023 on host example.com, but stop for user interaction on open ports
+nc -v example.com 7-1023
+
+#Port scan UDP ports 53 through 69 on host example.com
+nc -v -z -u example.com 53-69
+
+#Listen for inbound connections on TCP port 1234 and pipe the results to a file data.txt
+nc -vv -l 1234 > data.txt
+
+#Listen for inbound connections on TCP port 25 and pipe the results to /dev/null
+nc -vv -l 25 > /dev/null
+
+#Listen for inbound connections on TCP port 25 and pipe the results to /dev/null, but keep listening on the port even after a disconnect.
+nc -vv -k -l 25 > /dev/null
+
+#Listen for inbound connections on TCP port 25, keep listening on the port open even after a disconnect, but automatically drop any session after 3 seconds of inactivity.
+nc -vv -k -w 3 -l 25
+
+#Listen for inbound connections on TCP port 25, automatically pushing the contents of file welcome.txt upon a connection.
+cat welcome.txt | nc -vv -l 25
+
+#Transfer contents of file payload.txt to host example.com using TCP port 1234
+nc -vv example.com 1234 < payload.txt
+
+#Transfer the image of device /dev/sda1 to host example.com using TCP port 1234
+dd if=/dev/sda1 | nc -vv example.com 1234
+
+
+
+
+#Transfering Files
+#In the very same way it can be used to transfer files between two computers. You can create a server that serves the file with the following:
+
+cat backup.iso | nc -l 3333
+
+#Receive backup.iso on the client machine with the following:
+nc 192.168.0.1 3333 > backup.iso
+
+#As you may have noticed, netcat does not show any info about the progress of the data transfer. This is inconvenient when dealing with large files. In such cases, a pipe-monitoring utility like pv can be used to show a progress indicator. For example, the following shows the total amount of data that has been transfered in real-time on the server side:
+cat backup.iso | pv -b | nc -l 3333
+
+#Of course, the same can be implemented on the client side by piping netcat’s output through pv:
+nc 192.168.0.1 3333 | pv -b > backup.iso
+
+
+
