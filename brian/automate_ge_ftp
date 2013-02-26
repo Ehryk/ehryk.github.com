@@ -1,0 +1,271 @@
+#!/bin/bash
+#tmp_dir=/Users/bbird/temp/11319
+#reporting_dir=/Users/bbird/Desktop/temp
+
+HOST=colweb05
+USER=bbird
+PASS=qwer123\$
+
+
+
+## DIRECTORIES ##########################################################################################
+tmp_dir=/Users/bbird/temp/$RANDOM
+reporting_dir=/Volumes/GenmarReportingData
+log_file=/Users/bbird/Documents/GE_FINANCE_BACKUPS/process_log
+backup_dir=/Users/bbird/Documents/GE_FINANCE_BACKUPS
+current_file=x
+
+## PROCESSES TO RUN ##########################################################################################
+create_tmp_dir=true
+download_from_ftp=true
+clean_ftp_dir=false
+rename_files=true
+clean_tmp_dir=true
+mount_reporting_dir=true
+backup_files=true
+move_finance_files=true
+
+## UTILITIES ##########################################################################################
+function monitor_dir {
+	echo -e "Waiting "
+	l=0
+	while [ $l -eq 0 ] 
+	do
+		sleep 30
+		echo -e "."
+		ls $reporting_dir/jdboats* > /dev/null 2>&1
+		if [[ $? -eq 1 ]]
+		then
+			l=1
+		fi
+	done
+	echo "done"
+	growl "done processing " $current_file
+}
+
+function settings {
+	echo -e "\n\n\n --- PROCESSES TO RUN ---- "
+	if [ $create_tmp_dir = 'true' ]; then 
+		echo -e "1\tcreate_tmp_dir"
+	else
+		echo -e "0\tcreate_tmp_dir"
+	fi
+	if [ $download_from_ftp = 'true' ]; then 
+		echo -e "1\tdownload_from_ftp"
+	else
+		echo -e "0\tdownload_from_ftp"
+	fi
+	if [ $clean_ftp_dir = 'true' ]; then 
+		echo -e "1\tclean_ftp_dir"
+	else
+		echo -e "0\tclean_ftp_dir"
+	fi
+	if [ $rename_files = 'true' ]; then 
+		echo -e "1\trename_files"
+	else
+		echo -e "0\trename_files"
+	fi
+	if [ $clean_tmp_dir = 'true' ]; then 
+		echo -e "1\tclean_tmp_dir"
+	else
+		echo -e "0\tclean_tmp_dir"
+	fi
+	if [ $mount_reporting_dir = 'true' ]; then 
+		echo -e "1\tmount_reporting_dir"
+	else
+		echo -e "0\tmount_reporting_dir"
+	fi
+	if [ $backup_files = 'true' ]; then 
+		echo -e "1\tbackup_files"
+	else
+		echo -e "0\tbackup_files"
+	fi
+	if [ $move_finance_files = 'true' ]; then 
+		echo -e "1\tmove_finance_files"
+	else
+		echo -e "0\tmove_finance_files"
+	fi
+	echo -e  "\n\n\n --- DIRECTORIES --------- "
+	echo -e  'tmp_dir \t\t' $tmp_dir
+	echo -e  'reporting_dir \t' $reporting_dir
+	echo -e  'log_file \t\t' $log_file
+	echo -e  'backup_dir \t\t' $backup_dir
+}
+
+function usage {
+echo -e "\nHow to use this Usage"
+echo -e "--download-from-ftp \t true or false"
+echo -e "--rename-files \t\t true or false"
+echo -e "--clean-tmp-dir \t true or false"
+echo -e "--clean-tmp-dir \t true or false"
+echo -e "--create-tmp-dir \t true or false\n\n"
+echo -e "--tmp-dir \t /Temp/Dir/To/Use"
+echo -e "--help \t\t print this help\n"
+exit 0
+}
+
+function enterToContinue {
+echo -e "\nPress enter to continue, q to quit..."
+read c
+if [[ $c = 'q' ]]; then
+	echo "quitting"
+	exit 1
+fi
+}
+function parseArguments {
+	while [[ "A$1" = A-* ]]; do
+		if [[ "A$1" = A--tmp-dir ]]; then
+			shift
+			tmp_dir=$1
+		fi
+		if [[ "A$1" = A--download-from-ftp ]]; then
+			shift
+			download_from_ftp=$1
+		fi
+		if [[ "A$1" = A--rename-files ]]; then
+			shift
+			rename_files=$1
+		fi
+		if [[ "A$1" = A--clean-tmp-dir ]]; then
+			shift
+			clean_tmp_dir=$1
+		fi
+		if [[ "A$1" = A--create-tmp-dir ]]; then
+			shift
+			create_tmp_dir=$1
+		fi
+		if [[ "A$1" = A--help ]]; then
+			usage
+		fi
+		if [[ "A$1" = A--backup-files ]]; then
+			shift
+			backup_files=$1
+		fi
+
+		shift
+	done
+}
+
+function exitIfError {
+	if [[ $? -ne 0 ]]; then
+		echo "ERROR! EXITING SCRIPT " $1 | tee $log_file
+		growl -nosticky "ERROR! EXITING SCRIPT"
+		exit 1
+	fi
+}
+
+function mountGenmarReportingData {
+	echo -n "mount Coweb05/GenmarReportingData - TO - /Volumes/GenmarReportingData ..."
+	if [ ! -d "/Volumes/GenmarReportingData" ]
+	then
+		echo -ne "creating volume"
+		mkdir /Volumes/GenmarReportingData
+		if [ "$?" -ne "0" ]; then
+			exit 1
+		fi
+		mount -t smbfs //bbird:'qwer123$'@66.77.6.105/GenmarReportingData /Volumes/GenmarReportingData
+		if [ "$?" -ne "0" ]; then
+			exit 1
+		fi
+		echo -e "...ready"
+	else
+		echo -e "volume exists...ready"
+	fi
+}
+
+## PRE-FLIGHT INSPECTION #################################################################################
+
+parseArguments $@
+settings
+enterToContinue
+## PROCESS CODE ##########################################################################################
+echo -e "BEGIN -----" `date` "------- \n" | tee -a $log_file
+
+if [ $mount_reporting_dir = 'true' ]; then
+echo "Mount $reporting_dir"
+mountGenmarReportingData
+exitIfError "Error mounting GenmarReportingData"
+df | egrep -i 66.77.6.105 > /dev/null
+exitIfError "Verify that colweb05 is properly mounted then try again"
+fi
+
+if [ $create_tmp_dir = 'true' ]; then
+echo "Create directory $tmp_dir"
+mkdir $tmp_dir
+fi
+
+if [ $download_from_ftp = 'true' ]; then
+echo -n "FTP $HOST and download files..."
+growl -nosticky  "FTP $HOST and download files..." 
+ftp -n $HOST <<END_SCRIPT
+quote USER $USER
+quote PASS $PASS
+cd /droot/temp/GXS/current
+lcd $tmp_dir
+dir
+prompt
+mget *
+quit
+END_SCRIPT
+echo "...DONE with FTP"
+growl "...DONE with FTP. Press enter to continue"
+enterToContinue
+fi
+
+exitIfError
+
+if [ $rename_files = 'true' ]; then
+echo "Rename GE Files"
+for file in `find $tmp_dir -iname "*POLLABLE*" -size +100k`; do newfile=`echo $file | sed "s/.*\(jdboats_os_[0-9]*.txt\).*$/\1/g"`; mv $file $tmp_dir/$newfile; done
+fi
+
+if [ $clean_tmp_dir = 'true' ]; then
+echo "Remove leftover files"
+rm -f $tmp_dir/%GE* 
+fi
+
+exitIfError
+
+if [ $backup_files = 'true' ]; then
+backup_tar_file=$backup_dir/jdboats_$RANDOM.tar
+echo "Files backed up to " $backup_tar_file | tee -a $log_file
+tar cf $backup_tar_file $tmp_dir/*.txt
+fi
+
+if [ $move_finance_files = 'true' ]; then
+echo "We will process these files : "
+ls $tmp_dir | tee -a $log_file
+echo "Ready to move finance files."
+growl "Ready to move finance files. Enter To Continue"
+enterToContinue
+for finance_file in `ls $tmp_dir | sort -d`
+do
+	echo -e "\n moving  $tmp_dir/$finance_file to $reporting_dir " | tee -a $log_file
+	mv $tmp_dir/$finance_file $reporting_dir
+	current_file=$finance_file
+	exitIfError
+	monitor_dir $reporting_dir
+done
+fi
+
+if [ $clean_ftp_dir = 'true' ]; then
+echo "Deleting * from " $HOST " /droot/temp/GXS/current " | tee -a $log_file
+ftp -n $HOST <<END_SCRIPT
+quote USER $USER
+quote PASS $PASS
+cd /droot/temp/GXS/current
+prompt
+mdelete *
+quit
+END_SCRIPT
+fi
+
+
+growl -nosticky "Done with GE File Mover" 
+echo "Done with GE Files"
+echo -ne "END -----" `date` "------- \n" | tee -a $log_file
+sublime $log_file
+
+
+
+
