@@ -11,6 +11,9 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+function blkid() { echo -n "${1^^}:\\    " && $(cygpath --sysdir)/cmd /c dir ${1}:\\ | sed -n 1p |  sed -n -e '1s/^ Volume in drive . is //p' | tr '\n' ' ' && echo -n '    ' && $(cygpath --sysdir)/cmd /c dir ${1}:\\ | sed -n 2p | sed -n -e '1s/^ Volume Serial Number is //p'; }
+function dir() { "$(cygpath -sysdir)"/cmd.exe /c dir; }
+
 alias bc='bc -l'
 function md4()    { echo -n "$@" | openssl sha1 -md4    | cut -f2 -d'='; }
 function md5()    { echo -n "$@" | openssl sha1 -md5    | cut -f2 -d'='; }
@@ -65,8 +68,8 @@ alias lu='lsusb'
 alias c='clear'
 alias cls='clear'
 
-alias ls='ls --color=auto'
-alias l.='ls -d .* --color=auto'
+alias ls='ls --color=auto 2>/dev/null'
+alias l.='ls -d .* --color=auto 2>/dev/null'
 
 alias playavi='mplayer *.avi'
 alias playwav='for i in *.wav; do mplayer "$i"; done'
