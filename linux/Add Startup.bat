@@ -1,17 +1,33 @@
-#!/bin/sh
- 
-if [ $(id -u) eq 0 ]
-then
- 
 
-user = $(whoami)
- 
-start-dir = "/etc/rc.d"
-start-dir = "/etc/init.d"
-location = $start/update-prefs.$user
- 
-chmod +x $location
-ln -s $location /etc/rc2.d/S10update-prefs.$user
- 
- 
-cp ~/Projects/ehryk.github.com/linux/update-prefs.sh $start/update-prefs-$user.sh
+@ECHO OFF
+ECHO === Adding to Startup ===
+
+IF EXIST "%SYSTEMDRIVE%\Projects\ehryk.github.com\linux" GOTO BUILD
+
+ECHO Project directory not found.
+EXIT
+
+:BUILD
+
+ECHO @ECHO OFF > "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO PUSHD . >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO --- Changing Directory --- >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO CD "%SYSTEMDRIVE%\Projects\ehryk.github.com\linux" >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO Done. >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO --- Updating ehryk.github.com --- >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO git pull >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO Done. >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO --- Running Configuration Updater --- >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO CALL "Update Config.bat" >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO Done. >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+
+ECHO ECHO. >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO ECHO --- Script Ran Successfully. --- >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+ECHO POPD >> "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat"
+
+ECHO Added successfully.
+ECHO File = "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Github Profile.bat" ===
+
+ECHO ============
+ECHO === DONE ===
+ECHO ============
