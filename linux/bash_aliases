@@ -38,6 +38,7 @@ alias nowdate='date +%d-%m-%Y'
 alias tarball='tar -xvf'
 alias clipf='xclip -sel clip <'
 function clip() { echo -n "$@" | xclip -sel clip && echo "Copied to Clipboard."; }
+function gitadd() { git ls-files . | grep "$@" | xargs git add; }
 
 alias vi=vim
 alias svi='sudo vim'
