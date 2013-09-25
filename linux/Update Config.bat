@@ -1,62 +1,27 @@
-#if project directory doesn't exist, make it
-if [ ! -d ~/Projects ]
-then
-  cd ~
-  mkdir Projects
-fi
+@ECHO OFF
+ECHO ==========================
+ECHO === Copying User Files ===
+ECHO ==========================
 
-#if project doesn't exist, clone it
-if [ ! -d ~/Projects/ehryk.github.com ]
-then
-  cd ~/Projects
-  git clone git@github.com:Ehryk/ehryk.github.com.git
-fi
+ECHO | SET /P message= Updating .bashrc...        
+COPY /Y bashrc %UserProfile%\.bashrc > nul
+IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y bashrc %SYSTEMDRIVE%\cygwin\etc\.bashrc > nul & ECHO | SET /P message=+CygWin...  )
+ECHO Done.
 
-#update Project
-echo -n "Updating ~/Projects/ehryk.github.com/ : "
-cd ~/Projects/ehryk.github.com
-git pull
+ECHO | SET /P message= Updating .bash_aliases...  
+COPY /Y bash_aliases %UserProfile%\.bash_aliases > nul
+IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y bash_aliases %SYSTEMDRIVE%\cygwin\etc\.bash_aliases > nul & ECHO | SET /P message=+CygWin...  )
+ECHO Done.
 
-#copy user files
-echo -n "Updating ~/.bashrc ..."
-if [ ~/ = /root/ ]
-then cp ~/Projects/ehryk.github.com/linux/bashrc_root ~/.bashrc
-else cp ~/Projects/ehryk.github.com/linux/bashrc ~/.bashrc
-fi
-echo " Done."
+ECHO | SET /P message= Updating .inputrc...       
+COPY /Y inputrc %UserProfile%\.inputrc > nul
+IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y inputrc %SYSTEMDRIVE%\cygwin\etc\.inputrc > nul & ECHO | SET /P message=+CygWin...  )
+ECHO Done.
 
-echo -n "Updating ~/.bash_aliases ..."
-cp ~/Projects/ehryk.github.com/linux/bash_aliases ~/.bash_aliases
-echo " Done."
+REM ECHO | SET /P message= Adding to Startup *under construction* ... 
+REM "Add Startup.bat"
+REM ECHO Done.
 
-echo -n "Updating /etc/inputrc ..."
-cp ~/Projects/ehryk.github.com/linux/inputrc /etc/inputrc
-echo " Done."
-
-#if conky file exists, copy that too
-if [ -f ~/.conkyrc ]
-then
-  echo -n "Updating ~./conky ..."
-  cp ~/Projects/ehryk.github.com/linux/conkyrc ~/.conkyrc
-  echo " Done."
-fi
-
-#copy root files if home is not root
-if [ ~/ != /root/ ]
-then
-  echo " - Home is not /root - "
-  
-  echo -n "Updating /root/.bashrc ..."
-  cp ~/Projects/ehryk.github.com/linux/bashrc_root /root/.bashrc
-  echo " Done."
-
-  echo -n "Updating /root/.bash_aliases ..."
-  cp ~/Projects/ehryk.github.com/linux/bash_aliases /root/.bash_aliases
-  echo " Done."
-fi
-
-echo -n "Adding to Startup *under construction* ..."
-#./add-startup.sh
-echo " Done."
-
-echo "--- Updating Preferences Complete ---"
+ECHO =======================================
+ECHO === Updating Configuration Complete ===
+ECHO =======================================
