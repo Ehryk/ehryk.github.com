@@ -10,12 +10,17 @@
 	br = branch
 	c = commit
 	ci = commit
+	cm = commit -m
 	co = checkout
 	d = diff
 	dc = diff --cached
 	dw = diff --word-diff
 	hist = log --pretty=format:\" %ad | %s%d [%an]\" --graph --date=short
-	la = "!git l --all"
+	pu = pull
+	pul = pull
+	ph = push
+	ps = push
+	pus = push
 	s = status
 	st = status
 [color]
