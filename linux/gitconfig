@@ -1,0 +1,35 @@
+[user]
+	name = Ehryk
+	email = rhaistlin@gmail.com
+[http]
+	sslVerify = false
+[alias]
+	a = add
+	amend = commit --amend
+	b = branch
+	br = branch
+	c = commit
+	ci = commit
+	co = checkout
+	d = diff
+	dc = diff --cached
+	dw = diff --word-diff
+	hist = log --pretty=format:\" %ad | %s%d [%an]\" --graph --date=short
+	la = "!git l --all"
+	s = status
+	st = status
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+[merge]
+	conflictstyle = diff3
+[push]
+	default = simple

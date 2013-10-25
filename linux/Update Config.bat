@@ -18,6 +18,16 @@ COPY /Y inputrc %UserProfile%\.inputrc > nul
 IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y inputrc %SYSTEMDRIVE%\cygwin\etc\.inputrc > nul & ECHO | SET /P message=+CygWin...  )
 ECHO Done.
 
+ECHO | SET /P message= Updating .gitk...  
+COPY /Y gitk %UserProfile%\.gitk > nul
+IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y gitk %SYSTEMDRIVE%\cygwin\etc\.gitk > nul & ECHO | SET /P message=+CygWin...  )
+ECHO Done.
+
+ECHO | SET /P message= Updating .gitconfig...  
+COPY /Y gitconfig %UserProfile%\.gitconfig > nul
+IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y gitconfig %SYSTEMDRIVE%\cygwin\etc\.gitconfig > nul & ECHO | SET /P message=+CygWin...  )
+ECHO Done.
+
 REM ECHO | SET /P message= Adding to Startup *under construction* ... 
 REM "Add Startup.bat"
 REM ECHO Done.
