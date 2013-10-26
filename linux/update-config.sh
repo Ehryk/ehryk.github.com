@@ -29,6 +29,14 @@ echo -n "Updating ~/.bash_aliases ..."
 cp ~/Projects/ehryk.github.com/linux/bash_aliases ~/.bash_aliases
 echo " Done."
 
+echo -n "Updating ~/.gitk ..."
+cp ~/Projects/ehryk.github.com/linux/gitk ~/.gitk
+echo " Done."
+
+echo -n "Updating ~/.gitconfig ..."
+cp ~/Projects/ehryk.github.com/linux/gitconfig ~/.gitconfig
+echo " Done."
+
 echo -n "Updating /etc/inputrc ..."
 cp ~/Projects/ehryk.github.com/linux/inputrc /etc/inputrc
 echo " Done."
