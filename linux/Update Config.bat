@@ -28,10 +28,6 @@ COPY /Y gitconfig %UserProfile%\.gitconfig > nul
 IF EXIST %SYSTEMDRIVE%\cygwin\etc ( COPY /Y gitconfig %SYSTEMDRIVE%\cygwin\etc\.gitconfig > nul & ECHO | SET /P message=+CygWin...  )
 ECHO Done.
 
-REM ECHO | SET /P message= Adding to Startup *under construction* ... 
-REM "Add Startup.bat"
-REM ECHO Done.
-
 ECHO =======================================
 ECHO === Updating Configuration Complete ===
 ECHO =======================================
