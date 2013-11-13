@@ -1,20 +1,62 @@
-<html>
-<head>
-<title>Code</title>
-</head>
-<body style="color:white;background:url('images/GreyPaneling.jpg');background-repeat:repeat;">
-<h1 style="text-align:center;">ehryk.github.com</h1>
-<h5 style="text-align:center;">Random Thingies - for more, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a>, or <a href="mailto:ehryk42@gmail.com">email</a>.</h1>
-<section>
-  <div style="float:right;width:70%">
-    <h3>xkcd 1288 - Substitutions bookmarklet</h3>
-    <p>This is a bookmarklet that you can add to your bookmarks bar that will perform the text replacements in <a href="http://xkcd.com/1288/">xkcd #1288</a>. To add it, drag the image into your bookmarks section or bookmarks bar. A great example page is the <a href="https://simple.wikipedia.org/wiki/Car">Car Entry</a> in the simple Wikipedia.</p>
-  </div>
-  <div style="float:right;width:25%;">
-  <a href="javascript:(function(){var e={a:1,style:1,script:1,iframe:1};var t=function(r,i,s){var o,u;for(var a=r.childNodes.length-1;a>=0;a--){o=r.childNodes[a];if(o.nodeType==1){u=o.nodeName.toLowerCase();if(!(u in e)){t(o,i,s)}}else if(o.nodeType==3){n(o,i,s)}}};var n=function(e,t,n){var r,i=[];while(r=t.exec(e.data)){i.push(r)}for(var s=i.length-1;s>=0;s--){r=i[s];e.splitText(r.index);e.nextSibling.splitText(r[1].length);e.parentNode.replaceChild(n(r[1]),e.nextSibling)}};var r={witnesses:'these dudes I know',allegedly:'kinda probably','new study':'Tumblr post',rebuild:'avenge',space:'spaaace','google glass':'Virtual Boy',smartphone:'Pokedex',electric:'atomic',senator:'Elf-lord',car:'cat',election:'eating contest','congressional leaders':'River Spirits','homeland security':'homestar runner','could not be reached for comment':'is guilty and everyone knows it'};var i='';for(var s in r){i+=s+'|'}i=i.substring(0,i.length-1);t(document.body,new RegExp('\\b('+i+')\\b','g'),function(e){var t=document.createElement('span');t.innerHTML=r[e];t.style.fontWeight='Bold';return t})})()" alt="xkcd Bookmarklet" title="Drag Me to your Bookmarks!">
-    <img src="http://imgs.xkcd.com/comics/substitutions.png" style="width:200px;" alt="xkcd the News" />
-  </a>
-  </div>
-</section>
-</body>
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>ehryk.github.com</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+	    <meta name="description" content="Code and Random Thingies" />
+	    <meta name="keywords" content="Code,Ehryk,xkcd,Bookmarklet" />
+	    <meta name="author" content="Eric Menze" />
+		<meta property="og:url" content="http://ehryk.github.com" />
+		<meta property="og:title" content="ehryk.github.com" />
+		<meta property="og:image" content="images/" />
+		<meta property="og:description" content="Code and Random Thingies" />
+	    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		<link rel="stylesheet" media="all" href="css/main.css"/>
+
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+
+	<body>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+		<h1>ehryk.github.com</h1>
+		<h5>Random Thingies - for more: <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a>, or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
+
+		<section>
+		  <div class="Detail">
+		    <h3>xkcd 1288 - Substitutions bookmarklet</h3>
+		    <p>This is a bookmarklet that you can add to your bookmarks bar that will perform the text replacements in <a href="http://xkcd.com/1288/">xkcd #1288</a>. To add it, drag the image into your bookmarks section or bookmarks bar. A great example page to start with is the <a href="https://simple.wikipedia.org/wiki/Car">Car Entry</a> in the simple Wikipedia.</p>
+		  </div>
+		  <div class="Image">
+		  	<a href="javascript:(function(){var e={a:1,style:1,script:1,iframe:1};var t=function(r,i,s){var o,u;for(var a=r.childNodes.length-1;a>=0;a--){o=r.childNodes[a];if(o.nodeType==1){u=o.nodeName.toLowerCase();if(!(u in e)){t(o,i,s)}}else if(o.nodeType==3){n(o,i,s)}}};var n=function(e,t,n){var r,i=[];while(r=t.exec(e.data)){i.push(r)}for(var s=i.length-1;s>=0;s--){r=i[s];e.splitText(r.index);e.nextSibling.splitText(r[1].length);e.parentNode.replaceChild(n(r[1]),e.nextSibling)}};var r={witnesses:'these dudes I know',allegedly:'kinda probably','new study':'Tumblr post',rebuild:'avenge',space:'spaaace','google glass':'Virtual Boy',smartphone:'Pokedex',electric:'atomic',senator:'Elf-lord',car:'cat',election:'eating contest','congressional leaders':'River Spirits','homeland security':'homestar runner','could not be reached for comment':'is guilty and everyone knows it'};var i='';for(var s in r){i+=s+'|'}i=i.substring(0,i.length-1);t(document.body,new RegExp('\\b('+i+')\\b','g'),function(e){var t=document.createElement('span');t.innerHTML=r[e];t.style.fontWeight='Bold';return t})})()" alt="xkcd Bookmarklet" title="Drag Me to your Bookmarks!">
+		    <img src="http://imgs.xkcd.com/comics/substitutions.png" alt="xkcd the News" />
+		  </a>
+		  </div>
+		  <div class="clearfix">
+		</section>
+
+        <footer>
+        	<hr />
+            <p>&copy; Eric Menze 2013</p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/bootstrap.min.js"></script>
+
+	</body>
+
 </html>

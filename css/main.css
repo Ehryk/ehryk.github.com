@@ -1,0 +1,112 @@
+
+
+/* ==========================================================================
+   Main Styles
+   ========================================================================== */
+
+/* Tags */
+body {
+	color:white;
+	background:url('../img/GreyPaneling.jpg');
+	background-repeat:repeat;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video {
+	display: block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+h1{ font-size: 48px;}
+h2{ font-size: 36px; }
+h3{ font-size: 24px; }
+h4{ font-size: 21px; }
+h5{ font-size: 18px; }
+h6{ font-size: 14px; }
+
+body a{
+	text-decoration: none;
+	
+	-webkit-transition: color 0.3s ease;
+	-moz-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+footer, aside {
+	line-height: 1.5em;
+}
+
+footer {
+	margin-top:20px;
+	text-align: center;
+}
+footer hr {
+	width:75%;
+	display: block;
+	border-color: #444;
+}
+
+/* Links */
+a { color: #336699; }
+a:visited { color: #336699; }
+a:hover { color: #FF8800; text-decoration: underline; }
+
+/* Selection Color */
+body {-webkit-tap-highlight-color: #920E15;}
+::selection 	 	{background: #920E15; color: #fff; }
+::-moz-selection 	{background: #920E15; color: #fff; }
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+
+/* Named Elements */
+#loading {
+	background: url('../img/ajax-loader.gif') no-repeat scroll 50% 50% transparent;
+	height: 40px; width: 40px;
+	position:absolute;
+	top:42px;
+	left:2px;
+	display: none;
+}
+
+/* Classes */
+.clearfix {
+	clear:both;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.Detail {
+	float:right;
+	width:70%;
+}
+
+.Image {
+	float:right;
+	width:25%;
+}
+
+.Image img {
+	width:90%;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	float: left;
+}
