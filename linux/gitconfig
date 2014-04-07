@@ -7,7 +7,11 @@
 		#Adding
 	a = add
 
+		#Addremove (like Mercurial)
+	addremove = "!ar() { cd ${GIT_PREFIX:-.} && git add . && git ls-files -deleted | xargs git rm; }; ar"
+
 		#Amending
+		
 	amend = commit --amend
 
 		#Branching
