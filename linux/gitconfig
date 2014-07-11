@@ -6,8 +6,13 @@
 [alias]
 		#Adding
 	a = add
+	ap = "!ap() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -iz ${1} | xargs -0 git add; }; ap"
+	addpattern = "!ap() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -iz ${1} | xargs -0 git add; }; ap"
+	apc = "!apc() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -z ${1} | xargs -0 git add; }; apc"
+	addpatterncase = "!apc() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -z ${1} | xargs -0 git add; }; apc"
 
 		#Addremove (like Mercurial)
+	ar = "!ar() { cd ${GIT_PREFIX:-.} && git add . && git ls-files -deleted | xargs git rm; }; ar"
 	addremove = "!ar() { cd ${GIT_PREFIX:-.} && git add . && git ls-files -deleted | xargs git rm; }; ar"
 
 		#Amending
@@ -30,6 +35,9 @@
 		#Diffing
 	d = diff
 	dc = diff --cached
+
+		#Ignoring Checked in Files
+	ignore = rm -r --cached
 
 		#Content of a given Commit
 	dr  = "!f() { git diff "$1"^.."$1"; }; f"
