@@ -15,14 +15,16 @@
 	    <meta name="author" content="Eric Menze" />
 		<meta property="og:url" content="http://ehryk.github.io/mike" />
 		<meta property="og:title" content="Current Med Summit Imaging" />
-		<meta property="og:image" content="/mike/Medcorp.png" />
+		<meta property="og:image" content="Medcorp.png" />
 		<meta property="og:description" content="Combination of two sites" />
 	    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-		<link rel="stylesheet" media="all" href="/css/main.css"/>
+		<link rel="stylesheet" media="all" href="../css/main.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="jquery.ui.rotatable.css">
 
-        <script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="../js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
         <style>
         	{ margin: 0; padding: 0; }
@@ -41,10 +43,19 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/jquery-1.10.1.min.js"><\/script>')</script>
 
-        <script src="/js/bootstrap.min.js"></script>
+        <div id="draggable" style="top:150px;left:100px;">
+        	<div id="dial" style="height: 242px; width: 242px; border: 0px;"><img src="dial.png" alt="Dial Me In!" title="Dial Me In!" /></div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="../js/bootstrap.min.js"></script>
+
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+		<script src="jquery.ui.rotatable.js" type="text/javascript" charset="utf-8"></script>
 
         <script language="javascript" type="text/javascript">
 
@@ -57,6 +68,9 @@
 			}
 
 			$(window).click(swapBackgrounds);
+
+			$('#draggable').draggable();
+			$('#dial').rotatable();
 
 		</script>
 
