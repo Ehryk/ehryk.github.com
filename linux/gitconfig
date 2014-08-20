@@ -4,25 +4,80 @@
 [http]
 	sslVerify = false
 [alias]
+		#Adding
 	a = add
+	ap = "!ap() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -iz ${1} | xargs -0 git add; }; ap"
+	addpattern = "!ap() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -iz ${1} | xargs -0 git add; }; ap"
+	apc = "!apc() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -z ${1} | xargs -0 git add; }; apc"
+	addpatterncase = "!apc() { cd ${GIT_PREFIX:-.} && git ls-files -co --exclude-standard -z . | grep -z ${1} | xargs -0 git add; }; apc"
+
+		#Addremove (like Mercurial)
+	ar = "!ar() { cd ${GIT_PREFIX:-.} && git add . && git ls-files -deleted | xargs git rm; }; ar"
+	addremove = "!ar() { cd ${GIT_PREFIX:-.} && git add . && git ls-files -deleted | xargs git rm; }; ar"
+
+		#Amending
+		
 	amend = commit --amend
+
+		#Branching
 	b = branch
 	br = branch
+
+		#Committing
 	c = commit
 	ci = commit
 	cm = commit -m
+	cam = commit -am
+
+		#Checkout
 	co = checkout
+
+		#Diffing
 	d = diff
 	dc = diff --cached
+
+		#Ignoring Checked in Files
+	ignore = rm -r --cached
+
+		#Content of a given Commit
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	lc  = "!f() { git ll "$1"^.."$1"; }; f"
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+		#Modified Files Last Commit
+	dl = "!git ll -1"
+
+		#Diff Last Commit
+	dlc = diff --cached HEAD^
 	dw = diff --word-diff
+
+		#History of a File
+	filelog = log -u
+	fl = log -u #History of a File
 	hist = log --pretty=format:\" %ad | %s%d [%an]\" --graph --date=short
-	linecount = "!lc() { git ls-files -z | xargs -0 wc -l; }; lc"
-	lines = "!lc() { git ls-files -z ${1} | xargs -0 wc -l; }; lc"
+
+		#Ehryk: Linecounts (How many lines of code is that?)
+	linecount = "!lc() { git ls-files -z | xargs -0 wc -l | awk '/^[[:space:]]*[[:digit:]]+[[:space:]]+total$/{next} {total+=$1;print} END {printf \" Total => %s lines (\",total}'; echo \"*.*)\"; }; lc"
+	lines = "!lc() { cd ${GIT_PREFIX:-.} && git ls-files -z ${1} | xargs -0 wc -l | awk '/^[[:space:]]*[[:digit:]]+[[:space:]]+total$/{next} {total+=$1;print} END {printf \" Total => %s lines (\",total}'; if [[ -z "${1}" ]]; then echo \"*.*)\"; else echo ${1}\")\"; fi; }; lc"
+
+		#Listing Commits
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	le = log --oneline --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+
+		#Pull
 	pu = pull
 	pul = pull
+
+		#Push
 	ph = push
 	ps = push
 	pus = push
+
+		#Status
 	s = status
 	st = status
 [color]

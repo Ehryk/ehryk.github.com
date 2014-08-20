@@ -7,9 +7,9 @@ alias ....='cd ../../../..'
 alias copy=cp
 alias rn='mv -i'
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+#alias grep='grep --color=auto'
+#alias egrep='egrep --color=auto'
+#alias fgrep='fgrep --color=auto'
 
 function blkid() { echo -n "${1^^}:\\    " && $(cygpath --sysdir)/cmd /c dir ${1}:\\ | sed -n 1p |  sed -n -e '1s/^ Volume in drive . is //p' | tr '\n' ' ' && echo -n '    ' && $(cygpath --sysdir)/cmd /c dir ${1}:\\ | sed -n 2p | sed -n -e '1s/^ Volume Serial Number is //p'; }
 function dir() { "$(cygpath -sysdir)"/cmd.exe /c dir; }
