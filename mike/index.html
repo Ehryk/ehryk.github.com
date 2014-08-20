@@ -50,10 +50,11 @@
         <script language="javascript">
 
 			function swapBackgrounds() {
-				if (document.body.style.background.indexOf("Medcorp") == -1)
-					document.body.style.background = "url('Medcorp.png') no-repeat center center fixed";
-				else
+				if (document.body.style.background.indexOf("Medcorp") > -1)
 					document.body.style.background = "url('SummitImaging.png') no-repeat center center fixed";
+				else
+					document.body.style.background = "url('Medcorp.png') no-repeat center center fixed";
+				alert("Swapped!");
 			}
 
 		</script>
