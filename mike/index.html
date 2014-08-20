@@ -50,7 +50,10 @@
         <script language="javascript">
 
 			window.onClick = function() {
-				body.background = "url('SummitImaging.png') no-repeat center center fixed";
+				if (document.body.style.background.indexOf("Medcorp") == -1)
+					document.body.style.background = "url('Medcorp.png') no-repeat center center fixed";
+				else
+					document.body.style.background = "url('SummitImaging.png') no-repeat center center fixed";
 			}
 
 		</script>
