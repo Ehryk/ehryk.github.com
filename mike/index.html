@@ -27,7 +27,6 @@
         <style>
         	{ margin: 0; padding: 0; }
         	body {
-        		background: url('Medcorp.png') no-repeat center center fixed;
         		-webkit-background-size: cover;
 		        -moz-background-size: cover;
 		        -o-background-size: cover;
@@ -36,7 +35,7 @@
         </style>
 	</head>
 
-	<body onclick="swapBackgrounds">
+	<body style="background: url('Medcorp.png') no-repeat center center fixed">
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -56,6 +55,8 @@
 					document.body.style.background = "url('Medcorp.png') no-repeat center center fixed";
 				alert("Swapped!");
 			}
+
+			window.onClick = swapBackgrounds();
 
 		</script>
 
