@@ -53,10 +53,12 @@
 					document.body.style.background = "url('SummitImaging.png') no-repeat center center fixed";
 				else
 					document.body.style.background = "url('Medcorp.png') no-repeat center center fixed";
-				alert("Swapped!");
+				//alert("Swapped!");
 			}
 
-			window.onclick = swapBackgrounds();
+			$(function {
+				$(window).click(swapBackgrounds);
+			});
 
 		</script>
 
