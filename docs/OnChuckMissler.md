@@ -351,6 +351,7 @@ http://calvarychapel.pbworks.com/w/page/13146660/missler-crazy-chuck3
 ## Other Christian Perspectives on Missler
 
 > "There are many things that I myself have fallen prey too and sometimes it’s been difficult for me to want to believe I was fooled.  I am no one special, but I do my utter best to listen to the Holy Spirit’s warnings and I ask Jesus for forgiveness of these things and rectify my errors so that I do not lead people astray. I sincerely pray that these pastors that I myself love very much,  take heed of what I have written here and re-evaluate their position regarding what the Bible says about false teachers and how it’s even possible for the elect to be deceived."
+
 http://www.discerningtheworld.com/2010/02/17/dr-chuck-missler-swansat-and-the-auric-currency/
 
 > " My worry about Chuck Missler being a false teacher and not just making normal human errors or misjudgements, grew stronger and strong. ... Other Christians have discerned the truth about Missler and go into even more detail as to the odd bedfellows at conferences and other worrisome teachings and connections. Please take heed and be careful of trusting in this teacher. I have thanked God for warning me."
