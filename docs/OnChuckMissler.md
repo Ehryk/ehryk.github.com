@@ -7,14 +7,14 @@ Available on YouTube: https://www.youtube.com/watch?v=N4AtHLcU9_w (use this vide
 
 ### Flat Earth - Bible Verses [@ 4:33](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=4m33s)
 
-It's not accurate to say "...bible tells you, several places, Isaiah 40:22, that the earth is a circle, a sphere". A sphere is never mentioned, and more verses imply flatness than roundness, and one verse is not 'several':
+It's not accurate to say `...bible tells you, several places, Isaiah 40:22, that the earth is a circle, a sphere`. A sphere is never mentioned, and more verses imply flatness than roundness, and one verse is not 'several':
 
  - "Daniel 4:10-11. In Daniel, the king “saw a tree of great height at the centre of the earth...reaching with its top to the sky and visible to the earth's farthest bounds.” Only with a flat earth could tall tree be visible from “the earth's farthest bounds,” — this is impossible on a spherical earth.
    - Theological rebuttal: The strength of Daniel 4:10-11 as an argument for a flat Earth is considerably reduced by the fact that this part of the Book of Daniel recounts a dream experienced by the Persian king during a fit of madness. Thus, it does not necessarily refer to an actually existing tree or make any statements about real cosmology. This fact would seem to indicate that biblical literalists do not even know how to read the Bible properly. It also ignores that the New Testament claims that the Devil showed Jesus the entire world from the top of a mountain, which would not be possible on a spherical Earth:
  - Matthew 4:8: "Again, the devil taketh him up into an exceeding high mountain, and sheweth him all the kingdoms of the world"
  - Luke 4:5: "And the devil, taking him up into an high mountain, shewed unto him all the kingdoms of the world in a moment of time."
  - Isaiah 40:22: "He sits enthroned above the circle of the earth, and its people are like grasshoppers. He stretches out the heavens like a canopy, and spreads them out like a tent to live in." 
-   - Indeed, this quote is used to prove that bible claims that the earth is spherical. Some scholars point out that Isaiah never uses the Modern Hebrew word for sphere Kadur anywhere[1]. It is not clear whether this is relevant, seeing as the interpretation of the word Kadur in the bible is disputed[2]
+   - Indeed, this quote is used to prove that bible claims that the earth is spherical. **Some scholars point out that Isaiah never uses the Modern Hebrew word for sphere Kadur anywhere**[1]. It is not clear whether this is relevant, seeing as the interpretation of the word Kadur in the bible is disputed[2]
  - Isaiah 11:12 "And he shall set up an ensign for the nations, and shall assemble the outcasts of Israel, and gather together the dispersed of Judah from the four corners of the earth."
  - Revelation 7:1 "And after these things I saw four angels standing on four corners of the earth, holding the four winds of the earth, that the wind should not blow on the earth, nor on the sea, nor on any tree." As with the Daniel quote, this cannot be taken literally; the events described in Revelation are a series of visions, rather than an accurate description of the world. Another interpretation of this verse is that four corners of the earth don't refer to literal four corners but to cardinal directions, which is further supported by the description of the four winds which are commonly referenced by their cardinal direction.
 
@@ -55,7 +55,9 @@ However this doesn't mean that educated people (especially those in a technology
 
 ### Phlogiston  [@ 4:30](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=4m30s)
 
-This is well known to be incorrect. Since Wikipedia is the most up to date source of collective human knowledge, then I'll just hand it to WP: "The phlogiston theory is an obsolete scientific theory that postulated a fire-like element called phlogiston, contained within combustible bodies and released during combustion. The name comes from the Ancient Greek φλογιστόν phlogistón (burning up), from φλόξ phlóx (flame). It was first stated in 1667 by Johann Joachim Becher. The theory attempted to explain burning processes such as combustion and rusting, which are now collectively known as oxidation."
+This is well known to be incorrect. Since Wikipedia is the most up to date source of collective human knowledge, then I'll just hand it to WP: 
+
+>"The phlogiston theory is an obsolete scientific theory that postulated a fire-like element called phlogiston, contained within combustible bodies and released during combustion. The name comes from the Ancient Greek φλογιστόν phlogistón (burning up), from φλόξ phlóx (flame). It was first stated in 1667 by Johann Joachim Becher. The theory attempted to explain burning processes such as combustion and rusting, which are now collectively known as oxidation."
 
 http://en.wikipedia.org/wiki/Phlogiston_theory
 
@@ -67,7 +69,7 @@ So - science has been wrong. On lots of things. And is surely still is in many a
 
 ### Ptolemy [@ 5:25](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=5m25s)
 
-Right here Missler demonstrates a fundamental misunderstanding that has underpinned every argument leading up to this point in the video, as well as the article I read by him earlier: "Ptolemy of Alexandria has gone down in history as opposing two great truths in science".
+Right here Missler demonstrates a fundamental misunderstanding that has underpinned every argument leading up to this point in the video, as well as the article I read by him earlier: `Ptolemy of Alexandria has gone down in history as opposing two great truths in science`.
 
 Science has no great truths, and it is not an argument from authority from 'those elite, snobbish scientists.' If the evidence indeed pointed at a geocentric solar system, then the scientific models would reflect that. **THERE ARE NO GREAT TRUTHS IN SCIENCE** - only the best current explanation that fits the observed data.
 
@@ -75,13 +77,13 @@ Science has no great truths, and it is not an argument from authority from 'thos
 
 http://en.wikipedia.org/wiki/Science
 
-And to his second point, Ptolemy's "proof" might as well stay in quotes because "There is no 4th dimension because **I** can't visualize it" is completely invalid as a proof and is merely an argument from personal incredulity.
+And to his second point, Ptolemy's "proof" might as well stay in quotes because "There is no 4th dimension because **I** can't visualize it" is completely invalid as a proof and is merely an argument from personal incredulity. Ptolemy did have a proof he advanced that is not correct based on modern mathematics and geometry, but it was **NOT** equivalent to the argument that he couldn't visualize it, it was based on geometry and orthogonality.
 
 > "Because you found something difficult to understand, or are unaware of how it works, you made out like it's probably not true."
 
 https://yourlogicalfallacyis.com/personal-incredulity
 
-I, Eric Menze, don't personally know how to perform Open Heart surgery. Obviously, then, it can't be done.
+That argument would be equivalent to saying `I, Eric Menze, don't personally know how to perform Open Heart surgery. Obviously, then, it can't be done`.
 
 (that aside, Ptolemy did put forth a proof based on the current understanding of geometric laws at the time on one of his books _On Distance_: http://www.math.brown.edu/~banchoff/STG/ma8/papers/anogelo/hist4dim.html )
 
@@ -89,27 +91,29 @@ Again, this is just saying "the best thinking at the time was incorrect at this 
 
 ### Luminiferous Aether [@ 6:15](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=6m15s)
 
-Again, this is just another example of "yep, we were wrong once."
+Just another example of "yep, we were wrong once."
 
 > "Aether theory was dealt another blow when the Galilean transformation and Newtonian dynamics were both modified by Albert Einstein's special theory of relativity, giving the mathematics of Lorentzian electrodynamics a new, "non-aether" context.[A 18] Unlike most major shifts in scientific thought, special relativity was adopted by the scientific community remarkably quickly, consistent with Einstein's later comment that the laws of physics described by the Special Theory were "ripe for discovery" in 1905.[B 10] Max Planck's early advocacy of the special theory, along with the elegant formulation given to it by Hermann Minkowski, contributed much to the rapid acceptance of special relativity among working scientists."
 
 http://en.wikipedia.org/wiki/Luminiferous_aether#End_of_aether.3F
 
-Part of the reason SR and GR (special and general relativity, respectively) were accepted so quickly is because numerous fundamental problems with LAe were already widely known: http://en.wikipedia.org/wiki/Timeline_of_luminiferous_aether#Crisis
+Part of the reason SR and GR (special and general relativity, respectively) were accepted so quickly is because numerous fundamental problems with _LAe_ were already widely known: http://en.wikipedia.org/wiki/Timeline_of_luminiferous_aether#Crisis
 
 ### Velocity of Light [@ 6:48](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=6m48s)
 
 Here's another fundamental misunderstanding of Science by Missler, which is extremely common when Science is viewed through the lens of religion:
 
-It didn't take them 50 years to accept that the speed of light was finite because Scientists are stubborn dicks. Think about the "empirical data" offered up: Olaf Roemer witnessed the eclipse of a moon on Saturn[sic]. One of the core concepts of science is repeatability; I can write down all sorts of "empirical data", but Scientists are NOT CONVINCED by this, or taking it on my authority, or trust, or my position. Planetary eclipses are not repeatable at will, and the argument "But I wrote it down, guys!" goes nowhere in the scientific community.
+It didn't take them 50 years to accept that the speed of light was finite because Scientists are stubborn dicks. Think about the "empirical data" offered up: `Olaf Roemer witnessed the eclipse of a moon on Saturn[sic]`. One of the core concepts of science is repeatability; I can write down all sorts of "empirical data" (numbers), but **scientists are NOT CONVINCED** by this (nor should they be), by taking it on my authority, or trust, or my position. Planetary eclipses are not repeatable at will, and the argument "But I wrote it down, guys!" goes nowhere in the scientific community.
 
 I added [sic] because Ole Rømer was observing a moon of Jupiter, Io.
 
-This phrasiology is entirely misleading in how it portrays the scientific community. "Rømer's theory was controversial at the time he announced it, and he never convinced the director of the Royal Observatory, Giovanni Domenico Cassini, to fully accept it. However, it quickly gained support among other natural philosophers of the period, such as Christiaan Huygens and Isaac Newton. It was finally confirmed nearly two decades after Rømer's death, with the explanation in 1729 of stellar aberration by the English astronomer James Bradley."
+The entire phrasiology is entirely misleading in how it portrays the scientific methodology. 
+
+>"Rømer's theory was controversial at the time he announced it, and he never convinced the director of the Royal Observatory, Giovanni Domenico Cassini, to fully accept it. However, it quickly gained support among other natural philosophers of the period, such as Christiaan Huygens and Isaac Newton. It was finally confirmed nearly two decades after Rømer's death, with the explanation in 1729 of stellar aberration by the English astronomer James Bradley."
 
 http://en.wikipedia.org/wiki/R%C3%B8mer%27s_determination_of_the_speed_of_light
 
-That word - 'confirmed' - is the key here. While he made various contributions and progress during his lifetime, your 'character' and 'past accomplishments' mean nothing to science. He came up with a result which, even though it was true, was not easily reproducible (until the next eclipse of Jupiter) and even then relied on the relatively terrible optics of the time and was just fundamentally an unsound **reason** to believe the speed of light to be finite. 
+That word - _confirmed_ - is the key here. While he made various contributions and progress during his lifetime, your 'character' and 'past accomplishments' mean nothing to science. He came up with a result which, even though it was true, was not easily reproducible (until the next eclipse of Jupiter) and even then relied on the relatively terrible optics of the time and was just fundamentally an unsound **reason** to believe the speed of light to be finite. 
 
 > "Rømer's view that the velocity of light was finite was not fully accepted until measurements of stellar aberration were made in 1727 by James Bradley (1693–1762).[14] Bradley, who would be Halley's successor as Astronomer Royal, calculated a value of 8 minutes 13 seconds for light to travel from the Sun to Earth.[14] Ironically, stellar aberration had first been observed by Cassini and (independently) by Picard in 1671, but neither astronomer was able to give an explanation for the phenomenon.[3] Bradley's work also laid to rest any remaining serious objections to the Keplerian model of the Solar System."
 
@@ -123,15 +127,15 @@ The true shift in scientific thought came about NOT when someone happened to mea
 
 #### Evolution [@ 8:30](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=8m30s)
 
-He says evolution and then calls it 'biogenesis'? His conflation of the two demonstrates a lack of understanding of the theories and their scopes; 'evolution' = existing replicating life changing over time and adapting to its environment. Biogenesis (aka abiogenesis) = the arising of life from non living matter. Each can be individually correct while the other is false, or both true or both correct - THEY ARE NOT THE SAME! 
+He says evolution and then calls it 'biogenesis'? His conflation of the two demonstrates a lack of understanding of the theories and their scopes; 'evolution' = existing replicating life changing over time and adapting to its environment. Biogenesis (aka abiogenesis) = the arising of life from non living matter. Each can be individually correct while the other is false, or both true or both correct - _THEY ARE NOT THE EQUIVALENT!_
 
 Roughly speaking, the way creationists use the term 'evolution' corresponds loosely to multiple theories that have a common thread of 'Origins':
-1. (optionally) A Universe From Nothing (or similar pre-bang model) https://www.youtube.com/watch?v=EjaGktVQdNg
-1. Cosmology  (Big Bang being the current leading model): Big Bang to Dust Clouds
-1. Nebular Hypothesis (SNDM currently): Dust Clouds to Stars and Planets
-1. Geology and Chemistry (Tectonic Plates, Geothermal cooling, and Crystals): Fiery Magma Planet to self-replicating chemicals
-1. Abiogenesis: Chemicals to Living matter
-1. Evolution and Natural Selection: Living matter to species diversity and, among other flora and fauna, humans
+1. (optionally) A Universe From Nothing (or similar pre-bang model) https://www.youtube.com/watch?v=EjaGktVQdNg _Pre-Big Bang_
+1. Cosmology  (Big Bang being the current leading model): _Big Bang to Dust Clouds_
+1. Nebular Hypothesis (SNDM currently): _Dust Clouds to Stars and Planets_
+1. Geology and Chemistry (Tectonic Plates, Geothermal cooling, and Crystals): _Fiery Magma Planet to self-replicating chemicals and crystals_
+1. Abiogenesis: _Chemicals to Living matter_
+1. Evolution and Natural Selection: _Living matter to species diversity and, among other flora and fauna, humans_
 
 As for the writers who "demolished" "evolution":
 
@@ -183,7 +187,7 @@ http://rationalwiki.org/wiki/C-decay
 
 > "Most of us have been taught that the planets of our solar system came out of the sun. It may come as a surprise that there are serious scientific difficulties with this presumption. In fact, a careful analysis of existing evidence suggests some surprising alternative possibilities."
 
-As anecdotal as it is, I was never taught that planets were 'ejected' or 'came out' of the sun; nor do the _current_ variants of the Nebular Hypothesis. Because of his age, and the relatively recent age of the most modern and supported variant (SNDM / Solar Nebular Disk Model, introduced to the english-speaking world in 1972) I then checked to make sure 'us' [as in Missler's generation] wasn't taught the Laplacian variant, and it is quite doubtful that it was still taught or in any textbooks during that era.
+As anecdotal as it is, **I** was never taught that planets were 'ejected' or 'came out' of the sun; nor do the _current_ variants of the Nebular Hypothesis. Because of his age, and the relatively recent age of the most modern and supported variant (SNDM / Solar Nebular Disk Model, introduced to the english-speaking world in 1972) I then checked to make sure 'us' [as in Missler's generation] wasn't taught the Laplacian variant, and it is quite doubtful that it was still taught or in any textbooks during that era.
 
 > "While the Laplacian nebular model dominated in the 19th century, it encountered a number of difficulties. The main problem was angular momentum distribution between the Sun and planets. The planets have 99% of the angular momentum, and this fact could not be explained by the nebular model.[5] As a result this theory of planet formation was largely abandoned at the beginning of the 20th century."
 
@@ -199,7 +203,7 @@ http://en.wikipedia.org/wiki/Nebular_hypothesis
 
 Because of this, I can empathize with his distrust in the scientific process in this area, as there were competing models for planetary formation during his educational development. However, this does not excuse intellectual laziness in even a cursory review of _modern_ scientific theory; the resolution of the angular momentum problem with the Laplacian variants and other problems were well known over a hundred years ago, all replacements since it fell out of favor in ~1901 addressed these issues and the most current model had thoroughly addressed most, if not all, of the problems in the original Laplacian model (though this is not to suggest the current theory is without unsolved problems, just that it is the best current understanding we have with the observations and data we have to work with currently). See http://en.wikipedia.org/wiki/Nebular_hypothesis#Solar_nebular_model:_achievements_and_problems for a full list.
 
-The fact that these wildly different variants of the same theory all share the same name, **despite SNDM being as opposite as you can get** to "the planets of our solar system came out of the sun" is perhaps unfortunate, but only relevant to the willfully ignorant. To equate 'The Nebular Hypothesis' with the Laplacian or other very early variants is to make a Category Error (http://en.wikipedia.org/wiki/Category_mistake) similar to the following:
+The fact that these wildly different variants of the same theory all share the same name, **despite SNDM being as opposite as you can get** to the statement "the planets of our solar system came out of the sun" is perhaps unfortunate, but only relevant to the willfully ignorant. To equate 'The Nebular Hypothesis' to only the Laplacian or other very early variants is to make a Category Error (http://en.wikipedia.org/wiki/Category_mistake) similar to the following:
 
 Computer Science was developed by some crazy people like Turing and Ada Lovelace that didn't even have access to computers (irrelevant character ad hominems; arguments stand or fall separate of the arguer)
 Out of their work came C, which is prone to memory leaks (not technically true, but kind of correct from an overgeneralizing perspective)
@@ -208,7 +212,7 @@ Thus our education system is teaching students terrible things and there are mem
 
 Now this is clearly not true; many _modern_ languages handle memory manangement themselves and couldn't be further from the Malloc and memory leaking origins.
 
-Similarly, _modern_ variants Nebular Hypothesis have largely solved the initial issues, and are substantiated by such an exponential amount of additional data that was not available prior to key developments such as satellites, optics, computers, aerospace and aviation, etc. that to even consider Laplacian NH would negate just about everything we have observed, from our solar system to the 1,822 currently known exoplanets...and it's been abandoned since the early 1900s.
+Similarly, _modern_ variants Nebular Hypothesis have largely solved the initial issues, and are substantiated by such an exponential amount of additional data that was not available prior to key developments such as satellites, optics, computers, other solar system observations, aerospace and aviation, etc. that to even consider Laplacian NH would negate just about everything we have observed, from our solar system to the 1,822 currently known exoplanets...and it's been abandoned since the early 1900s.
 
 Not only is observation evidence of other solar systems paramount to the modern theory, computers' role in this cannot be understated. By simply modelling gravity and setting initial parameters, very disparate solar systems can arise, and you can literally write this in javascript and simulate it in a browser. While non-rotating initial conditions are very unfavorable to planetary formation (understandably, everything coalesces into the center before resolving any orbital stability), most [initially] rotating Nebula will produce at least one star with a few planetescimals, that would roughly correspond to terrestrial planets in size.
 
@@ -217,7 +221,7 @@ Not only is observation evidence of other solar systems paramount to the modern 
 Intro Video on Accretion Disk Simulator: https://www.khanacademy.org/science/cosmology-and-astronomy/stellar-life-topic/stellar-life-death-tutorial/v/accreting-mass-due-to-gravity-simulation
 Accretion Disk Simulator in Javascript: https://www.khanacademy.org/cs/challenge-modeling-accretion-disks/1180451277
 
-Noting the use of the Gish Gallop and multiple ad hominems throughout.
+I'm also noting the use of the Gish Gallop and multiple ad hominems throughout. Ad hominems is where you discredit the person rather than their argument ("Yeah well those are good points, but he's a wife beater!" doesn't invalidate the argument)
 
 > "You attacked your opponent's character or personal traits in an attempt to undermine their argument."
 
@@ -225,17 +229,17 @@ https://yourlogicalfallacyis.com/ad-hominem
 
 #### Solar System's Angular Momentum [@ 11:11](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=11m11s)
 
+Chuck says `There is no way to explain` this. So what do you call the following from the _Encyclopaedia Britannica_?
+
 > "The angular momentum problem that defeated Kant and Laplace—why the planets have most of the solar system’s angular momentum while the Sun has most of the mass—can now be approached in a cosmic context. All stars having masses that range from slightly above the mass of the Sun to the smallest known masses rotate more slowly than an extrapolation based on the rotation rate of stars of higher mass would predict. Accordingly, these sunlike stars show the same deficit in angular momentum as the Sun itself.
 > 
 > The answer to how this loss could have occurred seems to lie in the solar wind. The Sun and other stars of comparable mass have outer atmospheres that are slowly but steadily expanding into space. Stars of higher mass do not exhibit such stellar winds. The loss of angular momentum associated with this loss of mass to space is sufficient to reduce the rate of the Sun’s rotation. Thus, the planets preserve the angular momentum that was in the original solar nebula, but the Sun has gradually slowed down in the 4.6 billion years since it formed."
 
 http://www.britannica.com/EBchecked/topic/553008/solar-system/242068/Solution-to-the-angular-momentum-puzzle
 
-Chuck says "There is no way to explain" this.
-
 #### "Other Enigmas" [@ 12:36](https://www.youtube.com/watch?v=N4AtHLcU9_w#t=12m36s)
 
-Planets sharing similar rotational features, especially those near each other, is exactly a prediction of most nebular hypothesi, including the SNDM. None of this is particularly "enigmatic." 23 random people in a room have a 50% chance of sharing the same birthday. Doesn't mean there's any significance.
+Planets sharing similar rotational features, especially those near each other, is exactly a prediction of most nebular hypothesi, including the SNDM. None of this is particularly "enigmatic." It certainly is no indication that there are planetary `pairs` nor that they `came from ... somewhere else`. 23 random people in a room have a 50% chance of sharing the same birthday. Doesn't mean there's any significance.
 
 http://en.wikipedia.org/wiki/Birthday_problem
 
@@ -374,7 +378,7 @@ In a journal full of articles just like that, with similar detail and scrutiny
 
 ## Conclusion
 
-I hope the takeaway from this is simply that if you like Missler's program, and find it entertaining or illuminating in a spiritual sense, by all means purchase anything you like of his. However, his statements do not track with the objective reality that we share, his conceptions of science and fundamentally flawed and because he purports to be 'well researched' that his statements are contrary to even a cursory overview of modern science that he is knowingly cherry picking items that support his objective and does so knowing he is cherry picking.
+I hope the takeaway from this is simply that if you like Missler's program, and find it entertaining or illuminating in a spiritual sense, by all means purchase anything you like of his. However, his statements do not track with the objective reality that we share, his conceptions of science and fundamentally flawed and because he purports to be 'well researched' that his statements are contrary to even a cursory overview of modern science that he is knowingly cherry picking items that support his objective and does so _fully knowing_ he is cherry picking.
 
 In these first 15 minutes of his video I could not discern anything that was shocking or even interesting, the claims are so off as to be unintelligible or nefariously incorrect with the intent to deceive. SNDM is the modern incarnation of a vast number of models under the category of Nebular Hypothesis (how did the sun form from a gas cloud ("Nebula")?), bears little in common with the original Laplacian models that contain well know issues, and are not taught in science courses as stellar formation (maybe as historical context), all of his claims have been refuted a thousand times and the refutation and resources are readily available to poke serious holes in any position he tries to advance, he uses the Gish Gallop to spray information out there faster than it can be possibly refuted (note the 15 minute : 3 hour ratio it took me to respond, and I'm sure I didn't address every single point he made).
 
