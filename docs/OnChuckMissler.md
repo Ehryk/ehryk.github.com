@@ -132,11 +132,11 @@ He says evolution and then calls it 'biogenesis'? His conflation of the two demo
 Roughly speaking, the way creationists use the term 'evolution' corresponds loosely to multiple theories that have a common thread of 'Origins':
 
  1. (optionally) A Universe From Nothing (or similar pre-bang model) https://www.youtube.com/watch?v=EjaGktVQdNg _Pre-Big Bang_
- 1. Cosmology  (Big Bang being the current leading model): _Big Bang to Dust Clouds_
- 1. Nebular Hypothesis (SNDM currently): _Dust Clouds to Stars and Planets_
- 1. Geology and Chemistry (Tectonic Plates, Geothermal cooling, and Crystals): _Fiery Magma Planet to self-replicating chemicals and crystals_
- 1. Abiogenesis: _Chemicals to Living matter_
- 1. Evolution and Natural Selection: _Living matter to species diversity and, among other flora and fauna, humans_
+ 1. Cosmology  (Big Bang being the current leading model): _Big Bang --> Dust Clouds_
+ 1. Nebular Hypothesis (SNDM currently): _Dust Clouds --> Stars and Planets_
+ 1. Geology and Chemistry (Tectonic Plates, Geothermal cooling, and Crystals): _Fiery Magma Planet --> self-replicating chemicals and crystals_
+ 1. Abiogenesis: _Chemicals --> Living matter_
+ 1. Evolution and Natural Selection: _Living matter --> species diversity and, among other flora and fauna, humans_
 
 As for the writers who "demolished" "evolution":
 
@@ -369,7 +369,7 @@ http://www.talkorigins.org/indexcc/CE/CE260.html
 
 In a large index of the commonly repeated, oft-heard Creationist claims with refutations for each one:
 
-Index of [Debunked] Creationist Claims: http://www.talkorigins.org/indexcc/list.html
+Index of [addressed] Creationist Claims: http://www.talkorigins.org/indexcc/list.html
 
 Contrast this with a single peer reviewed, scientific study on a particular model: abstract, ouline and figures here (full article $35) http://www.sciencedirect.com/science/article/pii/S0032063311003904
 In a journal full of articles just like that, with similar detail and scrutiny
