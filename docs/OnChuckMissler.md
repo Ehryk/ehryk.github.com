@@ -40,12 +40,12 @@ http://en.wikipedia.org/wiki/Myth_of_the_Flat_Earth
 
 It's similarly frustrating that:
 
-11 percent of U.S. respondents to a poll thought HTML5 was an STD,
-42 percent thought a motherboard was the deck of a cruise ship,
-27 percent of respondents incorrectly identified a "gigabyte" as "an insect commonly found in South America,"
-18 percent mistakenly believed Blu-ray was some sort of marine animal,
-13 percent thought an MP3 was one of the robots in "Star Wars,"
-12 percent thought USB was the acronym for a country in Europe.
+ 1. 11 percent of U.S. respondents to a poll thought HTML5 was an STD,
+ 1. 42 percent thought a motherboard was the deck of a cruise ship,
+ 1. 27 percent of respondents incorrectly identified a "gigabyte" as "an insect commonly found in South America,"
+ 1. 18 percent mistakenly believed Blu-ray was some sort of marine animal,
+ 1. 13 percent thought an MP3 was one of the robots in "Star Wars,"
+ 1. 12 percent thought USB was the acronym for a country in Europe.
 
 http://www.huffingtonpost.com/2014/03/05/html-an-std-tech-survey_n_4904310.html
 
@@ -130,12 +130,13 @@ The true shift in scientific thought came about NOT when someone happened to mea
 He says evolution and then calls it 'biogenesis'? His conflation of the two demonstrates a lack of understanding of the theories and their scopes; 'evolution' = existing replicating life changing over time and adapting to its environment. Biogenesis (aka abiogenesis) = the arising of life from non living matter. Each can be individually correct while the other is false, or both true or both correct - _THEY ARE NOT THE EQUIVALENT!_
 
 Roughly speaking, the way creationists use the term 'evolution' corresponds loosely to multiple theories that have a common thread of 'Origins':
-1. (optionally) A Universe From Nothing (or similar pre-bang model) https://www.youtube.com/watch?v=EjaGktVQdNg _Pre-Big Bang_
-1. Cosmology  (Big Bang being the current leading model): _Big Bang to Dust Clouds_
-1. Nebular Hypothesis (SNDM currently): _Dust Clouds to Stars and Planets_
-1. Geology and Chemistry (Tectonic Plates, Geothermal cooling, and Crystals): _Fiery Magma Planet to self-replicating chemicals and crystals_
-1. Abiogenesis: _Chemicals to Living matter_
-1. Evolution and Natural Selection: _Living matter to species diversity and, among other flora and fauna, humans_
+
+ 1. (optionally) A Universe From Nothing (or similar pre-bang model) https://www.youtube.com/watch?v=EjaGktVQdNg _Pre-Big Bang_
+ 1. Cosmology  (Big Bang being the current leading model): _Big Bang to Dust Clouds_
+ 1. Nebular Hypothesis (SNDM currently): _Dust Clouds to Stars and Planets_
+ 1. Geology and Chemistry (Tectonic Plates, Geothermal cooling, and Crystals): _Fiery Magma Planet to self-replicating chemicals and crystals_
+ 1. Abiogenesis: _Chemicals to Living matter_
+ 1. Evolution and Natural Selection: _Living matter to species diversity and, among other flora and fauna, humans_
 
 As for the writers who "demolished" "evolution":
 
