@@ -113,7 +113,7 @@ The entire phrasiology is entirely misleading in how it portrays the scientific 
 
 http://en.wikipedia.org/wiki/R%C3%B8mer%27s_determination_of_the_speed_of_light
 
-That word - _confirmed_ - is the key here. While he made various contributions and progress during his lifetime, your 'character' and 'past accomplishments' mean nothing to science. He came up with a result which, even though it was true, was not easily reproducible (until the next eclipse of Jupiter) and even then relied on the relatively terrible optics of the time and was just fundamentally an unsound **reason** to believe the speed of light to be finite. 
+That word - _confirmed_ - is the key here. While he made various contributions and progress during his lifetime, your 'character' and 'past accomplishments' mean nothing to science. He came up with a result which, even though it was true, was not easily reproducible (until the next pass of Io across of Jupiter from Earth's perspective at night) and even then relied on the relatively terrible optics of the time and was just fundamentally an unsound **reason** to believe the speed of light to be finite. 
 
 > "Rømer's view that the velocity of light was finite was not fully accepted until measurements of stellar aberration were made in 1727 by James Bradley (1693–1762).[14] Bradley, who would be Halley's successor as Astronomer Royal, calculated a value of 8 minutes 13 seconds for light to travel from the Sun to Earth.[14] Ironically, stellar aberration had first been observed by Cassini and (independently) by Picard in 1671, but neither astronomer was able to give an explanation for the phenomenon.[3] Bradley's work also laid to rest any remaining serious objections to the Keplerian model of the Solar System."
 
