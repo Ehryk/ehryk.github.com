@@ -206,10 +206,10 @@ Because of this, I can empathize with his distrust in the scientific process in 
 
 The fact that these wildly different variants of the same theory all share the same name, **despite SNDM being as opposite as you can get** to the statement "the planets of our solar system came out of the sun" is perhaps unfortunate, but only relevant to the willfully ignorant. To equate 'The Nebular Hypothesis' to only the Laplacian or other very early variants is to make a Category Error (http://en.wikipedia.org/wiki/Category_mistake) similar to the following:
 
-Computer Science was developed by some crazy people like Turing and Ada Lovelace that didn't even have access to computers (irrelevant character ad hominems; arguments stand or fall separate of the arguer)
-Out of their work came C, which is prone to memory leaks (not technically true, but kind of correct from an overgeneralizing perspective)
-Our education system is still teaching computer science based on C (kind of, since most modern languages are C-like or heavily influenced)
-Thus our education system is teaching students terrible things and there are memory leaks in ALL THE CODE! (flawed conclusion even if all the premises were true, which they aren't)
+ 1. Computer Science was developed by some crazy people like Turing and Ada Lovelace that didn't even have access to computers (irrelevant character ad hominems; arguments stand or fall separate of the arguer)
+ 1. Out of their work came C, which is prone to memory leaks (not technically true, but kind of correct from an overgeneralizing perspective)
+ 1. Our education system is still teaching computer science based on C (kind of, since most modern languages are C-like or heavily influenced)
+ 1. Thus our education system is teaching students terrible things and there are memory leaks in ALL THE CODE! (flawed conclusion even if all the premises were true, which they aren't)
 
 Now this is clearly not true; many _modern_ languages handle memory manangement themselves and couldn't be further from the Malloc and memory leaking origins.
 
@@ -220,6 +220,7 @@ Not only is observation evidence of other solar systems paramount to the modern 
 (Gas Giants formation is currently an unsolved problem within modern SNDM, however I suspect a more accurate modelling of smaller particles, gas distribution and solar winds would be be integral to their formation, and this is currently NOT written in Javascript for browsers :-P)
 
 Intro Video on Accretion Disk Simulator: https://www.khanacademy.org/science/cosmology-and-astronomy/stellar-life-topic/stellar-life-death-tutorial/v/accreting-mass-due-to-gravity-simulation
+
 Accretion Disk Simulator in Javascript: https://www.khanacademy.org/cs/challenge-modeling-accretion-disks/1180451277
 
 I'm also noting the use of the Gish Gallop and multiple ad hominems throughout. Ad hominems is where you discredit the person rather than their argument ("Yeah well those are good points, but he's a wife beater!" doesn't invalidate the argument)
@@ -371,10 +372,10 @@ In a large index of the commonly repeated, oft-heard Creationist claims with ref
 
 Index of [addressed] Creationist Claims: http://www.talkorigins.org/indexcc/list.html
 
-Contrast this with a single peer reviewed, scientific study on a particular model: abstract, ouline and figures here (full article $35) http://www.sciencedirect.com/science/article/pii/S0032063311003904
-In a journal full of articles just like that, with similar detail and scrutiny
-... that specializes in ONLY Planetary and Space science: http://www.sciencedirect.com/science/journal/00320633/62/1
-... and is published monthly,
+Contrast this with a single peer reviewed, scientific study on a particular model: abstract, ouline and figures here (full article $35) http://www.sciencedirect.com/science/article/pii/S0032063311003904  
+... In a journal full of articles just like that, with similar detail and scrutiny  
+... that specializes in ONLY Planetary and Space science: http://www.sciencedirect.com/science/journal/00320633/62/1  
+... and is published monthly,  
 ... and is not even near representative of all planetary and space science being conducted worldwide, or even within the subset of the english speaking scientific community alone.
 
 ## Conclusion
