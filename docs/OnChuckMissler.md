@@ -49,7 +49,7 @@ It's similarly frustrating that:
 
 http://www.huffingtonpost.com/2014/03/05/html-an-std-tech-survey_n_4904310.html
 
-However this doesn't mean that educated people (especially those in a technology field) and I suspect that this is the same with actual historians and professors on the Flat Earth Middle Ages Myth and what they teach in their textbooks and classrooms.
+However this doesn't mean that educated people (especially those in a technology field) and I suspect that this is the same with actual historians and professors on the Flat Earth Middle Ages Myth and what they teach in their textbooks and classrooms. **Most importantly, none of this is taught**. Just because 'some people think x' it cannot be then shown that 'science teaches x' in the way that Missler implies occasionally.
 
 .... and I'm only 5:24 into this 2 hour video, so this doesn't bode well for my weekend.
 
