@@ -6,7 +6,7 @@ var namejs = namejs || {};
 
 namejs.app = {
   root_url: "/name-js",
-  data_url: "23.92.26.251",
+  data_url: "http://23.92.26.251",
 
   curr_word: "",
   starting_rating: 0,
