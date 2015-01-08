@@ -144,7 +144,8 @@ direction;
 		  columnEle.html("");
 
 		  for (var i = 0; i < data.length; i++) {
-			  columnEle.append("<li>" + data[i].rating + " " + data[i].word + ".js</li>");
+			  columnEle.append("<li>" + data[i].Rating + " " 
++ data[i].Word + ".js</li>");
 		  }
       loaderEle.hide();
     });
