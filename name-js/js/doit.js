@@ -5,8 +5,10 @@ $(function() {
 var namejs = namejs || {};
 
 namejs.app = {
-    root_url: "/name-js",
-    curr_word: "",
+  root_url: "/name-js",
+  data_url: "23.92.26.251",
+
+  curr_word: "",
   starting_rating: 0,
   session_rating: 0,
 
@@ -55,7 +57,7 @@ namejs.app = {
 
 	generateName: function() {
     var alias = namejs.app;	
-    $.getJSON(alias.root_url + "/api/word", function(data) {
+    $.getJSON(alias.data_url + "/api/word", function(data) {
       with(alias) {
         curr_word = data.word;
         starting_rating = data.rating;
@@ -94,7 +96,8 @@ namejs.app = {
     var alias = namejs.app;
     alias.rating_div.html(alias.session_rating);
 
-    var _url = alias.root_url + "/api/vote/" + alias.curr_word + "/" + direction;
+    var _url = alias.data_url + "/api/vote/" + alias.curr_word + "/" + 
+direction;
     $.ajax({
       type: 'POST',
       url: _url
@@ -108,28 +111,28 @@ namejs.app = {
 
   buildHistory: function() {
     var alias = namejs.app;
-    var dataUrl = alias.root_url + "/api/history";
+    var dataUrl = alias.data_url + "/api/history";
 		
 		alias.buildColumn($("#last-loader"), alias.history_div, dataUrl);
   },
   
   buildTop10: function() {
     var alias = namejs.app;
-    var dataUrl = alias.root_url + "/api/top10";
+    var dataUrl = alias.data_url + "/api/top10";
 		
 		alias.buildColumn($("#best-loader"), alias.top10_div, dataUrl);
   },
   
   buildBottom10: function() {
     var alias = namejs.app;
-    var dataUrl = alias.root_url + "/api/bottom10";
+    var dataUrl = alias.data_url + "/api/bottom10";
 		
 		alias.buildColumn($("#worst-loader"), alias.bottom10_div, dataUrl);
   },
   
   buildRandom10: function() {
     var alias = namejs.app;
-    var dataUrl = alias.root_url + "/api/random10";
+    var dataUrl = alias.data_url + "/api/random10";
     
 		alias.buildColumn($("#random-loader"), alias.random10_div, dataUrl);
   },
