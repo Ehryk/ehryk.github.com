@@ -51,8 +51,8 @@ footer hr {
 }
 
 /* Links */
-a { color: #336699; }
-a:visited { color: #336699; }
+a { color: #99CCFF; }
+a:visited { color: #99CCFF; }
 a:hover { color: #FF8800; text-decoration: underline; }
 
 /* Selection Color */
