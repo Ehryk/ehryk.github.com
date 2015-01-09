@@ -59,8 +59,8 @@ namejs.app = {
         var alias = namejs.app; 
         $.getJSON(alias.data_url + "/api/word", function(data) {
             with(alias) {
-                curr_word = data.word;
-                starting_rating = data.rating;
+                curr_word = data.Word;
+                starting_rating = data.Rating;
                 session_rating = alias.starting_rating;
 
                 name_div.html(alias.curr_word   + ".js");
