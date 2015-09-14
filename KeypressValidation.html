@@ -10,12 +10,12 @@
 
 			function validateKeypress(e, validChars) {
 			    var keyChar = String.fromCharCode(e.which || e.keyCode);
-			    //if (!validChars.test(keyChar)) alert("'" + keyChar + "': Not a valid currency character.");
+			    //if (!validChars.test(keyChar)) alert("'" + keyChar + "': Not a valid character.");
 			    return validChars.test(keyChar) ? keyChar : false;
 			}
 		</script>
 	</head>
 	<body>
-		<input type="text" onkeypress="return validateKeypress(event,currency);" />
+		<input type="text" onkeypress="validateKeypress(event,currency);" />
 	</body>
 </html>
