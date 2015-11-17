@@ -1,4 +1,4 @@
-update=11/16/2015 11:37:33 AM
+update=11/16/2015 11:35:24 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=Parts
+LibDir=
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,18 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=relays
-LibName31=sensors
-LibName32=switches
-LibName33=w_relay
-LibName34=w_analog
-LibName35=w_connectors
-LibName36=w_device
-LibName37=w_microcontrollers
-LibName38=Parts/binding_post
-LibName39=Parts/lcd_voltmeter
-LibName40=Parts/lt3083_linear_regulator
-LibName41=Parts/mc14490_hardware_debounce
-LibName42=Parts/power_jack
-LibName43=Parts/red_bear_labs
-LibName44=Parts/sparkfun
+LibName30=av
