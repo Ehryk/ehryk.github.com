@@ -1,0 +1,19 @@
+1. Grounds not isolated -> correct, design clarified. Is there a way to 'noise-isolate' grounds, while keeping them functionally connected for large currents? I'm not anticipating all that much noise in this board, or if that's a decent goal.
+2a. I'm using the MC14490 to make the programming way easier. I can hardware debounce 2 or 3 switches on certain pins only, and would definitely have to use software debounce for this many. I find it easier to add one than eat up processing bandwidth and one or more ISRs, especially when Bluetooth is the prime function of the uC. 
+2b. I'm hoping the encoder won't be laggy, I'll check with the datasheets and such. I can also feed an external oscillator input to the MC14490 if I need to.
+2c. Why would software debounce be preferable to hardware debounce?
+3. I'm aware of the 'smart' devices; if I was to be usb compliant I'd limit the output to 100mA until I negotiated with the device for 500mA, 1A, or 2A... but I'm choosing to go "meh" on compliance, for the potential benefit of a more usable 5V output for non-USB stuff
+4. Yeah I usually do a header for this because I can push the 0.1" female connectors on it and easily hook them to my oscilloscope without having to hold it
+5. I haven't looked at the RS 485 protocol yet, but presumably I'd talk directly to it or through an interface to get the voltage and amperage (to be determined). I'm not programming the meter, just reading from it and programming the Blend Micro.
+6. The power supply I bought is selectable from 12V to 24V, I'm fine with the 12V sagging a bit (the '12V LEDs' built into the two front panel switches might dim a bit, but I'd have less waste heat from the linear regulators if I needed higher current sub-10V output)
+7. I was hoping to keep the full +12V output available, but with LT10xx devices this might be more doable. Another option I might consider is a metal power resistor before the 5V.
+8. 'Constant current' into the USB? What does that mean? The schottky diodes should drop ~0.2V, so that when the device is off the uC can be programmed off ~4V or so (it's a 3.3V arduino anyway), but not flow anything back to the computer.... does that seem appropriate?
+9. I wasn't sure what I was doing with them yet, but that sounds like a good principle to keep in mind, thanks! I'll definitely ground the unused pins where appropriate (like I did on the 3803 NC pins)
+10. I haven't finished the design, so I'll specify fuse amperages once I get a bit further.
+11. Yeah, I ran out of space in the enclosure I chose (100mm x 75mm x 35mm) so I'm going straight linear
+12. I might want to blink the power light on certain conditions (programming, blown fuse, overheat, some other currently unknown reason) so I want to keep that on the uC for now. I also might swing the output to 0V, or ~0.342V, in which case the power LED should still be lit
+13. I haven't done a board yet, just getting the design & schematic & parts together
+14a. I'm planning on keeping the hot-ish things toward the rear and right side, and cool-ish things near the left and front. I'll definitely keep the digipots (now maybe a 16-bit DAC) in the coolest part, thanks for the heads up!
+14b. Yep, definitely doing a digital ground plane and a high-current ground plane, and keeping some barrier or something (connected electrically, but separated thermally somewhat). Would you recommend top & bottom ground planes ('ground fill') as I've been doing in fritzing on a 2-layer board, or a top power plane and bottom ground plane as I see in more professional designs?
+14c. Yes, it'll be an open source design (already is open on my github account), but I don't generally work with SMD components other than caps and diodes and resistors because I have a more difficult time soldering them and they seem to have more localized heating (sinking to the PCB as they have less casing and connection to only one layer)
+15. Thank you for helping, you rock!
