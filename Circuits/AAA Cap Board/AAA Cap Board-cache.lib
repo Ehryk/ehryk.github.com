@@ -1,0 +1,111 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# AAA_Terminal
+#
+DEF AAA_Terminal T 0 40 Y Y 1 F N
+F0 "T" -150 -50 60 H V C CNN
+F1 "AAA_Terminal" 0 100 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+X Terminal 1 0 -550 200 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# C
+#
+DEF C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "C" 25 -100 50 H V L CNN
+F2 "" 38 -150 30 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
+$ENDFPLIST
+DRAW
+P 2 0 1 20  -80 -30  80 -30 N
+P 2 0 1 20  -80 30  80 30 N
+X ~ 1 0 150 110 D 40 40 1 1 P
+X ~ 2 0 -150 110 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CP
+#
+DEF CP C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "CP" 25 -100 50 H V L CNN
+F2 "" 38 -150 30 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ CP*
+ Elko*
+ TantalC*
+ C*elec
+ c_elec*
+ SMD*_Pol
+$ENDFPLIST
+DRAW
+S -90 20 -90 40 0 1 0 N
+S -90 20 90 20 0 1 0 N
+S 90 -20 -90 -40 0 1 0 F
+S 90 40 -90 40 0 1 0 N
+S 90 40 90 20 0 1 0 N
+P 2 0 1 0  -70 90  -30 90 N
+P 2 0 1 0  -50 110  -50 70 N
+X ~ 1 0 150 110 D 40 40 1 1 P
+X ~ 2 0 -150 110 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CP1
+#
+DEF CP1 C 0 10 N N 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "CP1" 25 -100 50 H V L CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ SMD*_Pol
+ c_elec*
+ C*elec
+ TantalC*
+ Elko*
+ CP*
+$ENDFPLIST
+DRAW
+A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
+P 2 0 1 20  -80 30  80 30 N
+P 2 0 1 0  -70 90  -30 90 N
+P 2 0 1 0  -50 70  -50 110 N
+X ~ 1 0 150 110 D 40 40 1 1 P
+X ~ 2 0 -150 130 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dc_jack
+#
+DEF dc_jack J 0 0 Y N 1 F N
+F0 "J" 0 150 60 H V C CNN
+F1 "dc_jack" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+A 115 -50 10 -899 899 0 1 0 N 115 -60 115 -40
+S -125 100 150 -100 0 1 0 N
+P 2 0 1 0  -50 0  -50 25 N
+P 4 0 1 0  -50 50  -65 25  -35 25  -50 50 F
+P 4 0 1 0  -50 50  -25 50  0 25  25 50 N
+P 4 0 1 0  115 -40  -50 -40  -50 -60  115 -60 N
+X 1 1 -150 0 100 R 35 27 1 1 P
+X 2 2 -150 50 100 R 35 27 1 1 P
+X 3 3 -150 -50 100 R 35 27 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
