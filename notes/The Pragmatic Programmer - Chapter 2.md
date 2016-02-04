@@ -38,7 +38,7 @@ Reminds me of The Dark Crystal:
 
 From geometry, orthogonality is the property of line segment being at right angles to each other. There are only be as many simultaneous orthogonal lines as dimensions you have to work with.
 
-![Orthogonality](Orthogonal.png)
+![Orthogonality](Orthogonality.png)
 
 I like the helicopter analogy; to make drone flying easier there are microcontrollers attempting to make the 'sticks' orthogonal to the end user, though the raw inputs are non ortho.
 
