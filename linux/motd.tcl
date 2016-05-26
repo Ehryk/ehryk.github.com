@@ -33,7 +33,7 @@ set drive [lindex [exec -- /usr/bin/df -h /] 10]
 
 # * Calculate SSH logins:
 set logins     [exec -- w -s]
-set log(c)     [lindex $logins 3]
+set log(c)     [lindex $logins 4]
 
 # * Calculate processes
 set psa [expr {[lindex [exec -- ps -A h | wc -l] 0]-000}]
