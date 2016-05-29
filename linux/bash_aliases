@@ -95,15 +95,18 @@ alias browser='chrome'
 alias top='atop'
 
 alias root='echo You already are!'
-alias update='apt-get update && apt-get upgrade'
+#alias update='apt-get update && apt-get upgrade'
+alias update='pacman -Syu'
 
 #if user is not root, pass these commands via sudo #
 if [ $UID -ne 0 ]; then
 	alias reboot='sudo /sbin/reboot'
+	alias restart='sudo /sbin/reboot'
 	alias poweroff='sudo /sbin/poweroff'
 	alias halt='sudo /sbin/halt'
 	alias shutdown='sudo /sbin/shutdown'
-	alias update='sudo apt-get update && sudo apt-get upgrade'
+	#alias update='sudo apt-get update && sudo apt-get upgrade'
+	alias update='sudo pacman -Syu'
 	alias root='sudo -i'
 fi
 
