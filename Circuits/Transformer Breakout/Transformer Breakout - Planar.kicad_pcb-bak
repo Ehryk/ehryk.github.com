@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 138.354999 83.744999 156.285001 114.375001)
     (thickness 1.6)
-    (drawings 4)
+    (drawings 8)
     (tracks 4)
     (zones 0)
     (modules 2)
@@ -106,14 +106,14 @@
     (add_net /B)
   )
 
-  (module Footprints:AMGIS_XFRMR (layer F.Cu) (tedit 5815A496) (tstamp 5815A27B)
+  (module Footprints:AMGIS_XFRMR (layer F.Cu) (tedit 583FCF87) (tstamp 5815A27B)
     (at 147.32 110.49 180)
     (path /5815A005)
-    (fp_text reference P1 (at 0 3.81 180) (layer F.SilkS) hide
+    (fp_text reference P1 (at 6.35 -5.08 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value XFRMR (at 0 3.81 180) (layer B.Fab)
-      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    (fp_text value XFRMR (at -5.08 -5.08 180) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -5.08 -2.54) (end 5.08 -2.54) (layer B.SilkS) (width 0.15))
     (fp_line (start 5.08 -2.54) (end 5.08 2.54) (layer B.SilkS) (width 0.15))
@@ -132,10 +132,10 @@
   (module Footprints:ED110-2 (layer F.Cu) (tedit 5815A298) (tstamp 5815A296)
     (at 147.32 88.9)
     (path /58159F39)
-    (fp_text reference P2 (at 5.08 6.35) (layer F.SilkS) hide
+    (fp_text reference P2 (at -6.35 -6.35) (layer F.SilkS) hide
       (effects (font (size 1.2 1.2) (thickness 0.15)))
     )
-    (fp_text value BRK (at 0 6.35) (layer F.Fab) hide
+    (fp_text value BRK (at 5.08 -6.35) (layer F.Fab) hide
       (effects (font (size 1.2 1.2) (thickness 0.15)))
     )
     (fp_line (start -7.62 4.826) (end -7.62 5.08) (layer B.SilkS) (width 0.15))
@@ -163,8 +163,25 @@
       (net 2 /A))
     (pad 2 thru_hole oval (at 3.75 0) (size 2 3) (drill 0.8) (layers *.Cu *.Mask)
       (net 1 /B))
+    (model "C:/Programming/KiCAD Parts/modules/packages3d/conn_mkds/mkds_1,5-2.wrl"
+      (at (xyz 0 -0.01 0))
+      (scale (xyz 1.5 0.9 1))
+      (rotate (xyz 0 0 180))
+    )
   )
 
+  (gr_text "v1.0 Planar\nehryk.github.io" (at 147.32 104.14) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (gr_text "Transformer\nBreakout" (at 147.32 97.79) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.25)))
+  )
+  (gr_text "v1.0 Planar\nehryk.github.io" (at 147.32 104.14) (layer B.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+  )
+  (gr_text "Transformer\nBreakout" (at 147.32 97.79) (layer B.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.25)) (justify mirror))
+  )
   (gr_line (start 138.43 114.3) (end 138.43 83.82) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 156.21 114.3) (end 138.43 114.3) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 156.21 83.82) (end 156.21 114.3) (angle 90) (layer Edge.Cuts) (width 0.15))

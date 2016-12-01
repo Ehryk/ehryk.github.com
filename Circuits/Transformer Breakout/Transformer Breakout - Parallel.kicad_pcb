@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 138.354999 83.744999 156.285001 114.375001)
     (thickness 1.6)
-    (drawings 12)
+    (drawings 16)
     (tracks 7)
     (zones 0)
     (modules 65)
@@ -106,757 +106,13 @@
     (add_net /B)
   )
 
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BBAA)
-    (at 149.86 85.09)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BBA6)
-    (at 152.4 85.09)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BBA2)
-    (at 154.94 85.09)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB9E)
-    (at 154.94 87.63)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB9A)
-    (at 154.94 90.17)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB96)
-    (at 149.86 92.71)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB92)
-    (at 152.4 92.71)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB8E)
-    (at 154.94 92.71)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB8A)
-    (at 154.94 95.25)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB86)
-    (at 152.4 95.25)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB82)
-    (at 149.86 95.25)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB7E)
-    (at 149.86 97.79)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB7A)
-    (at 152.4 97.79)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB76)
-    (at 154.94 97.79)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB72)
-    (at 154.94 100.33)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB6E)
-    (at 152.4 100.33)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB6A)
-    (at 152.4 102.87)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB66)
-    (at 154.94 102.87)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB62)
-    (at 154.94 105.41)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB5E)
-    (at 152.4 105.41)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB5A)
-    (at 149.86 113.03)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB56)
-    (at 154.94 113.03)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB52)
-    (at 152.4 113.03)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB4E)
-    (at 152.4 110.49)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB4A)
-    (at 154.94 110.49)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB46)
-    (at 154.94 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB42)
-    (at 152.4 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB3E)
-    (at 152.4 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB3A)
-    (at 149.86 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB36)
-    (at 149.86 105.41)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB32)
-    (at 149.86 102.87)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B993) (tstamp 5819BB27)
-    (at 149.86 100.33)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 1 /B))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BB13)
-    (at 142.24 110.49)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BAA4)
-    (at 142.24 92.71)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BAA0)
-    (at 142.24 95.25)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA9C)
-    (at 142.24 97.79)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA98)
-    (at 142.24 100.33)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA94)
-    (at 142.24 102.87)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA90)
-    (at 142.24 105.41)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA8C)
-    (at 142.24 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA88)
-    (at 144.78 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA84)
-    (at 144.78 105.41)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA80)
-    (at 144.78 102.87)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA7C)
-    (at 144.78 100.33)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA78)
-    (at 144.78 97.79)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA74)
-    (at 144.78 95.25)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA70)
-    (at 144.78 92.71)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA6C)
-    (at 144.78 113.03)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA68)
-    (at 142.24 113.03)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA1A)
-    (at 144.78 85.09)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA16)
-    (at 142.24 85.09)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA12)
-    (at 139.7 85.09)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA0E)
-    (at 139.7 87.63)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA0A)
-    (at 139.7 90.17)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819BA06)
-    (at 139.7 92.71)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B9FB)
-    (at 139.7 95.25)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B9F7)
-    (at 139.7 97.79)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B723) (tstamp 5819B9F3)
-    (at 139.7 100.33)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B9EF)
-    (at 139.7 102.87)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B9EB)
-    (at 139.7 105.41)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B9E7)
-    (at 139.7 107.95)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B9C2)
-    (at 139.7 113.03)
-    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
-  )
-
-  (module Footprints:ED110-2 (layer F.Cu) (tedit 5815A298) (tstamp 5815A296)
+  (module Footprints:ED110-2 (layer F.Cu) (tedit 583FD00B) (tstamp 5815A296)
     (at 147.32 88.9)
     (path /58159F39)
-    (fp_text reference P2 (at 5.08 6.35) (layer F.SilkS) hide
+    (fp_text reference P2 (at -6.35 -6.35) (layer F.Fab)
       (effects (font (size 1.2 1.2) (thickness 0.15)))
     )
-    (fp_text value BRK (at 0 6.35) (layer F.Fab) hide
+    (fp_text value BRK (at 5.08 -6.35) (layer F.Fab)
       (effects (font (size 1.2 1.2) (thickness 0.15)))
     )
     (fp_line (start -7.62 4.826) (end -7.62 5.08) (layer B.SilkS) (width 0.15))
@@ -884,16 +140,21 @@
       (net 2 /A))
     (pad 2 thru_hole oval (at 3.75 0) (size 2 3) (drill 0.8) (layers *.Cu *.Mask)
       (net 1 /B))
+    (model "C:/Programming/KiCAD Parts/modules/packages3d/conn_mkds/mkds_1,5-2.wrl"
+      (at (xyz 0 -0.01 0))
+      (scale (xyz 1.5 0.9 1))
+      (rotate (xyz 0 0 180))
+    )
   )
 
-  (module Footprints:AMGIS_XFRMR (layer F.Cu) (tedit 58254494) (tstamp 5815A27B)
+  (module Footprints:AMGIS_XFRMR (layer F.Cu) (tedit 583FD012) (tstamp 5815A27B)
     (at 147.32 110.49 180)
     (path /5815A005)
-    (fp_text reference P1 (at 0 3.81 180) (layer F.SilkS) hide
+    (fp_text reference P1 (at 6.35 -5.08 180) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value XFRMR (at 0 3.81 180) (layer B.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    (fp_text value XFRMR (at -5.08 -5.08 180) (layer F.Fab)
+      (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -5.08 -2.54) (end 5.08 -2.54) (layer B.SilkS) (width 0.15))
     (fp_line (start 5.08 -2.54) (end 5.08 2.54) (layer B.SilkS) (width 0.15))
@@ -909,7 +170,7 @@
       (net 2 /A))
   )
 
-  (module Footprints:Thermal_Via (layer F.Cu) (tedit 5819B6A5) (tstamp 5819B994)
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B994)
     (at 139.7 110.49)
     (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -918,10 +179,758 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
-      (net 2 /A))
+      (net 2 /A) (solder_mask_margin 0.01))
   )
 
-  (gr_text ehryk.github.io (at 147.32 106.68) (layer B.SilkS)
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9C2)
+    (at 139.7 113.03)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9E7)
+    (at 139.7 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9EB)
+    (at 139.7 105.41)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9EF)
+    (at 139.7 102.87)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9F3)
+    (at 139.7 100.33)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9F7)
+    (at 139.7 97.79)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819B9FB)
+    (at 139.7 95.25)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA06)
+    (at 139.7 92.71)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA0A)
+    (at 139.7 90.17)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA0E)
+    (at 139.7 87.63)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA12)
+    (at 139.7 85.09)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA16)
+    (at 142.24 85.09)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA1A)
+    (at 144.78 85.09)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA68)
+    (at 142.24 113.03)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA6C)
+    (at 144.78 113.03)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA70)
+    (at 144.78 92.71)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA74)
+    (at 144.78 95.25)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA78)
+    (at 144.78 97.79)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA7C)
+    (at 144.78 100.33)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA80)
+    (at 144.78 102.87)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA84)
+    (at 144.78 105.41)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA88)
+    (at 144.78 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA8C)
+    (at 142.24 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA90)
+    (at 142.24 105.41)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA94)
+    (at 142.24 102.87)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA98)
+    (at 142.24 100.33)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BA9C)
+    (at 142.24 97.79)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BAA0)
+    (at 142.24 95.25)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BAA4)
+    (at 142.24 92.71)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB13)
+    (at 142.24 110.49)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 2 /A) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB27)
+    (at 149.86 100.33)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB32)
+    (at 149.86 102.87)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB36)
+    (at 149.86 105.41)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB3A)
+    (at 149.86 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB3E)
+    (at 152.4 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB42)
+    (at 152.4 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB46)
+    (at 154.94 107.95)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB4A)
+    (at 154.94 110.49)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB4E)
+    (at 152.4 110.49)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB52)
+    (at 152.4 113.03)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB56)
+    (at 154.94 113.03)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB5A)
+    (at 149.86 113.03)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB5E)
+    (at 152.4 105.41)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB62)
+    (at 154.94 105.41)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB66)
+    (at 154.94 102.87)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB6A)
+    (at 152.4 102.87)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB6E)
+    (at 152.4 100.33)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB72)
+    (at 154.94 100.33)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB76)
+    (at 154.94 97.79)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB7A)
+    (at 152.4 97.79)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB7E)
+    (at 149.86 97.79)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB82)
+    (at 149.86 95.25)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB86)
+    (at 152.4 95.25)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB8A)
+    (at 154.94 95.25)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB8E)
+    (at 154.94 92.71)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB92)
+    (at 152.4 92.71)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB96)
+    (at 149.86 92.71)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB9A)
+    (at 154.94 90.17)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BB9E)
+    (at 154.94 87.63)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BBA2)
+    (at 154.94 85.09)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BBA6)
+    (at 152.4 85.09)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (module Footprints:Thermal_Via_NoRing (layer F.Cu) (tedit 583FC85F) (tstamp 5819BBAA)
+    (at 149.86 85.09)
+    (fp_text reference "" (at 0 1.27) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1.27) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers *.Cu *.Mask)
+      (net 1 /B) (solder_mask_margin 0.01))
+  )
+
+  (gr_circle (center 149.86 106.9975) (end 149.86 106.7435) (layer B.SilkS) (width 0.5) (tstamp 583FD1C8))
+  (gr_circle (center 151.0665 94.9325) (end 151.0665 94.6785) (layer B.SilkS) (width 0.5) (tstamp 583FD1B2))
+  (gr_circle (center 149.86 106.9975) (end 149.86 106.7435) (layer F.SilkS) (width 0.5) (tstamp 583FD1A1))
+  (gr_circle (center 151.0665 94.9325) (end 151.0665 94.6785) (layer F.SilkS) (width 0.5))
+  (gr_text ehryk.github.io (at 147.32 104.14) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text Breakout (at 147.32 99.06) (layer B.SilkS)
@@ -930,16 +939,16 @@
   (gr_text Breakout (at 147.32 99.06) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.25)))
   )
-  (gr_text ehryk.github.io (at 147.32 106.68) (layer F.SilkS)
+  (gr_text ehryk.github.io (at 147.32 104.14) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "v1.0 Parallel" (at 147.32 104.14) (layer B.SilkS)
+  (gr_text "v1.0 Parallel" (at 147.32 101.6) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text Transformer (at 147.32 96.52) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.25)) (justify mirror))
   )
-  (gr_text "v1.0 Parallel" (at 147.32 104.14) (layer F.SilkS)
+  (gr_text "v1.0 Parallel" (at 147.32 101.6) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text Transformer (at 147.32 96.52) (layer F.SilkS)
