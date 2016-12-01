@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CONN_2_PWR
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP CONN_PWR_2
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+#End Doc Library
