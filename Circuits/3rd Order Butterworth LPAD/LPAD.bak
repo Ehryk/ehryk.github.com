@@ -1,0 +1,634 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:LPAD-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_2 P1
+U 1 1 58254E49
+P 1200 3850
+F 0 "P1" V 1150 3850 40  0000 C CNN
+F 1 "INPUT" V 1250 3850 40  0000 C CNN
+F 2 "Footprints:ED110-2" H 1200 3850 60  0001 C CNN
+F 3 "" H 1200 3850 60  0001 C CNN
+	1    1200 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P2
+U 1 1 58254EE9
+P 10100 1950
+F 0 "P2" V 10050 1950 40  0000 C CNN
+F 1 "TWEETER" V 10150 1950 40  0000 C CNN
+F 2 "Footprints:ED110-2" H 10100 1950 60  0001 C CNN
+F 3 "" H 10100 1950 60  0001 C CNN
+	1    10100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P3
+U 1 1 58254F18
+P 10100 4350
+F 0 "P3" V 10050 4350 40  0000 C CNN
+F 1 "WOOFER_A" V 10150 4350 40  0000 C CNN
+F 2 "Footprints:ED110-2" H 10100 4350 60  0001 C CNN
+F 3 "" H 10100 4350 60  0001 C CNN
+	1    10100 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P4
+U 1 1 58254F3D
+P 10100 5650
+F 0 "P4" V 10050 5650 40  0000 C CNN
+F 1 "WOOFER_B" V 10150 5650 40  0000 C CNN
+F 2 "Footprints:ED110-2" H 10100 5650 60  0001 C CNN
+F 3 "" H 10100 5650 60  0001 C CNN
+	1    10100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW4
+U 1 1 5825511F
+P 8650 4650
+F 0 "SW4" H 8600 4800 50  0000 C CNN
+F 1 "Phase" H 8650 5600 50  0000 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 8650 4650 60  0001 C CNN
+F 3 "" H 8650 4650 60  0000 C CNN
+	1    8650 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW4
+U 2 1 582551D8
+P 8650 4050
+F 0 "SW4" H 8600 4200 50  0000 C CNN
+F 1 "Phase" H 8400 3900 50  0001 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 8650 4050 60  0001 C CNN
+F 3 "" H 8650 4050 60  0000 C CNN
+	2    8650 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW2
+U 1 1 5825567E
+P 8650 2250
+F 0 "SW2" H 8600 2400 50  0000 C CNN
+F 1 "Phase" H 8650 3200 50  0000 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 8650 2250 60  0001 C CNN
+F 3 "" H 8650 2250 60  0000 C CNN
+	1    8650 2250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW2
+U 2 1 58255684
+P 8650 1650
+F 0 "SW2" H 8600 1800 50  0000 C CNN
+F 1 "Phase" H 8650 2000 50  0001 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 8650 1650 60  0001 C CNN
+F 3 "" H 8650 1650 60  0000 C CNN
+	2    8650 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SWITCH_INV SW5
+U 1 1 58255798
+P 7400 5700
+F 0 "SW5" H 7400 5900 50  0000 C CNN
+F 1 "Bypass" H 7400 5500 50  0000 C CNN
+F 2 "Footprints:SW_SPDT_RED" H 7400 5700 60  0001 C CNN
+F 3 "" H 7400 5700 60  0000 C CNN
+	1    7400 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW1
+U 1 1 58255947
+P 6450 1100
+F 0 "SW1" H 6400 1250 50  0000 C CNN
+F 1 "Attenuation" H 6450 1450 50  0000 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 6450 1100 60  0001 C CNN
+F 3 "" H 6450 1100 60  0000 C CNN
+	1    6450 1100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW3
+U 1 1 5825594D
+P 6450 3850
+F 0 "SW3" H 6400 4000 50  0000 C CNN
+F 1 "Attenuation" H 6450 4200 50  0000 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 6450 3850 60  0001 C CNN
+F 3 "" H 6450 3850 60  0000 C CNN
+	1    6450 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW1
+U 2 1 58255A3F
+P 6450 1700
+F 0 "SW1" H 6400 1850 50  0000 C CNN
+F 1 "Attenuation" H 6450 2050 50  0001 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 6450 1700 60  0001 C CNN
+F 3 "" H 6450 1700 60  0000 C CNN
+	2    6450 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW3
+U 2 1 58255A45
+P 6450 4450
+F 0 "SW3" H 6400 4600 50  0000 C CNN
+F 1 "Attenuation" H 6200 4300 50  0001 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 6450 4450 60  0001 C CNN
+F 3 "" H 6450 4450 60  0000 C CNN
+	2    6450 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58255A5A
+P 5800 1200
+F 0 "R1" V 5880 1200 50  0000 C CNN
+F 1 "2Ω" V 5800 1200 50  0000 C CNN
+F 2 "Footprints:R_WIREWOUND_25W" V 5730 1200 30  0001 C CNN
+F 3 "" H 5800 1200 30  0000 C CNN
+	1    5800 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 58255BD9
+P 5800 2300
+F 0 "R2" V 5880 2300 50  0000 C CNN
+F 1 "25Ω" V 5800 2300 50  0000 C CNN
+F 2 "Footprints:R_WIREWOUND_25W" V 5730 2300 30  0001 C CNN
+F 3 "" H 5800 2300 30  0000 C CNN
+	1    5800 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R3
+U 1 1 58255D61
+P 5800 3950
+F 0 "R3" V 5880 3950 50  0000 C CNN
+F 1 "2Ω" V 5800 3950 50  0000 C CNN
+F 2 "Footprints:R_WIREWOUND_100W" V 5730 3950 30  0001 C CNN
+F 3 "" H 5800 3950 30  0000 C CNN
+	1    5800 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 58255D67
+P 5800 5300
+F 0 "R4" V 5880 5300 50  0000 C CNN
+F 1 "24Ω" V 5800 5300 50  0000 C CNN
+F 2 "Footprints:R_WIREWOUND_100W" V 5730 5300 30  0001 C CNN
+F 3 "" H 5800 5300 30  0000 C CNN
+	1    5800 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L CP C1
+U 1 1 58255F0E
+P 3500 900
+F 0 "C1" V 3650 850 50  0000 L CNN
+F 1 "3.3 μF" V 3600 1000 50  0000 L CNN
+F 2 "Footprints:C_AXIAL_15x36" H 3538 750 30  0001 C CNN
+F 3 "" H 3500 900 60  0000 C CNN
+	1    3500 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP C3
+U 1 1 582560DD
+P 4200 900
+F 0 "C3" V 4350 850 50  0000 L CNN
+F 1 "10 μF" V 4300 550 50  0000 L CNN
+F 2 "Footprints:C_AXIAL_25x36" H 4238 750 30  0001 C CNN
+F 3 "" H 4200 900 60  0000 C CNN
+	1    4200 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP C5
+U 1 1 5825614A
+P 3650 5150
+F 0 "C5" H 3675 5250 50  0000 L CNN
+F 1 "8.2 μF" H 3350 5050 50  0000 L CNN
+F 2 "Footprints:C_AXIAL_23x36" H 3688 5000 30  0001 C CNN
+F 3 "" H 3650 5150 60  0000 C CNN
+	1    3650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR L2
+U 1 1 582561AA
+P 3450 3850
+F 0 "L2" V 3400 3850 50  0000 C CNN
+F 1 "0.78 mH" V 3550 3850 50  0000 C CNN
+F 2 "Footprints:ED110-2" H 3450 3850 60  0001 C CNN
+F 3 "" H 3450 3850 60  0000 C CNN
+	1    3450 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L INDUCTOR L3
+U 1 1 5825620E
+P 4250 3850
+F 0 "L3" V 4200 3850 50  0000 C CNN
+F 1 "0.25 mH" V 4350 3850 50  0000 C CNN
+F 2 "Footprints:ED110-2" H 4250 3850 60  0001 C CNN
+F 3 "" H 4250 3850 60  0000 C CNN
+	1    4250 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L INDUCTOR L1
+U 1 1 58256278
+P 3850 2050
+F 0 "L1" H 4100 2100 50  0000 C CNN
+F 1 "0.38 mH" H 4100 1950 50  0000 C CNN
+F 2 "Footprints:ED110-2" H 3850 2050 60  0001 C CNN
+F 3 "" H 3850 2050 60  0000 C CNN
+	1    3850 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3750 2150 3750
+Wire Wire Line
+	2150 1100 2150 3850
+Wire Wire Line
+	2150 1100 3250 1100
+Wire Wire Line
+	3750 1100 3950 1100
+Wire Wire Line
+	3850 1750 3850 1100
+Connection ~ 3850 1100
+Wire Wire Line
+	4450 1100 5400 1100
+Wire Wire Line
+	5400 1000 5400 1200
+Wire Wire Line
+	5400 1000 6150 1000
+Wire Wire Line
+	5400 1200 5650 1200
+Connection ~ 5400 1100
+Wire Wire Line
+	5950 1200 6150 1200
+Wire Wire Line
+	5800 2150 5800 1800
+Wire Wire Line
+	5800 1800 6150 1800
+Wire Wire Line
+	6750 1100 8050 1100
+Wire Wire Line
+	8050 1750 8350 1750
+Wire Wire Line
+	6750 1700 6900 1700
+Wire Wire Line
+	6900 1700 6900 1100
+Connection ~ 6900 1100
+Wire Wire Line
+	8050 1100 8050 2150
+Wire Wire Line
+	8050 2150 8350 2150
+Connection ~ 8050 1750
+Wire Wire Line
+	8950 1650 9400 1650
+Wire Wire Line
+	9400 1650 9400 1850
+Wire Wire Line
+	9400 1850 9750 1850
+Wire Wire Line
+	8950 2250 9400 2250
+Wire Wire Line
+	9400 2250 9400 2050
+Wire Wire Line
+	9400 2050 9750 2050
+Wire Wire Line
+	2150 3850 3150 3850
+Connection ~ 2150 3750
+Wire Wire Line
+	1550 3950 2900 3950
+Wire Wire Line
+	2900 2950 2900 6300
+Wire Wire Line
+	8200 2950 2900 2950
+Wire Wire Line
+	8200 1550 8200 2950
+Wire Wire Line
+	8200 2350 8350 2350
+Wire Wire Line
+	8200 1550 8350 1550
+Connection ~ 8200 2350
+Wire Wire Line
+	5800 2450 5800 2950
+Connection ~ 5800 2950
+Wire Wire Line
+	3850 2350 3850 2950
+Connection ~ 3850 2950
+Wire Wire Line
+	3750 3850 3950 3850
+Wire Wire Line
+	3850 4900 3850 3850
+Connection ~ 3850 3850
+Wire Wire Line
+	5950 3950 6150 3950
+Wire Wire Line
+	6150 4550 5800 4550
+Wire Wire Line
+	5800 4550 5800 5150
+Wire Wire Line
+	4550 3850 5400 3850
+Wire Wire Line
+	5400 3750 5400 3950
+Wire Wire Line
+	5400 3950 5650 3950
+Wire Wire Line
+	6150 3750 5400 3750
+Connection ~ 5400 3850
+NoConn ~ 6150 1600
+NoConn ~ 6150 4350
+Wire Wire Line
+	6750 3850 7700 3850
+Wire Wire Line
+	7700 3950 8350 3950
+Wire Wire Line
+	6750 4450 6900 4450
+Wire Wire Line
+	6900 4450 6900 3850
+Connection ~ 6900 3850
+Wire Wire Line
+	7900 5800 8200 5800
+Wire Wire Line
+	2900 6300 8000 6300
+Wire Wire Line
+	8000 6300 8000 5800
+Connection ~ 8000 5800
+Connection ~ 2900 3950
+Wire Wire Line
+	3850 5400 3850 6300
+Connection ~ 3850 6300
+Wire Wire Line
+	5800 5450 5800 6300
+Connection ~ 5800 6300
+Wire Wire Line
+	7700 4750 8350 4750
+Wire Wire Line
+	7700 3850 7700 4750
+Connection ~ 7700 3950
+Wire Wire Line
+	8350 4550 7800 4550
+Wire Wire Line
+	7800 4150 7800 5250
+Wire Wire Line
+	7800 5250 6900 5250
+Wire Wire Line
+	6900 5250 6900 5700
+Wire Wire Line
+	7800 4150 8350 4150
+Connection ~ 7800 4550
+Wire Wire Line
+	8950 4050 9400 4050
+Wire Wire Line
+	9400 4050 9400 4250
+Wire Wire Line
+	9400 4250 9750 4250
+Wire Wire Line
+	8950 4650 9400 4650
+Wire Wire Line
+	9400 4650 9400 4450
+Wire Wire Line
+	9400 4450 9750 4450
+Text Label 2900 4950 0    60   ~ 0
+IN-
+Text Label 2150 2300 0    60   ~ 0
+IN+
+Text Label 9400 1800 0    60   ~ 0
+T+
+Text Label 9400 2200 0    60   ~ 0
+T-
+Text Label 9400 4200 0    60   ~ 0
+A+
+Text Label 9400 4600 0    60   ~ 0
+A-
+Text Label 9400 5900 0    60   ~ 0
+B-
+Text Label 9400 5500 0    60   ~ 0
+B+
+$Comp
+L CP C2
+U 1 1 5826AA1F
+P 3500 1300
+F 0 "C2" V 3650 1250 50  0000 L CNN
+F 1 "2.2 μF" V 3400 1450 50  0000 L CNN
+F 2 "Footprints:C_AXIAL_15x24" H 3538 1150 30  0001 C CNN
+F 3 "" H 3500 1300 60  0000 C CNN
+	1    3500 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP C4
+U 1 1 5826AA89
+P 4200 1300
+F 0 "C4" V 4350 1250 50  0000 L CNN
+F 1 "5.6 μF" V 4100 950 50  0000 L CNN
+F 2 "Footprints:C_AXIAL_19x36" H 4238 1150 30  0001 C CNN
+F 3 "" H 4200 1300 60  0000 C CNN
+	1    4200 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP C6
+U 1 1 5826ADE0
+P 4050 5150
+F 0 "C6" H 4075 5250 50  0000 L CNN
+F 1 "2.2 μF" H 4075 5050 50  0000 L CNN
+F 2 "Footprints:C_AXIAL_15x24" H 4088 5000 30  0001 C CNN
+F 3 "" H 4050 5150 60  0000 C CNN
+	1    4050 5150
+	1    0    0    -1  
+$EndComp
+Text Notes 3950 4650 0    60   ~ 0
+10.61 μF Nominal
+Text Notes 3000 1600 0    60   ~ 0
+5.31 μF Nominal
+Text Notes 3950 1600 0    60   ~ 0
+15.92 μF Nominal\n
+Wire Wire Line
+	3650 5300 3650 5400
+Wire Wire Line
+	3650 5400 4050 5400
+Wire Wire Line
+	4050 5400 4050 5300
+Connection ~ 3850 5400
+Wire Wire Line
+	3650 5000 3650 4900
+Wire Wire Line
+	3650 4900 4050 4900
+Wire Wire Line
+	4050 4900 4050 5000
+Connection ~ 3850 4900
+Wire Wire Line
+	4050 900  3950 900 
+Wire Wire Line
+	3950 900  3950 1300
+Wire Wire Line
+	3950 1300 4050 1300
+Connection ~ 3950 1100
+Wire Wire Line
+	4350 900  4450 900 
+Wire Wire Line
+	4450 900  4450 1300
+Wire Wire Line
+	4450 1300 4350 1300
+Connection ~ 4450 1100
+Wire Wire Line
+	3350 900  3250 900 
+Wire Wire Line
+	3250 900  3250 1300
+Wire Wire Line
+	3250 1300 3350 1300
+Connection ~ 3250 1100
+Wire Wire Line
+	3650 900  3750 900 
+Wire Wire Line
+	3750 900  3750 1300
+Wire Wire Line
+	3750 1300 3650 1300
+Connection ~ 3750 1100
+Text Notes 4000 4750 0    60   ~ 0
+10.4 μF Actual
+Text Notes 3050 1700 0    60   ~ 0
+5.5 μF Actual
+Text Notes 4000 1700 0    60   ~ 0
+15.6 μF Actual\n
+Text Notes 5950 5300 0    60   ~ 0
+20Ω Nominal
+Text Notes 5950 5400 0    60   ~ 0
+24Ω Actual
+Text Notes 5900 2300 0    60   ~ 0
+20Ω Nominal
+Text Notes 5900 2400 0    60   ~ 0
+25Ω Actual
+$Comp
+L Switch_SPDT_x2 SW6
+U 1 1 58277B30
+P 8650 5950
+F 0 "SW6" H 8600 6100 50  0000 C CNN
+F 1 "Phase" H 8650 6900 50  0000 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 8650 5950 60  0001 C CNN
+F 3 "" H 8650 5950 60  0000 C CNN
+	1    8650 5950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 SW6
+U 2 1 58277B36
+P 8650 5350
+F 0 "SW6" H 8600 5500 50  0000 C CNN
+F 1 "Phase" H 8400 5200 50  0001 C CNN
+F 2 "Footprints:SW_DPDT_RED" H 8650 5350 60  0001 C CNN
+F 3 "" H 8650 5350 60  0000 C CNN
+	2    8650 5350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 5850 8350 5850
+Wire Wire Line
+	8200 5450 8200 5850
+Wire Wire Line
+	8350 5450 8200 5450
+Connection ~ 8200 5800
+Wire Wire Line
+	8350 5250 8100 5250
+Wire Wire Line
+	8100 5250 8100 6050
+Wire Wire Line
+	8100 6050 8350 6050
+Wire Wire Line
+	7900 5600 8100 5600
+Connection ~ 8100 5600
+Wire Wire Line
+	8950 5350 9400 5350
+Wire Wire Line
+	9400 5350 9400 5550
+Wire Wire Line
+	9400 5550 9750 5550
+Wire Wire Line
+	8950 5950 9400 5950
+Wire Wire Line
+	9400 5950 9400 5750
+Wire Wire Line
+	9400 5750 9750 5750
+Text Notes 5550 4150 0    60   ~ 0
+2Ω Nominal
+Text Notes 5600 1400 0    60   ~ 0
+2Ω Nominal
+Text Label 3650 7300 0    60   ~ 0
+THERMAL
+$Comp
+L R R99
+U 1 1 58296C7C
+P 3400 7100
+F 0 "R99" V 3400 7100 50  0000 C CNN
+F 1 "DUMMY" V 3500 7100 50  0000 C CNN
+F 2 "" V 3330 7100 30  0000 C CNN
+F 3 "" H 3400 7100 30  0000 C CNN
+	1    3400 7100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 7100 3150 7100
+Wire Wire Line
+	3150 7100 3150 7400
+Wire Wire Line
+	3150 7400 3650 7400
+Wire Wire Line
+	3650 7400 3650 7100
+Wire Wire Line
+	3650 7100 3550 7100
+$EndSCHEMATC
