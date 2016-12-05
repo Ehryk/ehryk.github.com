@@ -1,4 +1,4 @@
-update=12/1/2016 3:33:57 AM
+update=12/1/2016 5:16:18 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,16 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Projects/Ehryk/ehryk.github.com/Circuits/Parts/Libraries/red_bear_labs
-LibName31=ehryk
-LibName32=w_relay
-LibName33=+16-24vdc
-LibName34=av
-LibName35=binding_post
-LibName36=fan
-LibName37=lcd_voltmeter
-LibName38=lt3083_linear_regulator
-LibName39=mc14490_hardware_debounce
-LibName40=power_jack
-LibName41=red_bear_labs
-LibName42=test
+LibName30=ehryk
+LibName31=w_relay

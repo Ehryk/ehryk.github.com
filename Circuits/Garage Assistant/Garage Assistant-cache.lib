@@ -70,8 +70,8 @@ ENDDEF
 #
 # Blend_Micro_v1.0
 #
-DEF Blend_Micro_v1.0 BLEND_MICRO 0 40 Y Y 1 F N
-F0 "BLEND_MICRO" 0 700 60 H V C CNN
+DEF Blend_Micro_v1.0 MC 0 40 Y Y 1 F N
+F0 "MC" 0 700 60 H V C CNN
 F1 "Blend_Micro_v1.0" 0 -800 60 H V C CNN
 F2 "" 50 -150 60 H V C CNN
 F3 "" 50 -150 60 H V C CNN
