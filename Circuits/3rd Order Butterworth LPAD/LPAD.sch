@@ -191,7 +191,7 @@ L R R1
 U 1 1 58255A5A
 P 5800 1200
 F 0 "R1" V 5880 1200 50  0000 C CNN
-F 1 "2Ω" V 5800 1200 50  0000 C CNN
+F 1 "2Ω" V 5800 1200 39  0000 C CNN
 F 2 "Footprints:R_WIREWOUND_25W" V 5730 1200 30  0001 C CNN
 F 3 "" H 5800 1200 30  0000 C CNN
 	1    5800 1200
@@ -202,7 +202,7 @@ L R R2
 U 1 1 58255BD9
 P 5800 2300
 F 0 "R2" V 5880 2300 50  0000 C CNN
-F 1 "25Ω" V 5800 2300 50  0000 C CNN
+F 1 "25Ω" V 5800 2300 39  0000 C CNN
 F 2 "Footprints:R_WIREWOUND_25W" V 5730 2300 30  0001 C CNN
 F 3 "" H 5800 2300 30  0000 C CNN
 	1    5800 2300
@@ -213,7 +213,7 @@ L R R3
 U 1 1 58255D61
 P 5800 3950
 F 0 "R3" V 5880 3950 50  0000 C CNN
-F 1 "2Ω" V 5800 3950 50  0000 C CNN
+F 1 "2Ω" V 5800 3950 39  0000 C CNN
 F 2 "Footprints:R_WIREWOUND_100W" V 5730 3950 30  0001 C CNN
 F 3 "" H 5800 3950 30  0000 C CNN
 	1    5800 3950
@@ -224,7 +224,7 @@ L R R4
 U 1 1 58255D67
 P 5800 5300
 F 0 "R4" V 5880 5300 50  0000 C CNN
-F 1 "24Ω" V 5800 5300 50  0000 C CNN
+F 1 "24Ω" V 5800 5300 43  0000 C CNN
 F 2 "Footprints:R_WIREWOUND_100W" V 5730 5300 30  0001 C CNN
 F 3 "" H 5800 5300 30  0000 C CNN
 	1    5800 5300
@@ -547,11 +547,11 @@ Text Notes 3050 1700 0    60   ~ 0
 Text Notes 4000 1700 0    60   ~ 0
 15.6 μF Actual\n
 Text Notes 5950 5300 0    60   ~ 0
-20Ω Nominal
+24Ω Nominal
 Text Notes 5950 5400 0    60   ~ 0
 24Ω Actual
 Text Notes 5900 2300 0    60   ~ 0
-20Ω Nominal
+24Ω Nominal
 Text Notes 5900 2400 0    60   ~ 0
 25Ω Actual
 $Comp
@@ -616,7 +616,7 @@ U 1 1 58296C7C
 P 3400 7100
 F 0 "R99" V 3400 7100 50  0000 C CNN
 F 1 "DUMMY" V 3500 7100 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3330 7100 30  0000 C CNN
+F 2 "" V 3330 7100 30  0000 C CNN
 F 3 "" H 3400 7100 30  0000 C CNN
 	1    3400 7100
 	0    1    1    0   
@@ -631,4 +631,24 @@ Wire Wire Line
 	3650 7400 3650 7100
 Wire Wire Line
 	3650 7100 3550 7100
+Text Label 4850 3850 0    39   ~ 0
+Low
+Text Label 7100 3850 0    39   ~ 0
+Low_Attenuated
+Text Label 7200 5250 0    39   ~ 0
+Bypass
+Text Label 4850 1100 0    39   ~ 0
+High
+Text Label 7250 1100 0    39   ~ 0
+High_Attenuated
+Text Label 8100 5550 1    39   ~ 0
+Low_Secondary
+Text Label 3850 4500 1    39   ~ 0
+Low_Xover
+Text Label 3850 1650 1    39   ~ 0
+High_Xover
+Text Label 5800 5000 1    39   ~ 0
+Low_Shunt
+Text Label 5800 2150 1    39   ~ 0
+High_Shunt
 $EndSCHEMATC
