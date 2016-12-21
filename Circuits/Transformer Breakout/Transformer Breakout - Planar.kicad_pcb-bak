@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 138.354999 83.744999 156.285001 114.375001)
     (thickness 1.6)
-    (drawings 8)
+    (drawings 12)
     (tracks 4)
     (zones 0)
     (modules 2)
@@ -106,13 +106,13 @@
     (add_net /B)
   )
 
-  (module Footprints:AMGIS_XFRMR (layer F.Cu) (tedit 583FCF87) (tstamp 5815A27B)
+  (module Footprints:AMGIS_XFRMR (layer F.Cu) (tedit 583FD044) (tstamp 5815A27B)
     (at 147.32 110.49 180)
     (path /5815A005)
-    (fp_text reference P1 (at 6.35 -5.08 180) (layer F.SilkS) hide
+    (fp_text reference P1 (at 6.35 -5.08 180) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value XFRMR (at -5.08 -5.08 180) (layer F.Fab) hide
+    (fp_text value XFRMR (at -5.08 -5.08 180) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -5.08 -2.54) (end 5.08 -2.54) (layer B.SilkS) (width 0.15))
@@ -129,13 +129,13 @@
       (net 2 /A))
   )
 
-  (module Footprints:ED110-2 (layer F.Cu) (tedit 5815A298) (tstamp 5815A296)
+  (module Footprints:ED110-2 (layer F.Cu) (tedit 583FD039) (tstamp 5815A296)
     (at 147.32 88.9)
     (path /58159F39)
-    (fp_text reference P2 (at -6.35 -6.35) (layer F.SilkS) hide
+    (fp_text reference P2 (at -6.35 -6.35) (layer F.Fab)
       (effects (font (size 1.2 1.2) (thickness 0.15)))
     )
-    (fp_text value BRK (at 5.08 -6.35) (layer F.Fab) hide
+    (fp_text value BRK (at 5.08 -6.35) (layer F.Fab)
       (effects (font (size 1.2 1.2) (thickness 0.15)))
     )
     (fp_line (start -7.62 4.826) (end -7.62 5.08) (layer B.SilkS) (width 0.15))
@@ -170,6 +170,10 @@
     )
   )
 
+  (gr_circle (center 149.86 106.9975) (end 149.919961 106.7435) (layer B.SilkS) (width 0.5) (tstamp 583FD0CF))
+  (gr_circle (center 151.0665 94.9325) (end 151.126461 94.6785) (layer B.SilkS) (width 0.5) (tstamp 583FD0C7))
+  (gr_circle (center 151.073481 94.9325) (end 151.133442 94.6785) (layer F.SilkS) (width 0.5) (tstamp 583FD0A7))
+  (gr_circle (center 149.866981 106.9975) (end 149.926942 106.7435) (layer F.SilkS) (width 0.5))
   (gr_text "v1.0 Planar\nehryk.github.io" (at 147.32 104.14) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
