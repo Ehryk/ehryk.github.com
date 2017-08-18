@@ -35,6 +35,19 @@
 		<h5>Random Thingies - for more: <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a>, or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
 
 		<section>
+		  <div class="Detail left">
+		    <h3>Game of Trump</h3>
+		    <p>Sick of all the tiring mentions of Trump all over? This is a bookmarklet that you can add to your bookmarks bar that will replace mentions of Trump, his cabinet, and common rhetoric of his with Game of Throne references. A great example page to start with is the <a href="https://en.wikipedia.org/wiki/Donald_Trump_on_social_media">Donald Trump on social media</a> article on Wikipedia.</p>
+		  </div>
+		  <div class="Image left">
+		  	<a href="javascript:(function(){var e={a:1,style:1,script:1,iframe:1};var t=function(r,i,s){var o,u;for(var a=r.childNodes.length-1;a>=0;a--){o=r.childNodes[a];if(o.nodeType==1){u=o.nodeName.toLowerCase();if(!(u in e)){t(o,i,s)}}else if(o.nodeType==3){n(o,i,s)}}};var n=function(e,t,n){var r,i=[];while(r=t.exec(e.data)){i.push(r)}for(var s=i.length-1;s>=0;s--){r=i[s];e.splitText(r.index);e.nextSibling.splitText(r[1].length);e.parentNode.replaceChild(n(r[1]),e.nextSibling)}};var r={'power':'The Throne','Donald Trump':'King Lannister','Reince Priebus':'the Hand of the King','Trump Towers':'Tower fo Joy','Eric Trump':'Joffrey','Border Wall':'Mexicans are Coming','Milania':'Cersei','Tiffany Trump':'Daenerys Targaryen','Ivanka':'Melisandre','Trump':'Lannister','election':'duel to the death','winter is coming':'Illegals are Coming'};var i='';for(var s in r){i+=s+'|'}i=i.substring(0,i.length-1);t(document.body,new RegExp('\\b('+i+')\\b','g'),function(e){var t=document.createElement('span');t.innerHTML=r[e];t.style.fontWeight='Bold';return t})})()" alt="DeTrumpify" title="Drag Me to your Bookmarks!">
+		    <img src="img/DeTrumpify.png" alt="DeTrumpify" />
+		  </a>
+		  </div>
+		  <div class="clearfix">
+		</section>
+
+		<section>
 		  <div class="Detail">
 		    <h3>xkcd 1288 - Substitutions bookmarklet</h3>
 		    <p>This is a bookmarklet that you can add to your bookmarks bar that will perform the text replacements in <a href="http://xkcd.com/1288/">xkcd #1288</a>. To add it, drag the image into your bookmarks section or bookmarks bar. A great example page to start with is the <a href="https://simple.wikipedia.org/wiki/Car">Car Entry</a> in the simple Wikipedia.</p>
