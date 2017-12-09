@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:AAA Cap Board-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -31,6 +32,7 @@ LIBS:valves
 LIBS:w_connectors
 LIBS:w_device
 LIBS:aaa_terminal
+LIBS:AAA Cap Board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -46,7 +48,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L C C14
+L C-RESCUE-AAA_Cap_Board C14
 U 1 1 564FE5D4
 P 8400 3100
 F 0 "C14" H 8425 3200 50  0000 L CNN
@@ -57,7 +59,7 @@ F 3 "" H 8400 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C10
+L C-RESCUE-AAA_Cap_Board C10
 U 1 1 564FE638
 P 6600 3100
 F 0 "C10" H 6625 3200 50  0000 L CNN
@@ -68,7 +70,7 @@ F 3 "" H 6600 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L C-RESCUE-AAA_Cap_Board C9
 U 1 1 564FE656
 P 6150 3100
 F 0 "C9" H 6175 3200 50  0000 L CNN
@@ -79,7 +81,7 @@ F 3 "" H 6150 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L C-RESCUE-AAA_Cap_Board C8
 U 1 1 564FE68D
 P 5700 3100
 F 0 "C8" H 5725 3200 50  0000 L CNN
@@ -90,7 +92,7 @@ F 3 "" H 5700 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L C-RESCUE-AAA_Cap_Board C1
 U 1 1 564FE6D1
 P 2600 3100
 F 0 "C1" H 2625 3200 50  0000 L CNN
@@ -101,7 +103,7 @@ F 3 "" H 2600 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C13
+L CP-RESCUE-AAA_Cap_Board C13
 U 1 1 564FE760
 P 7950 3100
 F 0 "C13" H 7975 3200 50  0000 L CNN
@@ -112,7 +114,7 @@ F 3 "" H 7950 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C12
+L CP-RESCUE-AAA_Cap_Board C12
 U 1 1 564FE7BD
 P 7500 3100
 F 0 "C12" H 7525 3200 50  0000 L CNN
@@ -123,7 +125,7 @@ F 3 "" H 7500 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C11
+L CP-RESCUE-AAA_Cap_Board C11
 U 1 1 564FE7FB
 P 7050 3100
 F 0 "C11" H 7075 3200 50  0000 L CNN
@@ -134,7 +136,7 @@ F 3 "" H 7050 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C2
+L CP-RESCUE-AAA_Cap_Board C2
 U 1 1 564FE84F
 P 3050 3100
 F 0 "C2" H 3075 3200 50  0000 L CNN
@@ -145,7 +147,7 @@ F 3 "" H 3050 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C7
+L CP1-RESCUE-AAA_Cap_Board C7
 U 1 1 564FE885
 P 5250 3100
 F 0 "C7" H 5275 3200 50  0000 L CNN
@@ -156,7 +158,7 @@ F 3 "" H 5250 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C6
+L CP1-RESCUE-AAA_Cap_Board C6
 U 1 1 564FE918
 P 4800 3100
 F 0 "C6" H 4825 3200 50  0000 L CNN
@@ -167,7 +169,7 @@ F 3 "" H 4800 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C5
+L CP1-RESCUE-AAA_Cap_Board C5
 U 1 1 564FE973
 P 4350 3100
 F 0 "C5" H 4375 3200 50  0000 L CNN
@@ -178,7 +180,7 @@ F 3 "" H 4350 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C4
+L CP1-RESCUE-AAA_Cap_Board C4
 U 1 1 564FE9BB
 P 3950 3100
 F 0 "C4" H 3975 3200 50  0000 L CNN
@@ -189,7 +191,7 @@ F 3 "" H 3950 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C3
+L CP1-RESCUE-AAA_Cap_Board C3
 U 1 1 564FE9FA
 P 3500 3100
 F 0 "C3" H 3525 3200 50  0000 L CNN
@@ -200,7 +202,7 @@ F 3 "" H 3500 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C15
+L C-RESCUE-AAA_Cap_Board C15
 U 1 1 564FEF54
 P 8850 3100
 F 0 "C15" H 8875 3200 50  0000 L CNN
