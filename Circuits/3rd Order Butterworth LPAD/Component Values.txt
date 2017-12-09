@@ -1,0 +1,30 @@
+#######################
+# X+ Component Values #
+#######################
+
+3rd Order Butterworth @ 8Ω / 8Ω, 2500 Hz
+========================================
+Tweeter Section: 5.31μF,  0.38mH, 15.6μF
+Woofer Section:  0.76mH, 10.61μF, 0.25mH
+
+Paired Capacitors
+=================
+15.92μF =>  10μF + 5.6μF = 15.6μF (-0.32μF)
+10.61μF => 8.2μF + 2.2μF = 10.4μF (-0.21μF)
+ 5.31μF => 3.3μF + 2.2μF =  5.5μF (+0.19μF)
+
+Air Core Inductors
+==================
+Value	AWG 	DCR			Height	Radius	Turns	Diameter	Power	Length 		T/l 	Layers 	Width	Total Width
+0.76mH	14AWG 	0.20 Ohms 	0.78"	1.57"	81 		0.064" 		500W 	79.3'		12.18	7		.448"	2.466"
+0.38mH	14AWG	0.13 Ohms	0.69"	1.38"	61		0.065"		500W	51.6'		10.61	6		.39"	2.16"
+0.25mH	14AWG	0.10 Ohms	0.64"	1.27"	52		0.065"		500W	39.7'		9.8		6		.39"	2.05"
+
+LPAD Resistors @ 8 ohm, 2.5dB
+=============================
+Tweeter
+ - R1 = 2 Ohms   		25.01 Watts
+ - R2 = 23.99 Ohms   	18.76 Watts
+Woofers
+ - R1 = 2 Ohms   		100.04 Watts
+ - R2 = 23.99 Ohms   	75.02 Watts
