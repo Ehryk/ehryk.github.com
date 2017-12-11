@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Parts)(type KiCad)(uri "$(KIPRJMOD)\\Parts")(options "")(descr ""))
+  (lib (name MOUDLE-GPS-NEO-6M_24P-16X12.2MM_)(type Legacy)(uri "$(KIPRJMOD)\\Parts\\MOUDLE-GPS-NEO-6M_24P-16X12.2MM_.mod")(options "")(descr ""))
+  (lib (name MAX3232)(type Legacy)(uri "$(KIPRJMOD)\\Parts\\MAX3232.mod")(options "")(descr ""))
+)
