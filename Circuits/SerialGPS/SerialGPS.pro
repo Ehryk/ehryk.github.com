@@ -1,4 +1,4 @@
-update=12/8/2017 3:32:05 PM
+update=1/5/2018 9:23:07 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=valves
 LibName30=Parts/MOUDLE-GPS-NEO-6M_24P-16X12.2MM_
 LibName31=Parts/connector
 LibName32=Parts/MAX3232
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
