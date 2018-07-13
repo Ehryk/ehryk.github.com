@@ -1,10 +1,10 @@
-(module WIRE-14AWG (layer F.Cu) (tedit 5AACBE9D)
+(module WIRE-14AWG (layer F.Cu) (tedit 5B4831FC)
   (fp_text reference Ref** (at 0 2.54) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value Val** (at 0 -2.54) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (pad 1 thru_hole circle (at 0 0) (size 2.7 2.7) (drill 1.7) (layers *.Cu *.SilkS *.Mask)
+  (pad 1 thru_hole circle (at 0 0) (size 2.73 2.73) (drill 1.73) (layers *.Cu *.SilkS *.Mask)
     (solder_mask_margin 0.01))
 )
