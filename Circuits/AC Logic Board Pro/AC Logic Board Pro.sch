@@ -1,0 +1,249 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ehryk
+LIBS:w_connectors
+LIBS:w_relay
+LIBS:AC Logic Board Pro-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Conn_01x04 J1
+U 1 1 5C58A683
+P 2550 3100
+F 0 "J1" H 2550 3300 50  0000 C CNN
+F 1 "Input" H 2550 2800 50  0000 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_4pol" H 2550 3100 50  0001 C CNN
+F 3 "" H 2550 3100 50  0001 C CNN
+	1    2550 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x06 J2
+U 1 1 5C58A758
+P 8900 3200
+F 0 "J2" H 8900 2800 50  0000 C CNN
+F 1 "Output" H 8900 3500 50  0000 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_6pol" H 8900 3200 50  0001 C CNN
+F 3 "" H 8900 3200 50  0001 C CNN
+	1    8900 3200
+	1    0    0    1   
+$EndComp
+Text GLabel 2900 3000 2    47   Input ~ 0
+SOURCE
+Text GLabel 2900 3100 2    47   Input ~ 0
+A
+Text GLabel 2900 3200 2    47   Input ~ 0
+B
+Text GLabel 2900 3300 2    47   Input ~ 0
+COMMON
+Text GLabel 8550 3400 0    47   Output ~ 0
+COMMON
+Text GLabel 8550 3300 0    47   Output ~ 0
+OR
+Text GLabel 8550 3200 0    47   Output ~ 0
+AND
+Text GLabel 8550 3100 0    47   Output ~ 0
+B
+Text GLabel 8550 3000 0    47   Output ~ 0
+A
+Text GLabel 8550 2900 0    47   Output ~ 0
+SOURCE
+Wire Wire Line
+	2750 3000 2900 3000
+Wire Wire Line
+	2750 3100 2900 3100
+Wire Wire Line
+	2750 3200 2900 3200
+Wire Wire Line
+	2750 3300 2900 3300
+Wire Wire Line
+	8550 2900 8700 2900
+Wire Wire Line
+	8700 3000 8550 3000
+Wire Wire Line
+	8550 3100 8700 3100
+Wire Wire Line
+	8700 3200 8550 3200
+Wire Wire Line
+	8550 3300 8700 3300
+Wire Wire Line
+	8700 3400 8550 3400
+Text GLabel 5200 2350 2    47   Input ~ 0
+COMMON
+Text GLabel 6850 2350 2    47   Input ~ 0
+COMMON
+Text GLabel 4500 3750 0    47   Input ~ 0
+COMMON
+Text GLabel 6150 3750 0    47   Input ~ 0
+COMMON
+Text GLabel 4500 2350 0    47   Input ~ 0
+A
+Text GLabel 5200 3750 2    47   Input ~ 0
+A
+Text GLabel 6150 2350 0    47   Input ~ 0
+B
+Text GLabel 6850 3750 2    47   Input ~ 0
+B
+Text GLabel 4500 2700 0    47   Input ~ 0
+SOURCE
+Text GLabel 4500 4100 0    47   Input ~ 0
+SOURCE
+Text GLabel 6150 4100 0    47   Input ~ 0
+SOURCE
+Text GLabel 6850 2800 2    47   Output ~ 0
+AND
+Text GLabel 6850 4200 2    47   Output ~ 0
+OR
+Text GLabel 5200 4200 2    47   Output ~ 0
+OR
+$Comp
+L TE-AC-SPDT RLY1
+U 1 1 5C58C26A
+P 4850 2550
+F 0 "RLY1" H 4850 2900 60  0000 C CNN
+F 1 "AND_A" H 4850 2190 60  0000 C CNN
+F 2 "Footprints:TE-RT1-3.5mm" H 4895 2490 60  0001 C CNN
+F 3 "" H 4895 2490 60  0000 C CNN
+	1    4850 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L TE-AC-SPDT RLY3
+U 1 1 5C58C2AD
+P 6500 2550
+F 0 "RLY3" H 6500 2900 60  0000 C CNN
+F 1 "AND_B" H 6500 2190 60  0000 C CNN
+F 2 "Footprints:TE-RT1-3.5mm" H 6545 2490 60  0001 C CNN
+F 3 "" H 6545 2490 60  0000 C CNN
+	1    6500 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L TE-AC-SPDT RLY2
+U 1 1 5C58C2E3
+P 4850 3950
+F 0 "RLY2" H 4850 4300 60  0000 C CNN
+F 1 "OR_A" H 4850 3590 60  0000 C CNN
+F 2 "Footprints:TE-RT1-3.5mm" H 4895 3890 60  0001 C CNN
+F 3 "" H 4895 3890 60  0000 C CNN
+	1    4850 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L TE-AC-SPDT RLY4
+U 1 1 5C58C357
+P 6500 3950
+F 0 "RLY4" H 6500 4300 60  0000 C CNN
+F 1 "OR_B" H 6500 3590 60  0000 C CNN
+F 2 "Footprints:TE-RT1-3.5mm" H 6545 3890 60  0001 C CNN
+F 3 "" H 6545 3890 60  0000 C CNN
+	1    6500 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3750 4650 3750
+Wire Wire Line
+	5050 3750 5200 3750
+Wire Wire Line
+	4500 4100 4650 4100
+Wire Wire Line
+	5050 4200 5200 4200
+Wire Wire Line
+	6150 3750 6300 3750
+Wire Wire Line
+	6150 4100 6300 4100
+Wire Wire Line
+	6700 4200 6850 4200
+Wire Wire Line
+	6850 3750 6700 3750
+Wire Wire Line
+	4650 2350 4500 2350
+Wire Wire Line
+	4500 2700 4650 2700
+Wire Wire Line
+	5050 2350 5200 2350
+Wire Wire Line
+	6150 2350 6300 2350
+Wire Wire Line
+	6700 2350 6850 2350
+Wire Wire Line
+	6700 2800 6850 2800
+Text GLabel 5200 2800 2    47   Output ~ 0
+INT_AND
+Text GLabel 6150 2700 0    47   Input ~ 0
+INT_AND
+Wire Wire Line
+	5050 2800 5200 2800
+Wire Wire Line
+	6150 2700 6300 2700
+$Comp
+L Jumper_NC_Dual JP1
+U 1 1 5C58CA88
+P 2900 4300
+F 0 "JP1" H 2950 4200 50  0000 L CNN
+F 1 "Source Select" H 2900 4400 50  0000 C BNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2900 4300 50  0001 C CNN
+F 3 "" H 2900 4300 50  0001 C CNN
+	1    2900 4300
+	1    0    0    1   
+$EndComp
+Text GLabel 2900 4050 1    47   Input ~ 0
+SOURCE
+Text GLabel 2500 4300 0    47   Input ~ 0
+A
+Text GLabel 3300 4300 2    47   Input ~ 0
+B
+Wire Wire Line
+	2500 4300 2650 4300
+Wire Wire Line
+	2900 4200 2900 4050
+Wire Wire Line
+	3150 4300 3300 4300
+NoConn ~ 5050 2600
+NoConn ~ 5050 4000
+NoConn ~ 6700 4000
+NoConn ~ 6700 2600
+$EndSCHEMATC
