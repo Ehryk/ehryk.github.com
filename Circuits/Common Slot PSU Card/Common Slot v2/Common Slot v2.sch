@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Common Slot v1-cache
+LIBS:Common Slot v2-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1619,7 +1619,7 @@ U 1 1 5DCB7A2E
 P 8900 4100
 F 0 "J47" H 8980 4142 50  0000 L CNN
 F 1 "Status" H 8980 4051 50  0000 L CNN
-F 2 "Footprints:WIRE-16AWG" H 8900 4100 50  0001 C CNN
+F 2 "Footprints:WIRE-20AWG" H 8900 4100 50  0001 C CNN
 F 3 "~" H 8900 4100 50  0001 C CNN
 	1    8900 4100
 	1    0    0    -1  

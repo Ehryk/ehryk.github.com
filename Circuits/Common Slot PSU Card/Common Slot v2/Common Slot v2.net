@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source "C:\\Projects\\ehryk.github.com\\Circuits\\Common Slot PSU Card\\Common Slot v1\\Common Slot v1.sch")
-    (date "11/3/2019 2:13:29 AM")
+    (source "C:\\Projects\\ehryk.github.com\\Circuits\\Common Slot PSU Card\\Common Slot v2\\Common Slot v2.sch")
+    (date "11/3/2019 2:18:18 AM")
     (tool "Eeschema (5.1.4)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -9,7 +9,7 @@
         (company)
         (rev)
         (date)
-        (source "Common Slot v1.sch")
+        (source "Common Slot v2.sch")
         (comment (number 1) (value ""))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
@@ -436,7 +436,7 @@
       (tstamp 5DC14980))
     (comp (ref J47)
       (value Status)
-      (footprint Footprints:WIRE-16AWG)
+      (footprint Footprints:WIRE-20AWG)
       (datasheet ~)
       (libsource (lib conn) (part Conn_01x01) (description "Generic connector, single row, 01x01"))
       (sheetpath (names /) (tstamps /))
