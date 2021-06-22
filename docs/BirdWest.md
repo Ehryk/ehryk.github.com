@@ -7,6 +7,7 @@
 ## Images
 
  - [Overview](Overview.jpg)
+ - [Route](Route.jpg)
  - [Badlands and Mount Rushmore](MoreBadZoom.jpg)
 
 ## Internary
