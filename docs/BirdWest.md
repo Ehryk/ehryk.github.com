@@ -1,5 +1,9 @@
 # Bird West RV Trip 2021
 
+## Online Planner
+
+ - [Link](https://www.myscenicdrives.com/road-trip-directions?i=ee958376-0be6-4dcd-94ba-ed35fc793af1)
+
 ## Images
 
  - [Overview](Overview.jpg)
