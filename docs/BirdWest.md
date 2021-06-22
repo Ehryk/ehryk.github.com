@@ -1,4 +1,11 @@
-# RV Trip Internary
+# Bird West RV Trip
+
+# Images
+
+[Overview](Overview.jpg)
+[Badlands and Mount Rushmore](MoreBadZoom.jpg)
+
+# Internary
 
 ## Thursday 7/22 - Home (6.5h)
 Leave 10am
