@@ -10,7 +10,7 @@
  - [Route](Route.jpg)
  - [Badlands and Mount Rushmore](MoreBadZoom.jpg)
 
-## Internary
+## Itinernary
 
 ### Thursday 7/22 - Home (6.5h)
 
