@@ -1,4 +1,4 @@
-#RV Trip Internary
+# RV Trip Internary
 
 ## Thursday 7/22 - Home (6.5h)
 Leave 10am
@@ -11,7 +11,7 @@ http://americancreekcampground.net/
 605-234-5151
 Playground, volleyball, river beach, kayaks & paddle boards, gift shop
 
-##Friday 7/23 - Chamberlain SD (3h)
+## Friday 7/23 - Chamberlain SD (3h)
 Check out 11am
 Swim
 On Road 1pm
@@ -23,7 +23,7 @@ https://www.minutemanrvlodging.com/
 605-433-5451
 Playground, pool, guest laundry, wifi
 
-##Saturday 7/24 - Philip SD (3h)
+## Saturday 7/24 - Philip SD (3h)
 Start driving 9am
 Take SD 240 to SD 44, stop frequently (3 hour actual drive)
 Drive through badlands scenic loop
@@ -36,14 +36,14 @@ https://americanbuffaloresort.com/site-map-policies.html
 (605) 342-5368
 Playground, pool
 
-##Sunday 7/25 - Rapid City SD 1 (1h)
+## Sunday 7/25 - Rapid City SD 1 (1h)
 Head out at 10am
 Mount Rushmore
 Buffalo Ridge Camp Resort 8pm https://custerhospitality.com/buffalo-ridge-camp-resort/
 $85
 Pool, playground, store, laundry
 
-##Monday 7/26 - Rapid City SD 2 (1h)
+## Monday 7/26 - Rapid City SD 2 (1h)
 Start driving 12pm
 Jewel Cave 1pm-4pm https://www.nps.gov/jeca/index.htm
 Mammoth Site 5pm? (closes at 8pm) https://www.mammothsite.org/visit-us/
@@ -51,14 +51,14 @@ $45
 https://www.campathiddenlake.com/
 Playground, small lake, kayak/canoe rental
 
-##Tuesday 7/27 - Hot Springs SD (8h)
+## Tuesday 7/27 - Hot Springs SD (8h)
 Start Driving 10am
 7.5 hour drive to Omaha
 Two Rivers SRA 6pm
 $30
 https://nebraskastateparks.reserveamerica.com/camping/two-rivers-sra/r/campsiteDetails.do?contractCode=NE&siteId=4833&parkId=230175
 
-##Wednesday 7/28 - Omaha NE 1 (2h)
+## Wednesday 7/28 - Omaha NE 1 (2h)
 0.5h to Zoo
 Zoo visit w/Kyle & fam 11am
 Start Driving 5pm
@@ -66,11 +66,10 @@ Lake Anita 6pm
 $26
 https://iowastateparks.reserveamerica.com/camping/lake-anita-state-park/r/campsiteDetails.do?contractCode=IA&siteId=5647&parkId=610150
 
-##Thursday 7/29 - Omaha NE 2 (5h)
+## Thursday 7/29 - Omaha NE 2 (5h)
 Start driving 12pm
 Drive 5 hours home
 Arrive 5pm
-
 
 # Long Drive Days
 Thursday 7/22: Home to Pipestone and Chamberlain SD, 6.5h
