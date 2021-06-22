@@ -13,7 +13,7 @@
  - Get to Pipestone 2pm
  - Back on road by 4:30pm
  - Get to Chamberlain, SD on Missouri River 7pm
- - American Creek Campground Thurday night
+ - American Creek Campground 7pm
    - $42
    - http://americancreekcampground.net/
    - 605-234-5151
