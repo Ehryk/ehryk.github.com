@@ -21,7 +21,7 @@
  - American Creek Campground 7pm
    - $42
    - http://americancreekcampground.net/
-   - 605-234-5151
+   - Reservations: Call 605-234-5151
    - Playground, volleyball, river beach, kayaks & paddle boards, gift shop
 
 ### Friday 7/23 - Chamberlain SD (3h)
@@ -31,14 +31,19 @@
  - On Road 1pm
  - Minuteman Missile Silo 3pm https://www.nps.gov/mimi/index.htm
  - Wall Drug 27m optional, closes at 8pm https://www.walldrug.com/
- - Minuteman RV Park 6pm-8pm
-   - $45
+ - BOOKED: Minuteman RV Park 6pm-8pm
+   - $53.00 Reserved 6/23
+   - Confirmation Number 137210622-013871
+   - Customer Account 137210622-455648
+   - Campsite 40 E/W Pullthrough 50A
+   - Check in: After 12pm
    - https://www.minutemanrvlodging.com/
    - 605-433-5451
    - Playground, pool, guest laundry, wifi
 
 ### Saturday 7/24 - Philip SD (3h)
 
+ - Check out: before 11am
  - Start driving 9am
  - Take SD 240 to SD 44, stop frequently (3 hour actual drive)
  - Drive through badlands scenic loop
@@ -47,6 +52,8 @@
  - Dinner at a Restaurant 5pm
  - American Buffalo Resort 7pm 
    - $85
+   - Submit Reservation Request: https://americanbuffaloresort.com/rv-sites.html
+   - Request Submitted 6/23
    - https://americanbuffaloresort.com/site-map-policies.html
    - (605) 342-5368
    - Playground, pool
@@ -56,7 +63,8 @@
  - Head out at 10am
  - Mount Rushmore
  - Buffalo Ridge Camp Resort 8pm https://custerhospitality.com/buffalo-ridge-camp-resort/
-   - $85
+   - $84.31 AAA Discount
+   - 
    - Pool, playground, store, laundry
 
 ### Monday 7/26 - Rapid City SD 2 (1h)
@@ -64,8 +72,9 @@
  - Start driving 12pm
  - Jewel Cave 1pm-4pm https://www.nps.gov/jeca/index.htm
  - Mammoth Site 5pm? (closes at 8pm) https://www.mammothsite.org/visit-us/
- - Hidden Lake Campsite 5-7pm
-   - $45
+ - BOOKED: Hidden Lake Campsite 5-7pm
+   - $51.41 Reserved 6/23
+   - Reservation ID RES5382201
    - https://www.campathiddenlake.com/
    - Playground, small lake, kayak/canoe rental
 
@@ -73,8 +82,9 @@
 
  - Start Driving 10am
  - 7.5 hour drive to Omaha
- - Two Rivers SRA 6pm
-   - $30
+ - BOOKED: Two Rivers SRA 6pm
+   - $39.40
+   - Confirmation Number #2-50430106
    - https://nebraskastateparks.reserveamerica.com/camping/two-rivers-sra/r/campsiteDetails.do?contractCode=NE&siteId=4833&parkId=230175
 
 ### Wednesday 7/28 - Omaha NE 1 (2h)
@@ -82,8 +92,9 @@
  - 0.5h to Zoo
  - Zoo visit w/Kyle & fam 11am
  - Start Driving 5pm
- - Lake Anita 6pm
-   - $26
+ - BOOKED: Lake Anita 6pm
+   - $30
+   - Confirmation Number #2-32286050
    - https://iowastateparks.reserveamerica.com/camping/lake-anita-state-park/r/campsiteDetails.do?contractCode=IA&siteId=5647&parkId=610150
 
 ### Thursday 7/29 - Omaha NE 2 (5h)
