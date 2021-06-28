@@ -139,6 +139,9 @@
  - Install new knock sensors ($30 - Purchased)
  - Right Windshield Replacement (Scheduled with SafeLite)
  - Schedule appointment for chassis A/C ($500?)
+   - Auto Air Blaine https://www.autoairblaine.com/
+   - Likely compressor, pull cover and look and call back
+   - (763) 785-7878
  - Install Interior Light Fixtures (6 remain)
  - Fix wiring / fuse issue for interior ceiling lights
  - Wire Inverter Transfer Switch ($185 - Purchased)
