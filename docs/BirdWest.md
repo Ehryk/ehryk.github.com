@@ -134,37 +134,38 @@
 
 ## Critical To-Do List
 
+ - Fix Left Rear Brake Caliper ($200?)
+ - Install Bilstein Shocks ($415 - Purchased)
+ - Install new knock sensors ($30 - Purchased)
+ - DONE Schedule right Windshield replacement (Scheduled with SafeLite)
+ - Schedule appointment for chassis A/C ($500?)
  - Install Interior Light Fixtures (6 remain)
  - Fix wiring / fuse issue for interior ceiling lights
- - Finish lining shelves ($50)
- - Install Bilstein Shocks ($415)
- - Fix Left Rear Brake Caliper ($200?)
- - Install new spark plugs ($60)
- - Install new knock sensors ($30)
- - DONE Schedule right Windshield replacement (Scheduled with SafeLite)
- - Fix bathroom sink drain ($30)
+ - Install hatch screens and trim
+ - Install new screens (driver & passenger side)
+ - Finish lining shelves ($50 - Purchased)
+ - Install new spark plugs ($60 - Purchased)
  - Replace Drive Belt ($50)
+ - Fix bathroom sink drain ($30)
  - Mount and wire GPS
  - Mount and wire Camera system
+ - Pull generator, check output
  - Adjust blind tension
- - Install hatch screens and trim
  - Seal roof
- - Install new screens (driver & passenger side)
- - Check generator output
  - Install antenna handle
 
 ## Nice to have To-Do List
 
+ - Wire Inverter Transfer Switch ($185 - Purchased)
+ - Wire Inverter ($480 - Purchased)
  - Mount and wire CD/DVD Player
- - DONE Mount rear 32" TV ($235)
- - Mount front 43" TV ($370)
- - Schedule appointment for chassis A/C ($500?)
- - Wire Inverter Transfer Switch ($180)
- - Wire Inverter ($500)
- - Upgrade Alternator (300 amp, $180)
+ - DONE Mount rear 32" TV ($235 - Purchased)
+ - Mount front 43" TV ($370 - Purchased)
  - New Starter Battery ($120)
- - Wire Subwoofers ($50)
  - Try to fix fantastic fan (?)
- - DONE Install fridge thermometer
- - Mount indoor/outdoor temp panel
+ - DONE Install fridge thermometer ($25 - Purchased)
+ - Mount indoor/outdoor temp panel ($25 - Purchased)
  - DONE Install outdoor temp sensor
+ - Upgrade Alternator (300 amp, $180)
+ - Wire Subwoofers ($50 Wiring)
+ 
