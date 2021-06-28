@@ -148,13 +148,15 @@
  - Finish lining shelves ($50 - Purchased)
  - Install new spark plugs ($60 - Purchased)
  - Replace Drive Belt ($50)
+ - Oil Change ($80)
  - Fix bathroom sink drain ($30)
  - Mount and wire GPS (Purchased)
  - Mount and wire Camera system ($430 - Purchased)
  - Pull generator, check output
- - Adjust blind tension
+ - Fix/Adjust blinds
  - Seal roof ($40 - Purchased)
  - Install antenna handle
+ - Tape Awning Edges
 
 ## Nice to have To-Do List
 
@@ -168,4 +170,5 @@
  - DONE Install outdoor temp sensor
  - Upgrade Alternator (300 amp, $180)
  - Wire Subwoofers ($50 Wiring)
+ - Receive awning pole and sink cover from previous owners
  
