@@ -137,7 +137,7 @@
  - Fix Left Rear Brake Caliper ($200?)
  - Install Bilstein Shocks ($415 - Purchased)
  - Install new knock sensors ($30 - Purchased)
- - DONE Schedule right Windshield replacement (Scheduled with SafeLite)
+ - Right Windshield Replacement (Scheduled with SafeLite)
  - Schedule appointment for chassis A/C ($500?)
  - Install Interior Light Fixtures (6 remain)
  - Fix wiring / fuse issue for interior ceiling lights
@@ -149,11 +149,11 @@
  - Install new spark plugs ($60 - Purchased)
  - Replace Drive Belt ($50)
  - Fix bathroom sink drain ($30)
- - Mount and wire GPS
- - Mount and wire Camera system
+ - Mount and wire GPS (Purchased)
+ - Mount and wire Camera system ($430 - Purchased)
  - Pull generator, check output
  - Adjust blind tension
- - Seal roof
+ - Seal roof ($40 - Purchased)
  - Install antenna handle
 
 ## Nice to have To-Do List
