@@ -36,10 +36,10 @@
    - Confirmation Number 137210622-013871
    - Customer Account 137210622-455648
    - Campsite 40 E/W Pullthrough 50A
-   - Check in: After 12pm
+   - Check in: After 12pm, Check Out: 11am
    - https://www.minutemanrvlodging.com/
    - 605-433-5451
-   - Playground, pool, guest laundry, wifi
+   - Playground, pool, laundry, wifi
 
 ### Saturday 7/24 - Philip SD (3h)
 
@@ -56,49 +56,65 @@
    - Request Submitted 6/23
    - https://americanbuffaloresort.com/site-map-policies.html
    - (605) 342-5368
-   - Playground, pool
+   - Playground, pool, hot tub, mini golf, basketball, horsehoes, breakfast service, pavilions, laundry
 
 ### Sunday 7/25 - Rapid City SD 1 (1h)
 
+ - Check out: before ?
  - Head out at 10am
  - Mount Rushmore
- - Buffalo Ridge Camp Resort 8pm https://custerhospitality.com/buffalo-ridge-camp-resort/
+ - BOOKED: Buffalo Ridge Camp Resort 8pm https://custerhospitality.com/buffalo-ridge-camp-resort/
    - $84.31 AAA Discount
-   - 
-   - Pool, playground, store, laundry
+   - Itinerary ID 31278620 
+   - Adult pool, pool, hot tub, playground, store, laundry, frisbee golf, teepees, tree houses, picnic area
+   - Check in: 3pm - 10pm, Check out: 11am
 
 ### Monday 7/26 - Rapid City SD 2 (1h)
 
+ - Check out: before 11am
  - Start driving 12pm
  - Jewel Cave 1pm-4pm https://www.nps.gov/jeca/index.htm
  - Mammoth Site 5pm? (closes at 8pm) https://www.mammothsite.org/visit-us/
  - BOOKED: Hidden Lake Campsite 5-7pm
    - $51.41 Reserved 6/23
-   - Reservation ID RES5382201
+   - Reservation ID RES5382201, Reference Number 411Q2100000000003540
+   - Site Number: 03
+   - 6 occupants reported
    - https://www.campathiddenlake.com/
    - Playground, small lake, kayak/canoe rental
+   - No wifi, no cable
+   - Check in: 12pm - 7pm, Check Out: 11am
 
 ### Tuesday 7/27 - Hot Springs SD (8h)
 
+ - Check out: before 11am
  - Start Driving 10am
  - 7.5 hour drive to Omaha
  - BOOKED: Two Rivers SRA 6pm
    - $39.40
    - Confirmation Number #2-50430106
+   - Site Number: 042, Fawn Meadows loop
    - https://nebraskastateparks.reserveamerica.com/camping/two-rivers-sra/r/campsiteDetails.do?contractCode=NE&siteId=4833&parkId=230175
+   - Check in: 4pm, Check Out: 2pm
 
 ### Wednesday 7/28 - Omaha NE 1 (2h)
 
+ - Check out: before 2pm
+ - Head to zoo at 10am
  - 0.5h to Zoo
- - Zoo visit w/Kyle & fam 11am
+ - Omaha Zoo Visit 11am
  - Start Driving 5pm
  - BOOKED: Lake Anita 6pm
    - $30
    - Confirmation Number #2-32286050
+   - Site Number: 084
+   - 6 occupants reported
    - https://iowastateparks.reserveamerica.com/camping/lake-anita-state-park/r/campsiteDetails.do?contractCode=IA&siteId=5647&parkId=610150
+   - Check in: 4pm, Check Out: 3pm
 
 ### Thursday 7/29 - Omaha NE 2 (5h)
 
+ - Check out: before 3pm
  - Start driving 12pm
  - Drive 5 hours home
  - Arrive 5pm
@@ -115,3 +131,40 @@
  - Friday 7/23: Swim in Missouri River?
  - Monday 7/26: Late breakfast?
  - Thursday 7/29: Swim in Lake Anita?
+
+## Critical To-Do List
+
+ - Install Interior Light Fixtures (6 remain)
+ - Fix wiring / fuse issue for interior ceiling lights
+ - Finish lining shelves ($50)
+ - Install Bilstein Shocks ($415)
+ - Fix Left Rear Brake Caliper ($200?)
+ - Install new spark plugs ($60)
+ - Install new knock sensors ($30)
+ - DONE Schedule right Windshield replacement (Scheduled with SafeLite)
+ - Fix bathroom sink drain ($30)
+ - Replace Drive Belt ($50)
+ - Mount and wire GPS
+ - Mount and wire Camera system
+ - Adjust blind tension
+ - Install hatch screens and trim
+ - Seal roof
+ - Install new screens (driver & passenger side)
+ - Check generator output
+ - Install antenna handle
+
+## Nice to have To-Do List
+
+ - Mount and wire CD/DVD Player
+ - DONE Mount rear 32" TV ($235)
+ - Mount front 43" TV ($370)
+ - Schedule appointment for chassis A/C ($500?)
+ - Wire Inverter Transfer Switch ($180)
+ - Wire Inverter ($500)
+ - Upgrade Alternator (300 amp, $180)
+ - New Starter Battery ($120)
+ - Wire Subwoofers ($50)
+ - Try to fix fantastic fan (?)
+ - DONE Install fridge thermometer
+ - Mount indoor/outdoor temp panel
+ - DONE Install outdoor temp sensor
