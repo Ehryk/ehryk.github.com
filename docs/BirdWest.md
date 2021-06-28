@@ -2,7 +2,7 @@
 
 ## Online Planner
 
- - [Link](https://www.myscenicdrives.com/road-trip-directions?i=ee958376-0be6-4dcd-94ba-ed35fc793af1)
+ - [My Scenic Drives Trip Plan](https://www.myscenicdrives.com/road-trip-directions?i=ee958376-0be6-4dcd-94ba-ed35fc793af1)
 
 ## Images
 
