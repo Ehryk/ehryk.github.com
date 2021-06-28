@@ -141,6 +141,8 @@
  - Schedule appointment for chassis A/C ($500?)
  - Install Interior Light Fixtures (6 remain)
  - Fix wiring / fuse issue for interior ceiling lights
+ - Wire Inverter Transfer Switch ($185 - Purchased)
+ - Wire Inverter ($480 - Purchased)
  - Install hatch screens and trim
  - Install new screens (driver & passenger side)
  - Finish lining shelves ($50 - Purchased)
@@ -156,8 +158,6 @@
 
 ## Nice to have To-Do List
 
- - Wire Inverter Transfer Switch ($185 - Purchased)
- - Wire Inverter ($480 - Purchased)
  - Mount and wire CD/DVD Player
  - DONE Mount rear 32" TV ($235 - Purchased)
  - Mount front 43" TV ($370 - Purchased)
