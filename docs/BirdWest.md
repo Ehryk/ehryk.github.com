@@ -116,8 +116,9 @@
 
  - Check out: before 3pm
  - Start driving 12pm
- - Drive 5 hours home
- - Arrive 5pm
+ - Lunch at Tasty Taco in Des Moines @1pm
+ - Drive remaining 4 hours home
+ - Arrive 6pm
 
 ## Long Drive Days
 
@@ -144,9 +145,11 @@
    - (763) 785-7878
  - Install Interior Light Fixtures (6 remain)
  - Fix wiring / fuse issue for interior ceiling lights
+ - Mount dinette table
+ - Mount Child Seat Hooks ($42 - Purchased)
  - Wire Inverter Transfer Switch ($185 - Purchased)
  - Wire Inverter ($480 - Purchased)
- - Install hatch screens and trim
+ - Install hatch screens and trim (Fitment issues)
  - Install new screens (driver & passenger side)
  - Finish lining shelves ($50 - Purchased)
  - Install new spark plugs ($60 - Purchased)
@@ -158,12 +161,12 @@
  - Pull generator, check output
  - Fix/Adjust blinds
  - Seal roof ($40 - Purchased)
- - Install antenna handle
+ - Install antenna handle ($10 - Purchased)
  - Tape Awning Edges
 
 ## Nice to have To-Do List
 
- - Mount and wire CD/DVD Player
+ - Mount and wire CD/DVD Player ($215 - Purchased)
  - DONE Mount rear 32" TV ($235 - Purchased)
  - Mount front 43" TV ($370 - Purchased)
  - New Starter Battery ($120)
@@ -172,6 +175,6 @@
  - Mount indoor/outdoor temp panel ($25 - Purchased)
  - DONE Install outdoor temp sensor
  - Upgrade Alternator (300 amp, $180)
- - Wire Subwoofers ($50 Wiring)
+ - Wire Subwoofers
  - Receive awning pole and sink cover from previous owners
  
