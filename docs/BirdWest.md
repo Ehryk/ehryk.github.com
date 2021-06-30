@@ -18,11 +18,15 @@
  - Get to Pipestone 2pm
  - Back on road by 4:30pm
  - Get to Chamberlain, SD on Missouri River 7pm
- - American Creek Campground 7pm
-   - $42
+ - BOOKED: American Creek Campground 7pm
+   - $42.50 if Cash, $45.78 if on Card (pay on arrival)
+   - 30 and 50 amp
    - http://americancreekcampground.net/
    - Reservations: Call 605-234-5151
-   - Called and left message 6/30
+   - Called and left message 6/30 
+   - Booked 6/30
+   - Check in 3pm to 10pm (must check in by 10pm!)
+   - Check out noon, facilities open to public (beach, playground, etc.)
    - Playground, volleyball, river beach, kayaks & paddle boards, gift shop
 
 ### Friday 7/23 - Chamberlain SD (3h)
@@ -44,26 +48,30 @@
 
 ### Saturday 7/24 - Philip SD (3h)
 
- - Check out: before 11am
  - Start driving 9am
+ - Check out: before 11am
+ - Ben Reifel Visitor Center in Interior, SD 11am
+ - Tatanka Trading Post in Scenic, SD 2pm
  - Take SD 240 to SD 44, stop frequently (3 hour actual drive)
  - Drive through badlands scenic loop
  - Get to Rapid City 4pm
  - Dinosaur Park 4pm https://www.godakota.com/post.php?read-about=dinosaurs-at-dawn
  - Dinner at a Restaurant 5pm
  - BOOKED: American Buffalo Resort 7pm 
-   - $74.20 in L Section
+   - $74.20 in L Section Reserved 6/30
+   - Confirmation Number 31028
+   - 50 Amp full hookup, new section
    - Must Arrive before 8pm!!
+   - Check in: 2-7pm, Check Out: 11am
    - Submit Reservation Request: https://americanbuffaloresort.com/rv-sites.html
-   - Request Submitted 6/23
    - https://americanbuffaloresort.com/site-map-policies.html
    - (605) 342-5368
    - Playground, pool, hot tub, mini golf, basketball, horsehoes, breakfast service, pavilions, laundry
 
 ### Sunday 7/25 - Rapid City SD 1 (1h)
 
- - Check out: before ?
  - Head out at 10am
+ - Check out: before 11am
  - Mount Rushmore
  - BOOKED: Buffalo Ridge Camp Resort 8pm https://custerhospitality.com/buffalo-ridge-camp-resort/
    - $84.31 AAA Discount
@@ -74,6 +82,7 @@
 ### Monday 7/26 - Rapid City SD 2 (1h)
 
  - Check out: before 11am
+ - 11am Lunch @ Dakota Broasted (Chicken)
  - Start driving 12pm
  - Jewel Cave 1pm-4pm https://www.nps.gov/jeca/index.htm
  - Mammoth Site 5pm? (closes at 8pm) https://www.mammothsite.org/visit-us/
@@ -180,4 +189,32 @@
  - Upgrade Alternator (300 amp, $180)
  - Wire Subwoofers
  - Receive awning pole and sink cover from previous owners
+
+## Cost
+
+ - Campsites: $374.82
+ - Gas: $800 (Estimated)
+ - Activities: $233.70
+   - Pipestone National Monument (free)
+   - Minuteman Missile Silo (free)
+   - Wall Drug (just purchases)
+   - Badlands Visitor Center (just purchases)
+   - Tatanka Trading Center (just purchases)
+   - Dinosaur Park (free)
+   - Mount Rushmore ($10 parking, free admission) = $10
+   - Jewel Cave ($4 per adult 16+, 15 and under free) = $16
+   - Mammoth Site ($12 per adult 13+, $9 children 4-12, 3 and under free) = $66
+   - Omaha Zoo ($25.95 per adult 12+, $18.95 children 3-11, 2 and under free) = $141.70
+ - Dining Out: $570 (Estimated)
+   - Dinner near Pipestone (Dars Pizza): $40
+   - Dinner at Wall Drug: $60
+   - Lunch at Ben Reifel Visitor Center: $40
+   - Dinner in Rapid City (Dakotah Steakhouse): $100
+   - Lunch at Mount Rushmore: $50
+   - Dinner at Mount Rushmore: $100
+   - Lunch in Custer (Dakota Broasted): $40
+   - Dinner in Hot Springs (Red Shed Smokehouse): $100
+   - Lunch in Des Moines (Tasty Taco): $40
+ - Food/Groceries: $400 (Estimated)
+ - TOTAL: $2,378.52
  
