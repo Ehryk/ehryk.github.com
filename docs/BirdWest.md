@@ -22,6 +22,7 @@
    - $42
    - http://americancreekcampground.net/
    - Reservations: Call 605-234-5151
+   - Called and left message 6/30
    - Playground, volleyball, river beach, kayaks & paddle boards, gift shop
 
 ### Friday 7/23 - Chamberlain SD (3h)
@@ -50,8 +51,9 @@
  - Get to Rapid City 4pm
  - Dinosaur Park 4pm https://www.godakota.com/post.php?read-about=dinosaurs-at-dawn
  - Dinner at a Restaurant 5pm
- - American Buffalo Resort 7pm 
-   - $85
+ - BOOKED: American Buffalo Resort 7pm 
+   - $74.20 in L Section
+   - Must Arrive before 8pm!!
    - Submit Reservation Request: https://americanbuffaloresort.com/rv-sites.html
    - Request Submitted 6/23
    - https://americanbuffaloresort.com/site-map-policies.html
@@ -149,6 +151,7 @@
  - Mount Child Seat Hooks ($42 - Purchased)
  - Wire Inverter Transfer Switch ($185 - Purchased)
  - Wire Inverter ($480 - Purchased)
+ - Wire Battery Isolator Relay ($70 - Purchased)
  - Install hatch screens and trim (Fitment issues)
  - Install new screens (driver & passenger side)
  - Finish lining shelves ($50 - Purchased)
@@ -162,7 +165,6 @@
  - Fix/Adjust blinds
  - Seal roof ($40 - Purchased)
  - Install antenna handle ($10 - Purchased)
- - Tape Awning Edges
 
 ## Nice to have To-Do List
 
@@ -174,6 +176,7 @@
  - DONE Install fridge thermometer ($25 - Purchased)
  - Mount indoor/outdoor temp panel ($25 - Purchased)
  - DONE Install outdoor temp sensor
+ - Tape Awning Edges
  - Upgrade Alternator (300 amp, $180)
  - Wire Subwoofers
  - Receive awning pole and sink cover from previous owners
