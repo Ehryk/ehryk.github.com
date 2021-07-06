@@ -146,40 +146,40 @@
 
 ## Critical To-Do List
 
- - Fix Left Rear Brake Caliper ($200?)
- - Install Bilstein Shocks ($415 - Purchased)
- - Install new knock sensors ($30 - Purchased)
- - Right Windshield Replacement (Scheduled with SafeLite)
+ - ORDERED - Fix Left Rear Brake Caliper ($85 - Purchased)
+ - IN PROGRESS - Install Bilstein Shocks ($415 - Received)
+ - Install new knock sensors ($30 - Received)
+ - IN PROGRESS - Right Windshield Replacement (Scheduled with SafeLite)
  - Schedule appointment for chassis A/C ($500?)
    - Auto Air Blaine https://www.autoairblaine.com/
    - Likely compressor, pull cover and look and call back
    - (763) 785-7878
  - Install Interior Light Fixtures (6 remain)
- - Fix wiring / fuse issue for interior ceiling lights
+ - IN PROGRESS - Fix wiring / fuse issue for interior ceiling lights
  - Mount dinette table
- - Mount Child Seat Hooks ($42 - Purchased)
- - Wire Inverter Transfer Switch ($185 - Purchased)
- - Wire Inverter ($480 - Purchased)
- - Wire Battery Isolator Relay ($70 - Purchased)
+ - Mount Child Seat Hooks ($42 - Received)
+ - Wire Inverter Transfer Switch ($185 - Received)
+ - Wire Inverter ($480 - Received)
+ - Wire Battery Isolator Relay ($70 - Received)
  - Install hatch screens and trim (Fitment issues)
- - Install new screens (driver & passenger side)
- - Finish lining shelves ($50 - Purchased)
- - Install new spark plugs ($60 - Purchased)
+ - IN PROGRESS - Install new screens (driver & passenger side)
+ - IN PROGRESS - Finish lining shelves ($50 - Received)
+ - Install new spark plugs ($60 - Received)
  - Replace Drive Belt ($50)
  - Oil Change ($80)
- - Fix bathroom sink drain ($30)
- - Mount and wire GPS (Purchased)
- - Mount and wire Camera system ($430 - Purchased)
+ - IN PROGRESS - Fix bathroom sink drain ($30)
+ - Mount and wire GPS (Received)
+ - Mount and wire Camera system ($430 - Received)
  - Pull generator, check output
- - Fix/Adjust blinds
- - Seal roof ($40 - Purchased)
- - Install antenna handle ($10 - Purchased)
+ - IN PROGRESS - Fix/Adjust blinds
+ - Seal roof ($40 - Sealant Received)
+ - IN PROGRESS - Install antenna handle ($10 - Received)
 
 ## Nice to have To-Do List
 
  - Mount and wire CD/DVD Player ($215 - Purchased)
  - DONE Mount rear 32" TV ($235 - Purchased)
- - Mount front 43" TV ($370 - Purchased)
+ - IN PROGRESS - Mount front 43" TV ($370 - Purchased)
  - New Starter Battery ($120)
  - Try to fix fantastic fan (?)
  - DONE Install fridge thermometer ($25 - Purchased)
