@@ -147,7 +147,7 @@
 ## Critical To-Do List
 
  - ORDERED - Fix Left Rear Brake Caliper ($85 - Purchased)
- - IN PROGRESS - Install Bilstein Shocks ($415 - Received)
+ - IN PROGRESS - Install Bilstein Shocks ($415 - Received, rear removed, need new bolt and nut)
  - Install new knock sensors ($30 - Received)
  - IN PROGRESS - Right Windshield Replacement (Scheduled with SafeLite)
  - Schedule appointment for chassis A/C ($500?)
@@ -157,18 +157,19 @@
  - Install Interior Light Fixtures (6 remain)
  - IN PROGRESS - Fix wiring / fuse issue for interior ceiling lights
  - Mount dinette table
- - Mount Child Seat Hooks ($42 - Received)
- - Wire Inverter Transfer Switch ($185 - Received)
- - Wire Inverter ($480 - Received)
+ - Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
+ - DONE - Wire Inverter Transfer Switch ($185 - Received, Mounted, Wired)
+ - IN PROGRESS - Wire Inverter ($480 - Received, Mounted)
  - Wire Battery Isolator Relay ($70 - Received)
  - Install hatch screens and trim (Fitment issues)
+ - Wire battery charger outlet (Need box?)
  - IN PROGRESS - Install new screens (driver & passenger side)
  - IN PROGRESS - Finish lining shelves ($50 - Received)
  - Install new spark plugs ($60 - Received)
  - Replace Drive Belt ($50)
  - Oil Change ($80)
- - IN PROGRESS - Fix bathroom sink drain ($30)
- - Mount and wire GPS (Received)
+ - IN PROGRESS - Fix bathroom sink drain ($30, need different seal)
+ - IN PROGRESS - Mount and wire GPS (Received)
  - Mount and wire Camera system ($430 - Received)
  - Pull generator, check output
  - IN PROGRESS - Fix/Adjust blinds
@@ -181,13 +182,14 @@
  - DONE Mount rear 32" TV ($235 - Purchased)
  - IN PROGRESS - Mount front 43" TV ($370 - Purchased)
  - New Starter Battery ($120)
+ - New House Batteries? ($200)
  - Try to fix fantastic fan (?)
  - DONE Install fridge thermometer ($25 - Purchased)
  - Mount indoor/outdoor temp panel ($25 - Purchased)
  - DONE Install outdoor temp sensor
  - Tape Awning Edges
  - Upgrade Alternator (300 amp, $180)
- - Wire Subwoofers
+ - Wire Subwoofers (Set in place, wiring received)
  - Receive awning pole and sink cover from previous owners
 
 ## Cost
