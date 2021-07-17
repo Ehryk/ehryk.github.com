@@ -147,17 +147,17 @@
 ## Critical To-Do List
 
  - ORDERED - Fix Left Rear Brake Caliper ($85 - Purchased)
- - IN PROGRESS - Install Bilstein Shocks ($415 - Received, rear removed, need new bolt and nut)
+ - DONE - Install Bilstein Shocks ($415 - Received, rear removed, need new bolt and nut)
  - Install new knock sensors ($30 - Received)
- - IN PROGRESS - Right Windshield Replacement (Scheduled with SafeLite)
- - Schedule appointment for chassis A/C ($500?)
+ - DONE - Right Windshield Replacement (Scheduled with SafeLite)
+ - IN PROGRESS - Schedule appointment for chassis A/C ($500?)
    - Auto Air Blaine https://www.autoairblaine.com/
-   - Likely compressor, pull cover and look and call back
+   - Likely compressor, pull cover and look and call back (if need, check part stores)
    - (763) 785-7878
- - Install Interior Light Fixtures (6 remain)
+ - IN PROGRESS - Install Interior Light Fixtures (6 remain)
  - IN PROGRESS - Fix wiring / fuse issue for interior ceiling lights
  - Mount dinette table
- - Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
+ - IN PROGRESS - Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
  - DONE - Wire Inverter Transfer Switch ($185 - Received, Mounted, Wired)
  - IN PROGRESS - Wire Inverter ($480 - Received, Mounted)
  - Wire Battery Isolator Relay ($70 - Received)
@@ -166,31 +166,32 @@
  - IN PROGRESS - Install new screens (driver & passenger side)
  - IN PROGRESS - Finish lining shelves ($50 - Received)
  - Install new spark plugs ($60 - Received)
- - Replace Drive Belt ($50)
+ - Replace Drive Belt ($50, need to order)
  - Oil Change ($80)
- - IN PROGRESS - Fix bathroom sink drain ($30, need different seal)
+ - IN PROGRESS - Fix bathroom sink drain ($30, drain components purchased)
  - IN PROGRESS - Mount and wire GPS (Received)
  - Mount and wire Camera system ($430 - Received)
- - Pull generator, check output
  - IN PROGRESS - Fix/Adjust blinds
- - Seal roof ($40 - Sealant Received)
- - IN PROGRESS - Install antenna handle ($10 - Received)
 
 ## Nice to have To-Do List
 
  - Mount and wire CD/DVD Player ($215 - Purchased)
- - DONE Mount rear 32" TV ($235 - Purchased)
  - IN PROGRESS - Mount front 43" TV ($370 - Purchased)
+ - DONE - Mount rear 32" TV ($235 - Purchased)
+ - Add Shelves in front for PS3, DVD Player, etc.
+ - Try to fix fantastic fan (?)
  - New Starter Battery ($120)
  - New House Batteries? ($200)
- - Try to fix fantastic fan (?)
  - DONE Install fridge thermometer ($25 - Purchased)
  - Mount indoor/outdoor temp panel ($25 - Purchased)
  - DONE Install outdoor temp sensor
  - Tape Awning Edges
+ - IN PROGRESS - Wire Subwoofers (Set in place, wiring received)
+ - IN PROGRESS - Install antenna handle ($10 - Received)
+ - DONE - Receive awning pole and sink cover from previous owners
+ - Seal roof ($40 - Sealant Received)
  - Upgrade Alternator (300 amp, $180)
- - Wire Subwoofers (Set in place, wiring received)
- - Receive awning pole and sink cover from previous owners
+ - Pull generator, check output
 
 ## Cost
 
