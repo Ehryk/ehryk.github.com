@@ -146,50 +146,57 @@
 
 ## Critical To-Do List
 
- - ORDERED - Fix Left Rear Brake Caliper ($85 - Purchased)
- - DONE - Install Bilstein Shocks ($415 - Received, rear removed, need new bolt and nut)
- - Install new knock sensors ($30 - Received)
- - DONE - Right Windshield Replacement (Scheduled with SafeLite)
- - IN PROGRESS - Schedule appointment for chassis A/C ($500?)
+ - ORDERED: Fix Left Rear Brake Caliper ($85 - Purchased)
+ - DONE: Install Bilstein Shocks ($415 - Received, rear removed, need new bolt and nut)
+ - IN PROGRESS: Install new knock sensors ($30 - Received, incorrect fitment)
+ - DONE: Right Windshield Replacement (Completed 7/15)
+ - IN PROGRESS: Schedule appointment for chassis A/C ($500?)
    - Auto Air Blaine https://www.autoairblaine.com/
    - Likely compressor, pull cover and look and call back (if need, check part stores)
+   - Compressor Replaced 7/19 ($250)
    - (763) 785-7878
- - IN PROGRESS - Install Interior Light Fixtures (6 remain)
- - IN PROGRESS - Fix wiring / fuse issue for interior ceiling lights
+ - DONE: Install Interior Light Fixtures (6 remain)
+ - DONE: Fix wiring / fuse issue for interior ceiling lights
  - Mount dinette table
- - IN PROGRESS - Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
- - DONE - Wire Inverter Transfer Switch ($185 - Received, Mounted, Wired)
- - IN PROGRESS - Wire Inverter ($480 - Received, Mounted)
- - Wire Battery Isolator Relay ($70 - Received)
- - Install hatch screens and trim (Fitment issues)
+ - IN PROGRESS: Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
+ - DONE: Wire Automatic Transfer Switch ($185 - Received, Mounted, Wired)
+ - IN PROGRESS: Wire Inverter ($480 - Received, Mounted)
+ - IN PROGRESS: Wire Battery Isolator Relay ($70 - Received)
+ - DONE: Install hatch screens and trim (Thanks Joe!)
  - Wire battery charger outlet (Need box?)
- - IN PROGRESS - Install new screens (driver & passenger side)
- - IN PROGRESS - Finish lining shelves ($50 - Received)
- - Install new spark plugs ($60 - Received)
- - Replace Drive Belt ($50, need to order)
+ - IN PROGRESS: Install new screens (driver & passenger side)
+ - IN PROGRESS: Finish lining shelves ($50 - Received)
+ - DONE: Install new spark plugs ($60)
+ - DONE: Replace Drive Belt ($30)
  - Oil Change ($80)
- - IN PROGRESS - Fix bathroom sink drain ($30, drain components purchased)
- - IN PROGRESS - Mount and wire GPS (Received)
+ - IN PROGRESS: Fix bathroom sink drain ($30, drain components purchased)
+ - IN PROGRESS: Mount and wire GPS (Received)
  - Mount and wire Camera system ($430 - Received)
- - IN PROGRESS - Fix/Adjust blinds
+ - IN PROGRESS: Fix/Adjust blinds
+ - IN PROGRESS: Fix Hood Latch
 
 ## Nice to have To-Do List
 
- - Mount and wire CD/DVD Player ($215 - Purchased)
- - IN PROGRESS - Mount front 43" TV ($370 - Purchased)
- - DONE - Mount rear 32" TV ($235 - Purchased)
+ - IN PROGRESS: Mount front 43" TV ($370 - Purchased)
  - Add Shelves in front for PS3, DVD Player, etc.
+ - DONE: Mount rear 32" TV ($235 - Purchased)
+ - Mount and wire CD/DVD Player ($215 - Purchased)
+ - DONE: Install fridge thermometer ($25 - Purchased)
+ - Mount indoor/outdoor temp panel ($25 - Purchased)
+ - DONE: Install outdoor temp sensor
+ - DONE: Install New Spark Plug Wires ($50)
+ - Tape Awning Edges
+ - IN PROGRESS:Wire Subwoofers (Set in place, wiring received)
+ - IN PROGRESS: Install antenna handle ($10 - Received)
+ - DONE: Receive awning pole and sink cover from previous owners
+ - Seal roof ($40 - Sealant Received)
+
+## Oh Well List
+
+ - Upgrade to HID Headlights
  - Try to fix fantastic fan (?)
  - New Starter Battery ($120)
  - New House Batteries? ($200)
- - DONE Install fridge thermometer ($25 - Purchased)
- - Mount indoor/outdoor temp panel ($25 - Purchased)
- - DONE Install outdoor temp sensor
- - Tape Awning Edges
- - IN PROGRESS - Wire Subwoofers (Set in place, wiring received)
- - IN PROGRESS - Install antenna handle ($10 - Received)
- - DONE - Receive awning pole and sink cover from previous owners
- - Seal roof ($40 - Sealant Received)
  - Upgrade Alternator (300 amp, $180)
  - Pull generator, check output
 
