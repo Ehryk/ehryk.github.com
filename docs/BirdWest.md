@@ -28,6 +28,13 @@
    - Check in 3pm to 10pm (must check in by 10pm!)
    - Check out noon, facilities open to public (beach, playground, etc.)
    - Playground, volleyball, river beach, kayaks & paddle boards, gift shop
+   - CANCELED
+ - Actual
+   - Left 7pm
+   - Got to campsite 11pm
+   - 2.75h drive
+   - Prairie's Edge Casino Resort
+   - Great place, bike ride with Brian around Casino, learned about Jetson Bolt e-bike
 
 ### Friday 7/23 - Chamberlain SD (3h)
 
@@ -45,6 +52,15 @@
    - https://www.minutemanrvlodging.com/
    - 605-433-5451
    - Playground, pool, laundry, wifi
+ - Actual
+   - Checked out 10:30am
+   - Pipestone National Monument 11pm
+   - Walmart 3pm
+   - 1h time change to Mountain Time
+   - Minuteman Missile Silo 5:30pm _This happened on Saturday, not Friday - bbird_
+   - Wall Drug 7pm
+   - Dinner at Red Rock
+   - Got to campsite 11pm
 
 ### Saturday 7/24 - Philip SD (3h)
 
@@ -67,6 +83,16 @@
    - https://americanbuffaloresort.com/site-map-policies.html
    - (605) 342-5368
    - Playground, pool, hot tub, mini golf, basketball, horsehoes, breakfast service, pavilions, laundry
+ - ACTUAL
+   - Checked out ~10am
+   - Minuteman Missle site 10:20am
+   - Praire Dog Ranch 11:30am (Feed a p-dog)
+   - Bad Lands: First outlook 12:00pm 
+   - Bad Lands Visitor Center 2:00pm
+   - Bad Lands: 2nd & 3rd outlook 3:00pm
+   - Dinosaur park 6:45pm
+   - American Buffalo Resort 7:48pm
+    - Setup/Swin etc.
 
 ### Sunday 7/25 - Rapid City SD 1 (1h)
 
@@ -78,6 +104,11 @@
    - Itinerary ID 31278620 
    - Adult pool, pool, hot tub, playground, store, laundry, frisbee golf, teepees, tree houses, picnic area
    - Check in: 3pm - 10pm, Check out: 11am
+  - ACTUAL
+    - Pancake Breakfast
+    - Checked out at 11:15am
+    - Mt. Rushmore 11:45am
+    - Buffalo Ridge Camp Resort Checked in 4:30pm
 
 ### Monday 7/26 - Rapid City SD 2 (1h)
 
@@ -95,6 +126,14 @@
    - Playground, small lake, kayak/canoe rental
    - No wifi, no cable
    - Check in: 12pm - 7pm, Check Out: 11am
+  - ACTUAL
+   - Checked out 11:00am
+   - Jewel Cave 11:30am - Tour sold out
+   - Detour through Wind Cave National Park
+   - Wind Cave 3:30pm - Tour sold out
+   - Hidden Lake Camp Checked in ~ 5:15?
+   - Bike ride to Grocery Store for Spaghetti Dinner
+
 
 ### Tuesday 7/27 - Hot Springs SD (8h)
 
@@ -107,6 +146,10 @@
    - Site Number: 042, Fawn Meadows loop
    - https://nebraskastateparks.reserveamerica.com/camping/two-rivers-sra/r/campsiteDetails.do?contractCode=NE&siteId=4833&parkId=230175
    - Check in: 4pm, Check Out: 2pm
+  - ACTUAL
+    - Morning bike ride to Grocery store (Dakota-mart?) 7:15am
+    - Late morning bike ride to Ace 
+    - Checked out about 10:45am
 
 ### Wednesday 7/28 - Omaha NE 1 (2h)
 
@@ -146,59 +189,60 @@
 
 ## Critical To-Do List
 
- - ORDERED: Fix Left Rear Brake Caliper ($85 - Purchased)
  - DONE: Install Bilstein Shocks ($415 - Received, rear removed, need new bolt and nut)
- - IN PROGRESS: Install new knock sensors ($30 - Received, incorrect fitment)
+ - DONE: Install new knock sensors ($30 - Received, incorrect fitment)
  - DONE: Right Windshield Replacement (Completed 7/15)
- - IN PROGRESS: Schedule appointment for chassis A/C ($500?)
+ - DONE: Install Interior Light Fixtures (6 remain)
+ - DONE: Fix wiring / fuse issue for interior ceiling lights
+ - DONE: Install hatch screens and trim (Thanks Joe!)
+ - DONE: Install new spark plugs ($60)
+ - DONE: Replace Drive Belt ($30)
+ - DONE NIGHT BEFORE: Mount dinette table
+ - DONE NIGHT BEFORE: Wire Battery Isolator Relay ($70 - Received)
+ - DONE NIGHT BEFORE: Wire battery charger outlet (Need box?)
+ - DONE NIGHT BEFORE: Oil Change ($80)
+ - DONE NIGHT BEFORE: Fix bathroom sink drain ($30, drain components purchased)
+ - DONE DAY OF: Mount and wire GPS (Received)
+ - DONE DAY OF: Chassis A/C
+   - Schedule appointment for chassis A/C ($500?)
    - Auto Air Blaine https://www.autoairblaine.com/
    - Likely compressor, pull cover and look and call back (if need, check part stores)
    - Compressor Replaced 7/19 ($250)
    - (763) 785-7878
- - DONE: Install Interior Light Fixtures (6 remain)
- - DONE: Fix wiring / fuse issue for interior ceiling lights
- - Mount dinette table
- - IN PROGRESS: Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
- - DONE: Wire Automatic Transfer Switch ($185 - Received, Mounted, Wired)
- - IN PROGRESS: Wire Inverter ($480 - Received, Mounted)
- - IN PROGRESS: Wire Battery Isolator Relay ($70 - Received)
- - DONE: Install hatch screens and trim (Thanks Joe!)
- - Wire battery charger outlet (Need box?)
- - IN PROGRESS: Install new screens (driver & passenger side)
- - IN PROGRESS: Finish lining shelves ($50 - Received)
- - DONE: Install new spark plugs ($60)
- - DONE: Replace Drive Belt ($30)
- - Oil Change ($80)
- - IN PROGRESS: Fix bathroom sink drain ($30, drain components purchased)
- - IN PROGRESS: Mount and wire GPS (Received)
- - Mount and wire Camera system ($430 - Received)
- - IN PROGRESS: Fix/Adjust blinds
- - IN PROGRESS: Fix Hood Latch
 
 ## Nice to have To-Do List
 
- - IN PROGRESS: Mount front 43" TV ($370 - Purchased)
- - Add Shelves in front for PS3, DVD Player, etc.
  - DONE: Mount rear 32" TV ($235 - Purchased)
- - Mount and wire CD/DVD Player ($215 - Purchased)
  - DONE: Install fridge thermometer ($25 - Purchased)
- - Mount indoor/outdoor temp panel ($25 - Purchased)
  - DONE: Install outdoor temp sensor
  - DONE: Install New Spark Plug Wires ($50)
- - Tape Awning Edges
- - IN PROGRESS:Wire Subwoofers (Set in place, wiring received)
- - IN PROGRESS: Install antenna handle ($10 - Received)
  - DONE: Receive awning pole and sink cover from previous owners
- - Seal roof ($40 - Sealant Received)
+ - DONE NIGHT BEFORE: Mount front 43" TV ($370 - Purchased)
+ - DONE ON TRIP: Add Shelves in front for PS3, DVD Player, etc.
+ - DONE ON TRIP: Mount indoor/outdoor temp panel ($25 - Purchased)
 
 ## Oh Well List
 
- - Upgrade to HID Headlights
- - Try to fix fantastic fan (?)
+ - IN PROGRESS: Fix/Adjust blinds
+ - IN PROGRESS: Install new screens (driver & passenger side)
+ - IN PROGRESS: Finish lining shelves ($50 - Received)
+ - IN PROGRESS: Wire Automatic Transfer Switch ($185 - Received, Mounted, Wired)
+ - IN PROGRESS: Wire Inverter ($480 - Received, Mounted)
+ - IN PROGRESS: Mount Child Seat Hooks ($42 - Received, planned with Brian w/steel L channel)
+ - IN PROGRESS: Fix Hood Latch
+ - IN PROGRESS: Wire Subwoofers (Set in place, wiring received)
+ - IN PROGRESS: Install antenna handle ($10 - Received)
+ - ORDERED: Fix Left Rear Brake Caliper ($85 - Purchased)
+ - Mount and wire CD/DVD Player ($215 - Purchased)
+ - Tape Awning Edges
+ - Mount and wire Camera system ($430 - Received)
+ - Seal roof ($40 - Sealant Received)
  - New Starter Battery ($120)
  - New House Batteries? ($200)
  - Upgrade Alternator (300 amp, $180)
  - Pull generator, check output
+ - Upgrade to HID Headlights
+ - Try to fix fantastic fan (?)
 
 ## Cost
 
