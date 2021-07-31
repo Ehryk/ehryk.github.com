@@ -29,12 +29,15 @@
    - Check out noon, facilities open to public (beach, playground, etc.)
    - Playground, volleyball, river beach, kayaks & paddle boards, gift shop
    - CANCELED
- - Actual
+ - ACTUAL: Prairie's Edge Casino Resort
    - Left 7pm
+   - Bill's for Gas
+   - Back to house for Arianne's Sunglasses
    - Got to campsite 11pm
    - 2.75h drive
-   - Prairie's Edge Casino Resort
-   - Great place, bike ride with Brian around Casino, learned about Jetson Bolt e-bike
+   - Great place, not much to see
+   - Eric & Brian bike ride around Casino, learned about Jetson Bolt e-bike
+   - Great night :)
 
 ### Friday 7/23 - Chamberlain SD (3h)
 
@@ -52,12 +55,14 @@
    - https://www.minutemanrvlodging.com/
    - 605-433-5451
    - Playground, pool, laundry, wifi
- - Actual
+ - ACTUAL:
+   - Breakfast: Arianne made scrambled eggs, toast
+   - Brian played frisbee with kiddos
    - Checked out 10:30am
    - Pipestone National Monument 11pm
+   - Pizza Ranch 1pm
    - Walmart 3pm
    - 1h time change to Mountain Time
-   - Minuteman Missile Silo 5:30pm _This happened on Saturday, not Friday - bbird_
    - Wall Drug 7pm
    - Dinner at Red Rock
    - Got to campsite 11pm
@@ -83,16 +88,26 @@
    - https://americanbuffaloresort.com/site-map-policies.html
    - (605) 342-5368
    - Playground, pool, hot tub, mini golf, basketball, horsehoes, breakfast service, pavilions, laundry
- - ACTUAL
+ - ACTUAL:
+   - Breakfast: Not much
+   - Brian toek Devin to see horses
    - Checked out ~10am
-   - Minuteman Missle site 10:20am
+   - Minuteman Missile site 10:20am
+   - Sandwiches in RV
    - Praire Dog Ranch 11:30am (Feed a p-dog)
    - Bad Lands: First outlook 12:00pm 
+   - Bad Lands: Second overlook (Window & Door) 12:30pm
+     - Best one, lots of climbing
+     - Eric Slipped, twisted ankle
    - Bad Lands Visitor Center 2:00pm
-   - Bad Lands: 2nd & 3rd outlook 3:00pm
+   - Bad Lands: 3rd outlook 3:00pm
+   - Bad Lands: 4th outlook (Pinnacle) 3:30pm
+   - Bad Lands: Drove 7mi dirt road, saw cool rusted Beetle 
    - Dinosaur park 6:45pm
    - American Buffalo Resort 7:48pm
-    - Setup/Swin etc.
+   - Saw mini-donkeys behind site
+   - Eric & Brian: Rode to pool, hot tub w/kiddos
+   - Eric lost guitar pick maybe?
 
 ### Sunday 7/25 - Rapid City SD 1 (1h)
 
@@ -104,11 +119,28 @@
    - Itinerary ID 31278620 
    - Adult pool, pool, hot tub, playground, store, laundry, frisbee golf, teepees, tree houses, picnic area
    - Check in: 3pm - 10pm, Check out: 11am
-  - ACTUAL
-    - Pancake Breakfast
-    - Checked out at 11:15am
-    - Mt. Rushmore 11:45am
-    - Buffalo Ridge Camp Resort Checked in 4:30pm
+ - ACTUAL:
+   - Breakfast: All-you-can-eat Pancake Breakfast at Lodge
+     - Lucian spilled syrup all over, Arianne took him back early
+     - Annalee and Everett fought over cinnamon rolls
+     - Annalee rode back on Eric's bike
+   - Checked out at 11:15am
+   - Mt. Rushmore 11:45am
+   - Lady sang national anthem, Everett break danced
+   - Eric & Brian walked around Presidential Trail
+   - Devin stuck finger in cart, skinned it 2:30pm
+   - Zen dude with 'free' books 3pm
+   - Inferno Pizza 3:30pm
+   - Buffalo Ridge Camp Resort Checked in 4:30pm
+     - Swim at pool
+     - Hot Tubs not working
+     - Devin's finger hurt in pool
+     - Next to great playground
+   - Eric fixed shelf behind TV, trim behind TV
+   - Eric lowered tire pressure to 90psi
+   - Brian Evening ride, did not wait up for me: saw cool cabins
+   - Great night :)
+
 
 ### Monday 7/26 - Rapid City SD 2 (1h)
 
@@ -127,12 +159,17 @@
    - No wifi, no cable
    - Check in: 12pm - 7pm, Check Out: 11am
   - ACTUAL
+   - Eric morning ride, creepy playground, rode back through church yard, rode through teepees
+   - Brian morning ride, again took off without me (what a jerk)
+   - Eric took Lucian and Everett to playground: swings, slides, climbing, Flintstones car
+   - Breakfast: Arianne made Scrambled Eggs, Toast on Skillet
    - Checked out 11:00am
    - Jewel Cave 11:30am - Tour sold out
    - Detour through Wind Cave National Park
    - Wind Cave 3:30pm - Tour sold out
    - Hidden Lake Camp Checked in ~ 5:15?
-   - Bike ride to Grocery Store for Spaghetti Dinner
+   - Eric & Lucian dip in lake, perfect slide at playground
+   - Eric & Brian bike ride to Grocery Store for Spaghetti Dinner, womens watched chillens at playground
 
 
 ### Tuesday 7/27 - Hot Springs SD (8h)
@@ -147,9 +184,16 @@
    - https://nebraskastateparks.reserveamerica.com/camping/two-rivers-sra/r/campsiteDetails.do?contractCode=NE&siteId=4833&parkId=230175
    - Check in: 4pm, Check Out: 2pm
   - ACTUAL
-    - Morning bike ride to Grocery store (Dakota-mart?) 7:15am
-    - Late morning bike ride to Ace 
+    - Eric & Brian Morning bike ride to Grocery store for coffee (Dakota-mart?) 7:15am
+      - Rode back on Freedom Trail, stopped at great playground
+    - Eric Late morning bike ride to Ace 9am - Got springs for door latch, weatherstripping
+      - Got parts for hooking into radio w/3.5mm jack
+    - Breakfast: Brian made Eggs, Toast
+    - Breakfast: Eric made Eggs, Corned Beef Hash, Toast on stove
     - Checked out about 10:45am
+    - Dakota-mart again 11am for Ice Cream Cake
+    - Cane's Chicken 7pm
+    - Campsite 8pm
 
 ### Wednesday 7/28 - Omaha NE 1 (2h)
 
@@ -165,6 +209,24 @@
    - 6 occupants reported
    - https://iowastateparks.reserveamerica.com/camping/lake-anita-state-park/r/campsiteDetails.do?contractCode=IA&siteId=5647&parkId=610150
    - Check in: 4pm, Check Out: 3pm
+ - ACTUAL:
+   - Eric: Bike ride with Lucian, 8am
+     - Saw river, horse poops, Caboose Cabins
+   - Brian: Bike Ride solo?, 9am
+   - Breakfast: Eric made Eggs & Cinnamon French Toast on Skillet
+   - Left 11:30pm
+   - Got to Zoo 12pm
+   - Giant Pretzel 1:30pm
+   - Left Zoo 5pm, in parking lot for a while
+   - Convenience Stores 6:30pm
+   - Campsite 7pm
+   - Eric & Brian bike ride around Lake Anita, 8pm
+     - Eric & Lucian swam
+     - Chased Geese, Annalee got scared from sand slip
+     - Brian said I was his 'actual' friend <3 
+     - Annalee asked who Brian's 'favorite' friend is, he said it depends on what time in his life he was asked
+     - Said right now, Eric geeeyyyyyyyyyy
+     - Started watching Wild Card, weird Statham movie
 
 ### Thursday 7/29 - Omaha NE 2 (5h)
 
@@ -173,6 +235,20 @@
  - Lunch at Tasty Taco in Des Moines @1pm
  - Drive remaining 4 hours home
  - Arrive 6pm
+ - ACTUAL:
+   - Breakfast: Cereal (Cap'n Crunch was the favorite)
+   - Brian again did not wait and took off while I was getting Lucian ready for a bike ride
+     - Everett stuck his ankle in the rear wheel, tore some skin
+   - Eric fixed blinds w/help of Christie and Brian
+   - Group walk to beach, 11am (2+ miles! Atta girls!!)
+   - Eric swam across Lake Anita, 12pm
+   - Pulled up with Camper 1pm
+   - Left 3:30pm
+   - Tasty Taco 5pm
+   - Brian's House 8:30pm
+     - Unloaded Christie, Annalee, Everett, Devin, Cargo Bike, Bike Rack
+   - Eric's House 9:30pm
+   - FIN!
 
 ## Long Drive Days
 
