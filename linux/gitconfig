@@ -56,7 +56,7 @@
 	fl = log -u #History of a File
 	hist = log --pretty=format:\" %ad | %s%d [%an]\" --graph --date=short
 
-		#Ehryk: Linecounts (How many lines of code is that?)
+		#Linecounts (How many lines of code is that?)
 	linecount = "!lc() { git ls-files -z | xargs -0 wc -l | awk '/^[[:space:]]*[[:digit:]]+[[:space:]]+total$/{next} {total+=$1;print} END {printf \" Total => %s lines (\",total}'; echo \"*.*)\"; }; lc"
 	lines = "!lc() { cd ${GIT_PREFIX:-.} && git ls-files -z ${1} | xargs -0 wc -l | awk '/^[[:space:]]*[[:digit:]]+[[:space:]]+total$/{next} {total+=$1;print} END {printf \" Total => %s lines (\",total}'; if [[ -z "${1}" ]]; then echo \"*.*)\"; else echo ${1}\")\"; fi; }; lc"
 
@@ -76,6 +76,8 @@
 	ph = push
 	ps = push
 	pus = push
+
+	purge="!git branch --merged master | grep -v master | xargs -n 1 git branch -d"
 
 		#Status
 	s = status
