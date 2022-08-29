@@ -5,6 +5,12 @@ D Symbole general de connecteur
 K CONN
 $ENDCMP
 #
+$CMP ESP32-C3-DevKitC-02
+D Development Kit
+K esp32-c3-devkitc-02 development board
+F https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf
+$ENDCMP
+#
 $CMP TEST
 D Testpoint, connection for test equipment
 K tp testpoint

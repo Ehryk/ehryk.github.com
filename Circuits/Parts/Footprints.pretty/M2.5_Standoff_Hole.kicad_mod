@@ -1,4 +1,4 @@
-(module M2.5_Standoff_Hole (layer F.Cu) (tedit 5DC0EEEB)
+(module M2.5_Standoff_Hole (layer F.Cu) (tedit 5DC0F412)
   (fp_text reference Ref** (at 0 3.5) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
   )
