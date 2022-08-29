@@ -1,0 +1,1283 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_02x32_Counter_Clockwise-conn J1
+U 1 1 5DAA1E8A
+P 3900 4050
+F 0 "J1" V 4000 5650 50  0000 C CNN
+F 1 "32x2P Card Edge" V 3900 5950 50  0000 C CNN
+F 2 "Footprints:CommonSlot_2x32P_2.54mm" H 3900 4050 50  0001 C CNN
+F 3 "~" H 3900 4050 50  0001 C CNN
+	1    3900 4050
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GNDREF #PWR010
+U 1 1 5DADEEF7
+P 3600 4450
+F 0 "#PWR010" H 3600 4200 50  0001 C CNN
+F 1 "GNDREF" H 3800 4450 50  0000 C CNN
+F 2 "" H 3600 4450 50  0001 C CNN
+F 3 "" H 3600 4450 50  0001 C CNN
+	1    3600 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR012
+U 1 1 5DADFAC8
+P 4800 3500
+F 0 "#PWR012" H 4800 3350 50  0001 C CNN
+F 1 "+12V" H 4950 3450 50  0000 C CNN
+F 2 "" H 4800 3500 50  0001 C CNN
+F 3 "" H 4800 3500 50  0001 C CNN
+	1    4800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR013
+U 1 1 5DAE0BF5
+P 4800 4500
+F 0 "#PWR013" H 4800 4350 50  0001 C CNN
+F 1 "+12V" H 4950 4550 50  0000 C CNN
+F 2 "" H 4800 4500 50  0001 C CNN
+F 3 "" H 4800 4500 50  0001 C CNN
+	1    4800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR09
+U 1 1 5DAE1112
+P 3600 3500
+F 0 "#PWR09" H 3600 3250 50  0001 C CNN
+F 1 "GNDREF" H 3800 3450 50  0000 C CNN
+F 2 "" H 3600 3500 50  0001 C CNN
+F 3 "" H 3600 3500 50  0001 C CNN
+	1    3600 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3550 4800 3550
+Wire Wire Line
+	4800 3550 4800 3500
+Wire Wire Line
+	3450 3500 3600 3500
+Wire Wire Line
+	3450 4450 3600 4450
+Wire Wire Line
+	4650 4500 4800 4500
+$Comp
+L power:+12V #PWR020
+U 1 1 5DAFD827
+P 8000 4700
+F 0 "#PWR020" H 8000 4550 50  0001 C CNN
+F 1 "+12V" H 8000 4850 50  0000 C CNN
+F 2 "" H 8000 4700 50  0001 C CNN
+F 3 "" H 8000 4700 50  0001 C CNN
+	1    8000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR021
+U 1 1 5DAFE267
+P 8000 5550
+F 0 "#PWR021" H 8000 5300 50  0001 C CNN
+F 1 "GNDREF" H 8000 5400 50  0000 C CNN
+F 2 "" H 8000 5550 50  0001 C CNN
+F 3 "" H 8000 5550 50  0001 C CNN
+	1    8000 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR019
+U 1 1 5DAFEEF8
+P 3400 1800
+F 0 "#PWR019" H 3400 1550 50  0001 C CNN
+F 1 "GNDREF" H 3400 1650 50  0000 C CNN
+F 2 "" H 3400 1800 50  0001 C CNN
+F 3 "" H 3400 1800 50  0001 C CNN
+	1    3400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR017
+U 1 1 5DAFF61E
+P 3050 1650
+F 0 "#PWR017" H 3050 1500 50  0001 C CNN
+F 1 "+12V" H 3050 1800 50  0000 C CNN
+F 2 "" H 3050 1650 50  0001 C CNN
+F 3 "" H 3050 1650 50  0001 C CNN
+	1    3050 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1800 3400 1750
+Wire Wire Line
+	3400 1750 3600 1750
+Text GLabel 2700 3650 1    43   Input ~ 0
++12Vstandby
+Text GLabel 2600 4350 3    43   Input ~ 0
+A2
+Text GLabel 2600 3650 1    43   Input ~ 0
+PRESENT
+Text GLabel 2300 3650 1    43   Input ~ 0
+#ENABLE
+Text GLabel 2400 3650 1    43   Input ~ 0
+CurrentShare
+Text GLabel 2800 3650 1    43   Input ~ 0
+Alarm
+Text GLabel 2500 3650 1    43   Input ~ 0
+Status
+$Comp
+L power:GNDS #PWR04
+U 1 1 5DB07833
+P 2500 4500
+F 0 "#PWR04" H 2500 4250 50  0001 C CNN
+F 1 "GNDS" H 2500 4350 50  0000 C CNN
+F 2 "" H 2500 4500 50  0001 C CNN
+F 3 "" H 2500 4500 50  0001 C CNN
+	1    2500 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 2300 4350 3    43   Input ~ 0
+SCL
+Text GLabel 2700 4350 3    43   Input ~ 0
+A1
+Text GLabel 2800 4350 3    43   Input ~ 0
+A0
+Wire Wire Line
+	2300 3650 2300 3750
+Wire Wire Line
+	2400 3650 2400 3750
+Wire Wire Line
+	2500 3650 2500 3750
+Wire Wire Line
+	2600 3650 2600 3750
+Wire Wire Line
+	2700 3650 2700 3750
+Wire Wire Line
+	2800 3650 2800 3750
+Wire Wire Line
+	2300 4250 2300 4350
+Wire Wire Line
+	2400 4250 2400 4350
+Wire Wire Line
+	2500 4250 2500 4500
+Wire Wire Line
+	2600 4250 2600 4350
+Wire Wire Line
+	2700 4250 2700 4350
+Wire Wire Line
+	2800 4250 2800 4350
+$Comp
+L Common-Slot-Mini-v1-rescue:R-device R3
+U 1 1 5DB11AA4
+P 9300 1200
+F 0 "R3" V 9200 1200 50  0000 C CNN
+F 1 "22kΩ" V 9300 1200 39  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9230 1200 50  0001 C CNN
+F 3 "~" H 9300 1200 50  0001 C CNN
+	1    9300 1200
+	0    1    1    0   
+$EndComp
+Text GLabel 9550 1200 2    43   Input ~ 0
+PRESENT
+Text GLabel 9050 1200 0    43   Input ~ 0
++12Vstandby
+Wire Wire Line
+	9050 1200 9150 1200
+Wire Wire Line
+	9450 1200 9550 1200
+Text GLabel 2400 4350 3    43   Input ~ 0
+SDA
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x02-conn J2
+U 1 1 5DB226E3
+P 1750 6950
+F 0 "J2" V 1750 6650 50  0000 L CNN
+F 1 "ENj" V 1850 6850 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1750 6950 50  0001 C CNN
+F 3 "~" H 1750 6950 50  0001 C CNN
+	1    1750 6950
+	0    -1   1    0   
+$EndComp
+Text GLabel 1750 6650 1    43   Input ~ 0
+#ENABLE
+Wire Wire Line
+	1850 6750 1850 6550
+Wire Wire Line
+	1750 6750 1750 6650
+Text Notes 1050 6100 0    118  ~ 0
+Remote Enable\n (not isolated)
+$Comp
+L Common-Slot-Mini-v1-rescue:LED-device D2
+U 1 1 5DB52174
+P 2100 1850
+F 0 "D2" H 2100 1750 50  0000 C CNN
+F 1 "Standby" H 2100 1950 50  0000 C CNN
+F 2 "LEDs:LED_1206_HandSoldering" H 2100 1850 50  0001 C CNN
+F 3 "~" H 2100 1850 50  0001 C CNN
+	1    2100 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:R-device R2
+U 1 1 5DB527BD
+P 1650 1850
+F 0 "R2" V 1750 1800 50  0000 L CNN
+F 1 "470Ω" V 1645 1770 39  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1580 1850 50  0001 C CNN
+F 3 "~" H 1650 1850 50  0001 C CNN
+	1    1650 1850
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1400 1850 0    43   Input ~ 0
++12Vstandby
+Wire Wire Line
+	1400 1850 1500 1850
+Wire Wire Line
+	1800 1850 1950 1850
+Wire Wire Line
+	2250 1850 2400 1850
+$Comp
+L Common-Slot-Mini-v1-rescue:LED-device D3
+U 1 1 5DB68A32
+P 2100 1350
+F 0 "D3" H 2100 1250 50  0000 C CNN
+F 1 "Active" H 2100 1450 50  0000 C CNN
+F 2 "LEDs:LED_1206_HandSoldering" H 2100 1350 50  0001 C CNN
+F 3 "~" H 2100 1350 50  0001 C CNN
+	1    2100 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:R-device R4
+U 1 1 5DB68A3C
+P 1650 1350
+F 0 "R4" V 1550 1300 50  0000 L CNN
+F 1 "470Ω" V 1645 1270 39  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1580 1350 50  0001 C CNN
+F 3 "~" H 1650 1350 50  0001 C CNN
+	1    1650 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 1350 1500 1350
+Wire Wire Line
+	1800 1350 1950 1350
+Wire Wire Line
+	2250 1350 2500 1350
+$Comp
+L power:+12V #PWR018
+U 1 1 5DB6C0B8
+P 1400 1350
+F 0 "#PWR018" H 1400 1200 50  0001 C CNN
+F 1 "+12V" H 1400 1500 50  0000 C CNN
+F 2 "" H 1400 1350 50  0001 C CNN
+F 3 "" H 1400 1350 50  0001 C CNN
+	1    1400 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR023
+U 1 1 5DB6C89C
+P 2500 1350
+F 0 "#PWR023" H 2500 1100 50  0001 C CNN
+F 1 "GNDREF" H 2500 1200 50  0000 C CNN
+F 2 "" H 2500 1350 50  0001 C CNN
+F 3 "" H 2500 1350 50  0001 C CNN
+	1    2500 1350
+	1    0    0    -1  
+$EndComp
+Text Notes 8850 3550 0    118  ~ 0
+Main Output
+Text Notes 8950 900  0    118  ~ 0
+Standby
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x02-conn J6
+U 1 1 5DB7147A
+P 9300 1950
+F 0 "J6" H 9380 1942 50  0000 L CNN
+F 1 "12Vsb" H 9380 1851 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 9300 1950 50  0001 C CNN
+F 3 "~" H 9300 1950 50  0001 C CNN
+	1    9300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR022
+U 1 1 5DB71484
+P 9050 2100
+F 0 "#PWR022" H 9050 1850 50  0001 C CNN
+F 1 "GNDREF" H 9050 1950 50  0000 C CNN
+F 2 "" H 9050 2100 50  0001 C CNN
+F 3 "" H 9050 2100 50  0001 C CNN
+	1    9050 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1900 9050 1950
+Wire Wire Line
+	9050 1950 9100 1950
+Wire Wire Line
+	9050 2100 9050 2050
+Wire Wire Line
+	9050 2050 9100 2050
+Text GLabel 9050 1900 1    43   Input ~ 0
++12Vstandby
+$Comp
+L power:GNDREF #PWR014
+U 1 1 5DB801C2
+P 2400 1950
+F 0 "#PWR014" H 2400 1700 50  0001 C CNN
+F 1 "GNDREF" H 2400 1800 50  0000 C CNN
+F 2 "" H 2400 1950 50  0001 C CNN
+F 3 "" H 2400 1950 50  0001 C CNN
+	1    2400 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1950 2400 1850
+$Comp
+L power:GNDREF #PWR02
+U 1 1 5DB83CC7
+P 2050 6550
+F 0 "#PWR02" H 2050 6300 50  0001 C CNN
+F 1 "GNDREF" H 2050 6400 50  0000 C CNN
+F 2 "" H 2050 6550 50  0001 C CNN
+F 3 "" H 2050 6550 50  0001 C CNN
+	1    2050 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6550 2050 6550
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x02-conn J9
+U 1 1 5DBB0A7F
+P 5550 6400
+F 0 "J9" V 5550 6150 50  0000 L CNN
+F 1 "A0" V 5650 6300 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5550 6400 50  0001 C CNN
+F 3 "~" H 5550 6400 50  0001 C CNN
+	1    5550 6400
+	0    -1   1    0   
+$EndComp
+Text Notes 4700 5900 0    118  ~ 0
+I2C
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x02-conn J10
+U 1 1 5DBC575B
+P 5550 6900
+F 0 "J10" V 5550 6600 50  0000 L CNN
+F 1 "A1" V 5650 6800 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5550 6900 50  0001 C CNN
+F 3 "~" H 5550 6900 50  0001 C CNN
+	1    5550 6900
+	0    -1   1    0   
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x02-conn J11
+U 1 1 5DBC5C3E
+P 5550 7400
+F 0 "J11" V 5550 7100 50  0000 L CNN
+F 1 "A2" V 5650 7300 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5550 7400 50  0001 C CNN
+F 3 "~" H 5550 7400 50  0001 C CNN
+	1    5550 7400
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GNDS #PWR05
+U 1 1 5DBC6252
+P 4450 6700
+F 0 "#PWR05" H 4450 6450 50  0001 C CNN
+F 1 "GNDS" H 4450 6800 50  0000 C CNN
+F 2 "" H 4450 6700 50  0001 C CNN
+F 3 "" H 4450 6700 50  0001 C CNN
+	1    4450 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDS #PWR011
+U 1 1 5DBC791B
+P 6000 7400
+F 0 "#PWR011" H 6000 7150 50  0001 C CNN
+F 1 "GNDS" H 6000 7250 50  0000 C CNN
+F 2 "" H 6000 7400 50  0001 C CNN
+F 3 "" H 6000 7400 50  0001 C CNN
+	1    6000 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 7400 6000 7200
+Wire Wire Line
+	6000 7200 5650 7200
+Wire Wire Line
+	6000 7200 6000 6700
+Wire Wire Line
+	6000 6700 5650 6700
+Connection ~ 6000 7200
+Wire Wire Line
+	6000 6700 6000 6200
+Wire Wire Line
+	6000 6200 5650 6200
+Connection ~ 6000 6700
+Text GLabel 5400 6200 0    43   Input ~ 0
+A0
+Text GLabel 5400 6700 0    43   Input ~ 0
+A1
+Text GLabel 5400 7200 0    43   Input ~ 0
+A2
+Wire Wire Line
+	5400 7200 5550 7200
+Wire Wire Line
+	5400 6700 5550 6700
+Wire Wire Line
+	5400 6200 5550 6200
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x03-conn J8
+U 1 1 5DBD440F
+P 4200 7050
+F 0 "J8" V 4200 6850 50  0000 R CNN
+F 1 "I2C" V 4350 7100 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4200 7050 50  0001 C CNN
+F 3 "~" H 4200 7050 50  0001 C CNN
+	1    4200 7050
+	0    -1   1    0   
+$EndComp
+Text GLabel 4200 6700 1    43   Input ~ 0
+SDA
+Text GLabel 4100 6700 1    43   Input ~ 0
+SCL
+Wire Wire Line
+	4300 6700 4450 6700
+Wire Wire Line
+	4300 6700 4300 6850
+Wire Wire Line
+	4100 6700 4100 6850
+Wire Wire Line
+	4200 6700 4200 6850
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x03-conn J7
+U 1 1 5DC7D091
+P 3800 1650
+F 0 "J7" H 3880 1692 50  0000 L CNN
+F 1 "Vdisplay" H 3880 1601 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 3800 1650 50  0001 C CNN
+F 3 "~" H 3800 1650 50  0001 C CNN
+	1    3800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1650 3600 1650
+Text GLabel 3500 1350 0    43   Input ~ 0
++12Vstandby
+Wire Wire Line
+	3500 1350 3550 1350
+Wire Wire Line
+	3550 1350 3550 1550
+Wire Wire Line
+	3550 1550 3600 1550
+Text Notes 3200 3000 0    118  ~ 0
+PSU Common Slot
+Wire Wire Line
+	4100 4250 4100 4350
+Wire Wire Line
+	4100 4350 4000 4350
+Wire Wire Line
+	3450 4350 3450 4450
+Wire Wire Line
+	2900 4250 2900 4350
+Wire Wire Line
+	2900 4350 3000 4350
+Connection ~ 3450 4350
+Wire Wire Line
+	3000 4250 3000 4350
+Connection ~ 3000 4350
+Wire Wire Line
+	3000 4350 3100 4350
+Wire Wire Line
+	3100 4250 3100 4350
+Connection ~ 3100 4350
+Wire Wire Line
+	3100 4350 3200 4350
+Wire Wire Line
+	3200 4250 3200 4350
+Connection ~ 3200 4350
+Wire Wire Line
+	3200 4350 3300 4350
+Wire Wire Line
+	3300 4250 3300 4350
+Connection ~ 3300 4350
+Wire Wire Line
+	3300 4350 3400 4350
+Wire Wire Line
+	3400 4250 3400 4350
+Connection ~ 3400 4350
+Wire Wire Line
+	3400 4350 3450 4350
+Wire Wire Line
+	3500 4250 3500 4350
+Connection ~ 3500 4350
+Wire Wire Line
+	3500 4350 3450 4350
+Wire Wire Line
+	3600 4250 3600 4350
+Connection ~ 3600 4350
+Wire Wire Line
+	3600 4350 3500 4350
+Wire Wire Line
+	3700 4250 3700 4350
+Connection ~ 3700 4350
+Wire Wire Line
+	3700 4350 3600 4350
+Wire Wire Line
+	3800 4250 3800 4350
+Connection ~ 3800 4350
+Wire Wire Line
+	3800 4350 3700 4350
+Wire Wire Line
+	3900 4250 3900 4350
+Connection ~ 3900 4350
+Wire Wire Line
+	3900 4350 3800 4350
+Wire Wire Line
+	4000 4250 4000 4350
+Connection ~ 4000 4350
+Wire Wire Line
+	4000 4350 3900 4350
+Wire Wire Line
+	4200 4250 4200 4350
+Wire Wire Line
+	4200 4350 4300 4350
+Wire Wire Line
+	4650 4350 4650 4500
+Wire Wire Line
+	4650 4350 4700 4350
+Wire Wire Line
+	5400 4350 5400 4250
+Connection ~ 4650 4350
+Wire Wire Line
+	4300 4250 4300 4350
+Connection ~ 4300 4350
+Wire Wire Line
+	4300 4350 4400 4350
+Wire Wire Line
+	4400 4250 4400 4350
+Connection ~ 4400 4350
+Wire Wire Line
+	4400 4350 4500 4350
+Wire Wire Line
+	4500 4250 4500 4350
+Connection ~ 4500 4350
+Wire Wire Line
+	4500 4350 4600 4350
+Wire Wire Line
+	4600 4250 4600 4350
+Connection ~ 4600 4350
+Wire Wire Line
+	4600 4350 4650 4350
+Wire Wire Line
+	4700 4250 4700 4350
+Connection ~ 4700 4350
+Wire Wire Line
+	4700 4350 4800 4350
+Wire Wire Line
+	4800 4250 4800 4350
+Connection ~ 4800 4350
+Wire Wire Line
+	4800 4350 4900 4350
+Wire Wire Line
+	4900 4250 4900 4350
+Connection ~ 4900 4350
+Wire Wire Line
+	4900 4350 5000 4350
+Wire Wire Line
+	5000 4250 5000 4350
+Connection ~ 5000 4350
+Wire Wire Line
+	5000 4350 5100 4350
+Wire Wire Line
+	5100 4250 5100 4350
+Connection ~ 5100 4350
+Wire Wire Line
+	5100 4350 5200 4350
+Wire Wire Line
+	5200 4250 5200 4350
+Connection ~ 5200 4350
+Wire Wire Line
+	5200 4350 5300 4350
+Wire Wire Line
+	5300 4250 5300 4350
+Connection ~ 5300 4350
+Wire Wire Line
+	5300 4350 5400 4350
+Wire Wire Line
+	4200 3750 4200 3650
+Wire Wire Line
+	4200 3650 4300 3650
+Wire Wire Line
+	4650 3650 4650 3550
+Wire Wire Line
+	5400 3750 5400 3650
+Wire Wire Line
+	5400 3650 5300 3650
+Connection ~ 4650 3650
+Wire Wire Line
+	4700 3750 4700 3650
+Connection ~ 4700 3650
+Wire Wire Line
+	4700 3650 4650 3650
+Wire Wire Line
+	4600 3750 4600 3650
+Connection ~ 4600 3650
+Wire Wire Line
+	4600 3650 4650 3650
+Wire Wire Line
+	4500 3750 4500 3650
+Connection ~ 4500 3650
+Wire Wire Line
+	4500 3650 4600 3650
+Wire Wire Line
+	4400 3750 4400 3650
+Connection ~ 4400 3650
+Wire Wire Line
+	4400 3650 4500 3650
+Wire Wire Line
+	4300 3750 4300 3650
+Connection ~ 4300 3650
+Wire Wire Line
+	4300 3650 4400 3650
+Wire Wire Line
+	4800 3750 4800 3650
+Connection ~ 4800 3650
+Wire Wire Line
+	4800 3650 4700 3650
+Wire Wire Line
+	4900 3750 4900 3650
+Connection ~ 4900 3650
+Wire Wire Line
+	4900 3650 4800 3650
+Wire Wire Line
+	5000 3750 5000 3650
+Connection ~ 5000 3650
+Wire Wire Line
+	5000 3650 4900 3650
+Wire Wire Line
+	5100 3750 5100 3650
+Connection ~ 5100 3650
+Wire Wire Line
+	5100 3650 5000 3650
+Wire Wire Line
+	5200 3750 5200 3650
+Connection ~ 5200 3650
+Wire Wire Line
+	5200 3650 5100 3650
+Wire Wire Line
+	5300 3750 5300 3650
+Connection ~ 5300 3650
+Wire Wire Line
+	5300 3650 5200 3650
+Wire Wire Line
+	2900 3750 2900 3650
+Wire Wire Line
+	2900 3650 3000 3650
+Wire Wire Line
+	3450 3500 3450 3650
+Wire Wire Line
+	4100 3750 4100 3650
+Wire Wire Line
+	4100 3650 4000 3650
+Connection ~ 3450 3650
+Wire Wire Line
+	3000 3750 3000 3650
+Connection ~ 3000 3650
+Wire Wire Line
+	3000 3650 3100 3650
+Wire Wire Line
+	3100 3750 3100 3650
+Connection ~ 3100 3650
+Wire Wire Line
+	3100 3650 3200 3650
+Wire Wire Line
+	3200 3750 3200 3650
+Connection ~ 3200 3650
+Wire Wire Line
+	3200 3650 3300 3650
+Wire Wire Line
+	3300 3750 3300 3650
+Connection ~ 3300 3650
+Wire Wire Line
+	3300 3650 3400 3650
+Wire Wire Line
+	3400 3750 3400 3650
+Connection ~ 3400 3650
+Wire Wire Line
+	3400 3650 3450 3650
+Wire Wire Line
+	3500 3750 3500 3650
+Connection ~ 3500 3650
+Wire Wire Line
+	3500 3650 3450 3650
+Wire Wire Line
+	3600 3750 3600 3650
+Connection ~ 3600 3650
+Wire Wire Line
+	3600 3650 3500 3650
+Wire Wire Line
+	3700 3750 3700 3650
+Connection ~ 3700 3650
+Wire Wire Line
+	3700 3650 3600 3650
+Wire Wire Line
+	3800 3750 3800 3650
+Connection ~ 3800 3650
+Wire Wire Line
+	3800 3650 3700 3650
+Wire Wire Line
+	3900 3750 3900 3650
+Connection ~ 3900 3650
+Wire Wire Line
+	3900 3650 3800 3650
+Wire Wire Line
+	4000 3750 4000 3650
+Connection ~ 4000 3650
+Wire Wire Line
+	4000 3650 3900 3650
+Connection ~ 10400 4700
+Wire Wire Line
+	10400 4700 10400 4550
+Wire Wire Line
+	10400 4850 10400 4700
+Connection ~ 10400 4850
+Wire Wire Line
+	10400 5000 10400 4850
+Wire Wire Line
+	10400 5400 10400 5250
+Connection ~ 10400 5400
+Connection ~ 10400 5550
+Wire Wire Line
+	10400 5550 10400 5400
+Wire Wire Line
+	10400 5700 10400 5550
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J19
+U 1 1 5DC73BD7
+P 10600 5700
+F 0 "J19" H 10680 5742 50  0000 L CNN
+F 1 "0V" H 10680 5651 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 5700 50  0001 C CNN
+F 3 "~" H 10600 5700 50  0001 C CNN
+	1    10600 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J18
+U 1 1 5DC738A0
+P 10600 5550
+F 0 "J18" H 10680 5592 50  0000 L CNN
+F 1 "0V" H 10680 5501 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 5550 50  0001 C CNN
+F 3 "~" H 10600 5550 50  0001 C CNN
+	1    10600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J17
+U 1 1 5DC734CE
+P 10600 5250
+F 0 "J17" H 10680 5292 50  0000 L CNN
+F 1 "0V" H 10680 5201 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 5250 50  0001 C CNN
+F 3 "~" H 10600 5250 50  0001 C CNN
+	1    10600 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J16
+U 1 1 5DC731B8
+P 10600 5000
+F 0 "J16" H 10680 5042 50  0000 L CNN
+F 1 "+12V" H 10680 4951 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 5000 50  0001 C CNN
+F 3 "~" H 10600 5000 50  0001 C CNN
+	1    10600 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J14
+U 1 1 5DC72E29
+P 10600 4550
+F 0 "J14" H 10680 4592 50  0000 L CNN
+F 1 "+12V" H 10680 4501 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 4550 50  0001 C CNN
+F 3 "~" H 10600 4550 50  0001 C CNN
+	1    10600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J15
+U 1 1 5DC72AE1
+P 10600 4700
+F 0 "J15" H 10680 4742 50  0000 L CNN
+F 1 "+12V" H 10680 4651 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 4700 50  0001 C CNN
+F 3 "~" H 10600 4700 50  0001 C CNN
+	1    10600 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J13
+U 1 1 5DAC6254
+P 10600 5400
+F 0 "J13" H 10680 5442 50  0000 L CNN
+F 1 "0V" H 10680 5351 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 5400 50  0001 C CNN
+F 3 "~" H 10600 5400 50  0001 C CNN
+	1    10600 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J12
+U 1 1 5DAC52F3
+P 10600 4850
+F 0 "J12" H 10680 4892 50  0000 L CNN
+F 1 "+12V" H 10680 4801 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 4850 50  0001 C CNN
+F 3 "~" H 10600 4850 50  0001 C CNN
+	1    10600 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 4700
+Wire Wire Line
+	9850 4700 9850 4550
+Wire Wire Line
+	9850 4850 9850 4700
+Connection ~ 9850 4850
+Wire Wire Line
+	9850 5000 9850 4850
+Wire Wire Line
+	9850 5400 9850 5250
+Connection ~ 9850 5400
+Connection ~ 9850 5550
+Wire Wire Line
+	9850 5550 9850 5400
+Wire Wire Line
+	9850 5700 9850 5550
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J35
+U 1 1 5DD016E5
+P 10050 5700
+F 0 "J35" H 10130 5742 50  0000 L CNN
+F 1 "0V" H 10130 5651 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 5700 50  0001 C CNN
+F 3 "~" H 10050 5700 50  0001 C CNN
+	1    10050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J34
+U 1 1 5DD016EF
+P 10050 5550
+F 0 "J34" H 10130 5592 50  0000 L CNN
+F 1 "0V" H 10130 5501 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 5550 50  0001 C CNN
+F 3 "~" H 10050 5550 50  0001 C CNN
+	1    10050 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J32
+U 1 1 5DD016F9
+P 10050 5250
+F 0 "J32" H 10130 5292 50  0000 L CNN
+F 1 "0V" H 10130 5201 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 5250 50  0001 C CNN
+F 3 "~" H 10050 5250 50  0001 C CNN
+	1    10050 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J31
+U 1 1 5DD01703
+P 10050 5000
+F 0 "J31" H 10130 5042 50  0000 L CNN
+F 1 "+12V" H 10130 4951 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 5000 50  0001 C CNN
+F 3 "~" H 10050 5000 50  0001 C CNN
+	1    10050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J28
+U 1 1 5DD0170D
+P 10050 4550
+F 0 "J28" H 10130 4592 50  0000 L CNN
+F 1 "+12V" H 10130 4501 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 4550 50  0001 C CNN
+F 3 "~" H 10050 4550 50  0001 C CNN
+	1    10050 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J29
+U 1 1 5DD01717
+P 10050 4700
+F 0 "J29" H 10130 4742 50  0000 L CNN
+F 1 "+12V" H 10130 4651 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 4700 50  0001 C CNN
+F 3 "~" H 10050 4700 50  0001 C CNN
+	1    10050 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J33
+U 1 1 5DD01721
+P 10050 5400
+F 0 "J33" H 10130 5442 50  0000 L CNN
+F 1 "0V" H 10130 5351 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 5400 50  0001 C CNN
+F 3 "~" H 10050 5400 50  0001 C CNN
+	1    10050 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J30
+U 1 1 5DD0172B
+P 10050 4850
+F 0 "J30" H 10130 4892 50  0000 L CNN
+F 1 "+12V" H 10130 4801 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 4850 50  0001 C CNN
+F 3 "~" H 10050 4850 50  0001 C CNN
+	1    10050 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 9300 4700
+Wire Wire Line
+	9300 4700 9300 4550
+Wire Wire Line
+	9300 4850 9300 4700
+Connection ~ 9300 4850
+Wire Wire Line
+	9300 5000 9300 4850
+Wire Wire Line
+	9300 5400 9300 5250
+Connection ~ 9300 5400
+Connection ~ 9300 5550
+Wire Wire Line
+	9300 5550 9300 5400
+Wire Wire Line
+	9300 5700 9300 5550
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J27
+U 1 1 5DD3826B
+P 9500 5700
+F 0 "J27" H 9580 5742 50  0000 L CNN
+F 1 "0V" H 9580 5651 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 5700 50  0001 C CNN
+F 3 "~" H 9500 5700 50  0001 C CNN
+	1    9500 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J26
+U 1 1 5DD38275
+P 9500 5550
+F 0 "J26" H 9580 5592 50  0000 L CNN
+F 1 "0V" H 9580 5501 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 5550 50  0001 C CNN
+F 3 "~" H 9500 5550 50  0001 C CNN
+	1    9500 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J24
+U 1 1 5DD3827F
+P 9500 5250
+F 0 "J24" H 9580 5292 50  0000 L CNN
+F 1 "0V" H 9580 5201 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 5250 50  0001 C CNN
+F 3 "~" H 9500 5250 50  0001 C CNN
+	1    9500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J23
+U 1 1 5DD38289
+P 9500 5000
+F 0 "J23" H 9580 5042 50  0000 L CNN
+F 1 "+12V" H 9580 4951 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 5000 50  0001 C CNN
+F 3 "~" H 9500 5000 50  0001 C CNN
+	1    9500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J20
+U 1 1 5DD38293
+P 9500 4550
+F 0 "J20" H 9580 4592 50  0000 L CNN
+F 1 "+12V" H 9580 4501 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 4550 50  0001 C CNN
+F 3 "~" H 9500 4550 50  0001 C CNN
+	1    9500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J21
+U 1 1 5DD3829D
+P 9500 4700
+F 0 "J21" H 9580 4742 50  0000 L CNN
+F 1 "+12V" H 9580 4651 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 4700 50  0001 C CNN
+F 3 "~" H 9500 4700 50  0001 C CNN
+	1    9500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J25
+U 1 1 5DD382A7
+P 9500 5400
+F 0 "J25" H 9580 5442 50  0000 L CNN
+F 1 "0V" H 9580 5351 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 5400 50  0001 C CNN
+F 3 "~" H 9500 5400 50  0001 C CNN
+	1    9500 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J22
+U 1 1 5DD382B1
+P 9500 4850
+F 0 "J22" H 9580 4892 50  0000 L CNN
+F 1 "+12V" H 9580 4801 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 4850 50  0001 C CNN
+F 3 "~" H 9500 4850 50  0001 C CNN
+	1    9500 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 4550 9300 4400
+Wire Wire Line
+	9850 4400 9850 4550
+Connection ~ 9300 4550
+Connection ~ 9850 4550
+Wire Wire Line
+	10400 4400 10400 4550
+Connection ~ 10400 4550
+Wire Wire Line
+	9300 5700 9300 5850
+Wire Wire Line
+	9850 5850 9850 5700
+Connection ~ 9300 5700
+Connection ~ 9850 5700
+Wire Wire Line
+	10400 5850 10400 5700
+Connection ~ 10400 5700
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J39
+U 1 1 5DDB34FC
+P 10600 5850
+F 0 "J39" H 10680 5892 50  0000 L CNN
+F 1 "0V" H 10680 5801 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 5850 50  0001 C CNN
+F 3 "~" H 10600 5850 50  0001 C CNN
+	1    10600 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J38
+U 1 1 5DDB38B1
+P 10600 4400
+F 0 "J38" H 10680 4442 50  0000 L CNN
+F 1 "+12V" H 10680 4351 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10600 4400 50  0001 C CNN
+F 3 "~" H 10600 4400 50  0001 C CNN
+	1    10600 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J36
+U 1 1 5DDC8D6E
+P 9500 4400
+F 0 "J36" H 9580 4442 50  0000 L CNN
+F 1 "+12V" H 9580 4351 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 4400 50  0001 C CNN
+F 3 "~" H 9500 4400 50  0001 C CNN
+	1    9500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J37
+U 1 1 5DDC933B
+P 10050 4400
+F 0 "J37" H 10130 4442 50  0000 L CNN
+F 1 "+12V" H 10130 4351 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 4400 50  0001 C CNN
+F 3 "~" H 10050 4400 50  0001 C CNN
+	1    10050 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J41
+U 1 1 5DDEE3B2
+P 10050 5850
+F 0 "J41" H 10130 5892 50  0000 L CNN
+F 1 "0V" H 10130 5801 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 10050 5850 50  0001 C CNN
+F 3 "~" H 10050 5850 50  0001 C CNN
+	1    10050 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J40
+U 1 1 5DDEE523
+P 9500 5850
+F 0 "J40" H 9580 5892 50  0000 L CNN
+F 1 "0V" H 9580 5801 50  0000 L CNN
+F 2 "Footprints:WIRE-12AWG" H 9500 5850 50  0001 C CNN
+F 3 "~" H 9500 5850 50  0001 C CNN
+	1    9500 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J44
+U 1 1 5DEDCD2F
+P 8950 5550
+F 0 "J44" H 9030 5592 50  0000 L CNN
+F 1 "0V" H 9030 5501 50  0000 L CNN
+F 2 "Footprints:WIRE-16AWG" H 8950 5550 50  0001 C CNN
+F 3 "~" H 8950 5550 50  0001 C CNN
+	1    8950 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5550 8000 5400
+Wire Wire Line
+	8000 4700 8000 4850
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J45
+U 1 1 5DF1B045
+P 8950 5700
+F 0 "J45" H 9030 5742 50  0000 L CNN
+F 1 "0V" H 9030 5651 50  0000 L CNN
+F 2 "Footprints:WIRE-16AWG" H 8950 5700 50  0001 C CNN
+F 3 "~" H 8950 5700 50  0001 C CNN
+	1    8950 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J43
+U 1 1 5DF1B33E
+P 8950 4700
+F 0 "J43" H 9030 4742 50  0000 L CNN
+F 1 "+12V" H 9030 4651 50  0000 L CNN
+F 2 "Footprints:WIRE-16AWG" H 8950 4700 50  0001 C CNN
+F 3 "~" H 8950 4700 50  0001 C CNN
+	1    8950 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J42
+U 1 1 5DF1C507
+P 8950 4550
+F 0 "J42" H 9030 4592 50  0000 L CNN
+F 1 "+12V" H 9030 4501 50  0000 L CNN
+F 2 "Footprints:WIRE-16AWG" H 8950 4550 50  0001 C CNN
+F 3 "~" H 8950 4550 50  0001 C CNN
+	1    8950 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 5700 8750 5550
+Connection ~ 8750 5550
+Wire Wire Line
+	8750 5550 8750 5400
+Wire Wire Line
+	8750 4550 8750 4700
+Connection ~ 8750 4700
+Wire Wire Line
+	8750 4700 8750 4850
+Connection ~ 8750 4850
+Wire Wire Line
+	8750 4850 9300 4850
+Wire Wire Line
+	8000 4850 8750 4850
+Wire Wire Line
+	9300 4400 9300 4250
+Wire Wire Line
+	9300 4250 9850 4250
+Wire Wire Line
+	9850 4250 9850 4400
+Connection ~ 9300 4400
+Connection ~ 9850 4400
+Wire Wire Line
+	9850 4250 10400 4250
+Wire Wire Line
+	10400 4250 10400 4400
+Connection ~ 9850 4250
+Connection ~ 10400 4400
+Wire Wire Line
+	9300 5850 9300 6000
+Wire Wire Line
+	9850 6000 9850 5850
+Connection ~ 9300 5850
+Connection ~ 9850 5850
+Wire Wire Line
+	10400 6000 10400 5850
+Connection ~ 9850 6000
+Connection ~ 10400 5850
+Wire Wire Line
+	9850 6000 10400 6000
+Wire Wire Line
+	9300 6000 9850 6000
+Connection ~ 8750 5400
+Wire Wire Line
+	8750 5400 9300 5400
+Wire Wire Line
+	8000 5400 8750 5400
+Wire Wire Line
+	10200 3850 10300 3850
+Text GLabel 10200 3850 0    43   Input ~ 0
+CurrentShare
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J46
+U 1 1 5DC14980
+P 10500 3850
+F 0 "J46" H 10580 3892 50  0000 L CNN
+F 1 "Isense" H 10580 3801 50  0000 L CNN
+F 2 "Footprints:WIRE-16AWG" H 10500 3850 50  0001 C CNN
+F 3 "~" H 10500 3850 50  0001 C CNN
+	1    10500 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3850 8850 3850
+Text GLabel 8750 3850 0    43   Input ~ 0
+Status
+$Comp
+L Common-Slot-Mini-v1-rescue:Conn_01x01-conn J47
+U 1 1 5DCB7A2E
+P 9050 3850
+F 0 "J47" H 9130 3892 50  0000 L CNN
+F 1 "Status" H 9130 3801 50  0000 L CNN
+F 2 "Footprints:WIRE-20AWG" H 9050 3850 50  0001 C CNN
+F 3 "~" H 9050 3850 50  0001 C CNN
+	1    9050 3850
+	1    0    0    -1  
+$EndComp
+Text Notes 2250 900  0    118  ~ 0
+Monitoring
+$EndSCHEMATC
