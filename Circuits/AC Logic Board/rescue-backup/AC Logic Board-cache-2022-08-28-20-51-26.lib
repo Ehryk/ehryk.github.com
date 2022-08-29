@@ -1,15 +1,20 @@
-EESchema-LIBRARY Version 2.4
+EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
-# Connector_Generic_Conn_01x03
+# Conn_01x03
 #
-DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
+DEF Conn_01x03 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
+F1 "Conn_01x03" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- Connector*:*_1x??_*
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
 $ENDFPLIST
 DRAW
 S -50 -95 0 -105 1 1 6 N
@@ -22,15 +27,20 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x05
+# Conn_01x05
 #
-DEF Connector_Generic_Conn_01x05 J 0 40 Y N 1 F N
+DEF Conn_01x05 J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Generic_Conn_01x05" 0 -300 50 H V C CNN
+F1 "Conn_01x05" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- Connector*:*_1x??_*
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
 $ENDFPLIST
 DRAW
 S -50 -195 0 -205 1 1 6 N
@@ -47,29 +57,29 @@ X Pin_5 5 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ehryk_TE-AC-SPDT
+# TE-AC-SPDT
 #
-DEF ehryk_TE-AC-SPDT RLY 0 40 Y Y 1 F N
+DEF TE-AC-SPDT RLY 0 40 Y Y 1 F N
 F0 "RLY" 0 350 60 H V C CNN
-F1 "ehryk_TE-AC-SPDT" 0 -360 60 H V C CNN
+F1 "TE-AC-SPDT" 0 -360 60 H V C CNN
 F2 "" 45 -60 60 H V C CNN
 F3 "" 45 -60 60 H V C CNN
 $FPLIST
  relay_T9AS1x1
 $ENDFPLIST
 DRAW
-A -45 115 15 1 1799 0 1 0 N -30 115 -60 115
-A -15 115 15 1 1799 0 1 0 N 0 115 -30 115
-A 15 115 15 1 1799 0 1 0 N 30 115 0 115
-A 45 115 15 1 1799 0 1 0 N 60 115 30 115
 C 90 -249 10 0 0 0 N
-C -90 -150 10 0 1 0 F
-C 90 -50 10 0 1 0 N
 T 0 -147 180 20 0 0 0 COIL Normal 0 C C
 T 0 150 180 20 0 0 0 COIL Normal 0 C C
 T 0 -145 -170 20 0 0 0 COM Normal 0 C C
 T 0 151 -71 20 0 0 0 NC Normal 0 C C
 T 0 152 -167 20 0 0 0 NO Normal 0 C C
+A -45 115 15 1 1799 0 1 0 N -30 115 -60 115
+A -15 115 15 1 1799 0 1 0 N 0 115 -30 115
+A 15 115 15 1 1799 0 1 0 N 30 115 0 115
+A 45 115 15 1 1799 0 1 0 N 60 115 30 115
+C -90 -150 10 0 1 0 F
+C 90 -50 10 0 1 0 N
 S -240 300 240 -300 0 1 0 N
 P 2 0 1 0 -100 115 -100 200 N
 P 2 0 1 0 -73 -147 70 -63 N
@@ -98,10 +108,10 @@ P 3 0 1 0 20 95 40 95 40 95 N
 P 3 0 1 0 50 95 70 95 70 95 N
 P 3 0 1 0 60 115 100 115 100 115 N
 X ~ 11 -200 -150 100 R 50 50 1 1 P
-X ~ 12 200 -50 100 L 50 50 1 1 P
-X ~ 14 200 -250 100 L 50 50 1 1 I
 X ~ A1 200 200 100 L 50 50 1 1 P
+X ~ 12 200 -50 100 L 50 50 1 1 P
 X ~ A2 -200 200 100 R 50 50 1 1 P
+X ~ 14 200 -250 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #

@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name AC-Logic-Board-rescue)(type Legacy)(uri "${KIPRJMOD}/AC Logic Board-rescue.lib")(options "")(descr ""))
+  (lib (name w_connectors)(type Legacy)(uri C:/Projects/ehryk.github.com/Circuits/Parts/Libraries/w_connectors.lib)(options "")(descr ""))
+  (lib (name w_relay)(type Legacy)(uri C:/Projects/ehryk.github.com/Circuits/Parts/Libraries/w_relay.lib)(options "")(descr ""))
+)
