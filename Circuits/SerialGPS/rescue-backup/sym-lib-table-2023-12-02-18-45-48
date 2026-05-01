@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name SerialGPS-rescue)(type Legacy)(uri ${KIPRJMOD}/SerialGPS-rescue.lib)(options "")(descr ""))
+  (lib (name MOUDLE-GPS-NEO-6M_24P-16X12.2MM_)(type Legacy)(uri ${KIPRJMOD}/Parts/MOUDLE-GPS-NEO-6M_24P-16X12.2MM_.lib)(options "")(descr ""))
+  (lib (name connector)(type Legacy)(uri ${KIPRJMOD}/Parts/connector.lib)(options "")(descr ""))
+)
