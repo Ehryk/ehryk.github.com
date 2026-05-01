@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "LPAD-rescue")(type "Legacy")(uri "${KIPRJMOD}/LPAD-rescue.lib")(options "")(descr ""))
+)
