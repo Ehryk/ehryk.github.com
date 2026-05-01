@@ -46,7 +46,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.159
+          "min_clearance": 0.16
         }
       },
       "diff_pair_dimensions": [
@@ -401,7 +401,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Charger.kicad_pro",
+    "filename": "2.0 with PD.kicad_pro",
     "version": 1
   },
   "net_settings": {
