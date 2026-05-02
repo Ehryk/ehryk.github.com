@@ -3568,8 +3568,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -7.62 6.35 0)
+			(property "Reference" "U2"
+				(at -6.604 6.096 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3579,7 +3579,7 @@
 				)
 			)
 			(property "Value" "AP63201WU"
-				(at 2.54 6.35 0)
+				(at 2.286 6.096 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3611,6 +3611,17 @@
 				)
 			)
 			(property "Description" "2A, 500kHz Buck DC/DC Converter, adjustable output voltage, TSOT-23-6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "KiLib_Generator" "package/gullwing"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3730,7 +3741,7 @@
 					)
 				)
 				(pin output line
-					(at 10.16 2.54 180)
+					(at 10.16 0 180)
 					(length 2.54)
 					(name "SW"
 						(effects
@@ -3748,7 +3759,7 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 0 180)
+					(at 10.16 2.54 180)
 					(length 2.54)
 					(name "BST"
 						(effects
@@ -3774,8 +3785,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -7.62 6.35 0)
+			(property "Reference" "U1"
+				(at -6.35 6.096 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3785,7 +3796,7 @@
 				)
 			)
 			(property "Value" "AP63203WU"
-				(at 2.54 6.35 0)
+				(at 2.032 6.096 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3817,6 +3828,17 @@
 				)
 			)
 			(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "KiLib_Generator" "package/gullwing"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3936,7 +3958,7 @@
 					)
 				)
 				(pin output line
-					(at 10.16 2.54 180)
+					(at 10.16 0 180)
 					(length 2.54)
 					(name "SW"
 						(effects
@@ -3954,7 +3976,7 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 0 180)
+					(at 10.16 2.54 180)
 					(length 2.54)
 					(name "BST"
 						(effects
