@@ -4916,7 +4916,7 @@
 		)
 		(uuid "7f11699e-d964-4273-9634-8c6d1196b93a")
 	)
-	(text "13.6V Output: 160kΩ\n   5V Output: 53kΩ"
+	(text "13.6V Output: 160kΩ/10kΩ\n   5V Output: 162kΩ/30kΩ"
 		(exclude_from_sim no)
 		(at 108.966 91.948 0)
 		(effects
@@ -7927,15 +7927,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330Ω"
-			(at 106.426 130.81 90)
+		(property "Value" "10Ω"
+			(at 107.95 130.81 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 0.75 0.75)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
@@ -8219,15 +8218,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "220Ω"
-			(at 106.426 135.89 90)
+		(property "Value" "10Ω"
+			(at 107.95 135.89 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 0.75 0.75)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
@@ -10981,8 +10979,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330Ω"
-			(at 106.426 125.73 90)
+		(property "Value" "68Ω"
+			(at 107.95 125.73 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10990,7 +10988,6 @@
 					(face "KiCad Font")
 					(size 0.75 0.75)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
