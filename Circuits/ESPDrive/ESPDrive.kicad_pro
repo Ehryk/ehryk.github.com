@@ -62,10 +62,6 @@
       ],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|151546936|97918999|1a342553-776a-43c9-b654-4659baf54b44|00000000-0000-0000-0000-000000000000",
-          "Removed Courtyard"
-        ],
-        [
           "silk_edge_clearance|137745186|76000000|29937ce5-0659-407a-93ea-7beda791037f|48664939-eb62-405f-866e-f082da599fa5",
           ""
         ],
