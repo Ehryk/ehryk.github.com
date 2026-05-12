@@ -1477,7 +1477,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "../../Parts/3D/ESP32-DEVKIT-V1.step"
+		(model "C:/Projects/ehryk.github.com/Circuits/Parts/3D/ESP32-DEVKIT-V1.step"
 			(offset
 				(xyz -1 0 6)
 			)
@@ -1965,7 +1965,7 @@
 			)
 		)
 		(property "Value" "6.8μH"
-			(at 0 4.25 270)
+			(at 0 4.25 90)
 			(layer "F.Fab")
 			(uuid "e0a58d5d-91a7-4c7f-80b5-e81dccd9584d")
 			(effects
@@ -2247,7 +2247,7 @@
 			(uuid "52f9ae64-2379-4d62-94e4-0d39baf702d2")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "8d3a99e4-7ddc-4e40-960e-b36d8efff6a4")
 			(effects
@@ -2278,7 +2278,7 @@
 			(uuid "a6608c9c-0bba-42d4-ae4f-80a727d7ee1b")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Abracon_ASPI-0630LR.step"
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Panasonic_PCC-M0630M.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4082,7 +4082,7 @@
 			)
 		)
 		(property "Value" "6.8μH"
-			(at 0 4.25 270)
+			(at 0 4.25 90)
 			(layer "F.Fab")
 			(uuid "79315b4d-87b8-4022-a1d2-650ef015ff1a")
 			(effects
@@ -4364,7 +4364,7 @@
 			(uuid "d83d7427-fe7a-4ddd-aac1-97cd56f09f26")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "423982ba-040e-44f4-8da0-7cfcf9badfe9")
 			(effects
@@ -4395,7 +4395,7 @@
 			(uuid "554b640c-6b19-4741-95f7-d5db5721aed0")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Abracon_ASPI-0630LR.step"
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Panasonic_PCC-M0630M.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7179,7 +7179,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R18"
-			(at 3.5 0 180)
+			(at 3.4 0 180)
 			(layer "B.SilkS")
 			(uuid "ea2e4f31-7ac3-488c-9871-2541feef068a")
 			(effects
@@ -7343,7 +7343,7 @@
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "D1"
-			(at 1.5 -1.4 180)
+			(at 1.5 -1.8 180)
 			(layer "B.SilkS")
 			(uuid "1d400ddf-b8f9-4b78-a32d-fde604820683")
 			(effects
@@ -7895,7 +7895,7 @@
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q3"
-			(at 0 2.4 90)
+			(at 0 2.6 180)
 			(layer "B.SilkS")
 			(uuid "783de555-cfad-40af-87d6-bea00320b825")
 			(effects
@@ -9341,7 +9341,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R14"
-			(at -2.6 0 180)
+			(at -3.5 0.2 180)
 			(layer "B.SilkS")
 			(uuid "6f8baaf4-a6b9-4fd5-831e-902a647aa872")
 			(effects
@@ -9505,7 +9505,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R16"
-			(at -2.7 0 180)
+			(at -3.5 0 180)
 			(layer "B.SilkS")
 			(uuid "371ce18d-11f3-42e2-b26f-35b2fe2a9d1b")
 			(effects
@@ -9997,7 +9997,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R6"
-			(at 1.5 1.8 0)
+			(at 1.6 1.7 0)
 			(layer "B.SilkS")
 			(uuid "7a575c31-b770-46d4-bf5e-e903f7cd706c")
 			(effects
@@ -10695,7 +10695,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R15"
-			(at 0 -2.4 180)
+			(at 0.8 -2.4 180)
 			(layer "B.SilkS")
 			(uuid "e38176b9-1268-4d87-8efc-10bab2d84a5c")
 			(effects
@@ -11207,7 +11207,7 @@
 		)
 	)
 	(gr_text "NC"
-		(at 141.5 139.5 0)
+		(at 141.6 139.1 0)
 		(layer "F.SilkS")
 		(uuid "3f82cc1f-b5bd-4a5f-b228-681712265902")
 		(effects
@@ -11219,7 +11219,7 @@
 		)
 	)
 	(gr_text "NO"
-		(at 142.3 137.1 0)
+		(at 143.1 137.1 0)
 		(layer "F.SilkS")
 		(uuid "0c81ab79-fffc-4b59-bfa8-936ec4bb6e19")
 		(effects
@@ -11231,7 +11231,7 @@
 		)
 	)
 	(gr_text "COM"
-		(at 166.15 139.85 0)
+		(at 166.1 139.9 0)
 		(layer "F.SilkS")
 		(uuid "7ce31996-66fc-4220-915d-fc335909eb4b")
 		(effects
@@ -11418,8 +11418,8 @@
 			(justify bottom mirror)
 		)
 	)
-	(gr_text "12V/5V"
-		(at 130 132.6 -0)
+	(gr_text "Vout"
+		(at 130.8 132.1 0)
 		(layer "B.SilkS")
 		(uuid "6e57fc24-3a9f-4a8b-b458-7ab7a6b4db4f")
 		(effects
@@ -11443,7 +11443,7 @@
 		)
 	)
 	(gr_text "NC"
-		(at 141.5 139.6 -0)
+		(at 141.4 139.1 -0)
 		(layer "B.SilkS")
 		(uuid "63634ecd-8fae-4f16-b6d3-700da5edc542")
 		(effects
@@ -11455,7 +11455,7 @@
 		)
 	)
 	(gr_text "NO"
-		(at 142.35 137.1 -0)
+		(at 143.3 136.8 -0)
 		(layer "B.SilkS")
 		(uuid "823fc80a-b1ad-4389-ab79-c56cd0fc7a5d")
 		(effects
@@ -11467,7 +11467,7 @@
 		)
 	)
 	(gr_text "V+"
-		(at 162.4 132.2 -0)
+		(at 162.5 132.3 -0)
 		(layer "B.SilkS")
 		(uuid "73ab51bb-583b-4f21-a81b-306e09ac81f2")
 		(effects
@@ -11479,7 +11479,7 @@
 		)
 	)
 	(gr_text "COM"
-		(at 166.2 139.85 -0)
+		(at 167 139.9 -0)
 		(layer "B.SilkS")
 		(uuid "50fc5c0c-0976-450b-b785-71c200612ef7")
 		(effects
@@ -11514,7 +11514,7 @@
 			(justify bottom mirror)
 		)
 	)
-	(gr_text "2026.05.03"
+	(gr_text "2026.05.12"
 		(at 152 106 0)
 		(layer "B.SilkS")
 		(uuid "bf88de73-e5a7-4a85-88b9-62a7a7cf789c")
@@ -11526,7 +11526,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "ESPDrive v1.0"
+	(gr_text "ESPDrive v1.1"
 		(at 152 102 0)
 		(layer "B.SilkS")
 		(uuid "5cfbd644-f903-43a3-bdf5-3b469b12e1ce")
