@@ -1,0 +1,94 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "SJ1-3523N" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "J" (id 0) (at -7.62 8.382 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Value" "SJ1-3523N" (id 1) (at -7.62 -10.16 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Footprint" "SJ1-3523N:CUI_SJ1-3523N" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PARTREV" "1.05" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "STANDARD" "Manufacturer Recommendations" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MAXIMUM_PACKAGE_HEIGHT" "6.25 mm" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MANUFACTURER" "CUI Devices" (id 7) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "SJ1-3523N_0_0"
+      (polyline
+        (pts (xy 7.62 5.08) (xy -3.81 5.08)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -3.81 5.08) (xy -3.81 0.889)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -3.81 0.889) (xy -3.175 0.889)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -3.175 0.889) (xy -3.175 -3.556)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -3.175 -3.556) (xy -4.445 -3.556)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -4.445 -3.556) (xy -4.445 0.889)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -4.445 0.889) (xy -3.81 0.889)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 2.54) (xy 0.127 2.54)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 0.127 2.54) (xy -1.143 1.27)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -1.143 1.27) (xy -2.413 2.54)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 -5.08) (xy 1.397 -5.08)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 1.397 -5.08) (xy 0.127 -3.81)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 0.127 -3.81) (xy -1.143 -5.08)) (stroke (width 0.1524))
+      )
+      (rectangle (start -7.62 -7.62) (end 7.62 7.62)
+        (stroke (width 0.254)) (fill (type background))
+      )
+      (pin passive line (at 12.7 5.08 180.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 12.7 2.54 180.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 12.7 -5.08 180.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)
