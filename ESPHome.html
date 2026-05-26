@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPHome Encryption Key Generator</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #f5f7fb;
+            color: #1e293b;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .sub {
+            color: #475569;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .key-container {
+            background: #f1f5f9;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            word-break: break-all;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            border: 1px solid #cbd5e1;
+        }
+        .key-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #334155;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-right: 0.75rem;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        button.secondary {
+            background: #64748b;
+        }
+        button.secondary:hover {
+            background: #475569;
+        }
+        .copy-feedback {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            color: #10b981;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            border-top: 1px solid #e2e8f0;
+        }
+        .yaml-hint {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: #64748b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>🔐 ESPHome API Encryption Key</h1>
+    <div class="sub">Random 32‑byte base64 key – regenerated each time you open/refresh this page.</div>
+
+    <div class="key-label">🔑 Your generated key</div>
+    <div class="key-container" id="keyDisplay">-- generating --</div>
+
+    <div>
+        <button id="copyBtn">📋 Copy key</button>
+        <button id="refreshBtn" class="secondary">🔄 Regenerate</button>
+        <span id="copyFeedback" class="copy-feedback">✓ Copied!</span>
+    </div>
+
+    <hr>
+
+    <div class="key-label">📄 Example usage in ESPHome YAML</div>
+    <div class="yaml-hint" id="yamlSnippet">
+        # Paste your key below
+    </div>
+    <p style="font-size: 0.8rem; margin-top: 0.75rem;">
+        ⚡️ The key above is generated locally in your browser — never sent to any server.
+    </p>
+</div>
+<footer>
+    Reload the page or click "Regenerate" to create a new secure key.
+</footer>
+
+<script>
+    (function() {
+        // Generate a cryptographically random 32-byte array and return base64 string
+        function generateBase64Key() {
+            const bytes = new Uint8Array(32);
+            crypto.getRandomValues(bytes);  // secure random values
+            // Convert to base64 (btoa works on binary strings, so we need a workaround)
+            let binary = '';
+            for (let i = 0; i < bytes.length; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return btoa(binary);
+        }
+
+        function updateUI() {
+            const key = generateBase64Key();
+            document.getElementById('keyDisplay').innerText = key;
+            // Update YAML snippet
+            const snippet = `api:\n  encryption:\n    key: "${key}"`;
+            document.getElementById('yamlSnippet').innerText = snippet;
+            return key;
+        }
+
+        let currentKey = updateUI();
+
+        // Copy functionality
+        const copyBtn = document.getElementById('copyBtn');
+        const refreshBtn = document.getElementById('refreshBtn');
+        const copyFeedback = document.getElementById('copyFeedback');
+
+        copyBtn.addEventListener('click', async () => {
+            const keyText = document.getElementById('keyDisplay').innerText;
+            try {
+                await navigator.clipboard.writeText(keyText);
+                copyFeedback.style.opacity = '1';
+                setTimeout(() => {
+                    copyFeedback.style.opacity = '0';
+                }, 1500);
+            } catch (err) {
+                alert('Could not copy: ' + err);
+            }
+        });
+
+        refreshBtn.addEventListener('click', () => {
+            currentKey = updateUI();
+            copyFeedback.style.opacity = '0'; // hide any visible feedback
+        });
+    })();
+</script>
+</body>
+</html>
