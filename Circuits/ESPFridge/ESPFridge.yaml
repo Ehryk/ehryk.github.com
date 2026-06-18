@@ -1,0 +1,381 @@
+esphome:
+  name: kitchen-fridge
+  friendly_name: Kitchen Fridge
+  # Boot configuration - Setup interrupts & thresholds
+  on_boot:
+    priority: 600
+    then:
+      # Run configuration only on true cold boot (not on deep sleep wake)
+      - if:
+          condition:
+            lambda: 'return id(boot_count).state < 2;'   # Only run once on first boot
+          then:
+            - lambda: |-
+                ESP_LOGI("boot", "Cold boot - Configuring sensors");
+
+                // === Configure OPT3001 ===
+                // Config register 0x01 = Single-shot, 100 ms conversion, INT active low
+                id(i2c_bus).write(0x44, (uint8_t[3]){0x01, 0xC4, 0x10}, 3);
+                // High lux threshold register 0x03 ≈ 50 lux (door open)
+                id(i2c_bus).write(0x44, (uint8_t[3]){0x03, 0x0C, 0x00}, 3);
+
+                // === TMP117 One-Shot + Alert Thresholds ===
+                // Config register 0x01 = One-shot mode, 16-bit, no averaging
+                id(i2c_bus).write(0x48, (uint8_t[3]){0x01, 0x02, 0x20}, 3);
+                // High threshold register 0x02 = +8.0°C (Too Warm)
+                id(i2c_bus).write(0x48, (uint8_t[3]){0x02, 0x04, 0x00}, 3);
+                // Low threshold register 0x03 =  -2.0°C (Too Cold)
+                id(i2c_bus).write(0x48, (uint8_t[3]){0x03, 0xFE, 0x00}, 3);
+
+                ESP_LOGI("config", "Sensor configuration complete");
+
+# ====================== CONFIGURATION ======================
+
+esp32:
+  board: esp32-c3-devkitm-1     # Most reliable for WROOM-02 modules
+  variant: ESP32C3
+  framework:
+    type: esp-idf               # Recommended for C3
+
+interval:
+  - interval: 20s
+    then:
+      - script.execute: wake_and_process
+
+deep_sleep:
+  id: fridge_deep_sleep
+  sleep_duration: 45s          # Deep Sleep Fallback when not specified
+  wakeup_pin_mode: KEEP_AWAKE
+  wakeup_pin: 
+    number: GPIO1
+    inverted: true
+    mode: INPUT_PULLUP
+    allow_other_uses: true
+
+wifi:
+  id: wifi_id
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  power_save_mode: HIGH
+
+api:
+  encryption: 
+    key: "XwfXtratsJLjzyvR3bBwIyW4rGaKPosYBYPQliu03m8="
+  on_client_connected:
+    - globals.set:
+        id: debug_mode
+        value: 'true'
+  #on_client_disconnected:
+  #  - globals.set:
+  #      id: debug_mode
+  #      value: 'false'
+
+time:
+  - platform: homeassistant
+    id: ha_time
+
+ota:
+  - platform: esphome
+    
+logger:
+  level: DEBUG
+
+i2c:
+  id: i2c_bus
+  sda: GPIO4
+  scl: GPIO5
+  scan: false
+
+globals:
+  - id: debug_mode
+    type: bool
+    restore_value: true          # Persists across power cycles / deep sleep wakes
+    initial_value: 'true'       # Default = normal low-power behavior
+
+  - id: sleep_duration_sec
+    type: uint32_t
+    restore_value: true
+    initial_value: '300'          # Default = 5m
+
+  - id: last_update_ts
+    type: uint32_t
+    restore_value: false
+    initial_value: '0'
+
+# ====================== MAIN LOGIC ======================
+script:
+  - id: wake_and_process
+    mode: restart
+    then:
+      # 1. Immediate visual feedback
+      - light.turn_on:
+          id: status_light
+          effect: "Slow Pulse"
+          brightness: 60%
+
+      # 2. Wait for WiFi?
+      - delay: 1s
+
+      # 3. Quick battery voltage measurement
+      - output.turn_on: divider_enable
+      - delay: 300ms  # Increased for good settling + MOSFET + caps
+      - component.update: adc_voltage
+      - delay: 80ms   # Increased for good settling + MOSFET + caps
+      - lambda: 'ESP_LOGI("battery", "Raw ADC: %.3f V (Battery ~%.3f V)", id(adc_voltage).state, id(battery_voltage).state);'
+      - component.update: battery_percent
+      - output.turn_off: divider_enable
+      - switch.turn_off: divider_enable_switch   # Optional sync
+      
+      # 4. Trigger Single-Shot on OPT3001
+      - lambda: |-
+          id(i2c_bus).write(0x48, (uint8_t[3]){0x01, 0x02, 0x20}, 3);  // TMP117 one-shot
+          id(i2c_bus).write(0x44, (uint8_t[3]){0x01, 0xC4, 0x10}, 3);  // OPT3001 one-shot
+
+      # 5. Wait for conversion to finish (100 ms + margin)
+      - delay: 450ms   
+
+      # 6. Update all sensors (this sends fresh values to Home Assistant)
+      - component.update: tmp117_sensor
+      - component.update: opt3001_sensor
+
+      # 7. Wait for WiFi + data publishing + time sync
+      - wait_until:
+          condition:
+            - lambda: 'return id(ha_time).now().is_valid();'
+          timeout: 2s
+      - delay: 3s
+
+      - lambda: |-
+          if (id(ha_time).now().is_valid()) {
+            uint32_t ts = id(ha_time).now().timestamp;
+            id(last_update_ts) = ts;
+            id(last_update).publish_state(ts);
+            ESP_LOGI("time", "Last Update → %d", ts);
+          } else {
+            ESP_LOGW("time", "HA time not valid");
+          }
+
+      # 8. Update LED based on actual WiFi status
+      - if:
+          condition:
+            - binary_sensor.is_off: wifi_connected
+          then:
+            - light.turn_on:
+                id: status_light
+                effect: "Fast Blink"
+                brightness: 100%
+
+      # 9. Final Delay
+      - delay: 1.5s
+
+      # 10. Clean shutdown
+      - light.turn_off: status_light
+      - delay: 0.5s
+      - if:
+          condition:
+            - lambda: 'return id(debug_mode);'
+          then:
+            - lambda: 'ESP_LOGD("power", "Debug/API active - preventing deep sleep");'
+          else:
+            - lambda: 'ESP_LOGI("power", "Entering deep sleep for %.1f minutes", id(sleep_duration_sec) / 60.0);'
+            - deep_sleep.enter:
+                id: fridge_deep_sleep
+                sleep_duration: !lambda 'return id(sleep_duration_sec) * 1000;'
+
+# ====================== SENSORS ======================
+sensor:
+  - platform: tmp117
+    id: tmp117_sensor
+    name: "Fridge Temperature"
+    address: 0x48
+    update_interval: never
+
+  - platform: opt3001
+    id: opt3001_sensor
+    name: "Fridge Light Level"
+    address: 0x44
+    update_interval: never
+
+  - platform: adc
+    id: adc_voltage
+    pin: GPIO0
+    name: "ADC Voltage"
+    unit_of_measurement: "V"
+    icon: mdi:flash
+    attenuation: auto
+    accuracy_decimals: 3
+    update_interval: never
+
+  - platform: copy
+    id: battery_voltage
+    source_id: adc_voltage
+    name: "Battery Voltage"
+    unit_of_measurement: "V"
+    icon: mdi:flash
+    accuracy_decimals: 3
+    filters:
+      - multiply: 1.457
+
+  - platform: template
+    name: "Battery Percentage"
+    id: battery_percent
+    unit_of_measurement: "%"
+    icon: "mdi:battery"
+    accuracy_decimals: 0
+    update_interval: never
+    lambda: |-
+      float voltage = id(battery_voltage).state;
+
+      if (voltage <= 3.0) return 0.0;
+      if (voltage >= 4.2) return 100.0;
+
+      // Piecewise linear approximation for Li-ion (good balance of simplicity and accuracy)
+      if (voltage >= 4.0) {
+        return (voltage - 4.0) * (100.0 - 85.0) / (4.2 - 4.0) + 85.0;
+      } else if (voltage >= 3.7) {
+        return (voltage - 3.7) * (85.0 - 30.0) / (4.0 - 3.7) + 30.0;
+      } else if (voltage >= 3.4) {
+        return (voltage - 3.4) * (30.0 - 5.0) / (3.7 - 3.4) + 5.0;
+      } else {
+        return (voltage - 3.0) * 5.0 / (3.4 - 3.0);
+      }
+      
+  - platform: template
+    name: "Boot Count"
+    id: boot_count
+    lambda: return id(boot_count).state + 1;
+    internal: true
+    update_interval: never
+
+  - platform: wifi_signal
+    name: "WiFi Signal Strength"
+    update_interval: 60s
+    icon: "mdi:wifi"
+
+  - platform: uptime
+    name: "Uptime"
+    update_interval: 60s
+    icon: mdi:clock-outline
+
+  - platform: template
+    name: "Last Update"
+    id: last_update
+    device_class: timestamp
+    icon: "mdi:clock-check"
+    update_interval: never
+    force_update: true
+    lambda: 'return id(last_update_ts);'
+
+binary_sensor:
+  - platform: gpio
+    id: opt3001_alarm
+    name: "Light Alarm"
+    pin: 
+      number: GPIO1
+      inverted: true
+      allow_other_uses: true
+      
+  - platform: gpio
+    id: tmp117_alarm
+    name: "Temperature Alarm"
+    pin: 
+      number: GPIO3
+      inverted: true
+
+  - platform: template
+    name: "Battery Low"
+    id: battery_low
+    icon: "mdi:battery-alert"
+    lambda: |-
+      return id(battery_percent).state <= 15.0;
+
+  - platform: template
+    name: "WiFi Connected"
+    id: wifi_connected
+    icon: "mdi:wifi"
+    lambda: |-
+      return id(wifi_id).is_connected();
+
+text_sensor:
+  - platform: version
+    name: "Version"
+    hide_timestamp: true
+
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+      icon: mdi:ip-network
+
+# ====================== GPIO & OUTPUTS ======================
+output:
+  - platform: gpio
+    pin: GPIO6
+    id: divider_enable
+
+  - platform: ledc
+    pin: GPIO8
+    id: status_led
+    frequency: 1000Hz
+
+light:
+  - platform: monochromatic
+    id: status_light
+    output: status_led
+    name: "Status LED"
+    effects:
+      - pulse:
+          name: "Slow Pulse"
+          transition_length: 800ms
+          update_interval: 800ms
+          min_brightness: 0%
+          max_brightness: 60%
+      - pulse:
+          name: "Fast Blink"
+          transition_length: 50ms
+          update_interval: 100ms
+          min_brightness: 0%
+          max_brightness: 100%
+
+# ====================== HA Controls ======================
+switch:
+  - platform: template
+    name: "Debug Mode (Stay Awake)"
+    id: debug_switch
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON   # Or ALWAYS_ON if you prefer
+    lambda: |-
+      return id(debug_mode);
+    turn_on_action:
+      - globals.set:
+          id: debug_mode
+          value: 'true'
+      - logger.log: "Debug mode ENABLED - will skip deep sleep"
+    turn_off_action:
+      - globals.set:
+          id: debug_mode
+          value: 'false'
+      - logger.log: "Debug mode DISABLED - normal deep sleep resumed"
+
+  - platform: template
+    id: divider_enable_switch
+    name: "Battery Voltage Divider"
+    icon: "mdi:flash"
+    optimistic: true
+    turn_on_action:
+      - output.turn_on: divider_enable
+    turn_off_action:
+      - output.turn_off: divider_enable
+    restore_mode: ALWAYS_OFF
+
+# ====================== BUTTONS ======================
+button:
+  - platform: template
+    id: manual_read_button
+    name: "Manual Read"
+    icon: "mdi:play"
+    on_press:
+      then:
+        - script.execute: wake_and_process
+
+  - platform: restart
+    name: "Restart"

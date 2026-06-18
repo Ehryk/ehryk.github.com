@@ -1,0 +1,21 @@
+#,Reference,Qty,Value,Footprint,Description
+1,BT1,1,Battery_Cell,Ehryk:Keystone_1043,Single-cell battery
+2,"C1,C2,C4,
+C5,C7,C8,C9",7,0.1µF,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,"Unpolarized capacitor, small symbol"
+3,"C3,C6",2,10µF,Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder,Unpolarized capacitor
+4,D1,1,RED,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,"Light emitting diode, small symbol"
+5,J1,1,Conn_01x06_Socket,Connector_PinSocket_2.00mm:PinSocket_1x06_P2.00mm_Vertical_SMD_Pin1Left,"Generic connector, single row, 01x06, script generated"
+6,Q1,1,AO3401A,Package_TO_SOT_SMD:SOT-23,"-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+7,Q2,1,MMBT3904,Package_TO_SOT_SMD:SOT-23,"0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+8,"R2,R3,R4",3,4.7kΩ,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Resistor
+9,"R5,R6,R11",3,10kΩ,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Resistor
+10,R7,1,220kΩ,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Resistor
+11,R8,1,470kΩ,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Resistor
+12,R9,1,47kΩ,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Resistor
+13,R10,1,2.2kΩ,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Resistor
+14,U1,1,ESP32-C3-WROOM-02,RF_Module:ESP32-C3-WROOM-02,"802.11 b/g/n Wi­Fi and Bluetooth 5 module, ESP32­C3 SoC, RISC­V microprocessor, On-board antenna"
+15,U2,1,DW01A,Package_TO_SOT_SMD:SOT-23-6,"Overcharge, overcurrent and overdischarge protection IC for single cell lithium-ion/polymer battery"
+16,U3,1,8205A,Ehryk:SOT95P285X140-6N,Mosfet Array 20V 5A 830mW (Ta) Surface Mount SOT-23-6
+17,U4,1,OPT3001DNPRQ1,Ehryk:SON65P200X200X65-7N,Automotive digital ambient light sensor (ALS) with high-precision human-eye response
+18,U5,1,MCP1700x-330xxTT,Package_TO_SOT_SMD:SOT-23,"250mA Low Quiscent Current LDO, 3.3V output, SOT-23"
+19,U6,1,TMP117xxDRV,Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,"Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON"
