@@ -206,6 +206,16 @@
 				font-weight: 700;
 			}
 
+			.fertilizer-table.nutrient-totals-table tbody tr.row-differential td {
+				color: #b89b4a;
+				font-weight: 700;
+			}
+
+			.fertilizer-table.nutrient-totals-table th {
+				white-space: normal;
+				line-height: 1.25;
+			}
+
 			.pct-input {
 				display: inline-flex;
 				align-items: center;
@@ -883,12 +893,12 @@
 				<thead>
 					<tr>
 						<th></th>
-						<th data-nutrient-header="N">N</th>
-						<th data-nutrient-header="P">P<sub>2</sub>O<sub>5</sub></th>
-						<th data-nutrient-header="K">K<sub>2</sub>O</th>
-						<th data-nutrient-header="Ca">Ca</th>
-						<th data-nutrient-header="Mg">Mg</th>
-						<th data-nutrient-header="S">S</th>
+						<th data-nutrient-header="N">Nitrogen (N)</th>
+						<th data-nutrient-header="P">Phosphate (P<sub>2</sub>O<sub>5</sub>)</th>
+						<th data-nutrient-header="K">Potash (K<sub>2</sub>O)</th>
+						<th data-nutrient-header="Ca">Calcium (Ca)</th>
+						<th data-nutrient-header="Mg">Magnesium (Mg)</th>
+						<th data-nutrient-header="S">Sulfur (S)</th>
 					</tr>
 				</thead>
 				<tbody id="application-totals-body"></tbody>
@@ -1514,6 +1524,34 @@
 					return formatAmount(value, unit);
 				}
 
+				function formatNutrientDifferential(targetLbAcre, resultLbAcre) {
+					if (!isFinite(targetLbAcre) || !isFinite(resultLbAcre)) {
+						return '—';
+					}
+					if (targetLbAcre <= 0) {
+						if (resultLbAcre <= 0) {
+							return 'Match';
+						}
+						return '—';
+					}
+
+					var ratio = resultLbAcre / targetLbAcre;
+					if (Math.abs(ratio - 1) < 0.0005) {
+						return 'Match';
+					}
+
+					var pctDiff = Math.abs(ratio - 1) * 100;
+					var rounded = Math.round(pctDiff * 10) / 10;
+					var display = Math.abs(rounded - Math.round(rounded)) < 0.05
+						? String(Math.round(rounded))
+						: rounded.toFixed(1);
+
+					if (resultLbAcre > targetLbAcre) {
+						return display + '% High';
+					}
+					return display + '% Low';
+				}
+
 				function formatSourceLimitCell(lbAcreLimit) {
 					if (lbAcreLimit === null || lbAcreLimit === undefined) {
 						return '—';
@@ -1992,7 +2030,8 @@
 					var rows = [
 						{ label: 'Target', type: 'target' },
 						{ label: 'Maximum', type: 'maximum' },
-						{ label: 'Result', type: 'result' }
+						{ label: 'Result', type: 'result' },
+						{ label: 'Differential', type: 'differential' }
 					];
 
 					applicationTotalsBody.innerHTML = '';
@@ -2018,6 +2057,11 @@
 								lbPerAcre = nutrientResultsLbAcre[nutrient] || 0;
 								display = convertFromLbPerAcre(lbPerAcre, state.unit);
 								td.textContent = formatAmount(display, state.unit);
+							} else if (rowDef.type === 'differential') {
+								td.textContent = formatNutrientDifferential(
+									seasonTotalsLbAcre[nutrient] || 0,
+									nutrientResultsLbAcre[nutrient] || 0
+								);
 							} else {
 								maxLbAcre = getNutrientMaxLbAcre(nutrient);
 								if (maxLbAcre === null || maxLbAcre === undefined) {
