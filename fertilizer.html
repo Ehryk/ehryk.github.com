@@ -1,0 +1,1375 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Fertilizer - ehryk.github.com</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+	    <meta name="description" content="Fertilizer" />
+	    <meta name="keywords" content="Fertilizer,Ehryk" />
+	    <meta name="author" content="Eric Menze" />
+		<meta property="og:url" content="http://ehryk.github.com/fertilizer.html" />
+		<meta property="og:title" content="Fertilizer - ehryk.github.com" />
+		<meta property="og:image" content="img/Ehryk.png" />
+		<meta property="og:description" content="Fertilizer" />
+	    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		<link rel="stylesheet" media="all" href="css/main.css"/>
+
+		<style>
+			.selectors {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 1.5rem;
+				margin: 1rem auto 1.5rem;
+				max-width: 960px;
+			}
+
+			.toggle-selector {
+				position: relative;
+				display: inline-flex;
+				background: rgba(0, 0, 0, 0.35);
+				border-radius: 999px;
+				padding: 4px;
+				border: 1px solid #444;
+			}
+
+			.toggle-selector button {
+				position: relative;
+				z-index: 1;
+				background: transparent;
+				border: none;
+				color: #99CCFF;
+				cursor: pointer;
+				padding: 0.55rem 1.1rem;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				white-space: nowrap;
+				transition: color 0.2s ease;
+			}
+
+			.toggle-selector button:hover {
+				color: #FF8800;
+			}
+
+			.toggle-selector button.active {
+				color: #fff;
+			}
+
+			.toggle-selector button.active:hover {
+				color: #fff;
+			}
+
+			.toggle-slider {
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				height: calc(100% - 8px);
+				background: #920E15;
+				border-radius: 999px;
+				transition: transform 0.25s ease, width 0.25s ease;
+				z-index: 0;
+				pointer-events: none;
+			}
+
+			.fertilizer-table-wrap {
+				max-width: 1100px;
+				margin: 0 auto 2rem;
+				padding: 0 1rem;
+				overflow-x: auto;
+			}
+
+			.fertilizer-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+			}
+
+			.fertilizer-table th,
+			.fertilizer-table td {
+				border: 1px solid #555;
+				padding: 0.5rem 0.65rem;
+				text-align: center;
+				vertical-align: middle;
+			}
+
+			.fertilizer-table th {
+				background: rgba(0, 0, 0, 0.45);
+				font-weight: 600;
+			}
+
+			.fertilizer-table td.stage-label {
+				text-align: left;
+				white-space: nowrap;
+				min-width: 11rem;
+			}
+
+			.fertilizer-table tbody tr:nth-child(even) {
+				background: rgba(0, 0, 0, 0.2);
+			}
+
+			.fertilizer-table tfoot td {
+				background: rgba(0, 0, 0, 0.45);
+				font-weight: 600;
+			}
+
+			.fertilizer-table tfoot td.total-ok {
+				color: #8f8;
+			}
+
+			.fertilizer-table tfoot td.total-warn {
+				color: #f88;
+			}
+
+			.pct-input {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.15rem;
+			}
+
+			.pct-input input {
+				width: 3.25rem;
+				padding: 0.25rem 0.35rem;
+				border: 1px solid #666;
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.9);
+				color: #222;
+				text-align: right;
+				font-size: 14px;
+			}
+
+			.pct-input input:focus {
+				outline: 2px solid #99CCFF;
+				border-color: #99CCFF;
+			}
+
+			.pct-input span {
+				color: #ccc;
+				font-size: 13px;
+			}
+
+			.unit-controls {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				gap: 1.5rem;
+				max-width: 1100px;
+				margin: 0 auto 2rem;
+				padding: 0 1rem;
+			}
+
+			#unit-selector button {
+				font-size: 13px;
+				padding: 0.5rem 0.85rem;
+			}
+
+			.row-length-field {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				color: #fff;
+				white-space: nowrap;
+			}
+
+			.row-length-field input {
+				width: 4.5rem;
+				padding: 0.35rem 0.5rem;
+				border: 1px solid #666;
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.9);
+				color: #222;
+				text-align: right;
+				font-size: 14px;
+			}
+
+			.row-length-field input:focus {
+				outline: 2px solid #99CCFF;
+				border-color: #99CCFF;
+			}
+
+			.season-totals-wrap {
+				max-width: 1100px;
+				margin: 0 auto 1.5rem;
+				padding: 0 1rem;
+			}
+
+			.season-totals-wrap h3 {
+				font-size: 18px;
+				margin: 0 0 0.75rem;
+			}
+
+			.season-totals {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.75rem 1.25rem;
+			}
+
+			.season-total-field {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35rem;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				color: #fff;
+			}
+
+			.season-total-field input {
+				width: 4.5rem;
+				padding: 0.35rem 0.5rem;
+				border: 1px solid #666;
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.9);
+				color: #222;
+				text-align: right;
+				font-size: 14px;
+			}
+
+			.season-total-field input:focus {
+				outline: 2px solid #99CCFF;
+				border-color: #99CCFF;
+			}
+
+			.output-table-wrap {
+				max-width: 1100px;
+				margin: 0 auto 2rem;
+				padding: 0 1rem;
+				overflow-x: auto;
+			}
+
+			.output-table-wrap h3 {
+				font-size: 18px;
+				margin: 0 0 0.75rem;
+			}
+
+			.fertilizer-table.output-table td.amount-cell {
+				font-variant-numeric: tabular-nums;
+			}
+
+			.row-dimension-field.is-hidden {
+				display: none;
+			}
+
+			.spec-panel-wrap {
+				max-width: 1100px;
+				margin: 0 auto 1.5rem;
+				padding: 0 1rem;
+			}
+
+			.spec-panel {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.25rem;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+			}
+
+			@media (max-width: 800px) {
+				.spec-panel {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.spec-card {
+				background: rgba(0, 0, 0, 0.3);
+				border: 1px solid #555;
+				border-radius: 8px;
+				padding: 1rem 1.15rem;
+			}
+
+			.spec-card h3 {
+				font-size: 16px;
+				margin: 0 0 0.75rem;
+				text-align: left;
+			}
+
+			.spec-card-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 0.75rem;
+			}
+
+			.spec-card-header h3 {
+				margin: 0;
+			}
+
+			.spec-expander {
+				flex-shrink: 0;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 2rem;
+				height: 2rem;
+				padding: 0;
+				border: 1px solid #444;
+				border-radius: 999px;
+				background: rgba(0, 0, 0, 0.35);
+				color: #99CCFF;
+				font-size: 1.1rem;
+				line-height: 1;
+				cursor: pointer;
+				transition: color 0.2s ease, background 0.2s ease;
+			}
+
+			.spec-expander:hover {
+				color: #FF8800;
+				background: rgba(0, 0, 0, 0.5);
+			}
+
+			.spec-collapse-panel.is-collapsed {
+				display: none;
+			}
+
+			.spec-collapse-panel:not(.is-collapsed) {
+				margin-top: 0.75rem;
+			}
+
+			.spec-grid {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.35rem 1rem;
+				margin: 0;
+			}
+
+			.spec-grid dt {
+				color: #99CCFF;
+				font-weight: 600;
+				margin: 0;
+			}
+
+			.spec-grid dd {
+				margin: 0;
+				color: #eee;
+			}
+
+			.sources-table {
+				width: 100%;
+				margin-top: 0.5rem;
+			}
+
+			.sources-table td:first-child {
+				text-align: left;
+			}
+
+			.seasonal-targets-table {
+				width: 100%;
+				margin-top: 0.5rem;
+			}
+
+			.seasonal-targets-table td:first-child {
+				text-align: left;
+			}
+
+			.target-input {
+				width: 4.5rem;
+				padding: 0.3rem 0.45rem;
+				border: 1px solid #666;
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.9);
+				color: #222;
+				text-align: right;
+				font-size: 14px;
+			}
+
+			.target-input:focus {
+				outline: 2px solid #99CCFF;
+				border-color: #99CCFF;
+			}
+		</style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	</head>
+
+	<body>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+		<h1>Fertilizer</h1>
+
+		<div class="spec-panel-wrap">
+			<div class="spec-panel">
+				<div class="spec-card">
+					<div class="spec-card-header">
+						<h3>Growing Specifications</h3>
+						<button
+							type="button"
+							class="spec-expander"
+							id="growing-specs-expander"
+							aria-expanded="false"
+							aria-controls="growing-specs-panel"
+							aria-label="Expand Growing Specifications"
+							title="Expand Growing Specifications"
+						>+</button>
+					</div>
+					<div class="spec-collapse-panel is-collapsed" id="growing-specs-panel">
+						<dl class="spec-grid" id="growing-specs"></dl>
+					</div>
+					<h3 style="margin-top: 1rem;">Seasonal Targets</h3>
+					<table class="fertilizer-table seasonal-targets-table" id="seasonal-targets-table">
+						<thead>
+							<tr>
+								<th>Nutrient</th>
+								<th>Target (lb/acre)</th>
+							</tr>
+						</thead>
+						<tbody id="seasonal-targets-body"></tbody>
+					</table>
+				</div>
+				<div class="spec-card">
+					<table class="fertilizer-table sources-table" id="sources-table">
+						<thead>
+							<tr>
+								<th>Fertilizer Source</th>
+								<th>Analysis</th>
+							</tr>
+						</thead>
+						<tbody id="sources-table-body"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="selectors">
+			<div class="toggle-selector" id="crop-selector" data-key="crop">
+				<button type="button" class="toggle-option active" data-value="everything-else">Everything Else</button>
+				<button type="button" class="toggle-option" data-value="tomatoes">Tomatoes</button>
+				<span class="toggle-slider" aria-hidden="true"></span>
+			</div>
+			<div class="toggle-selector" id="stage-selector" data-key="stage">
+				<button type="button" class="toggle-option active" data-value="normal">Normal (6-stage)</button>
+				<button type="button" class="toggle-option" data-value="extended">Extended (7-stage)</button>
+				<span class="toggle-slider" aria-hidden="true"></span>
+			</div>
+		</div>
+
+		<div class="fertilizer-table-wrap">
+			<table class="fertilizer-table" id="fertilizer-table">
+				<thead>
+					<tr>
+						<th>Stage</th>
+						<th>N</th>
+						<th>P<sub>2</sub>O<sub>5</sub></th>
+						<th>K<sub>2</sub>O</th>
+						<th>Ca</th>
+						<th>Mg</th>
+						<th>S</th>
+					</tr>
+				</thead>
+				<tbody id="fertilizer-table-body"></tbody>
+				<tfoot>
+					<tr>
+						<td class="stage-label">Total Checks:</td>
+						<td id="total-N"></td>
+						<td id="total-P"></td>
+						<td id="total-K"></td>
+						<td id="total-Ca"></td>
+						<td id="total-Mg"></td>
+						<td id="total-S"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div class="unit-controls">
+			<div class="toggle-selector" id="unit-selector" data-key="unit">
+				<button type="button" class="toggle-option active" data-value="lb-acre">lb/acre</button>
+				<button type="button" class="toggle-option" data-value="grams-sqft">grams/square foot</button>
+				<button type="button" class="toggle-option" data-value="grams-linear-ft">grams/linear foot</button>
+				<button type="button" class="toggle-option" data-value="grams-row">grams/row</button>
+				<span class="toggle-slider" aria-hidden="true"></span>
+			</div>
+			<label class="row-length-field" for="row-length">
+				Row Length (feet)
+				<input type="number" id="row-length" value="25" min="0" step="0.1" />
+			</label>
+			<label class="row-length-field row-dimension-field" for="row-width">
+				Bed Width (feet)
+				<input type="number" id="row-width" value="2.5" min="0" step="0.1" />
+			</label>
+		</div>
+
+		<div class="season-totals-wrap">
+			<h3>Season Totals (<span id="season-totals-unit-label">lb/acre</span>)</h3>
+			<div class="season-totals" id="season-totals"></div>
+		</div>
+
+		<div class="output-table-wrap">
+			<h3>Stage Targets (<span id="output-unit-label">lb/acre</span>)</h3>
+			<table class="fertilizer-table output-table" id="fertilizer-output-table">
+				<thead>
+					<tr>
+						<th>Stage</th>
+						<th>N</th>
+						<th>P<sub>2</sub>O<sub>5</sub></th>
+						<th>K<sub>2</sub>O</th>
+						<th>Ca</th>
+						<th>Mg</th>
+						<th>S</th>
+					</tr>
+				</thead>
+				<tbody id="fertilizer-output-body"></tbody>
+				<tfoot>
+					<tr>
+						<td class="stage-label">Season Total:</td>
+						<td id="output-total-N"></td>
+						<td id="output-total-P"></td>
+						<td id="output-total-K"></td>
+						<td id="output-total-Ca"></td>
+						<td id="output-total-Mg"></td>
+						<td id="output-total-S"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div class="output-table-wrap">
+			<h3>Fertilizer Application (<span id="product-unit-label">lb/acre</span>)</h3>
+			<table class="fertilizer-table product-table" id="fertilizer-product-table">
+				<thead id="product-table-head"></thead>
+				<tbody id="product-table-body"></tbody>
+				<tfoot id="product-table-foot"></tfoot>
+			</table>
+		</div>
+
+        <footer>
+        	<hr />
+            <p>&copy; Eric Menze 2026</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			(function () {
+				var NUTRIENTS = ['N', 'P', 'K', 'Ca', 'Mg', 'S'];
+				var SQFT_PER_ACRE = 43560;
+				var GRAMS_PER_LB = 453.59237;
+
+				var UNIT_LABELS = {
+					'lb-acre': 'lb/acre',
+					'grams-sqft': 'grams/square foot',
+					'grams-linear-ft': 'grams/linear foot',
+					'grams-row': 'grams/row'
+				};
+
+				var NUTRIENT_LABELS = {
+					N: 'N',
+					P: 'P<sub>2</sub>O<sub>5</sub>',
+					K: 'K<sub>2</sub>O',
+					Ca: 'Ca',
+					Mg: 'Mg',
+					S: 'S'
+				};
+
+				var GROWING_SPECS = {
+					soilType: 'Silty Sandy Loam',
+					organicMatter: '>2%',
+					compost: 'Approximately 2.5 cubic feet incorporated',
+					bedWidthIn: 30,
+					rowCentersIn: 48,
+					plantSpacingIn: 24,
+					bedHeight: 'Raised 4–6 inches',
+					irrigation: 'Drip Irrigation',
+					fertigation: 'None',
+					applicationMethod: 'Manual Broadcast Applications'
+				};
+
+				var SEASONAL_TARGETS = [
+					{ key: 'N', label: 'Nitrogen (N)', target: 110 },
+					{ key: 'P', label: 'Phosphate (P<sub>2</sub>O<sub>5</sub>)', target: 50 },
+					{ key: 'K', label: 'Potash (K<sub>2</sub>O)', target: 200 },
+					{ key: 'Ca', label: 'Calcium (Ca)', target: 120 },
+					{ key: 'Mg', label: 'Magnesium (Mg)', target: 40 },
+					{ key: 'S', label: 'Sulfur (S)', target: 40 }
+				];
+
+				var FERTILIZER_SOURCES = [
+					{ name: 'Calcium Nitrate', analysis: '15.5-0-0 + 19% Ca', N: 15.5, P: 0, K: 0, Ca: 19, Mg: 0, S: 0 },
+					{ name: 'Potassium Nitrate', analysis: '13-0-46', N: 13, P: 0, K: 46, Ca: 0, Mg: 0, S: 0 },
+					{ name: 'Potassium Sulfate', analysis: '0-0-50', N: 0, P: 0, K: 50, Ca: 0, Mg: 0, S: 17 },
+					{ name: 'Potassium Chloride', analysis: '0-0-60', N: 0, P: 0, K: 60, Ca: 0, Mg: 0, S: 0 },
+					{ name: 'Urea', analysis: '46-0-0', N: 46, P: 0, K: 0, Ca: 0, Mg: 0, S: 0 },
+					{ name: 'DAP', analysis: '18-46-0', N: 18, P: 46, K: 0, Ca: 0, Mg: 0, S: 0 },
+					{ name: 'Gypsum', analysis: '23% Ca, 18% S', N: 0, P: 0, K: 0, Ca: 23, Mg: 0, S: 18 },
+					{ name: 'Dolomitic Lime', analysis: '21% Ca, 12% Mg', N: 0, P: 0, K: 0, Ca: 21, Mg: 12, S: 0 }
+				];
+
+				var STAGE_LABELS_TOMATOES = [
+					'1. Preplant / Bedding',
+					'2. Early Vegetative',
+					'3. Rapid Vine Stretch',
+					'4. Early Fruit Set',
+					'5. Heavy Continuous Load',
+					'6. Extended Mid-Harvest',
+					'7. Final Taper / Wrap-up'
+				];
+
+				var STAGE_LABELS_EVERYTHING_ELSE_6 = [
+					'1. Preplant / Bedding',
+					'2. Early Vegetative',
+					'3. Rapid Vegetative',
+					'4. Flowering / Fruit Set',
+					'5. Heavy Fruit Load',
+					'6. Peak Ripening'
+				];
+
+				var TOMATOES_EXTENDED = [
+					{ stage: STAGE_LABELS_TOMATOES[0], N: 10, P: 65, K: 15, Ca: 40, Mg: 45, S: 15 },
+					{ stage: STAGE_LABELS_TOMATOES[1], N: 10, P: 10, K: 5, Ca: 10, Mg: 10, S: 10 },
+					{ stage: STAGE_LABELS_TOMATOES[2], N: 20, P: 10, K: 15, Ca: 15, Mg: 15, S: 20 },
+					{ stage: STAGE_LABELS_TOMATOES[3], N: 20, P: 10, K: 20, Ca: 15, Mg: 10, S: 20 },
+					{ stage: STAGE_LABELS_TOMATOES[4], N: 20, P: 5, K: 25, Ca: 10, Mg: 10, S: 15 },
+					{ stage: STAGE_LABELS_TOMATOES[5], N: 15, P: 0, K: 15, Ca: 7, Mg: 7, S: 15 },
+					{ stage: STAGE_LABELS_TOMATOES[6], N: 5, P: 0, K: 5, Ca: 3, Mg: 3, S: 5 }
+				];
+
+				var EVERYTHING_ELSE_NORMAL = [
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[0], N: 10, P: 70, K: 15, Ca: 40, Mg: 40, S: 15 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[1], N: 15, P: 10, K: 10, Ca: 10, Mg: 10, S: 10 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[2], N: 25, P: 10, K: 15, Ca: 15, Mg: 15, S: 25 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[3], N: 25, P: 10, K: 25, Ca: 20, Mg: 15, S: 25 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[4], N: 15, P: 0, K: 25, Ca: 10, Mg: 15, S: 15 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[5], N: 10, P: 0, K: 10, Ca: 5, Mg: 5, S: 10 }
+				];
+
+				function cloneRows(rows) {
+					return rows.map(function (row) {
+						var copy = { stage: row.stage };
+						NUTRIENTS.forEach(function (nutrient) {
+							copy[nutrient] = row[nutrient];
+						});
+						return copy;
+					});
+				}
+
+				function blankRows(stageLabels) {
+					return stageLabels.map(function (label) {
+						var row = { stage: label };
+						NUTRIENTS.forEach(function (nutrient) {
+							row[nutrient] = 0;
+						});
+						return row;
+					});
+				}
+
+				var defaults = {
+					'tomatoes-extended': cloneRows(TOMATOES_EXTENDED),
+					'tomatoes-normal': cloneRows(TOMATOES_EXTENDED.slice(0, 6)),
+					'everything-else-extended': blankRows(STAGE_LABELS_TOMATOES),
+					'everything-else-normal': cloneRows(EVERYTHING_ELSE_NORMAL)
+				};
+
+				var state = {
+					crop: 'everything-else',
+					stage: 'normal',
+					unit: 'lb-acre',
+					rowLength: 25,
+					rowWidth: GROWING_SPECS.bedWidthIn / 12,
+					rowCenters: GROWING_SPECS.rowCentersIn / 12,
+					plantSpacing: GROWING_SPECS.plantSpacingIn / 12
+				};
+
+				var seasonTotalsLbAcre = {};
+				SEASONAL_TARGETS.forEach(function (target) {
+					seasonTotalsLbAcre[target.key] = target.target;
+				});
+
+				var tableCache = {};
+				var tableBody = document.getElementById('fertilizer-table-body');
+				var outputBody = document.getElementById('fertilizer-output-body');
+				var productHead = document.getElementById('product-table-head');
+				var productBody = document.getElementById('product-table-body');
+				var productFoot = document.getElementById('product-table-foot');
+				var seasonTotalsEl = document.getElementById('season-totals');
+				var seasonTotalInputs = {};
+				var myTargetInputs = {};
+				var onTableChange = null;
+				var updatingSeasonInputs = false;
+				var updatingMyTargets = false;
+
+				function tableKey() {
+					return state.crop + '-' + state.stage;
+				}
+
+				function getRows() {
+					var key = tableKey();
+					if (!tableCache[key]) {
+						tableCache[key] = cloneRows(defaults[key]);
+					}
+					return tableCache[key];
+				}
+
+				function saveRowsFromDom() {
+					var key = tableKey();
+					var rows = [];
+					var domRows = tableBody.querySelectorAll('tr');
+
+					domRows.forEach(function (tr, index) {
+						var defaultsForMode = defaults[key];
+						var row = {
+							stage: defaultsForMode[index].stage
+						};
+						NUTRIENTS.forEach(function (nutrient) {
+							var input = tr.querySelector('[data-nutrient="' + nutrient + '"]');
+							row[nutrient] = input ? parseFloat(input.value) || 0 : 0;
+						});
+						rows.push(row);
+					});
+
+					tableCache[key] = rows;
+				}
+
+				function formatTotal(value) {
+					var rounded = Math.round(value * 10) / 10;
+					if (Math.abs(rounded - Math.round(rounded)) < 0.001) {
+						return Math.round(rounded) + '%';
+					}
+					return rounded + '%';
+				}
+
+				function usesRowDimensions(unit) {
+					return unit === 'grams-linear-ft' || unit === 'grams-row';
+				}
+
+				function linearRowFtPerAcre() {
+					if (state.rowCenters <= 0) {
+						return 0;
+					}
+					return SQFT_PER_ACRE / state.rowCenters;
+				}
+
+				function treatedSqftPerAcre() {
+					return linearRowFtPerAcre() * state.rowWidth;
+				}
+
+				function convertFromLbPerAcre(lbPerAcre, unit) {
+					var gramsPerAcre = lbPerAcre * GRAMS_PER_LB;
+					var linearFtPerAcre = linearRowFtPerAcre();
+					var bedSqftPerAcre = treatedSqftPerAcre();
+
+					if (unit === 'lb-acre') {
+						return lbPerAcre;
+					}
+					if (unit === 'grams-sqft') {
+						return bedSqftPerAcre > 0 ? gramsPerAcre / bedSqftPerAcre : 0;
+					}
+					if (unit === 'grams-linear-ft') {
+						return linearFtPerAcre > 0 ? gramsPerAcre / linearFtPerAcre : 0;
+					}
+					return linearFtPerAcre > 0 ? (gramsPerAcre / linearFtPerAcre) * state.rowLength : 0;
+				}
+
+				function convertToLbPerAcre(value, unit) {
+					if (unit === 'lb-acre') {
+						return value;
+					}
+
+					var linearFtPerAcre = linearRowFtPerAcre();
+					var bedSqftPerAcre = treatedSqftPerAcre();
+
+					if (unit === 'grams-sqft') {
+						return bedSqftPerAcre > 0 ? (value * bedSqftPerAcre) / GRAMS_PER_LB : 0;
+					}
+					if (unit === 'grams-linear-ft') {
+						return linearFtPerAcre > 0 ? (value * linearFtPerAcre) / GRAMS_PER_LB : 0;
+					}
+					if (state.rowLength <= 0 || linearFtPerAcre <= 0) {
+						return 0;
+					}
+					return ((value / state.rowLength) * linearFtPerAcre) / GRAMS_PER_LB;
+				}
+
+				function formatAmount(value, unit) {
+					if (!isFinite(value)) {
+						return '—';
+					}
+					if (unit === 'lb-acre') {
+						return (Math.round(value * 100) / 100).toFixed(2);
+					}
+					if (unit === 'grams-row') {
+						return (Math.round(value * 10) / 10).toFixed(1);
+					}
+					return (Math.round(value * 100) / 100).toFixed(2);
+				}
+
+				function updateUnitLabels() {
+					var label = UNIT_LABELS[state.unit];
+					document.getElementById('season-totals-unit-label').textContent = label;
+					document.getElementById('output-unit-label').textContent = label;
+					document.getElementById('product-unit-label').textContent = label;
+				}
+
+				function getSourceByName(name) {
+					for (var i = 0; i < FERTILIZER_SOURCES.length; i++) {
+						if (FERTILIZER_SOURCES[i].name === name) {
+							return FERTILIZER_SOURCES[i];
+						}
+					}
+					return null;
+				}
+
+				function getStageNutrientTargetsLbAcre(row) {
+					var targets = {};
+					NUTRIENTS.forEach(function (nutrient) {
+						targets[nutrient] = seasonTotalsLbAcre[nutrient] * (row[nutrient] / 100);
+					});
+					return targets;
+				}
+
+				function calculateProductBlend(targetsLbAcre) {
+					var rem = {};
+					var products = {};
+					var i;
+					var source;
+					var nutrient;
+
+					NUTRIENTS.forEach(function (n) {
+						rem[n] = targetsLbAcre[n] || 0;
+					});
+					for (i = 0; i < FERTILIZER_SOURCES.length; i++) {
+						products[FERTILIZER_SOURCES[i].name] = 0;
+					}
+
+					function addProduct(sourceName, pounds) {
+						if (!pounds || pounds < 1e-9) {
+							return;
+						}
+						source = getSourceByName(sourceName);
+						if (!source) {
+							return;
+						}
+						products[sourceName] += pounds;
+						NUTRIENTS.forEach(function (n) {
+							rem[n] -= pounds * source[n] / 100;
+							if (rem[n] < 1e-6) {
+								rem[n] = 0;
+							}
+						});
+					}
+
+					function fulfill(sourceName, nutrientKey) {
+						source = getSourceByName(sourceName);
+						if (!source || source[nutrientKey] <= 0 || rem[nutrientKey] <= 0) {
+							return;
+						}
+						addProduct(sourceName, rem[nutrientKey] / (source[nutrientKey] / 100));
+					}
+
+					fulfill('DAP', 'P');
+					fulfill('Dolomitic Lime', 'Mg');
+					fulfill('Potassium Sulfate', 'K');
+					fulfill('Gypsum', 'S');
+					fulfill('Gypsum', 'Ca');
+					fulfill('Calcium Nitrate', 'Ca');
+					fulfill('Potassium Nitrate', 'K');
+					fulfill('Urea', 'N');
+					fulfill('Potassium Chloride', 'K');
+
+					return { products: products, remaining: rem };
+				}
+
+				function formatProductCell(value, unit) {
+					if (!isFinite(value) || value < 0.005) {
+						return '—';
+					}
+					return formatAmount(value, unit);
+				}
+
+				function updateRowDimensionVisibility() {
+					var show = usesRowDimensions(state.unit);
+					document.querySelectorAll('.row-dimension-field').forEach(function (field) {
+						field.classList.toggle('is-hidden', !show);
+					});
+				}
+
+				function refreshOutputIfRowBased() {
+					if (usesRowDimensions(state.unit)) {
+						refreshSeasonTotalInputs();
+						renderOutputTable();
+					}
+				}
+
+				function syncMyTargetInputs() {
+					updatingMyTargets = true;
+					NUTRIENTS.forEach(function (nutrient) {
+						var input = myTargetInputs[nutrient];
+						if (input) {
+							input.value = seasonTotalsLbAcre[nutrient];
+						}
+						SEASONAL_TARGETS.forEach(function (target) {
+							if (target.key === nutrient) {
+								target.target = seasonTotalsLbAcre[nutrient];
+							}
+						});
+					});
+					updatingMyTargets = false;
+				}
+
+				function refreshSeasonTotalInputs() {
+					updatingSeasonInputs = true;
+					NUTRIENTS.forEach(function (nutrient) {
+						var input = seasonTotalInputs[nutrient];
+						if (input) {
+							input.value = formatAmount(
+								convertFromLbPerAcre(seasonTotalsLbAcre[nutrient], state.unit),
+								state.unit
+							);
+						}
+					});
+					updatingSeasonInputs = false;
+				}
+
+				function applySeasonTotalsFromLbAcre() {
+					syncMyTargetInputs();
+					refreshSeasonTotalInputs();
+					renderOutputTable();
+				}
+
+				function renderSeasonTotals() {
+					seasonTotalsEl.innerHTML = '';
+					seasonTotalInputs = {};
+
+					NUTRIENTS.forEach(function (nutrient) {
+						var label = document.createElement('label');
+						label.className = 'season-total-field';
+						label.innerHTML = NUTRIENT_LABELS[nutrient] + ' ';
+
+						var input = document.createElement('input');
+						input.type = 'number';
+						input.min = '0';
+						input.step = state.unit === 'lb-acre' ? '0.01' : '0.1';
+						input.value = formatAmount(
+							convertFromLbPerAcre(seasonTotalsLbAcre[nutrient], state.unit),
+							state.unit
+						);
+						input.setAttribute('aria-label', 'Season total ' + nutrient);
+
+						input.addEventListener('input', function () {
+							if (updatingSeasonInputs) {
+								return;
+							}
+							seasonTotalsLbAcre[nutrient] = convertToLbPerAcre(
+								parseFloat(input.value) || 0,
+								state.unit
+							);
+							syncMyTargetInputs();
+							renderOutputTable();
+						});
+
+						label.appendChild(input);
+						seasonTotalsEl.appendChild(label);
+						seasonTotalInputs[nutrient] = input;
+					});
+				}
+
+				function renderOutputTable() {
+					saveRowsFromDom();
+					var rows = getRows();
+					outputBody.innerHTML = '';
+
+					var outputTotals = {};
+					NUTRIENTS.forEach(function (nutrient) {
+						outputTotals[nutrient] = 0;
+					});
+
+					rows.forEach(function (row) {
+						var tr = document.createElement('tr');
+
+						var stageTd = document.createElement('td');
+						stageTd.className = 'stage-label';
+						stageTd.textContent = row.stage;
+						tr.appendChild(stageTd);
+
+						NUTRIENTS.forEach(function (nutrient) {
+							var td = document.createElement('td');
+							td.className = 'amount-cell';
+							var lbPerAcre = seasonTotalsLbAcre[nutrient] * (row[nutrient] / 100);
+							var amount = convertFromLbPerAcre(lbPerAcre, state.unit);
+							outputTotals[nutrient] += amount;
+							td.textContent = formatAmount(amount, state.unit);
+							tr.appendChild(td);
+						});
+
+						outputBody.appendChild(tr);
+					});
+
+					NUTRIENTS.forEach(function (nutrient) {
+						var cell = document.getElementById('output-total-' + nutrient);
+						var seasonDisplay = convertFromLbPerAcre(seasonTotalsLbAcre[nutrient], state.unit);
+						cell.textContent = formatAmount(outputTotals[nutrient], state.unit);
+						cell.classList.toggle('total-ok', Math.abs(outputTotals[nutrient] - seasonDisplay) < 0.05);
+						cell.classList.toggle('total-warn', Math.abs(outputTotals[nutrient] - seasonDisplay) >= 0.05);
+					});
+
+					renderProductTable();
+				}
+
+				function renderProductTable() {
+					var headerRow = document.createElement('tr');
+					var stageTh = document.createElement('th');
+					stageTh.textContent = 'Stage';
+					headerRow.appendChild(stageTh);
+
+					FERTILIZER_SOURCES.forEach(function (source) {
+						var th = document.createElement('th');
+						th.textContent = source.name;
+						headerRow.appendChild(th);
+					});
+
+					var totalTh = document.createElement('th');
+					totalTh.textContent = 'Total';
+					headerRow.appendChild(totalTh);
+					productHead.innerHTML = '';
+					productHead.appendChild(headerRow);
+					productBody.innerHTML = '';
+
+					var rows = getRows();
+					var seasonSums = {};
+					var seasonProductTotal = 0;
+
+					FERTILIZER_SOURCES.forEach(function (source) {
+						seasonSums[source.name] = 0;
+					});
+
+					rows.forEach(function (row) {
+						var blend = calculateProductBlend(getStageNutrientTargetsLbAcre(row));
+						var tr = document.createElement('tr');
+						var stageTd = document.createElement('td');
+						var rowTotal = 0;
+
+						stageTd.className = 'stage-label';
+						stageTd.textContent = row.stage;
+						tr.appendChild(stageTd);
+
+						FERTILIZER_SOURCES.forEach(function (source) {
+							var td = document.createElement('td');
+							td.className = 'amount-cell';
+							var lbPerAcre = blend.products[source.name];
+							var display = convertFromLbPerAcre(lbPerAcre, state.unit);
+							rowTotal += display;
+							seasonSums[source.name] += display;
+							td.textContent = formatProductCell(display, state.unit);
+							tr.appendChild(td);
+						});
+
+						var totalTd = document.createElement('td');
+						totalTd.className = 'amount-cell';
+						totalTd.textContent = formatProductCell(rowTotal, state.unit);
+						tr.appendChild(totalTd);
+						seasonProductTotal += rowTotal;
+						productBody.appendChild(tr);
+					});
+
+					var footRow = document.createElement('tr');
+					var footLabel = document.createElement('td');
+					footLabel.className = 'stage-label';
+					footLabel.textContent = 'Season Total';
+					footRow.appendChild(footLabel);
+
+					FERTILIZER_SOURCES.forEach(function (source) {
+						var td = document.createElement('td');
+						td.className = 'amount-cell';
+						td.textContent = formatProductCell(seasonSums[source.name], state.unit);
+						footRow.appendChild(td);
+					});
+
+					var footTotal = document.createElement('td');
+					footTotal.className = 'amount-cell';
+					footTotal.textContent = formatProductCell(seasonProductTotal, state.unit);
+					footRow.appendChild(footTotal);
+					productFoot.innerHTML = '';
+					productFoot.appendChild(footRow);
+				}
+
+				function updateTotals() {
+					var totals = {};
+					NUTRIENTS.forEach(function (nutrient) {
+						totals[nutrient] = 0;
+					});
+
+					tableBody.querySelectorAll('input[data-nutrient]').forEach(function (input) {
+						totals[input.dataset.nutrient] += parseFloat(input.value) || 0;
+					});
+
+					NUTRIENTS.forEach(function (nutrient) {
+						var cell = document.getElementById('total-' + nutrient);
+						var total = totals[nutrient];
+						cell.textContent = formatTotal(total);
+						cell.classList.toggle('total-ok', Math.abs(total - 100) < 0.05);
+						cell.classList.toggle('total-warn', Math.abs(total - 100) >= 0.05);
+					});
+				}
+
+				function renderTable() {
+					var rows = getRows();
+					tableBody.innerHTML = '';
+
+					rows.forEach(function (row, rowIndex) {
+						var tr = document.createElement('tr');
+
+						var stageTd = document.createElement('td');
+						stageTd.className = 'stage-label';
+						stageTd.textContent = row.stage;
+						tr.appendChild(stageTd);
+
+						NUTRIENTS.forEach(function (nutrient) {
+							var td = document.createElement('td');
+							var wrapper = document.createElement('div');
+							wrapper.className = 'pct-input';
+
+							var input = document.createElement('input');
+							input.type = 'number';
+							input.min = '0';
+							input.max = '100';
+							input.step = '1';
+							input.value = row[nutrient];
+							input.dataset.nutrient = nutrient;
+							input.dataset.row = rowIndex;
+							input.setAttribute('aria-label', row.stage + ' ' + nutrient);
+
+							var suffix = document.createElement('span');
+							suffix.textContent = '%';
+
+							input.addEventListener('input', function () {
+								var cached = getRows();
+								cached[rowIndex][nutrient] = parseFloat(input.value) || 0;
+								updateTotals();
+								renderOutputTable();
+								if (onTableChange) {
+									onTableChange();
+								}
+							});
+
+							wrapper.appendChild(input);
+							wrapper.appendChild(suffix);
+							td.appendChild(wrapper);
+							tr.appendChild(td);
+						});
+
+						tableBody.appendChild(tr);
+					});
+
+					updateTotals();
+					renderOutputTable();
+				}
+
+				function updateSlider(selector, activeButton) {
+					var slider = selector.querySelector('.toggle-slider');
+					slider.style.width = activeButton.offsetWidth + 'px';
+					slider.style.transform = 'translateX(' + activeButton.offsetLeft + 'px)';
+				}
+
+				function initToggle(selector) {
+					var key = selector.dataset.key;
+					var affectsTable = key === 'crop' || key === 'stage';
+					var buttons = selector.querySelectorAll('.toggle-option');
+
+					function setActive(button, skipSave) {
+						if (affectsTable && !skipSave && tableBody.children.length) {
+							saveRowsFromDom();
+						}
+
+						buttons.forEach(function (btn) {
+							btn.classList.toggle('active', btn === button);
+						});
+						state[key] = button.dataset.value;
+						updateSlider(selector, button);
+
+						if (affectsTable) {
+							renderTable();
+						}
+
+						if (key === 'unit') {
+							updateUnitLabels();
+							updateRowDimensionVisibility();
+							renderSeasonTotals();
+							renderOutputTable();
+						}
+					}
+
+					buttons.forEach(function (button) {
+						button.addEventListener('click', function () {
+							if (!button.classList.contains('active')) {
+								setActive(button);
+							}
+						});
+					});
+
+					setActive(selector.querySelector('.toggle-option.active') || buttons[0], true);
+				}
+
+				function renderSeasonalTargets() {
+					var bodyEl = document.getElementById('seasonal-targets-body');
+					bodyEl.innerHTML = '';
+					myTargetInputs = {};
+
+					SEASONAL_TARGETS.forEach(function (target) {
+						var tr = document.createElement('tr');
+
+						var nutrientTd = document.createElement('td');
+						nutrientTd.className = 'stage-label';
+						nutrientTd.innerHTML = target.label;
+
+						var targetTd = document.createElement('td');
+						var input = document.createElement('input');
+						input.type = 'number';
+						input.className = 'target-input';
+						input.min = '0';
+						input.step = '1';
+						input.value = target.target;
+						input.setAttribute('aria-label', 'Target ' + target.key + ' lb/acre');
+
+						input.addEventListener('input', function () {
+							if (updatingMyTargets) {
+								return;
+							}
+							var value = parseFloat(input.value) || 0;
+							target.target = value;
+							seasonTotalsLbAcre[target.key] = value;
+							applySeasonTotalsFromLbAcre();
+						});
+
+						targetTd.appendChild(input);
+						tr.appendChild(nutrientTd);
+						tr.appendChild(targetTd);
+						bodyEl.appendChild(tr);
+						myTargetInputs[target.key] = input;
+					});
+				}
+
+				function initGrowingSpecsExpander() {
+					var button = document.getElementById('growing-specs-expander');
+					var panel = document.getElementById('growing-specs-panel');
+
+					function setExpanded(expanded) {
+						panel.classList.toggle('is-collapsed', !expanded);
+						button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+						button.textContent = expanded ? '−' : '+';
+						button.setAttribute(
+							'aria-label',
+							(expanded ? 'Collapse' : 'Expand') + ' Growing Specifications'
+						);
+						button.title = button.getAttribute('aria-label');
+					}
+
+					button.addEventListener('click', function () {
+						setExpanded(panel.classList.contains('is-collapsed'));
+					});
+
+					setExpanded(false);
+				}
+
+				function renderGrowingSpecs() {
+					var specsEl = document.getElementById('growing-specs');
+					var entries = [
+						['Soil Type', GROWING_SPECS.soilType],
+						['Organic Matter', GROWING_SPECS.organicMatter],
+						['Compost', GROWING_SPECS.compost],
+						['Bed Width', GROWING_SPECS.bedWidthIn + ' inches'],
+						['Row Centers', GROWING_SPECS.rowCentersIn + ' inches'],
+						['Plant Spacing', GROWING_SPECS.plantSpacingIn + ' inches'],
+						['Bed Height', GROWING_SPECS.bedHeight],
+						['Irrigation', GROWING_SPECS.irrigation],
+						['Fertigation', GROWING_SPECS.fertigation],
+						['Application Method', GROWING_SPECS.applicationMethod]
+					];
+
+					specsEl.innerHTML = '';
+					entries.forEach(function (entry) {
+						var dt = document.createElement('dt');
+						dt.textContent = entry[0];
+						var dd = document.createElement('dd');
+						dd.textContent = entry[1];
+						specsEl.appendChild(dt);
+						specsEl.appendChild(dd);
+					});
+				}
+
+				function renderFertilizerSources() {
+					var bodyEl = document.getElementById('sources-table-body');
+					bodyEl.innerHTML = '';
+
+					FERTILIZER_SOURCES.forEach(function (source) {
+						var tr = document.createElement('tr');
+						var nameTd = document.createElement('td');
+						nameTd.className = 'stage-label';
+						nameTd.textContent = source.name;
+						var analysisTd = document.createElement('td');
+						analysisTd.textContent = source.analysis;
+						tr.appendChild(nameTd);
+						tr.appendChild(analysisTd);
+						bodyEl.appendChild(tr);
+					});
+				}
+
+				function initRowDimensions() {
+					var lengthInput = document.getElementById('row-length');
+					var widthInput = document.getElementById('row-width');
+
+					lengthInput.addEventListener('input', function () {
+						state.rowLength = parseFloat(lengthInput.value) || 0;
+						refreshOutputIfRowBased();
+					});
+
+					widthInput.addEventListener('input', function () {
+						state.rowWidth = parseFloat(widthInput.value) || 0;
+						GROWING_SPECS.bedWidthIn = Math.round(state.rowWidth * 12 * 10) / 10;
+						renderGrowingSpecs();
+						refreshSeasonTotalInputs();
+						renderOutputTable();
+					});
+				}
+
+				document.querySelectorAll('.toggle-selector').forEach(initToggle);
+				renderGrowingSpecs();
+				renderSeasonalTargets();
+				initGrowingSpecsExpander();
+				renderFertilizerSources();
+				initRowDimensions();
+				updateUnitLabels();
+				updateRowDimensionVisibility();
+				renderSeasonTotals();
+				applySeasonTotalsFromLbAcre();
+
+				window.addEventListener('resize', function () {
+					document.querySelectorAll('.toggle-selector').forEach(function (selector) {
+						var active = selector.querySelector('.toggle-option.active');
+						if (active) {
+							updateSlider(selector, active);
+						}
+					});
+				});
+
+				window.fertilizerState = state;
+				window.fertilizerSpecs = GROWING_SPECS;
+				window.fertilizerSeasonalTargets = SEASONAL_TARGETS;
+				window.fertilizerSources = FERTILIZER_SOURCES;
+				window.fertilizerTable = {
+					getRows: getRows,
+					getDefaults: function () { return defaults; },
+					getSeasonTotalsLbAcre: function () { return seasonTotalsLbAcre; },
+					calculateProductBlend: calculateProductBlend,
+					setOnChange: function (fn) { onTableChange = fn; }
+				};
+			})();
+		</script>
+
+	</body>
+
+</html>
