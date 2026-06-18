@@ -89,9 +89,18 @@
 				padding: 0 1rem;
 			}
 
-			.fertilizer-table-wrap h3 {
+			.section-header,
+			.spec-card-header {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.5rem;
+			}
+
+			.section-header h3 {
 				font-size: 18px;
-				margin: 0 0 0.75rem;
+				margin: 0;
+				text-align: center;
 			}
 
 			.fertilizer-table {
@@ -274,10 +283,7 @@
 				padding: 0 1rem;
 			}
 
-			.season-totals-wrap h3 {
-				font-size: 18px;
-				margin: 0 0 0.75rem;
-			}
+
 
 			.season-totals {
 				display: flex;
@@ -317,10 +323,7 @@
 				padding: 0 1rem;
 			}
 
-			.output-table-wrap h3 {
-				font-size: 18px;
-				margin: 0 0 0.75rem;
-			}
+
 
 			.fertilizer-table.output-table td.amount-cell,
 			.fertilizer-table.product-table td.amount-cell {
@@ -330,12 +333,6 @@
 			.fertilizer-table.product-table th {
 				white-space: normal;
 				line-height: 1.25;
-			}
-
-			.row-dimension-field.is-hidden,
-			.row-length-dimension-field.is-hidden {
-				visibility: hidden;
-				pointer-events: none;
 			}
 
 			.spec-panel-wrap {
@@ -418,9 +415,7 @@
 					padding: 0.85rem 0.75rem;
 				}
 
-				.fertilizer-table-wrap h3,
-				.output-table-wrap h3,
-				.season-totals-wrap h3 {
+				.section-header h3 {
 					font-size: 1rem;
 				}
 
@@ -503,15 +498,9 @@
 				text-align: left;
 			}
 
-			.spec-card-header {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 0.75rem;
-			}
-
 			.spec-card-header h3 {
 				margin: 0;
+				text-align: center;
 			}
 
 			.spec-card-header.is-spaced {
@@ -549,22 +538,32 @@
 				margin-top: 0.75rem;
 			}
 
-			.spec-grid {
-				display: grid;
-				grid-template-columns: auto 1fr;
-				gap: 0.35rem 1rem;
-				margin: 0;
+			.growing-specs-table {
+				width: 100%;
+				margin-top: 0.5rem;
 			}
 
-			.spec-grid dt {
+			.growing-specs-table td.spec-label {
+				text-align: left;
 				color: #99CCFF;
 				font-weight: 600;
-				margin: 0;
+				white-space: nowrap;
 			}
 
-			.spec-grid dd {
-				margin: 0;
+			.growing-specs-table td.spec-value {
+				text-align: left;
 				color: #eee;
+			}
+
+			.growing-specs-table td.spec-input-with-unit {
+				display: flex;
+				align-items: center;
+				gap: 0.35rem;
+			}
+
+			.growing-specs-table .spec-unit {
+				color: #eee;
+				white-space: nowrap;
 			}
 
 			.sources-table {
@@ -638,7 +637,9 @@
 						>+</button>
 					</div>
 					<div class="spec-collapse-panel is-collapsed" id="growing-specs-panel">
-						<dl class="spec-grid" id="growing-specs"></dl>
+						<table class="fertilizer-table growing-specs-table" id="growing-specs-table">
+							<tbody id="growing-specs-body"></tbody>
+						</table>
 					</div>
 					<div class="spec-card-header is-spaced">
 						<h3>Seasonal Targets</h3>
@@ -711,7 +712,19 @@
 		</div>
 
 		<div class="fertilizer-table-wrap">
-			<h3>Stage Percentages</h3>
+			<div class="section-header">
+				<h3>Stage Percentages</h3>
+				<button
+					type="button"
+					class="spec-expander"
+					id="stage-percentages-expander"
+					aria-expanded="true"
+					aria-controls="stage-percentages-panel"
+					aria-label="Collapse Stage Percentages"
+					title="Collapse Stage Percentages"
+				>−</button>
+			</div>
+			<div class="spec-collapse-panel" id="stage-percentages-panel">
 			<table class="fertilizer-table" id="fertilizer-table">
 				<thead>
 					<tr>
@@ -737,6 +750,7 @@
 					</tr>
 				</tfoot>
 			</table>
+			</div>
 		</div>
 
 		<div class="unit-controls">
@@ -747,23 +761,40 @@
 				<button type="button" class="toggle-option" data-value="grams-row">grams/row</button>
 				<span class="toggle-slider" aria-hidden="true"></span>
 			</div>
-			<label class="row-length-field row-dimension-field" for="row-width">
-				Bed Width (ft)
-				<input type="number" id="row-width" value="2.5" min="0" step="0.1" />
-			</label>
-			<label class="row-length-field row-length-dimension-field" for="row-length">
-				Row Length (ft)
-				<input type="number" id="row-length" value="25" min="0" step="0.1" />
-			</label>
 		</div>
 
 		<div class="season-totals-wrap">
-			<h3>Season Totals (<span id="season-totals-unit-label">lb/acre</span>)</h3>
-			<div class="season-totals" id="season-totals"></div>
+			<div class="section-header">
+				<h3>Season Totals (<span id="season-totals-unit-label">lb/acre</span>)</h3>
+				<button
+					type="button"
+					class="spec-expander"
+					id="season-totals-expander"
+					aria-expanded="true"
+					aria-controls="season-totals-panel"
+					aria-label="Collapse Season Totals"
+					title="Collapse Season Totals"
+				>−</button>
+			</div>
+			<div class="spec-collapse-panel" id="season-totals-panel">
+				<div class="season-totals" id="season-totals"></div>
+			</div>
 		</div>
 
 		<div class="output-table-wrap">
-			<h3>Stage Targets (<span id="output-unit-label">lb/acre</span>)</h3>
+			<div class="section-header">
+				<h3>Stage Targets (<span id="output-unit-label">lb/acre</span>)</h3>
+				<button
+					type="button"
+					class="spec-expander"
+					id="stage-targets-expander"
+					aria-expanded="true"
+					aria-controls="stage-targets-panel"
+					aria-label="Collapse Stage Targets"
+					title="Collapse Stage Targets"
+				>−</button>
+			</div>
+			<div class="spec-collapse-panel" id="stage-targets-panel">
 			<table class="fertilizer-table output-table" id="fertilizer-output-table">
 				<thead>
 					<tr>
@@ -789,19 +820,45 @@
 					</tr>
 				</tfoot>
 			</table>
+			</div>
 		</div>
 
 		<div class="output-table-wrap product-table-wrap">
-			<h3>Fertilizer Application (<span id="product-unit-label">lb/acre</span>)</h3>
+			<div class="section-header">
+				<h3>Fertilizer Application (<span id="product-unit-label">lb/acre</span>)</h3>
+				<button
+					type="button"
+					class="spec-expander"
+					id="fertilizer-application-expander"
+					aria-expanded="true"
+					aria-controls="fertilizer-application-panel"
+					aria-label="Collapse Fertilizer Application"
+					title="Collapse Fertilizer Application"
+				>−</button>
+			</div>
+			<div class="spec-collapse-panel" id="fertilizer-application-panel">
 			<table class="fertilizer-table product-table" id="fertilizer-product-table">
 				<thead id="product-table-head"></thead>
 				<tbody id="product-table-body"></tbody>
 				<tfoot id="product-table-foot"></tfoot>
 			</table>
+			</div>
 		</div>
 
 		<div class="output-table-wrap">
-			<h3>Nutrient Totals (<span id="nutrient-totals-unit-label">lb/acre</span>)</h3>
+			<div class="section-header">
+				<h3>Nutrient Totals (<span id="nutrient-totals-unit-label">lb/acre</span>)</h3>
+				<button
+					type="button"
+					class="spec-expander"
+					id="nutrient-totals-expander"
+					aria-expanded="true"
+					aria-controls="nutrient-totals-panel"
+					aria-label="Collapse Nutrient Totals"
+					title="Collapse Nutrient Totals"
+				>−</button>
+			</div>
+			<div class="spec-collapse-panel" id="nutrient-totals-panel">
 			<table class="fertilizer-table application-totals-table nutrient-totals-table" id="application-totals-table">
 				<thead>
 					<tr>
@@ -816,6 +873,7 @@
 				</thead>
 				<tbody id="application-totals-body"></tbody>
 			</table>
+			</div>
 		</div>
 
         <footer>
@@ -1029,10 +1087,6 @@
 						return Math.round(rounded) + '%';
 					}
 					return rounded + '%';
-				}
-
-				function usesRowDimensions(unit) {
-					return unit === 'grams-linear-ft' || unit === 'grams-row';
 				}
 
 				function usesRowLength(unit) {
@@ -1458,17 +1512,6 @@
 					productFoot.appendChild(tr);
 				}
 
-				function updateRowDimensionVisibility() {
-					var showRowDimensions = usesRowDimensions(state.unit);
-					var showRowLength = usesRowLength(state.unit);
-					document.querySelectorAll('.row-dimension-field').forEach(function (field) {
-						field.classList.toggle('is-hidden', !showRowDimensions);
-					});
-					document.querySelectorAll('.row-length-dimension-field').forEach(function (field) {
-						field.classList.toggle('is-hidden', !showRowLength);
-					});
-				}
-
 				function refreshOutputIfRowLengthBased() {
 					if (usesRowLength(state.unit)) {
 						refreshSeasonTotalInputs();
@@ -1837,7 +1880,6 @@
 
 						if (key === 'unit') {
 							updateUnitLabels();
-							updateRowDimensionVisibility();
 							renderSeasonTotals();
 							renderOutputTable();
 						}
@@ -1952,36 +1994,71 @@
 					setExpanded(defaultExpanded);
 				}
 
-				function initSpecExpanders() {
+				function initExpanders() {
 					initSpecExpander('growing-specs-expander', 'growing-specs-panel', 'Growing Specifications', false);
 					initSpecExpander('seasonal-targets-expander', 'seasonal-targets-panel', 'Seasonal Targets', true);
 					initSpecExpander('fertilizers-expander', 'fertilizers-panel', 'Fertilizers', true);
+					initSpecExpander('stage-percentages-expander', 'stage-percentages-panel', 'Stage Percentages', true);
+					initSpecExpander('season-totals-expander', 'season-totals-panel', 'Season Totals', true);
+					initSpecExpander('stage-targets-expander', 'stage-targets-panel', 'Stage Targets', true);
+					initSpecExpander('fertilizer-application-expander', 'fertilizer-application-panel', 'Fertilizer Application', true);
+					initSpecExpander('nutrient-totals-expander', 'nutrient-totals-panel', 'Nutrient Totals', true);
 				}
 
 				function renderGrowingSpecs() {
-					var specsEl = document.getElementById('growing-specs');
-					var entries = [
-						['Soil Type', GROWING_SPECS.soilType],
-						['Organic Matter', GROWING_SPECS.organicMatter],
-						['Compost', GROWING_SPECS.compost],
-						['Bed Width', GROWING_SPECS.bedWidthIn + ' inches'],
-						['Row Centers', GROWING_SPECS.rowCentersIn + ' inches'],
-						['Plant Spacing', GROWING_SPECS.plantSpacingIn + ' inches'],
-						['Bed Height', GROWING_SPECS.bedHeight],
-						['Irrigation', GROWING_SPECS.irrigation],
-						['Fertigation', GROWING_SPECS.fertigation],
-						['Application Method', GROWING_SPECS.applicationMethod]
-					];
+					var bodyEl = document.getElementById('growing-specs-body');
+					bodyEl.innerHTML = '';
 
-					specsEl.innerHTML = '';
-					entries.forEach(function (entry) {
-						var dt = document.createElement('dt');
-						dt.textContent = entry[0];
-						var dd = document.createElement('dd');
-						dd.textContent = entry[1];
-						specsEl.appendChild(dt);
-						specsEl.appendChild(dd);
-					});
+					function addTextRow(label, value) {
+						var tr = document.createElement('tr');
+						var labelTd = document.createElement('td');
+						labelTd.className = 'spec-label';
+						labelTd.textContent = label;
+						var valueTd = document.createElement('td');
+						valueTd.className = 'spec-value';
+						valueTd.textContent = value;
+						tr.appendChild(labelTd);
+						tr.appendChild(valueTd);
+						bodyEl.appendChild(tr);
+					}
+
+					function addInputRow(label, inputId, value, unit) {
+						var tr = document.createElement('tr');
+						var labelTd = document.createElement('td');
+						labelTd.className = 'spec-label';
+						labelTd.textContent = label;
+						var valueTd = document.createElement('td');
+						valueTd.className = 'spec-value spec-input-with-unit';
+						var input = document.createElement('input');
+						input.type = 'number';
+						input.id = inputId;
+						input.className = 'target-input';
+						input.min = '0';
+						input.step = '0.1';
+						input.value = value;
+						valueTd.appendChild(input);
+						if (unit) {
+							var unitSpan = document.createElement('span');
+							unitSpan.className = 'spec-unit';
+							unitSpan.textContent = unit;
+							valueTd.appendChild(unitSpan);
+						}
+						tr.appendChild(labelTd);
+						tr.appendChild(valueTd);
+						bodyEl.appendChild(tr);
+					}
+
+					addTextRow('Soil Type', GROWING_SPECS.soilType);
+					addTextRow('Organic Matter', GROWING_SPECS.organicMatter);
+					addTextRow('Compost', GROWING_SPECS.compost);
+					addInputRow('Bed Width', 'row-width', state.rowWidth, 'ft');
+					addInputRow('Row Length', 'row-length', state.rowLength, 'ft');
+					addTextRow('Row Centers', GROWING_SPECS.rowCentersIn + ' in');
+					addTextRow('Plant Spacing', GROWING_SPECS.plantSpacingIn + ' in');
+					addTextRow('Bed Height', GROWING_SPECS.bedHeight);
+					addTextRow('Irrigation', GROWING_SPECS.irrigation);
+					addTextRow('Fertigation', GROWING_SPECS.fertigation);
+					addTextRow('Application Method', GROWING_SPECS.applicationMethod);
 				}
 
 				function renderFertilizerSources() {
@@ -2045,6 +2122,9 @@
 				function initRowDimensions() {
 					var lengthInput = document.getElementById('row-length');
 					var widthInput = document.getElementById('row-width');
+					if (!lengthInput || !widthInput) {
+						return;
+					}
 
 					lengthInput.addEventListener('input', function () {
 						state.rowLength = parseFloat(lengthInput.value) || 0;
@@ -2054,7 +2134,6 @@
 					widthInput.addEventListener('input', function () {
 						state.rowWidth = parseFloat(widthInput.value) || 0;
 						GROWING_SPECS.bedWidthIn = Math.round(state.rowWidth * 12 * 10) / 10;
-						renderGrowingSpecs();
 						refreshSeasonTotalInputs();
 						renderOutputTable();
 					});
@@ -2063,12 +2142,11 @@
 				document.querySelectorAll('.toggle-selector').forEach(initToggle);
 				renderGrowingSpecs();
 				renderSeasonalTargets();
-				initSpecExpanders();
+				initExpanders();
 				renderFertilizerSources();
 				applyNutrientHeaderTooltips();
 				initRowDimensions();
 				updateUnitLabels();
-				updateRowDimensionVisibility();
 				renderSeasonTotals();
 				applySeasonTotalsFromLbAcre();
 

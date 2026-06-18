@@ -3,6 +3,15 @@
 
 	<head>
 		<meta charset="utf-8"/>
+		<!-- Remove the next script block to serve this page instead of redirecting to Fertilator -->
+		<script>
+			(function () {
+				if (location.protocol === 'http:' || location.protocol === 'https:') {
+					location.replace('/fertilator');
+				}
+			})();
+		</script>
+		<link rel="canonical" href="/fertilator" />
 		<title>Fertilizer - ehryk.github.com</title>
 
 		<!--[if lt IE 9]>
