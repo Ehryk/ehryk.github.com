@@ -229,6 +229,22 @@
 				border-color: #99CCFF;
 			}
 
+			.weeks-input input {
+				width: 3.5rem;
+				padding: 0.25rem 0.35rem;
+				border: 1px solid #666;
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.9);
+				color: #222;
+				text-align: right;
+				font-size: 14px;
+			}
+
+			.weeks-input input:focus {
+				outline: 2px solid #99CCFF;
+				border-color: #99CCFF;
+			}
+
 			.pct-input span {
 				color: #ccc;
 				font-size: 13px;
@@ -446,7 +462,8 @@
 					min-width: 34rem;
 				}
 
-				.fertilizer-table.product-table {
+				.fertilizer-table.product-table,
+				.fertilizer-table.weekly-application-table {
 					min-width: 64rem;
 				}
 
@@ -457,6 +474,7 @@
 				}
 
 				.pct-input input,
+				.weeks-input input,
 				.target-input,
 				.season-total-field input,
 				.row-length-field input {
@@ -735,6 +753,7 @@
 						<th data-nutrient-header="Ca">Ca</th>
 						<th data-nutrient-header="Mg">Mg</th>
 						<th data-nutrient-header="S">S</th>
+						<th>Weeks</th>
 					</tr>
 				</thead>
 				<tbody id="fertilizer-table-body"></tbody>
@@ -747,6 +766,7 @@
 						<td id="total-Ca"></td>
 						<td id="total-Mg"></td>
 						<td id="total-S"></td>
+						<td id="total-weeks"></td>
 					</tr>
 				</tfoot>
 			</table>
@@ -755,10 +775,10 @@
 
 		<div class="unit-controls">
 			<div class="toggle-selector" id="unit-selector" data-key="unit">
-				<button type="button" class="toggle-option active" data-value="lb-acre">lb/acre</button>
+				<button type="button" class="toggle-option" data-value="lb-acre">lb/acre</button>
 				<button type="button" class="toggle-option" data-value="grams-sqft">grams/square foot</button>
 				<button type="button" class="toggle-option" data-value="grams-linear-ft">grams/linear foot</button>
-				<button type="button" class="toggle-option" data-value="grams-row">grams/row</button>
+				<button type="button" class="toggle-option active" data-value="grams-row">grams/row</button>
 				<span class="toggle-slider" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -876,6 +896,28 @@
 			</div>
 		</div>
 
+		<div class="output-table-wrap">
+			<div class="section-header">
+				<h3>Weekly Application (<span id="weekly-application-unit-label">lb/acre</span>)</h3>
+				<button
+					type="button"
+					class="spec-expander"
+					id="weekly-application-expander"
+					aria-expanded="true"
+					aria-controls="weekly-application-panel"
+					aria-label="Collapse Weekly Application"
+					title="Collapse Weekly Application"
+				>−</button>
+			</div>
+			<div class="spec-collapse-panel" id="weekly-application-panel">
+			<table class="fertilizer-table weekly-application-table product-table" id="weekly-application-table">
+				<thead id="weekly-application-head"></thead>
+				<tbody id="weekly-application-body"></tbody>
+				<tfoot id="weekly-application-foot"></tfoot>
+			</table>
+			</div>
+		</div>
+
         <footer>
         	<hr />
             <p>&copy; Eric Menze 2026</p>
@@ -982,27 +1024,27 @@
 				];
 
 				var TOMATOES_EXTENDED = [
-					{ stage: STAGE_LABELS_TOMATOES[0], N: 10, P: 65, K: 15, Ca: 40, Mg: 45, S: 15 },
-					{ stage: STAGE_LABELS_TOMATOES[1], N: 10, P: 10, K: 5, Ca: 10, Mg: 10, S: 10 },
-					{ stage: STAGE_LABELS_TOMATOES[2], N: 20, P: 10, K: 15, Ca: 15, Mg: 15, S: 20 },
-					{ stage: STAGE_LABELS_TOMATOES[3], N: 20, P: 10, K: 20, Ca: 15, Mg: 10, S: 20 },
-					{ stage: STAGE_LABELS_TOMATOES[4], N: 20, P: 5, K: 25, Ca: 10, Mg: 10, S: 15 },
-					{ stage: STAGE_LABELS_TOMATOES[5], N: 15, P: 0, K: 15, Ca: 7, Mg: 7, S: 15 },
-					{ stage: STAGE_LABELS_TOMATOES[6], N: 5, P: 0, K: 5, Ca: 3, Mg: 3, S: 5 }
+					{ stage: STAGE_LABELS_TOMATOES[0], N: 10, P: 65, K: 15, Ca: 40, Mg: 45, S: 15, weeks: 1 },
+					{ stage: STAGE_LABELS_TOMATOES[1], N: 10, P: 10, K: 5, Ca: 10, Mg: 10, S: 10, weeks: 2 },
+					{ stage: STAGE_LABELS_TOMATOES[2], N: 20, P: 10, K: 15, Ca: 15, Mg: 15, S: 20, weeks: 3 },
+					{ stage: STAGE_LABELS_TOMATOES[3], N: 20, P: 10, K: 20, Ca: 15, Mg: 10, S: 20, weeks: 2.5 },
+					{ stage: STAGE_LABELS_TOMATOES[4], N: 20, P: 5, K: 25, Ca: 10, Mg: 10, S: 15, weeks: 5 },
+					{ stage: STAGE_LABELS_TOMATOES[5], N: 15, P: 0, K: 15, Ca: 7, Mg: 7, S: 15, weeks: 5.5 },
+					{ stage: STAGE_LABELS_TOMATOES[6], N: 5, P: 0, K: 5, Ca: 3, Mg: 3, S: 5, weeks: 2.5 }
 				];
 
 				var EVERYTHING_ELSE_NORMAL = [
-					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[0], N: 10, P: 70, K: 15, Ca: 40, Mg: 40, S: 15 },
-					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[1], N: 15, P: 10, K: 10, Ca: 10, Mg: 10, S: 10 },
-					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[2], N: 25, P: 10, K: 15, Ca: 15, Mg: 15, S: 25 },
-					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[3], N: 25, P: 10, K: 25, Ca: 20, Mg: 15, S: 25 },
-					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[4], N: 15, P: 0, K: 25, Ca: 10, Mg: 15, S: 15 },
-					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[5], N: 10, P: 0, K: 10, Ca: 5, Mg: 5, S: 10 }
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[0], N: 10, P: 70, K: 15, Ca: 40, Mg: 40, S: 15, weeks: 1 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[1], N: 15, P: 10, K: 10, Ca: 10, Mg: 10, S: 10, weeks: 2.5 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[2], N: 25, P: 10, K: 15, Ca: 15, Mg: 15, S: 25, weeks: 3 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[3], N: 25, P: 10, K: 25, Ca: 20, Mg: 15, S: 25, weeks: 3 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[4], N: 15, P: 0, K: 25, Ca: 10, Mg: 15, S: 15, weeks: 4 },
+					{ stage: STAGE_LABELS_EVERYTHING_ELSE_6[5], N: 10, P: 0, K: 10, Ca: 5, Mg: 5, S: 10, weeks: 3.5 }
 				];
 
 				function cloneRows(rows) {
 					return rows.map(function (row) {
-						var copy = { stage: row.stage };
+						var copy = { stage: row.stage, weeks: row.weeks };
 						NUTRIENTS.forEach(function (nutrient) {
 							copy[nutrient] = row[nutrient];
 						});
@@ -1017,7 +1059,7 @@
 
 				var state = {
 					crop: 'determinite',
-					unit: 'lb-acre',
+					unit: 'grams-row',
 					rowLength: 25,
 					rowWidth: GROWING_SPECS.bedWidthIn / 12,
 					rowCenters: GROWING_SPECS.rowCentersIn / 12,
@@ -1075,6 +1117,8 @@
 							var input = tr.querySelector('[data-nutrient="' + nutrient + '"]');
 							row[nutrient] = input ? parseFloat(input.value) || 0 : 0;
 						});
+						var weeksInput = tr.querySelector('[data-field="weeks"]');
+						row.weeks = weeksInput ? parseFloat(weeksInput.value) || 0 : defaultsForMode[index].weeks;
 						rows.push(row);
 					});
 
@@ -1087,6 +1131,17 @@
 						return Math.round(rounded) + '%';
 					}
 					return rounded + '%';
+				}
+
+				function formatWeeksTotal(value) {
+					if (!isFinite(value)) {
+						return '—';
+					}
+					var rounded = Math.round(value * 2) / 2;
+					if (Math.abs(rounded - Math.round(rounded)) < 0.001) {
+						return String(Math.round(rounded));
+					}
+					return rounded.toFixed(1);
 				}
 
 				function usesRowLength(unit) {
@@ -1160,6 +1215,7 @@
 					document.getElementById('output-unit-label').textContent = label;
 					document.getElementById('product-unit-label').textContent = label;
 					document.getElementById('nutrient-totals-unit-label').textContent = label;
+					document.getElementById('weekly-application-unit-label').textContent = label;
 				}
 
 				function getNutrientMaxLbAcre(nutrient) {
@@ -1490,6 +1546,215 @@
 					tr.appendChild(nameTd);
 				}
 
+				function computeStageBlends(rows) {
+					var seasonUsedLbAcre = {};
+					var postPlantUsedLbAcre = {};
+					var seasonNutrientDeliveredLbAcre = {};
+
+					NUTRIENTS.forEach(function (nutrient) {
+						seasonNutrientDeliveredLbAcre[nutrient] = 0;
+					});
+
+					var stageBlends = rows.map(function (row, stageIndex) {
+						var blend = calculateProductBlend(
+							getStageNutrientTargetsLbAcre(row),
+							seasonUsedLbAcre,
+							seasonNutrientDeliveredLbAcre,
+							postPlantUsedLbAcre,
+							stageIndex > 0
+						);
+						return {
+							row: row,
+							productsLbAcre: blend.products
+						};
+					});
+
+					return {
+						stageBlends: stageBlends,
+						seasonNutrientDeliveredLbAcre: seasonNutrientDeliveredLbAcre
+					};
+				}
+
+				function buildWeeklyApplicationSchedule(stageBlends) {
+					var timeline = [];
+					var cursor = 0;
+
+					stageBlends.forEach(function (entry) {
+						var weeks = entry.row.weeks || 0;
+						if (weeks <= 0) {
+							return;
+						}
+						timeline.push({
+							stageName: parseStageLabel(entry.row.stage).name,
+							start: cursor,
+							end: cursor + weeks,
+							weeks: weeks,
+							productsLbAcre: entry.productsLbAcre
+						});
+						cursor += weeks;
+					});
+
+					if (cursor <= 0) {
+						return [];
+					}
+
+					var weekCount = Math.ceil(cursor - 1e-9);
+					var weeklyRows = [];
+
+					for (var week = 1; week <= weekCount; week++) {
+						var weekStart = week - 1;
+						var weekEnd = week;
+						var stageNames = [];
+						var productsLbAcre = {};
+
+						FERTILIZER_SOURCES.forEach(function (source) {
+							productsLbAcre[source.name] = 0;
+						});
+
+						timeline.forEach(function (segment) {
+							var overlap = Math.min(segment.end, weekEnd) - Math.max(segment.start, weekStart);
+							if (overlap <= 1e-9) {
+								return;
+							}
+							if (stageNames.indexOf(segment.stageName) === -1) {
+								stageNames.push(segment.stageName);
+							}
+							var share = overlap / segment.weeks;
+							FERTILIZER_SOURCES.forEach(function (source) {
+								productsLbAcre[source.name] += (segment.productsLbAcre[source.name] || 0) * share;
+							});
+						});
+
+						weeklyRows.push({
+							week: week,
+							stageLabel: stageNames.join(' / '),
+							productsLbAcre: productsLbAcre
+						});
+					}
+
+					return weeklyRows;
+				}
+
+				function getActiveWeeklySources(schedule) {
+					var seasonTotalsLbAcre = {};
+
+					FERTILIZER_SOURCES.forEach(function (source) {
+						seasonTotalsLbAcre[source.name] = 0;
+					});
+
+					schedule.forEach(function (weekRow) {
+						FERTILIZER_SOURCES.forEach(function (source) {
+							seasonTotalsLbAcre[source.name] += weekRow.productsLbAcre[source.name] || 0;
+						});
+					});
+
+					return FERTILIZER_SOURCES.filter(function (source) {
+						var display = convertFromLbPerAcre(seasonTotalsLbAcre[source.name], state.unit);
+						return isFinite(display) && display >= 0.005;
+					});
+				}
+
+				function renderWeeklyApplicationTable(stageBlends) {
+					var weeklyHead = document.getElementById('weekly-application-head');
+					var weeklyBody = document.getElementById('weekly-application-body');
+					var weeklyFoot = document.getElementById('weekly-application-foot');
+					if (!weeklyHead || !weeklyBody || !weeklyFoot) {
+						return;
+					}
+
+					var schedule = buildWeeklyApplicationSchedule(stageBlends);
+					var activeSources = getActiveWeeklySources(schedule);
+					var headerRow = document.createElement('tr');
+					['Week', 'Stage'].forEach(function (label) {
+						var th = document.createElement('th');
+						th.textContent = label;
+						headerRow.appendChild(th);
+					});
+
+					activeSources.forEach(function (source) {
+						var th = document.createElement('th');
+						th.textContent = source.name;
+						th.title = getSourceTooltip(source);
+						headerRow.appendChild(th);
+					});
+
+					var totalTh = document.createElement('th');
+					totalTh.textContent = 'Total';
+					headerRow.appendChild(totalTh);
+					weeklyHead.innerHTML = '';
+					weeklyHead.appendChild(headerRow);
+					weeklyBody.innerHTML = '';
+
+					if (!schedule.length) {
+						var emptyTr = document.createElement('tr');
+						var emptyTd = document.createElement('td');
+						emptyTd.colSpan = 3;
+						emptyTd.textContent = 'Set stage weeks to see weekly applications.';
+						emptyTr.appendChild(emptyTd);
+						weeklyBody.appendChild(emptyTr);
+						weeklyFoot.innerHTML = '';
+						return;
+					}
+
+					var seasonSums = {};
+					var seasonTotal = 0;
+					activeSources.forEach(function (source) {
+						seasonSums[source.name] = 0;
+					});
+
+					schedule.forEach(function (weekRow) {
+						var tr = document.createElement('tr');
+						var weekTd = document.createElement('td');
+						weekTd.className = 'stage-number';
+						weekTd.textContent = weekRow.week;
+						tr.appendChild(weekTd);
+
+						var stageTd = document.createElement('td');
+						stageTd.className = 'stage-label';
+						stageTd.textContent = weekRow.stageLabel || '—';
+						tr.appendChild(stageTd);
+
+						var rowTotal = 0;
+						activeSources.forEach(function (source) {
+							var td = document.createElement('td');
+							td.className = 'amount-cell';
+							var display = convertFromLbPerAcre(weekRow.productsLbAcre[source.name] || 0, state.unit);
+							rowTotal += display;
+							seasonSums[source.name] += display;
+							td.textContent = formatProductCell(display, state.unit);
+							tr.appendChild(td);
+						});
+
+						var totalTd = document.createElement('td');
+						totalTd.className = 'amount-cell';
+						totalTd.textContent = formatProductCell(rowTotal, state.unit);
+						seasonTotal += rowTotal;
+						tr.appendChild(totalTd);
+						weeklyBody.appendChild(tr);
+					});
+
+					weeklyFoot.innerHTML = '';
+					var footRow = document.createElement('tr');
+					var footLabel = document.createElement('td');
+					footLabel.className = 'stage-label foot-season-result';
+					footLabel.colSpan = 2;
+					footLabel.textContent = 'Season Total';
+					footRow.appendChild(footLabel);
+
+					activeSources.forEach(function (source) {
+						var td = document.createElement('td');
+						td.className = 'amount-cell foot-season-result';
+						td.textContent = formatProductCell(seasonSums[source.name], state.unit);
+						footRow.appendChild(td);
+					});
+
+					var footTotal = document.createElement('td');
+					footTotal.className = 'amount-cell foot-season-result';
+					footTotal.textContent = formatProductCell(seasonTotal, state.unit);
+					footRow.appendChild(footTotal);
+					weeklyFoot.appendChild(footRow);
+				}
+
 				function appendProductFootRow(label, rowClass, valueGetter) {
 					var tr = document.createElement('tr');
 					var labelTd = document.createElement('td');
@@ -1656,6 +1921,8 @@
 					productBody.innerHTML = '';
 
 					var rows = getRows();
+					var computed = computeStageBlends(rows);
+					var stageBlends = computed.stageBlends;
 					var seasonSums = {};
 					var seasonProductTotal = 0;
 
@@ -1663,31 +1930,16 @@
 						seasonSums[source.name] = 0;
 					});
 
-					var seasonUsedLbAcre = {};
-					var postPlantUsedLbAcre = {};
-					var seasonNutrientDeliveredLbAcre = {};
-
-					NUTRIENTS.forEach(function (nutrient) {
-						seasonNutrientDeliveredLbAcre[nutrient] = 0;
-					});
-
-					rows.forEach(function (row, stageIndex) {
-						var blend = calculateProductBlend(
-							getStageNutrientTargetsLbAcre(row),
-							seasonUsedLbAcre,
-							seasonNutrientDeliveredLbAcre,
-							postPlantUsedLbAcre,
-							stageIndex > 0
-						);
+					stageBlends.forEach(function (entry) {
 						var tr = document.createElement('tr');
 						var rowTotal = 0;
 
-						appendStageCells(tr, row.stage);
+						appendStageCells(tr, entry.row.stage);
 
 						FERTILIZER_SOURCES.forEach(function (source) {
 							var td = document.createElement('td');
 							td.className = 'amount-cell';
-							var lbPerAcre = blend.products[source.name];
+							var lbPerAcre = entry.productsLbAcre[source.name];
 							var display = convertFromLbPerAcre(lbPerAcre, state.unit);
 							rowTotal += display;
 							seasonSums[source.name] += display;
@@ -1703,7 +1955,8 @@
 						productBody.appendChild(tr);
 					});
 
-					renderApplicationTotals(seasonNutrientDeliveredLbAcre);
+					renderApplicationTotals(computed.seasonNutrientDeliveredLbAcre);
+					renderWeeklyApplicationTable(stageBlends);
 
 					productFoot.innerHTML = '';
 
@@ -1786,12 +2039,17 @@
 
 				function updateTotals() {
 					var totals = {};
+					var weeksTotal = 0;
 					NUTRIENTS.forEach(function (nutrient) {
 						totals[nutrient] = 0;
 					});
 
 					tableBody.querySelectorAll('input[data-nutrient]').forEach(function (input) {
 						totals[input.dataset.nutrient] += parseFloat(input.value) || 0;
+					});
+
+					tableBody.querySelectorAll('input[data-field="weeks"]').forEach(function (input) {
+						weeksTotal += parseFloat(input.value) || 0;
 					});
 
 					NUTRIENTS.forEach(function (nutrient) {
@@ -1801,6 +2059,11 @@
 						cell.classList.toggle('total-ok', Math.abs(total - 100) < 0.05);
 						cell.classList.toggle('total-warn', Math.abs(total - 100) >= 0.05);
 					});
+
+					var weeksCell = document.getElementById('total-weeks');
+					if (weeksCell) {
+						weeksCell.textContent = formatWeeksTotal(weeksTotal);
+					}
 				}
 
 				function renderTable() {
@@ -1844,6 +2107,30 @@
 							td.appendChild(wrapper);
 							tr.appendChild(td);
 						});
+
+						var weeksTd = document.createElement('td');
+						var weeksWrapper = document.createElement('div');
+						weeksWrapper.className = 'weeks-input';
+
+						var weeksInput = document.createElement('input');
+						weeksInput.type = 'number';
+						weeksInput.min = '0';
+						weeksInput.step = '0.5';
+						weeksInput.value = row.weeks;
+						weeksInput.dataset.field = 'weeks';
+						weeksInput.dataset.row = rowIndex;
+						weeksInput.setAttribute('aria-label', row.stage + ' weeks');
+
+						weeksInput.addEventListener('input', function () {
+							var cached = getRows();
+							cached[rowIndex].weeks = parseFloat(weeksInput.value) || 0;
+							updateTotals();
+							renderOutputTable();
+						});
+
+						weeksWrapper.appendChild(weeksInput);
+						weeksTd.appendChild(weeksWrapper);
+						tr.appendChild(weeksTd);
 
 						tableBody.appendChild(tr);
 					});
@@ -2003,6 +2290,7 @@
 					initSpecExpander('stage-targets-expander', 'stage-targets-panel', 'Stage Targets', true);
 					initSpecExpander('fertilizer-application-expander', 'fertilizer-application-panel', 'Fertilizer Application', true);
 					initSpecExpander('nutrient-totals-expander', 'nutrient-totals-panel', 'Nutrient Totals', true);
+					initSpecExpander('weekly-application-expander', 'weekly-application-panel', 'Weekly Application', true);
 				}
 
 				function renderGrowingSpecs() {
