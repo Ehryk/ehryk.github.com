@@ -1,0 +1,35 @@
+#,Reference,Value,Qty,Datasheet,Footprint,Ordered,Part Number,Brand
+1,"C1,C2,C5,C6,C7,C13,C14,C15,C16",0.1μF,9,,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,100,AC0805KRX7R9BB104 ,YAGEO 
+2,"C3,C4",10μF,2,,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,50,CL32B226KAJNNNE ,Samsung Electro-Mechanics 
+3,C8,100pF,1,,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,10,C0805C101J5GACTU ,KEMET 
+4,"C9,C10,C11,C12",22μF,4,,Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder,50,CL31B106KBHNNNE ,Samsung Electro-Mechanics 
+5,D1,BAT54S,1,https://www.diodes.com/assets/Datasheets/ds11005.pdf,Package_TO_SOT_SMD:SOT-23,10,BAT54SFILM ,STMicroelectronics 
+6,D2,LED,1,,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,10,INL-5TB4URGB60 ,Inolux 
+6,D2,,1,,,10,SSH-LXH501 ,Lumex Opto/Components Inc. 
+7,"L1,L2",6.8μH,2,,Inductor_SMD:L_TechFuse_SL0630,25,ASPI-0630LR-6R8M-T15 ,Abracon LLC
+8,MCU1,ESP32-DEVKIT-V1,1,,Ehryk:ESP32_DEVKIT_V1,,,
+9,Q1,‎AO3400A‎ ,1,https://www.aosmd.com/res/datasheets/AOSS32334C.pdf,Package_TO_SOT_SMD:SOT-23-3,10,‎AO3400A‎ ,UMW
+10,R1,TE-SPDT,1,,Ehryk:TE-SPDT,,,
+11,"R2,R3",220Ω,2,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,25,CRGCQ0805F220R ,TE Connectivity Passive Product 
+12,"R4,R5,R12,R13",10kΩ,4,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,50,CRGCQ0805F10K ,TE Connectivity Passive Product 
+13,R6,220kΩ,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,CRGCQ0805F220K ,TE Connectivity Passive Product 
+14,R7,22kΩ,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,CRGCQ0805F22K ,TE Connectivity Passive Product 
+15,R8,160kΩ,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,RNCF0805DTE160K ,Stackpole Electronics Inc 
+15,R8_Alt,162kΩ,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,ERJ-PB6D1623V ,Panasonic Industry 
+30,R9,10kΩ,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,RNCF0805DTE10K0 ,Stackpole Electronics Inc 
+30,R9_Alt,30kΩ,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,RNCF0805DTE30K0 ,Stackpole Electronics Inc 
+16,"R10,R11",2.7kΩ,2,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,25,CRGCQ0805F2K7 ,TE Connectivity Passive Product 
+31,R14,68Ω,1,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,10,CRGCQ0805F68R‎ ,TE Connectivity Passive Product 
+17,"R15,R16",10Ω,2,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,25,CRGCQ0805F10R‎ ,TE Connectivity Passive Product 
+18,U1,AP63203WU,1,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf,Package_TO_SOT_SMD:TSOT-23-6,10,AP63203QWU-7 ,Diodes Incorporated 
+19,U2,AP63201WU,1,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf,Package_TO_SOT_SMD:TSOT-23-6,10,AP63201QWU-7 ,Diodes Incorporated 
+20,U3,LTV-827S,1,http://www.us.liteon.com/downloads/LTV-817-827-847.PDF,Package_DIP:SMDIP-8_W9.53mm,10,LTV-827S-TA1 ,LITEON 
+21,W1,V+,1,,Ehryk:WIRE-14AWG,,,
+22,W2,3V3,1,,Ehryk:WIRE-16AWG,,,
+23,W3,12V,1,,Ehryk:WIRE-16AWG,,,
+24,W4,V-,1,,Ehryk:WIRE-14AWG,,,
+25,W5,CO,1,,Ehryk:WIRE-14AWG,,,
+26,W6,NC,1,,Ehryk:WIRE-14AWG,,,
+27,W7,NO,1,,Ehryk:WIRE-14AWG,,,
+28,W8,ON,1,,Ehryk:WIRE-18AWG,,,
+29,W9,LT,1,,Ehryk:WIRE-18AWG,,,
