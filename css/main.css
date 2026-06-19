@@ -96,7 +96,8 @@ img::-moz-selection	{background: transparent;}
 }
 
 .Image img {
-	width:90%;
+	width: 90%;
+	cursor: pointer;
 }
 
 .right {
@@ -109,4 +110,136 @@ img::-moz-selection	{background: transparent;}
 
 .left {
 	float: left;
+}
+
+/* ==========================================================================
+   Page Layout
+   ========================================================================== */
+
+.page {
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	box-sizing: border-box;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5%;
+	margin-bottom: 1.5rem;
+}
+
+section:nth-of-type(odd) {
+	flex-direction: row-reverse;
+}
+
+section .Detail,
+section .Image {
+	float: none;
+}
+
+section .Detail {
+	width: 70%;
+	flex: 0 1 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+section .Image {
+	width: 25%;
+	flex: 0 0 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+section .clearfix {
+	display: none;
+}
+
+/* ==========================================================================
+   Image Overlay
+   ========================================================================== */
+
+.image-overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.85);
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+.image-overlay.is-open {
+	display: flex;
+}
+
+.image-overlay-content {
+	max-width: 95vw;
+	max-height: 95vh;
+}
+
+.image-overlay-content img {
+	display: block;
+	max-width: 95vw;
+	max-height: 95vh;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+.no-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	min-height: 120px;
+	border: 2px dashed #666;
+	color: #aaa;
+	font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+	font-size: 18px;
+	text-align: center;
+}
+
+.Image .no-image {
+	cursor: pointer;
+}
+
+.image-overlay-content .no-image {
+	width: min(80vw, 600px);
+	min-height: 300px;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+@media (max-width: 992px) {
+	section,
+	section:nth-of-type(odd),
+	section:nth-of-type(even) {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 1rem;
+	}
+
+	section .Detail,
+	section .Image {
+		width: 100%;
+		flex: 1 1 auto;
+	}
+
+	section .Image img {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	section .Image .no-image {
+		width: 100%;
+	}
 }

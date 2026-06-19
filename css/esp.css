@@ -1,0 +1,9 @@
+/* ESP project pages: even sections reverse (index uses odd) */
+
+section:nth-of-type(odd) {
+	flex-direction: row;
+}
+
+section:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
