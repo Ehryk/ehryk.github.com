@@ -23,6 +23,106 @@
 		<link rel="stylesheet" media="all" href="css/main.css"/>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<style>
+			.page {
+				max-width: 1400px;
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 1.5rem;
+				box-sizing: border-box;
+			}
+
+			section {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 5%;
+				margin-bottom: 1.5rem;
+			}
+
+			section:nth-of-type(odd) {
+				flex-direction: row-reverse;
+			}
+
+			section .Detail,
+			section .Image {
+				float: none;
+			}
+
+			section .Detail {
+				width: 70%;
+				flex: 0 1 70%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section .Image {
+				width: 25%;
+				flex: 0 0 25%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			section .clearfix {
+				display: none;
+			}
+
+			.Image img {
+				cursor: pointer;
+			}
+
+			.image-overlay {
+				display: none;
+				position: fixed;
+				inset: 0;
+				z-index: 1000;
+				background: rgba(0, 0, 0, 0.85);
+				align-items: center;
+				justify-content: center;
+				padding: 2rem;
+				box-sizing: border-box;
+			}
+
+			.image-overlay.is-open {
+				display: flex;
+			}
+
+			.image-overlay-content {
+				max-width: 95vw;
+				max-height: 95vh;
+			}
+
+			.image-overlay-content img {
+				display: block;
+				max-width: 95vw;
+				max-height: 95vh;
+				width: auto;
+				height: auto;
+				cursor: pointer;
+			}
+
+			@media (max-width: 992px) {
+				section,
+				section:nth-of-type(odd) {
+					flex-direction: column;
+					align-items: stretch;
+					gap: 1rem;
+				}
+
+				section .Detail,
+				section .Image {
+					width: 100%;
+					flex: 1 1 auto;
+				}
+
+				section .Image img {
+					width: 100%;
+					max-width: 100%;
+				}
+			}
+		</style>
 	</head>
 
 	<body>
@@ -31,8 +131,21 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+		<div class="page">
 		<h1>ehryk.github.com</h1>
 		<h5>Random Thingies - for more: <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a>, or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
+
+		<section>
+		  <div class="Detail">
+		    <h3>ESPSauna</h3>
+		    <p>An ESP32 based sauna controller for Home Assistant; powered from 100 to 240 VAC, with temperature, humidity, and current monitoring.</p>
+		  </div>
+		  <div class="Image">
+		  	<img src="Circuits/ESPSauna/Images/Front.jpg" alt="Front Picture" />
+		  </a>
+		  </div>
+		  <div class="clearfix">
+		</section>
 
 		<section>
 		  <div class="Detail left">
@@ -103,10 +216,63 @@
         	<hr />
             <p>&copy; Eric Menze 2013</p>
         </footer>
+		</div>
+
+		<div id="image-overlay" class="image-overlay" aria-hidden="true">
+			<div class="image-overlay-content"></div>
+		</div>
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			(function () {
+				var overlay = document.getElementById('image-overlay');
+				var overlayContent = overlay.querySelector('.image-overlay-content');
+				var isOpen = false;
+
+				function closeOverlay() {
+					overlay.classList.remove('is-open');
+					overlay.setAttribute('aria-hidden', 'true');
+					overlayContent.innerHTML = '';
+					isOpen = false;
+					document.body.style.overflow = '';
+				}
+
+				function openOverlay(source) {
+					overlayContent.innerHTML = '';
+
+					var img = document.createElement('img');
+					img.src = source.currentSrc || source.src;
+					img.alt = source.alt;
+					overlayContent.appendChild(img);
+
+					overlay.classList.add('is-open');
+					overlay.setAttribute('aria-hidden', 'false');
+					isOpen = true;
+					document.body.style.overflow = 'hidden';
+				}
+
+				document.querySelectorAll('.Image img').forEach(function (el) {
+					el.addEventListener('click', function (event) {
+						event.preventDefault();
+						event.stopPropagation();
+						if (isOpen) {
+							closeOverlay();
+						} else {
+							openOverlay(el);
+						}
+					});
+				});
+
+				overlay.addEventListener('click', function () {
+					if (isOpen) {
+						closeOverlay();
+					}
+				});
+			})();
+		</script>
 
 	</body>
 
