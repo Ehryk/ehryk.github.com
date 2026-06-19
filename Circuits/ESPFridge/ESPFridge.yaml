@@ -38,7 +38,7 @@ esp32:
     type: esp-idf               # Recommended for C3
 
 interval:
-  - interval: 20s
+  - interval: 40s
     then:
       - script.execute: wake_and_process
 
@@ -61,10 +61,10 @@ wifi:
 api:
   encryption: 
     key: "XwfXtratsJLjzyvR3bBwIyW4rGaKPosYBYPQliu03m8="
-  on_client_connected:
-    - globals.set:
-        id: debug_mode
-        value: 'true'
+  #on_client_connected:
+  #  - globals.set:
+  #      id: debug_mode
+  #      value: 'true'
   #on_client_disconnected:
   #  - globals.set:
   #      id: debug_mode
@@ -89,8 +89,8 @@ i2c:
 globals:
   - id: debug_mode
     type: bool
-    restore_value: true          # Persists across power cycles / deep sleep wakes
-    initial_value: 'true'       # Default = normal low-power behavior
+    restore_value: false          # Persist across power cycles / deep sleep wakes
+    initial_value: 'false'        # Default = normal low-power behavior
 
   - id: sleep_duration_sec
     type: uint32_t
@@ -150,7 +150,10 @@ script:
             uint32_t ts = id(ha_time).now().timestamp;
             id(last_update_ts) = ts;
             id(last_update).publish_state(ts);
-            ESP_LOGI("time", "Last Update → %d", ts);
+            id(last_update).update();
+            ESP_LOGI("time", "Last Update → %d (%d)", id(last_update), id(last_update_ts));
+            id(last_update).publish_state(ts);
+            id(last_update).update();
           } else {
             ESP_LOGW("time", "HA time not valid");
           }
@@ -167,6 +170,7 @@ script:
 
       # 9. Final Delay
       - delay: 1.5s
+      #- component.update: last_update
 
       # 10. Clean shutdown
       - light.turn_off: status_light
@@ -342,7 +346,7 @@ switch:
     name: "Debug Mode (Stay Awake)"
     id: debug_switch
     optimistic: true
-    restore_mode: RESTORE_DEFAULT_ON   # Or ALWAYS_ON if you prefer
+    restore_mode: RESTORE_DEFAULT_OFF   # Or ALWAYS_ON if you prefer
     lambda: |-
       return id(debug_mode);
     turn_on_action:

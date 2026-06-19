@@ -1,0 +1,435 @@
+esphome:
+  name: espdrive
+  friendly_name: ESPDrive - Red Jeep
+  on_boot:
+    priority: 650
+    then:
+      - logger.log:
+          level: INFO
+          format: "=== ESPDrive booting ==="
+
+      - lambda: |-
+          gpio_set_direction(GPIO_NUM_25, GPIO_MODE_INPUT);
+          gpio_set_pull_mode(GPIO_NUM_25, GPIO_FLOATING);
+          gpio_hold_dis(GPIO_NUM_25);
+          ESP_LOGI("boot", "GPIO25 configured as input (floating)");
+
+      - output.turn_on: divider_enable
+      - output.turn_on: opto_enable
+
+      - light.turn_on:
+          id: blue_led
+          effect: "Slow Pulse"
+
+      - delay: 1s
+
+      - script.execute: update_vehicle_status
+      - script.execute: update_led
+
+      - logger.log:
+          level: INFO
+          format: "ESPDrive woke up - initialization complete"
+  on_shutdown: 
+    then:
+      - output.turn_off: relay_pwm
+      - output.turn_off: divider_enable
+      - output.turn_off: opto_enable
+      - output.turn_off: buck_enable
+      
+
+esp32:
+  board: esp32doit-devkit-v1
+  framework:
+    type: esp-idf
+    advanced: 
+      minimum_chip_revision: "3.1"
+      sram1_as_iram: true
+
+wifi:
+  id: wifi_id
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  on_connect:
+    - switch.turn_on:
+        id: onboard_led
+    - light.turn_off:
+        id: blue_led
+  on_disconnect:
+    - switch.turn_off:
+        id: onboard_led
+    - light.turn_on:
+        id: blue_led
+        effect: "Slow Pulse"
+
+api:
+  encryption: 
+    key: "ZUBcSqV5RazaqkjdjaiTsiVXps33FWGjOanQ4sV30Cc="
+
+ota:
+  - platform: esphome
+
+logger:
+  level: DEBUG
+
+# ====================== CONFIGURATION ======================
+globals:
+  # Change this to switch battery profiles
+  - id: battery_type
+    type: int
+    restore_value: true
+    initial_value: '0'   # 0 = M18 (18.5V nominal), 1 = 12V Lead Acid
+
+  - id: vehicle_on_state
+    type: bool
+    restore_value: false
+    initial_value: 'false'
+
+  - id: relay_duty
+    type: float
+    initial_value: '0.0'
+    restore_value: false
+
+select:
+  - platform: template
+    name: "Battery Type"
+    id: battery_type_select
+    icon: mdi:battery
+    options:
+      - "M18 Battery"
+      - "12V Lead-Acid"
+    optimistic: False
+    lambda: |-
+      if (id(battery_type) == 0) {
+        return "M18 Battery";
+      } else {
+        return "12V Lead-Acid";
+      }
+    set_action:
+      - lambda: |-
+          if (x == "M18 Battery") {
+            id(battery_type) = 0;
+          } else {
+            id(battery_type) = 1;
+          }
+          id(battery_type_select).publish_state(x);
+      - component.update: battery_percent
+
+# ====================== DEEP SLEEP ======================
+deep_sleep:
+  id: deep_sleep_1
+  run_duration:
+    default: 25s
+    gpio_wakeup_reason: 2min
+  sleep_duration: 10min
+  wakeup_pin:
+    number: GPIO25
+    inverted: true
+  wakeup_pin_mode: KEEP_AWAKE
+
+# ====================== OUTPUTS ======================
+output:
+  - platform: gpio
+    pin: GPIO14
+    id: divider_enable
+    inverted: true
+
+  - platform: gpio
+    pin: GPIO26
+    id: opto_enable
+    inverted: true
+
+  - platform: gpio
+    pin: GPIO23
+    id: buck_enable
+
+  - platform: ledc
+    pin: 
+      number: GPIO5
+      mode: 
+        output: true
+        pullup: true
+    id: relay_pwm
+    frequency: 30kHz
+    channel: 0
+
+  # RGB LED PWM
+  - platform: ledc
+    pin: GPIO33
+    id: led_red
+    frequency: 1000Hz
+    channel: 2
+
+  - platform: ledc
+    pin: GPIO32
+    id: led_green
+    frequency: 1000Hz
+    channel: 4
+
+  - platform: ledc
+    pin: GPIO27
+    id: led_blue
+    frequency: 1000Hz
+    channel: 6
+
+switch:
+  - platform: template
+    name: "Relay"
+    id: relay_switch
+    optimistic: false
+    lambda: |-
+      return id(relay_duty) > 0.001;
+    turn_on_action:
+      - script.execute: turn_on_relay
+      - switch.template.publish:
+          id: relay_switch
+          state: true
+    turn_off_action:
+      - lambda: |-
+          id(relay_duty) = 0.0;
+          id(relay_pwm).set_level(0.0);
+      - switch.template.publish:
+          id: relay_switch
+          state: false
+
+  - platform: output
+    name: "Vout"
+    output: buck_enable
+    id: vout_switch
+
+  - platform: gpio
+    pin:
+      number: GPIO2
+      mode: OUTPUT
+    name: "ESP32 LED"
+    id: onboard_led
+    restore_mode: ALWAYS_ON     # Or RESTORE_DEFAULT_OFF, ALWAYS_ON, etc.
+    inverted: false              # Leave false — LED is active HIGH
+
+# ====================== LIGHT (Smart Battery LED) ======================
+light:
+  - platform: monochromatic
+    id: red_led
+    name: "Status LED - Red"
+    output: led_red
+    internal: true
+    default_transition_length: 0s
+    effects:
+      - pulse:
+          name: "Fast Pulse"
+          transition_length: 0.5s
+          update_interval: 0.5s
+
+  - platform: monochromatic
+    id: green_led
+    name: "Status LED - Green"
+    output: led_green
+    internal: true
+    default_transition_length: 0s
+
+  - platform: monochromatic
+    id: blue_led
+    name: "Status LED - Blue"
+    output: led_blue
+    internal: true
+    default_transition_length: 0s
+    effects:
+      - pulse:
+          name: "Slow Pulse"
+          transition_length: 1s
+          update_interval: 1s
+
+#  - platform: rgb
+#    name: "Status LED"
+#    id: status_led
+#    red: led_red
+#    green: led_green
+#    blue: led_blue
+#    restore_mode: ALWAYS_OFF
+
+# ====================== BINARY SENSORS ======================
+binary_sensor:
+  - platform: template
+    name: "Vehicle On"
+    id: vehicle_on
+    lambda: |-
+      return id(vehicle_on_state);
+    filters:
+      - delayed_on: 300ms
+      - delayed_off: 300ms
+
+  - platform: gpio
+    pin: 
+      number: GPIO18
+      inverted: true
+    name: "Lights On"
+    id: lights_on
+    filters:
+      - delayed_on: 200ms
+      - delayed_off: 200ms
+
+  - platform: template
+    name: "WiFi Connected"
+    id: wifi_connected
+    icon: "mdi:wifi"
+    lambda: |-
+      return id(wifi_id).is_connected();
+
+interval:
+  - interval: 5s
+    then:
+      - logger.log:
+          level: DEBUG
+          format: "Updating vehicle status and battery LED"
+      - script.execute: update_vehicle_status
+      - script.execute: update_led
+  - interval: 3s
+    then:
+      - if:
+          condition:
+            switch.is_on: relay_switch
+          then:
+            - script.execute: update_relay_pwm
+
+# ====================== SENSORS ======================
+sensor:
+  - platform: adc
+    name: "Battery Voltage Internal"
+    id: battery_voltage_internal
+    pin: GPIO34
+    unit_of_measurement: V
+    icon: mdi:flash
+    attenuation: 12db
+    accuracy_decimals: 4
+    update_interval: 1s
+    internal: True
+    filters:
+      - multiply: 12.0
+
+  - platform: copy
+    source_id: battery_voltage_internal
+    name: "Battery Voltage Raw"
+    unit_of_measurement: "V"
+    icon: mdi:flash
+    accuracy_decimals: 2
+    filters:
+      - throttle: 5s
+          
+  - platform: copy
+    id: battery_voltage
+    name: "Battery Voltage"
+    source_id: battery_voltage_internal
+    unit_of_measurement: V
+    icon: mdi:flash
+    accuracy_decimals: 2
+    filters:
+      - calibrate_linear:
+          method: exact
+          datapoints: 
+            - 1.70 -> 0.00
+            - 4.66 -> 4.01
+            - 5.72 -> 5.01
+            - 11.13 -> 10.01
+            - 16.55 -> 15.02
+            - 22.17 -> 20.02
+            - 27.60 -> 25.02
+            - 32.82 -> 30.02
+            - 36.96 -> 34.02
+      #- sliding_window_moving_average:
+      #    window_size: 10
+      #    send_every: 5
+      #- throttle: 1s
+
+  - platform: template
+    name: "Battery Percentage"
+    id: battery_percent
+    icon: mdi:battery
+    unit_of_measurement: "%"
+    update_interval: 1s
+    lambda: |-
+      float v = id(battery_voltage).state;
+      bool is_m18 = id(battery_type) == 0;
+
+      if (is_m18) {
+        if (v <= 14.5) return 0.0;
+        if (v >= 19.5) return 100.0;
+        return (v - 14.5) / (19.5 - 14.5) * 100;
+      } else {
+        if (v <= 10.8) return 0.0;
+        if (v >= 13.8) return 100.0;
+        return (v - 10.8) / (13.8 - 10.8) * 100;
+      }
+
+  - platform: wifi_signal
+    name: "WiFi Signal Strength"
+    update_interval: 60s
+    icon: "mdi:wifi"
+
+  - platform: uptime
+    name: "Uptime"
+    update_interval: 60s
+    icon: mdi:clock-outline
+          
+  - platform: template
+    name: "Relay PWM Duty"
+    lambda: |-
+      return id(relay_duty) * 100.0;
+    unit_of_measurement: "%"
+    update_interval: 3s
+
+text_sensor:
+  - platform: version
+    name: "Version"
+    hide_timestamp: true
+
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+      icon: mdi:ip-network
+     
+button:
+  - platform: restart
+    name: "Restart"
+ 
+# Smart Battery Status LED
+script:
+  - id: update_led
+    then:
+      - lambda: |-
+          float batt = id(battery_percent).state;
+          bool conn = id(wifi_id).is_connected();
+          ESP_LOGD("led", "Battery = %.1f%% → WiFi %s", batt, conn ? "Connected" : "Disconnected");
+
+          if (batt <= 0.0) {
+            id(red_led).turn_on().set_brightness(1.0).set_effect("Fast Pulse").perform();
+            id(green_led).turn_on().set_brightness(0.0);
+          } else {
+            id(red_led).turn_on().set_brightness(clamp(1.0 - batt / 100.0, 0.0, 0.9)).set_effect("None").perform();
+            id(green_led).turn_on().set_brightness(clamp(0.7 * batt / 100.0, 0.2, 0.7)).set_effect("None").perform();
+          }
+
+  - id: update_vehicle_status
+    then:
+      - lambda: |-
+          bool state = (gpio_get_level(GPIO_NUM_25) == 0);   // Active LOW
+          id(vehicle_on_state) = state; 
+          id(vehicle_on).publish_state(state);
+
+          //id(buck_enable).set_state(state);                    // Enable Vout when Vehicle is ON
+
+          ESP_LOGD("vehicle", "GPIO25 raw = %d → Vehicle %s", gpio_get_level(GPIO_NUM_25), state ? "ON" : "OFF");
+          
+  - id: turn_on_relay
+    then:
+      - output.set_level:
+          id: relay_pwm
+          level: 1.0      # Full voltage to pull in
+      - delay: 200ms
+      - script.execute: update_relay_pwm
+
+  - id: update_relay_pwm
+    then:
+      - lambda: |-
+          float bat = id(battery_voltage).state;
+          float duty = clamp(5.0 / bat, 0.01, 1.0);    // 5V Hold Voltage
+          id(relay_duty) = duty;
+          id(relay_pwm).set_level(duty);
