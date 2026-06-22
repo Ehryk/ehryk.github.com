@@ -10,12 +10,12 @@
 		<![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-	    <meta name="description" content="ESPRadiator - An ESP32 radiator controller for Home Assistant" />
+	    <meta name="description" content="ESPRadiator - An ESP32 fan radiator controller for Home Assistant" />
 	    <meta name="keywords" content="ESPRadiator,ESP32,Ehryk,Radiator" />
 	    <meta name="author" content="Eric Menze" />
 		<meta property="og:url" content="https://ehryk.github.io/espradiator" />
 		<meta property="og:title" content="ESPRadiator" />
-		<meta property="og:description" content="ESPRadiator - An ESP32 radiator controller for Home Assistant" />
+		<meta property="og:description" content="ESPRadiator - An ESP32 radiator fan controller for Home Assistant" />
 	    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -33,12 +33,12 @@
 
 		<div class="page">
 		<h1>ESPRadiator</h1>
-		<h5>A radiator controller for Home Assistant — for more: <a href="/">home</a>, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a> or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
+		<h5>A radiator fan controller for Home Assistant — for more: <a href="/">home</a>, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a> or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
 
 		<section>
 		  <div class="Detail left">
 		    <h3>Home Assistant</h3>
-		    <p>Available entities include Remote Activation, stove running, stove current, power (instantaneous), energy usage, temperature and humidity</p>
+		    <p>Available entities include manual on/off, engine coolant temperature, ignition and A/C clutch status, and fan speed</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPRadiator/Images/HomeAssistant.jpg" alt="Home Assistant" />
@@ -49,7 +49,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3>Front</h3>
-		    <p>AC rectifier unit, ESP32 DevKit v1, DHT22, SHT45, 2x 12V 30A high power micro relays</p>
+		    <p>15A and 2A fuses, ESP32 DevKit v1, 3.3V switching regulator, dual IRLZ44N MOSFETs, power input, fan output, and Ignition (yellow), A/C clutch (blue) and ECT (white) inputs</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="Circuits/ESPRadiator/Images/Front.jpg" alt="Front Picture" />
@@ -60,7 +60,7 @@
 		<section>
 		  <div class="Detail left">
 		    <h3>Rear</h3>
-		    <p>AC input (100 - 240 VAC), 12V DC output, 3.3V DC output, Remote and Safety relay connections, 3.5mm current clamp</p>
+		    <p>Not much to see here, folks. Voltage divider circuit with a P-channel MOSFET for minimal quiescent current</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPRadiator/Images/Rear.jpg" alt="Rear Picture" />
