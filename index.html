@@ -38,7 +38,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3><a href="espsauna.html" title="Check it out!">ESPSauna</a></h3>
-		    <p>An ESP32 based sauna controller for Home Assistant; powered from 100 to 240 VAC, with temperature, humidity, and current monitoring.</p>
+		    <p>An ESP32 based sauna controller for Home Assistant; powered from 100 to 240 VAC, with temperature, humidity, and current monitoring. Built on an ESP32-DEVKIT-V1 (U4) with an HLK-5M12 (PS1) AC–DC module, AP63203WU buck (U1), and AO3400A MOSFETs (Q1/Q2) PWM-driving TE-SPDT relays (RLY1/RLY2) for remote and safety heater control. AM2302/DHT22 (U3) and SHT45 sensors cover sauna and changing-room conditions; a 3.5 mm jack (J1) accepts a current clamp for stove current, power, and energy entities.</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="Circuits/ESPSauna/Images/Front.jpg" alt="ESPSauna" />
@@ -49,7 +49,7 @@
 		<section>
 		  <div class="Detail left">
 		    <h3><a href="espfridge.html" title="Check it out!">ESPFridge</a></h3>
-		    <p>An ESP32 based fridge monitor for Home Assistant; powered from an 18650 battery, with temperature, humidity, and light monitoring.</p>
+		    <p>An ESP32 based fridge monitor for Home Assistant; powered from an 18650 battery, with temperature, humidity, and light monitoring. The ESP32-C3-WROOM-02 (U1) rides on a PCB sized to stack with the cell (BT1); a TMP117 (U6) provides ±0.3°C readings, an OPT3001DNPRQ1 (U4) detects door-open light levels, and DW01A plus 8205A (U2/U3) protect the pack while an MCP1700-3.3 (U5) and AO3401A (Q1) keep quiescent current low across deep-sleep wake cycles.</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPFridge/Images/Front.jpg" alt="ESPFridge" />
@@ -60,7 +60,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3><a href="espprobe.html" title="Check it out!">ESPProbe</a></h3>
-		    <p>An ESP32 based temperature monitor with triple K type thermocouples for Home Assistant; powered from USB C, used for my wood stove</p>
+		    <p>An ESP32 based temperature monitor with triple K type thermocouples for Home Assistant; powered from USB C, used for my wood stove. An ESP32-DEVKIT-V1 (MCU1) hosts three MAX31855KASA (U1–U3) on screw terminals (J1–J3) for intake, chamber, and exhaust probes, plus an AM2302/DHT22 (U4) for ambient conditions; polling speeds up automatically when fire is detected.</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="Circuits/ESPProbe/Images/Front.jpg" alt="ESPProbe" />
@@ -71,7 +71,7 @@
 		<section>
 		  <div class="Detail left">
 		    <h3><a href="espradiator.html" title="Check it out!">ESPRadiator</a></h3>
-		    <p>An ESP32 based electric radiator fan controller; with battery monitoring and HA integration</p>
+		    <p>An ESP32 based electric radiator fan controller; with battery monitoring and HA integration. Built for a Jeep Wrangler aftermarket fan on an ESP32-DEVKIT-V1 (MCU1), with dual IRLZ44N MOSFETs (Q3/Q4) driven by a TC4427 (U3), LTV-827S optocouplers (U2) for ignition and A/C-clutch sense, an AP63203WU buck (U1), 3568 fuses (F1/F2), AO3401A battery-sense switch (Q1), and an ECT voltage divider.</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPRadiator/Images/Front.jpg" alt="ESPRadiator" />
@@ -82,7 +82,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3><a href="espdrive.html" title="Check it out!">ESPDrive</a></h3>
-		    <p>An ESP32 based monitor for vehicles and power wheels; checks battery voltage, outputs a status to an RGB led, has a ~12VDC output for upgrading to higher voltage main batteries</p>
+		    <p>An ESP32 based monitor for vehicles and power wheels; checks battery voltage, outputs a status to an RGB led, has a ~12VDC output for upgrading to higher voltage main batteries. Centered on an ESP32-DEVKIT-V1 (MCU1) with AP63201WU (U2) and AP63203WU (U1) bucks, LTV-827S optocouplers (U3) for vehicle and light inputs, a TE-SPDT relay (R1) with AO3400A/AO3401A drivers, BAT54S clamping (D1), and a resistor-divider battery sense circuit.</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="Circuits/ESPDrive/Images/Front.jpg" alt="ESPDrive" />
@@ -93,7 +93,7 @@
 		<section>
 		  <div class="Detail left">
 		    <h3><a href="fertilator.html" title="Open the calculator">Fertilator</a></h3>
-		    <p>A fertilization calculator for planning nutrient applications across the growing season; configure fertilizers, stage targets, seasonal totals, and weekly application schedules.</p>
+		    <p>A fertilization calculator for planning nutrient applications across the growing season; configure fertilizers, stage targets, seasonal totals, and weekly application schedules. Supports N-P-K-Ca-Mg-S seasonal targets and a product library from urea (46-0-0) and MAP/DAP/TSP through micronutrient blends, with stage-percentage tables, nutrient differentials, and weekly lb/acre rates — all calculated in the browser.</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="img/fertilator.jpg" alt="Fertilator" />
@@ -104,7 +104,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3><a href="espkey.html" title="Generate an encryption key">ESPKey</a></h3>
-		    <p>A browser-based ESPHome encryption key generator; creates a fresh 32-byte hex key ready to copy into your device YAML or secrets file.</p>
+		    <p>A browser-based ESPHome encryption key generator; creates a fresh 32-byte hex key ready to copy into your device YAML or secrets file. Keys are generated locally with <code>crypto.getRandomValues()</code> — never sent to a server — with a ready-to-paste <code>api: encryption: key:</code> YAML snippet you can copy or regenerate on demand.</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="img/espkey.jpg" alt="ESPKey" />
