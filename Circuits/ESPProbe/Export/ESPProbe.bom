@@ -1,0 +1,7 @@
+#,Value,Qty,Reference,Footprint,Datasheet
+1,WIRE,3,"W1,W2,W3",Ehryk:WIRE-18AWG,
+2,Screw Terminal 01x02,3,"J1,J2,J3",TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal,
+3,MAX31855KASA,3,"U1,U2,U3",Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf
+4,ESP32 DEVKIT-V1,1,MCU1,Ehryk:ESP32_DEVKIT_V1,
+5,AM2302,1,U4,Sensor:ASAIR_AM2302_P2.54mm_Vertical,http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
+6,0.1μF,5,"C1,C2,C3,C4,C5",Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,

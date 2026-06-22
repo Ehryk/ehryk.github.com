@@ -10,12 +10,12 @@
 		<![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-	    <meta name="description" content="ESPDrive - An ESP32 drive controller for Home Assistant" />
+	    <meta name="description" content="ESPDrive - An ESP32 power wheels monitor for Home Assistant" />
 	    <meta name="keywords" content="ESPDrive,ESP32,Ehryk,Drive" />
 	    <meta name="author" content="Eric Menze" />
 		<meta property="og:url" content="https://ehryk.github.io/espdrive" />
 		<meta property="og:title" content="ESPDrive" />
-		<meta property="og:description" content="ESPDrive - An ESP32 drive controller for Home Assistant" />
+		<meta property="og:description" content="ESPDrive - An ESP32 power wheels monitor for Home Assistant" />
 	    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -33,12 +33,12 @@
 
 		<div class="page">
 		<h1>ESPDrive</h1>
-		<h5>A drive controller for Home Assistant — for more: <a href="/">home</a>, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a> or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
+		<h5>A power wheels monitor for Home Assistant — for more: <a href="/">home</a>, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a> or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
 
 		<section>
 		  <div class="Detail left">
 		    <h3>Home Assistant</h3>
-		    <p>Available entities include Remote Activation, stove running, stove current, power (instantaneous), energy usage, temperature and humidity</p>
+		    <p>Available entities include vehicle status (on/off), lights status (on/off), direct relay control, and main battery voltage</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPDrive/Images/HomeAssistant.jpg" alt="Home Assistant" />
@@ -49,7 +49,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3>Front</h3>
-		    <p>AC rectifier unit, ESP32 DevKit v1, DHT22, SHT45, 2x 12V 30A high power micro relays</p>
+		    <p>RGB Status LED, ESP32 DevKit v1, 12V switching regulator (for radio and lights when increasing main battery voltage), 3.3V switching regulator, Micro K relay, dual optoisolated inputs for vehicle power and lights</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="Circuits/ESPDrive/Images/Front.jpg" alt="Front Picture" />
@@ -60,7 +60,7 @@
 		<section>
 		  <div class="Detail left">
 		    <h3>Rear</h3>
-		    <p>AC input (100 - 240 VAC), 12V DC output, 3.3V DC output, Remote and Safety relay connections, 3.5mm current clamp</p>
+		    <p>Main battery input, ~13.5V DC output, 3.3V DC output, relay connections, vehicle power and light status input</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPDrive/Images/Rear.jpg" alt="Rear Picture" />

@@ -33,12 +33,12 @@
 
 		<div class="page">
 		<h1>ESPProbe</h1>
-		<h5>A probe for Home Assistant — for more: <a href="/">home</a>, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a> or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
+		<h5>A triple thermocouple host for Home Assistant — for more: <a href="/">home</a>, <a href="https://github.com/Ehryk">github</a>, <a href="http://www.ericmenze.com/cv/portfolios/">portfolio</a> or <a href="mailto:ehryk42@gmail.com">email</a>.</h5>
 
 		<section>
 		  <div class="Detail left">
 		    <h3>Home Assistant</h3>
-		    <p>Available entities include Remote Activation, stove running, stove current, power (instantaneous), energy usage, temperature and humidity</p>
+		    <p>Available entities include wood stove status, three monitors (I use intake, chamber, and exhaust), configurable thresholds, and ambient temperature and humidity</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPProbe/Images/HomeAssistant.jpg" alt="Home Assistant" />
@@ -49,7 +49,7 @@
 		<section>
 		  <div class="Detail">
 		    <h3>Front</h3>
-		    <p>AC rectifier unit, ESP32 DevKit v1, DHT22, SHT45, 2x 12V 30A high power micro relays</p>
+		    <p>DHT22 air temp/humidity sensor, ESP32 DevKit v1, thermocouple inputs</p>
 		  </div>
 		  <div class="Image">
 		  	<img src="Circuits/ESPProbe/Images/Front.jpg" alt="Front Picture" />
@@ -60,7 +60,7 @@
 		<section>
 		  <div class="Detail left">
 		    <h3>Rear</h3>
-		    <p>AC input (100 - 240 VAC), 12V DC output, 3.3V DC output, Remote and Safety relay connections, 3.5mm current clamp</p>
+		    <p>Triple Analog Devices MAX31855KASA 14-bit K-Type thermocouple amplifiers supporting probe temperatures from -270°C to +1800°C with 2°C accuracy and 0.25°C resolution</p>
 		  </div>
 		  <div class="Image left">
 		  	<img src="Circuits/ESPProbe/Images/Rear.jpg" alt="Rear Picture" />

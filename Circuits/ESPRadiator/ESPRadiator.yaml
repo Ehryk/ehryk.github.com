@@ -1,0 +1,393 @@
+esphome:
+  name: jeep-wrangler
+  friendly_name: Jeep Wrangler
+# ESP32-based Radiator Fan Controller for Jeep Wrangler (aftermarket electric fan)
+# Dual IRLZ44N MOSFETs (120W/10A fan), Battery voltage sense, ECT input, Optocoupled IGN + A/C clutch
+# GPIO23=BATT_SENSE_EN, GPIO25=FAN_PWM, GPIO26=IGN_SENSE, GPIO27=AC_SENSE
+# GPIO35=Battery Divider, GPIO34=ECT (0-5V via divider)
+# Schematic: AP63203 3.3V buck, LTV-827S optos, fuses, etc.
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: DEBUG
+  # level: WARN  # Reduce noise once stable
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret api_encryption_key  # Generate a strong one in secrets.yaml
+ota:
+  - platform: esphome
+    password: !secret ota_password
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  min_auth_mode: WPA2
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Jeep Fan Fallback"
+  on_connect:
+    - light.turn_off:
+        id: status_led
+  on_disconnect:
+    - light.turn_on:
+        id: status_led
+        effect: "Slow Pulse"
+captive_portal:
+
+# ========================================
+#            INTERVALS
+# ========================================
+interval:
+  - interval: 15s
+    then:
+      - if:
+          condition:
+            or:
+              - binary_sensor.is_on: ac_clutch_status
+              - lambda: return id(ect_temp).state > id(fan_hysteresis_high);
+          then:
+            - fan.turn_on:
+                id: radiator_fan
+                speed: 100
+          else:
+            - if:
+                condition:
+                  lambda: return id(ect_temp).state < id(fan_hysteresis_low);
+                then:
+                  - fan.turn_off:
+                      id: radiator_fan
+  - interval: 30s
+    then:
+      - script.execute: read_battery_voltage
+
+script:
+  - id: read_battery_voltage
+    mode: queued   # or restart / single if you prefer
+    then:
+      - switch.turn_on: battery_sense_enable
+      - delay: 350ms          # Settling time — tune based on your measurements
+      - component.update: battery_adc
+      - delay: 150ms          # Extra stabilization after ADC read
+      - switch.turn_off: battery_sense_enable
+
+globals:
+  - id: low_duty
+    type: float
+    restore_value: true
+    initial_value: '0.35'
+  - id: medium_duty
+    type: float
+    restore_value: true
+    initial_value: '0.65'
+  - id: fan_hysteresis_high
+    type: float
+    restore_value: true
+    initial_value: '195.0'  # °F - Turn fan ON above this (adjust for your ECT sensor)
+  - id: fan_hysteresis_low
+    type: float
+    restore_value: true
+    initial_value: '170.0'  # °F - Turn fan OFF below this
+  - id: battery_low_threshold
+    type: float
+    restore_value: true
+    initial_value: '11.5'   # Volts
+
+output:
+  - platform: ledc
+    id: fan_pwm
+    pin: GPIO25
+    frequency: 1000Hz
+    channel: 0
+  - platform: ledc
+    id: board_led
+    pin: GPIO2
+    inverted: true  # Most DevKit boards need this
+
+light:
+  - platform: monochromatic
+    id: status_led
+    name: "Status LED"
+    output: board_led
+    restore_mode: ALWAYS_ON
+    effects:
+      - pulse:
+          name: "Slow Pulse"
+          transition_length: 800ms
+          update_interval: 1000ms
+          min_brightness: 10%
+          max_brightness: 80%
+
+sensor:
+  # Battery Voltage (GPIO35 via divider + GPIO23 enable)
+  - platform: adc
+    pin: GPIO35
+    id: battery_adc
+    name: "Battery Raw Voltage"
+    unit_of_measurement: "V"
+    accuracy_decimals: 3
+    update_interval: 30s
+    attenuation: 11db
+    filters:
+      - sliding_window_moving_average:
+          window_size: 5
+          send_every: 3
+          
+  # Battery Voltage (GPIO35 via divider + GPIO23 enable)
+  - platform: copy
+    id: battery_voltage
+    name: "Battery Voltage"
+    source_id: battery_adc
+    icon: mdi:car-battery
+    unit_of_measurement: "V"
+    accuracy_decimals: 2
+    filters:
+      - multiply: 6.56  # Calibrate based on your exact divider (150k + ~27k)
+      - sliding_window_moving_average:
+          window_size: 8
+          send_every: 4
+      - throttle: 5s
+      - heartbeat: 60s
+
+  # Engine Coolant Temp (ECT) - GPIO34 (0-5V scaled via 10k/15k divider)
+  - platform: adc
+    pin: GPIO34
+    id: ect_adc
+    name: "ECT Raw Voltage"
+    unit_of_measurement: "V"
+    accuracy_decimals: 3
+    update_interval: 30s
+    attenuation: 11db
+    filters:
+      - sliding_window_moving_average:
+          window_size: 5
+          send_every: 3
+
+  - platform: template
+    id: ect_temp
+    name: "Engine Coolant Temperature"
+    icon: mdi:thermometer
+    unit_of_measurement: "°F"
+    accuracy_decimals: 1
+    lambda: |-
+      float v_adc = id(ect_adc).state;
+      if (isnan(v_adc) || v_adc < 0.05) return NAN;
+
+      // Reverse the 10k/15k divider (adjust if your exact ratio differs)
+      float v_sensor = v_adc * (10000.0 + 15000.0) / 15000.0;   // ≈ v_adc * 1.6667
+
+      // Practical voltage-to-temperature approximation for Jeep 4.0L ECT
+      // This is a starting curve — calibrate with real measurements!
+      // Rough polynomial fit based on typical behavior + table above
+      float temp_f;
+      if (v_sensor > 4.2) {
+        temp_f = 20.0;                    // Very cold
+      } else if (v_sensor > 3.6) {
+        temp_f = 40.0 + (4.2 - v_sensor) * 80.0;
+      } else if (v_sensor > 2.8) {
+        temp_f = 80.0 + (3.6 - v_sensor) * 70.0;
+      } else if (v_sensor > 1.8) {
+        temp_f = 140.0 + (2.8 - v_sensor) * 90.0;
+      } else if (v_sensor > 1.0) {
+        temp_f = 190.0 + (1.8 - v_sensor) * 80.0;
+      } else {
+        temp_f = 220.0;                   // Very hot
+      }
+
+      // Optional: clamp to reasonable range
+      if (temp_f < 0) temp_f = 0;
+      if (temp_f > 260) temp_f = 260;
+
+      return temp_f;
+    filters:
+      - sliding_window_moving_average:
+          window_size: 6
+          send_every: 3
+      - throttle: 15s
+
+text_sensor:
+  - platform: uptime
+    name: "Uptime"
+    update_interval: 60s
+    format:
+      separator: ", "      # Space between units (or ", " etc.)
+      days: "d"
+      hours: "h"
+      minutes: "m"
+      seconds: "s"      # omit if you don't want seconds when large
+    icon: "mdi:clock-start"
+    entity_category: diagnostic
+  - platform: version
+    name: "Firmware Version"
+    hide_timestamp: true
+    entity_category: diagnostic
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+      icon: mdi:ip-network
+      entity_category: diagnostic
+  - platform: template
+    name: "Fan Status"
+    id: fan_status
+    icon: mdi:fan
+    lambda: |-
+      std::string status = "";
+
+      // Fan state
+      if (id(radiator_fan).state) {
+        int percent = (int)(id(radiator_fan).speed);
+        status += "Fan Running (" + to_string(percent) + "%)";
+      } else {
+        status += "Fan OFF";
+      }
+
+      // Inputs
+      status += " | Ignition:";
+      status += id(ignition_status).state ? "ON" : "OFF";
+      status += " | AC Clutch:";
+      status += id(ac_clutch_status).state ? "ON" : "OFF";
+
+      // Optional Battery in summary
+      float v = id(battery_voltage).state;
+      if (!isnan(v)) {
+        char buf[16];
+        snprintf(buf, sizeof(buf), " | Battery:%.2fV", v);
+        status += buf;
+      }
+
+      // Optional ECT in summary
+      float ect = id(ect_temp).state;
+      if (!isnan(ect)) {
+        char buf[16];
+        snprintf(buf, sizeof(buf), " | ECT:%.1f°F", ect);
+        status += buf;
+      }
+
+      return status;
+    update_interval: 8s
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO26
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Ignition Status"
+    id: ignition_status
+    device_class: power
+    icon: mdi:engine
+
+  - platform: gpio
+    pin:
+      number: GPIO27
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "A⁄C Clutch Status"
+    id: ac_clutch_status
+    device_class: power
+    icon: mdi:air-conditioner
+
+  - platform: template
+    id: radiator_fan_active
+    name: "Radiator Fan Active"
+    device_class: heat
+    lambda: |-
+      return id(radiator_fan).state;
+    filters:
+      - delayed_on_off: 5s
+
+  - platform: template
+    id: battery_low
+    name: "Battery Low"
+    device_class: problem
+    icon: mdi:car-battery-alert
+    lambda: |-
+      static bool low_state = false;
+      float v = id(battery_voltage).state;
+      if (isnan(v)) return low_state;  // Keep last known state on bad read
+
+      if (low_state) {
+        // Hysteresis: stay "low" until clearly recovered
+        if (v > id(battery_low_threshold) + 0.3) {
+          low_state = false;
+        }
+      } else {
+        if (v < id(battery_low_threshold)) {
+          low_state = true;
+        }
+      }
+      return low_state;
+    filters:
+      - delayed_on: 10s    # Debounce - ignore brief dips
+      - delayed_off: 30s
+
+fan:
+  - platform: speed
+    id: radiator_fan
+    name: "Radiator Fan"
+    output: fan_pwm
+    speed_count: 101  # 0-100%
+    on_turn_on:
+      - switch.turn_on: battery_sense_enable
+    on_turn_off:
+      - switch.turn_off: battery_sense_enable
+
+switch:
+  - platform: gpio
+    pin: GPIO23
+    id: battery_sense_enable
+    name: "Battery Sense Enable"
+    restore_mode: ALWAYS_OFF
+    icon: mdi:power
+
+number:
+  - platform: template
+    name: "Fan ON Threshold"
+    id: fan_on_threshold
+    icon: mdi:thermometer-chevron-up
+    unit_of_measurement: "°F"
+    mode: box
+    min_value: 140
+    max_value: 260
+    step: 1.0
+    initial_value: 195.0
+    set_action:
+      - lambda: |-
+          if (x <= id(fan_hysteresis_low) + 5.0) {
+            id(fan_hysteresis_high) = id(fan_hysteresis_low) + 5.0;
+          } else {
+            id(fan_hysteresis_high) = x;
+          }
+
+  - platform: template
+    name: "Fan OFF Threshold"
+    id: fan_off_threshold
+    icon: mdi:thermometer-chevron-down
+    unit_of_measurement: "°F"
+    mode: box
+    min_value: 130
+    max_value: 250
+    step: 1.0
+    initial_value: 170.0
+    set_action:
+      - lambda: |-
+          if (x >= id(fan_hysteresis_high) - 5.0) {
+            id(fan_hysteresis_low) = id(fan_hysteresis_high) - 5.0;
+          } else {
+            id(fan_hysteresis_low) = x;
+          }
+
+button:
+  - platform: restart
+    name: "Restart Controller"
+  - platform: template
+    name: "Refresh All Sensors"
+    icon: mdi:refresh
+    on_press:
+      - script.execute: read_battery_voltage
+      - component.update: ect_temp
+      - component.update: fan_status

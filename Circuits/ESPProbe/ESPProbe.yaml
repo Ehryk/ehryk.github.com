@@ -1,0 +1,334 @@
+esphome:
+  name: wood-stove
+  friendly_name: Wood Stove
+
+# ESP32 v1.0 PCB - Triple Thermocouple Probe (ESPProbe.kicad_sch)
+# Schematic: 3x MAX31855KASA (U1/U2/U3) + AM2302/AM2303 (U4) on ESP32-DEVKIT-V1
+# J1=Chamber (CS1/GPIO5), J2=Exhaust (CS2/GPIO21), J3=Intake (CS3/GPIO22)
+# SPI: SCK=GPIO18, MISO=GPIO19 | AM230x data=GPIO32
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: DEBUG
+  # level: WARN          # Reduce noise
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "UY3kiB+h4wKR06XXQ6NF4sjx8EhDI0n0yTxhd+T6EkI="
+
+ota:
+  - platform: esphome
+    password: "1daafc2b64776a1e6e6366b4de48a52e"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  min_auth_mode: WPA2
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Wood Stove Fallback"
+  on_connect:
+    - light.turn_off:
+        id: status_led
+  on_disconnect:
+    - light.turn_on:
+        id: status_led
+        effect: "Slow Pulse"
+
+captive_portal:
+
+globals:
+  - id: high_speed_mode
+    type: bool
+    restore_value: false
+    initial_value: 'false'
+  - id: fire_hysteresis_high
+    type: float
+    restore_value: true
+    initial_value: '180.0'     # Turn "Fire" ON above this
+  - id: fire_hysteresis_low
+    type: float
+    restore_value: true
+    initial_value: '150.0'     # Turn "Fire" OFF below this
+
+interval:
+  - interval: 20s
+    then:
+      - if:
+          condition:
+            lambda: return !id(high_speed_mode);
+          then:
+            - if:
+                condition:
+                  binary_sensor.is_on: fire
+                then:
+                  # Fire is burning → 6 seconds
+                  - lambda: |-
+                      id(chamber_temp).set_update_interval(6000); // 6s when hot
+                      id(chamber_temp).start_poller();
+                      id(exhaust_temp).set_update_interval(6000); // 6s when hot
+                      id(exhaust_temp).start_poller();
+                      id(intake_temp).set_update_interval(6000);  // 6s when hot
+                      id(intake_temp).start_poller();
+                else:
+                  # No fire → 60 seconds
+                  - lambda: |-
+                      id(chamber_temp).set_update_interval(60000); // 60s when cold
+                      id(chamber_temp).start_poller();
+                      id(exhaust_temp).set_update_interval(60000); // 60s when cold
+                      id(exhaust_temp).start_poller();
+                      id(intake_temp).set_update_interval(60000);  // 60s when cold
+                      id(intake_temp).start_poller();
+
+spi:
+  id: spi_a
+  clk_pin: GPIO18
+  miso_pin: GPIO19
+  # mosi_pin not used (MAX31855 is read-only)
+
+output:
+  - platform: ledc
+    id: board_led
+    pin: GPIO2
+    inverted: true          # Most DevKit boards need this (LED is active-low)
+
+light:
+  - platform: monochromatic
+    id: status_led
+    name: "Status LED"
+    output: board_led
+    restore_mode: ALWAYS_ON
+    effects:
+      - pulse:
+          name: "Slow Pulse"
+          transition_length: 600ms
+          update_interval: 800ms
+          min_brightness: 10%
+          max_brightness: 90%
+
+sensor:
+  # J1 / CS1 - Chamber (primary, used for fire logic)
+  - platform: max31855
+    id: chamber_temp
+    name: "Fire Chamber"
+    icon: mdi:fire
+    spi_id: spi_a
+    cs_pin: GPIO25
+    unit_of_measurement: "°F"
+    accuracy_decimals: 1
+    update_interval: 60s
+    filters:
+      - lambda: |-
+          return x * 9.0 / 5.0 + 32.0;   // C to F
+      - sliding_window_moving_average:
+          window_size: 6
+          send_every: 3
+      - throttle: 10s
+      - heartbeat: 60s
+
+  # J2 / CS2 - Exhaust
+  - platform: max31855
+    id: exhaust_temp
+    name: "Exhaust Temperature"
+    icon: mdi:smoke
+    spi_id: spi_a
+    cs_pin: GPIO26
+    unit_of_measurement: "°F"
+    accuracy_decimals: 1
+    update_interval: 60s
+    filters:
+      - lambda: |-
+          return x * 9.0 / 5.0 + 32.0;   // C to F
+      - sliding_window_moving_average:
+          window_size: 4
+          send_every: 2
+      - throttle: 30s
+
+  # J3 / CS3 - Intake
+  - platform: max31855
+    id: intake_temp
+    name: "Intake Temperature"
+    icon: mdi:fan
+    spi_id: spi_a
+    cs_pin: GPIO27
+    unit_of_measurement: "°F"
+    accuracy_decimals: 1
+    update_interval: 60s
+    filters:
+      - lambda: |-
+          return x * 9.0 / 5.0 + 32.0;   // C to F
+      - sliding_window_moving_average:
+          window_size: 4
+          send_every: 2
+      - throttle: 30s
+
+  # AM2302/AM2303 ambient (schematic U4, GPIO32 data)
+  - platform: dht
+    pin: GPIO32
+    model: DHT22
+    id: dht22
+    temperature:
+      name: "Living Room Temperature"
+      id: ambient_temperature
+      icon: mdi:thermometer
+      unit_of_measurement: "°F"          # optional: also convert to F
+      accuracy_decimals: 1               # or 2
+      filters:
+        - lambda: |-
+            return x * 9.0 / 5.0 + 32.0;  // C to F
+        - sliding_window_moving_average:
+            window_size: 3
+            send_every: 2
+    humidity:
+      name: "Living Room Humidity"
+      id: ambient_humidity
+      icon: mdi:water-percent
+      accuracy_decimals: 1
+      filters:
+        - sliding_window_moving_average:
+            window_size: 3
+            send_every: 2
+    update_interval: 60s
+
+binary_sensor:
+  - platform: template
+    id: fire
+    name: "Fire"
+    device_class: heat
+    lambda: |-
+      static bool fire_state = false;
+      
+      float t = id(chamber_temp).state;
+      if (isnan(t)) return fire_state;   // Keep last state on bad reading
+      
+      if (fire_state) {
+        // Currently ON → only turn OFF if below low threshold
+        if (t < id(fire_hysteresis_low)) {
+          fire_state = false;
+        }
+      } else {
+        // Currently OFF → only turn ON if above high threshold
+        if (t > id(fire_hysteresis_high)) {
+          fire_state = true;
+        }
+      }
+      return fire_state;
+
+text_sensor:
+  - platform: uptime
+    name: "Uptime"
+    update_interval: 60s
+    format:
+      separator: ", "      # Space between units (or ", " etc.)
+      days: "d"
+      hours: "h"
+      minutes: "m"
+      seconds: "s"      # omit if you don't want seconds when large
+    icon: "mdi:clock-start"
+    entity_category: diagnostic
+
+  - platform: version
+    name: "Version"
+    hide_timestamp: true
+
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+      icon: mdi:ip-network
+
+  - platform: template
+    name: "Stove Status"
+    id: stove_status
+    icon: mdi:stove
+    lambda: |-
+      float t = id(chamber_temp).state;
+      if (isnan(t)) return {"Unknown"};
+
+      if (t < 95)          return {"Ambient"};
+      else if (t < 130)    return {"Warm"};
+      else if (t < 180)    return {"Burning"};
+      else if (t < 300)    return {"Hot"};
+      else                 return {"Extremely Hot"};
+
+switch:
+  - platform: template
+    id: high_speed_switch
+    name: "High Speed"
+    device_class: switch
+    icon: mdi:clock-fast
+    lambda: return id(high_speed_mode);
+    turn_on_action:
+      - lambda: |-
+          id(high_speed_mode) = true;
+          id(chamber_temp).set_update_interval(1000);  // 1 second
+          id(chamber_temp).start_poller();
+          id(exhaust_temp).set_update_interval(1000);  // 1 second
+          id(exhaust_temp).start_poller();
+          id(intake_temp).set_update_interval(1000);   // 1 second
+          id(intake_temp).start_poller();
+    turn_off_action:
+      - lambda: |-
+          id(high_speed_mode) = false;
+          id(chamber_temp).set_update_interval(6000); // 6 seconds
+          id(chamber_temp).start_poller();
+          id(exhaust_temp).set_update_interval(6000); // 6 seconds
+          id(exhaust_temp).start_poller();
+          id(intake_temp).set_update_interval(6000);  // 6 seconds
+          id(intake_temp).start_poller();
+
+number:
+  - platform: template
+    name: "Fire ON Threshold"
+    id: fire_on_threshold
+    icon: mdi:thermometer-chevron-up
+    unit_of_measurement: "°F"
+    mode: box
+    min_value: 53
+    max_value: 253
+    step: 0.5
+    initial_value: 55.0
+    set_action:
+      - lambda: |-
+          // Enforce minimum 3°F gap
+          if (x <= id(fire_hysteresis_low) + 3.0) {
+            id(fire_hysteresis_high) = id(fire_hysteresis_low) + 3.0;
+          } else {
+            id(fire_hysteresis_high) = x;
+          }
+
+  - platform: template
+    name: "Fire OFF Threshold"
+    id: fire_off_threshold
+    icon: mdi:thermometer-chevron-down
+    unit_of_measurement: "°F"
+    mode: box
+    min_value: 50
+    max_value: 250
+    step: 0.5
+    initial_value: 50.0
+    set_action:
+      - lambda: |-
+          // Enforce minimum 3°F gap
+          if (x >= id(fire_hysteresis_high) - 3.0) {
+            id(fire_hysteresis_low) = id(fire_hysteresis_high) - 3.0;
+          } else {
+            id(fire_hysteresis_low) = x;
+          }
+
+button:
+  - platform: restart
+    name: "Restart"
+
+  - platform: template
+    name: "Refresh Sensors"
+    icon: mdi:refresh
+    on_press:
+      - component.update: chamber_temp
+      - component.update: exhaust_temp
+      - component.update: intake_temp
+      - component.update: dht22

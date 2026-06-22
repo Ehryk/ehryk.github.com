@@ -1,0 +1,33 @@
+#,Value,Qty,Reference,Footprint,Datasheet
+1,100pF,1,C8,Capacitor SMD:C 0805 2012Metric Pad1.18x1.45mm HandSolder,
+2,BAT54S,1,D1,Package TO SOT SMD:SOT-23,https://www.diodes.com/assets/Datasheets/ds11005.pdf
+3,LED,1,D2,Connector PinHeader 2.54mm:PinHeader 1x04 P2.54mm Vertical,
+4,ESP32-DEVKIT-V1,1,MCU1,Ehryk:ESP32 DEVKIT V1,
+5,AO3401A,1,Q2,Package TO SOT SMD:SOT-23,http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf
+6,AO3400A,1,Q3,Package TO SOT SMD:SOT-23,http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf
+7,TE-SPDT,1,R1,Ehryk:TE-SPDT,
+8,220kΩ,1,R6,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+9,160kΩ,1,R8,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+10,68Ω,1,R14,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+11,4.7kΩ,1,R17,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+12,AP63203WU,1,U1,Package TO SOT SMD:TSOT-23-6,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf
+13,AP63201WU,1,U2,Package TO SOT SMD:TSOT-23-6,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf
+14,LTV-827S,1,U3,Package DIP:SMDIP-8 W9.53mm,http://www.us.liteon.com/downloads/LTV-817-827-847.PDF
+15,V+,1,W1,Ehryk:WIRE-14AWG,
+16,3V3,1,W2,Ehryk:WIRE-16AWG,
+17,12V,1,W3,Ehryk:WIRE-16AWG,
+18,V-,1,W4,Ehryk:WIRE-14AWG,
+19,CO,1,W5,Ehryk:WIRE-14AWG,
+20,NC,1,W6,Ehryk:WIRE-14AWG,
+21,NO,1,W7,Ehryk:WIRE-14AWG,
+22,ON,1,W8,Ehryk:WIRE-18AWG,
+23,LT,1,W9,Ehryk:WIRE-18AWG,
+24,10μF,2,"C3,C4",Capacitor SMD:C 1206 3216Metric Pad1.33x1.80mm HandSolder,
+25,6.8μH,2,"L1,L2",Inductor SMD:L Abracon ASPI-0630LR,
+26,220Ω,2,"R2,R3",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+27,22kΩ,2,"R7,R18",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+28,2.2kΩ,2,"R10,R11",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+29,10Ω,2,"R15,R16",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+30,22μF,4,"C9,C10,C11,C12",Capacitor SMD:C 1210 3225Metric Pad1.33x2.70mm HandSolder,
+31,10kΩ,5,"R4,R5,R9,R12,R13",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+32,0.1μF,9,"C1,C2,C5,C6,C7,C13,C14,C15,C16",Capacitor SMD:C 0805 2012Metric Pad1.18x1.45mm HandSolder,

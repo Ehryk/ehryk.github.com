@@ -1,0 +1,30 @@
+#,Qty,Value,Reference,Footprint,Datasheet
+1,8,0.1μF,"C1,C2,C6,C7,C8,C9,C10,C11",Capacitor SMD:C 0805 2012Metric Pad1.18x1.45mm HandSolder,
+2,2,10μF,"C3,C12",Capacitor SMD:C 1206 3216Metric Pad1.33x1.80mm HandSolder,
+3,2,22μF,"C4,C5",Capacitor SMD:C 1210 3225Metric Pad1.33x2.70mm HandSolder,
+4,2,LED,"D1,D3",LED SMD:LED 1206 3216Metric Pad1.42x1.75mm HandSolder,
+5,1,1N5822,D2,Diode THT:D DO-201AD P15.24mm Horizontal,http://www.vishay.com/docs/88526/1n5820.pdf
+6,2,3568,"F1,F2",Ehryk:FUSE 3568,
+7,1,6.8μH,L1,Inductor SMD:L Abracon ASPI-0630LR,
+8,1,ESP32-DEVKIT-V1,MCU1,Ehryk:ESP32 DEVKIT V1,
+9,1,AO3401A,Q1,Package TO SOT SMD:SOT-23,http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf
+10,2,IRLZ44N,"Q3,Q4",Package TO SOT THT:TO-220-3 Vertical,http://www.irf.com/product-info/datasheets/data/irlz44n.pdf
+11,5,10kΩ,"R1,R2,R3,R9,R11",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+12,1,150kΩ,R4,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+13,1,4.7kΩ,R5,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+14,1,15kΩ,R6,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+15,1,27kΩ,R7,Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+16,4,1kΩ,"R8,R10,R14,R17",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+17,3,10Ω,"R12,R13,R15",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+18,2,220Ω,"R16,R18",Resistor SMD:R 0805 2012Metric Pad1.20x1.40mm HandSolder,
+19,1,AP63203WU,U1,Package TO SOT SMD:TSOT-23-6,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf
+20,1,LTV-827S,U2,Package DIP:SMDIP-8 W9.53mm,http://www.us.liteon.com/downloads/LTV-817-827-847.PDF
+21,1,TC4427xOA,U3,Package SO:SOIC-8 3.9x4.9mm P1.27mm,https://ww1.microchip.com/downloads/en/DeviceDoc/20001422G.pdf
+22,1,V+,W1,Ehryk:WIRE-10AWG,
+23,1,3V3,W2,Ehryk:WIRE-16AWG,
+24,1,V-,W3,Ehryk:WIRE-10AWG,
+25,1,FAN+,W4,Ehryk:WIRE-10AWG,
+26,1,FAN-,W5,Ehryk:WIRE-10AWG,
+27,1,ECT,W6,Ehryk:WIRE-18AWG,
+28,1,IGN,W7,Ehryk:WIRE-18AWG,
+29,1,AC,W8,Ehryk:WIRE-18AWG,
