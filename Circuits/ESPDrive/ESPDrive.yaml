@@ -31,6 +31,8 @@ esphome:
           format: "ESPDrive woke up - initialization complete"
   on_shutdown: 
     then:
+      - lambda: |-
+          id(wifi_connected).publish_state(false);
       - output.turn_off: relay_pwm
       - output.turn_off: divider_enable
       - output.turn_off: opto_enable
@@ -73,6 +75,11 @@ logger:
 
 # ====================== CONFIGURATION ======================
 globals:
+  - id: debug_mode
+    type: bool
+    restore_value: false          # Persist across power cycles / deep sleep wakes
+    initial_value: 'false'        # Default = normal low-power behavior
+    
   # Change this to switch battery profiles
   - id: battery_type
     type: int
@@ -205,6 +212,35 @@ switch:
     restore_mode: ALWAYS_ON     # Or RESTORE_DEFAULT_OFF, ALWAYS_ON, etc.
     inverted: false              # Leave false — LED is active HIGH
 
+  - platform: template
+    name: "Debug Mode (Stay Awake)"
+    id: debug_switch
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF   # Or ALWAYS_ON if you prefer
+    lambda: |-
+      return id(debug_mode);
+    turn_on_action:
+      - globals.set:
+          id: debug_mode
+          value: 'true'
+      - logger.log: "Debug mode ENABLED - will skip deep sleep"
+    turn_off_action:
+      - globals.set:
+          id: debug_mode
+          value: 'false'
+      - logger.log: "Debug mode DISABLED - normal deep sleep resumed"
+
+  - platform: template
+    id: divider_enable_switch
+    name: "Battery Voltage Divider"
+    icon: "mdi:flash"
+    optimistic: true
+    turn_on_action:
+      - output.turn_on: divider_enable
+    turn_off_action:
+      - output.turn_off: divider_enable
+    restore_mode: ALWAYS_OFF
+
 # ====================== LIGHT (Smart Battery LED) ======================
 light:
   - platform: monochromatic
@@ -293,7 +329,7 @@ interval:
 # ====================== SENSORS ======================
 sensor:
   - platform: adc
-    name: "Battery Voltage Internal"
+    name: "Battery Voltage (Raw)"
     id: battery_voltage_internal
     pin: GPIO34
     unit_of_measurement: V
@@ -301,17 +337,17 @@ sensor:
     attenuation: 12db
     accuracy_decimals: 4
     update_interval: 1s
-    internal: True
+    internal: false
     filters:
-      - multiply: 12.0
 
   - platform: copy
     source_id: battery_voltage_internal
-    name: "Battery Voltage Raw"
+    name: "Battery Voltage (Uncalibrated)"
     unit_of_measurement: "V"
     icon: mdi:flash
     accuracy_decimals: 2
     filters:
+      - multiply: 12.0
       - throttle: 5s
           
   - platform: copy
