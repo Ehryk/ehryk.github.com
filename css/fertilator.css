@@ -1,0 +1,695 @@
+/* Fertilator calculator */
+
+:root {
+	--page-max-width: 1500px;
+}
+
+.selectors {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.5rem;
+	margin: 1rem auto 1.5rem;
+	max-width: var(--page-max-width);
+}
+
+.toggle-selector {
+	position: relative;
+	display: inline-flex;
+	background: rgba(0, 0, 0, 0.35);
+	border-radius: 999px;
+	padding: 4px;
+	border: 1px solid #444;
+}
+
+.toggle-selector button {
+	position: relative;
+	z-index: 1;
+	background: transparent;
+	border: none;
+	color: #99CCFF;
+	cursor: pointer;
+	padding: 0.55rem 1.1rem;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	white-space: nowrap;
+	transition: color 0.2s ease;
+}
+
+.toggle-selector button:hover {
+	color: #FF8800;
+}
+
+.toggle-selector button.active {
+	color: #fff;
+}
+
+.toggle-selector button.active:hover {
+	color: #fff;
+}
+
+.toggle-slider {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	height: calc(100% - 8px);
+	background: #920E15;
+	border-radius: 999px;
+	transition: transform 0.25s ease, width 0.25s ease;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.fertilizer-table-wrap {
+	max-width: var(--page-max-width);
+	margin: 0 auto 2rem;
+	padding: 0 1rem;
+}
+
+.section-header,
+.spec-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.section-header h3 {
+	font-size: 18px;
+	margin: 0;
+	text-align: center;
+}
+
+.fertilizer-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+.fertilizer-table th,
+.fertilizer-table td {
+	border: 1px solid #555;
+	padding: 0.5rem 0.65rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.fertilizer-table th {
+	background: rgba(0, 0, 0, 0.45);
+	font-weight: 600;
+}
+
+.fertilizer-table td.stage-number {
+	text-align: center;
+	font-weight: 600;
+	width: 2.5rem;
+	min-width: 2.5rem;
+	white-space: nowrap;
+}
+
+.fertilizer-table td.stage-label {
+	text-align: left;
+	white-space: nowrap;
+	min-width: 9rem;
+}
+
+.fertilizer-table tbody tr:nth-child(even) {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.fertilizer-table tfoot td {
+	background: rgba(0, 0, 0, 0.45);
+	font-weight: 600;
+}
+
+.fertilizer-table tfoot td.stage-label {
+	text-align: center;
+}
+
+.fertilizer-table tfoot td.total-ok {
+	color: #8f8;
+}
+
+.fertilizer-table tfoot td.total-warn {
+	color: #f88;
+}
+
+.fertilizer-table.output-table tfoot td.foot-output-season-total {
+	color: #9f9;
+	font-weight: 700;
+}
+
+.fertilizer-table.seasonal-targets-table tfoot td.seasonal-targets-total {
+	color: #9f9;
+	font-weight: 700;
+}
+
+.fertilizer-table.seasonal-targets-table tfoot td.stage-label {
+	text-align: center;
+}
+
+.fertilizer-table.product-table tfoot td.foot-season-result {
+	color: #99CCFF;
+	font-weight: 700;
+}
+
+.fertilizer-table.product-table tfoot td.foot-post-plant-max {
+	color: #ffc285;
+	font-weight: 700;
+}
+
+.fertilizer-table.product-table tfoot td.foot-product-max {
+	color: #f99;
+	font-weight: 700;
+}
+
+.fertilizer-table.nutrient-totals-table td.stage-label {
+	text-align: center;
+}
+
+.fertilizer-table.nutrient-totals-table tbody tr.row-target td {
+	color: #9f9;
+	font-weight: 700;
+}
+
+.fertilizer-table.nutrient-totals-table tbody tr.row-result td {
+	color: #99CCFF;
+	font-weight: 700;
+}
+
+.fertilizer-table.nutrient-totals-table tbody tr.row-maximum td {
+	color: #f99;
+	font-weight: 700;
+}
+
+.fertilizer-table.nutrient-totals-table tbody tr.row-differential td {
+	color: #b89b4a;
+	font-weight: 700;
+}
+
+.fertilizer-table.nutrient-totals-table th {
+	white-space: normal;
+	line-height: 1.25;
+}
+
+.pct-input {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.15rem;
+}
+
+.pct-input input {
+	width: 3.25rem;
+	padding: 0.25rem 0.35rem;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #222;
+	text-align: right;
+	font-size: 14px;
+}
+
+.pct-input input:focus {
+	outline: 2px solid #99CCFF;
+	border-color: #99CCFF;
+}
+
+.weeks-input input {
+	width: 3.5rem;
+	padding: 0.25rem 0.35rem;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #222;
+	text-align: right;
+	font-size: 14px;
+}
+
+.weeks-input input:focus {
+	outline: 2px solid #99CCFF;
+	border-color: #99CCFF;
+}
+
+.pct-input span {
+	color: #ccc;
+	font-size: 13px;
+}
+
+.unit-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	max-width: var(--page-max-width);
+	margin: 0 auto 2rem;
+	padding: 0 1rem;
+}
+
+#unit-selector button {
+	font-size: 13px;
+	padding: 0.5rem 0.85rem;
+}
+
+.row-length-field {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	flex-shrink: 0;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	color: #fff;
+	white-space: nowrap;
+}
+
+.row-length-field input {
+	width: 3.5rem;
+	padding: 0.3rem 0.4rem;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #222;
+	text-align: right;
+	font-size: 14px;
+}
+
+.row-length-field input:focus {
+	outline: 2px solid #99CCFF;
+	border-color: #99CCFF;
+}
+
+.season-totals-wrap {
+	max-width: var(--page-max-width);
+	margin: 0 auto 1.5rem;
+	padding: 0 1rem;
+}
+
+.season-totals {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem 1.25rem;
+}
+
+.season-total-field {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #fff;
+}
+
+.season-total-field input {
+	width: 4.5rem;
+	padding: 0.35rem 0.5rem;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #222;
+	text-align: right;
+	font-size: 14px;
+}
+
+.season-total-field input:focus {
+	outline: 2px solid #99CCFF;
+	border-color: #99CCFF;
+}
+
+.output-table-wrap {
+	max-width: var(--page-max-width);
+	margin: 0 auto 2rem;
+	padding: 0 1rem;
+}
+
+.fertilizer-table.output-table td.amount-cell,
+.fertilizer-table.product-table td.amount-cell {
+	font-variant-numeric: tabular-nums;
+}
+
+.fertilizer-table.product-table th {
+	white-space: normal;
+	line-height: 1.25;
+}
+
+.spec-panel-wrap {
+	max-width: var(--page-max-width);
+	margin: 0 auto 1.5rem;
+	padding: 0 1rem;
+}
+
+.spec-panel {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.25rem;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+.fertilizer-table-wrap,
+.output-table-wrap,
+.product-table-wrap,
+.spec-card {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 960px) {
+	.spec-panel {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2rem;
+		margin: 0.75rem 0 1rem;
+		padding: 0 0.5rem;
+		line-height: 1.1;
+	}
+
+	.selectors,
+	.unit-controls {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+		padding: 0 0.75rem;
+	}
+
+	.toggle-selector {
+		display: flex;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.toggle-selector button {
+		flex: 1 1 auto;
+		padding: 0.55rem 0.75rem;
+		font-size: 12px;
+		line-height: 1.25;
+		min-height: 2.75rem;
+	}
+
+	#unit-selector button {
+		flex: 0 0 auto;
+		font-size: 11px;
+		padding: 0.5rem 0.65rem;
+		white-space: nowrap;
+	}
+
+	.fertilizer-table-wrap,
+	.output-table-wrap,
+	.season-totals-wrap,
+	.spec-panel-wrap,
+	.unit-controls {
+		padding: 0 0.75rem;
+	}
+
+	.spec-card {
+		padding: 0.85rem 0.75rem;
+	}
+
+	.section-header h3 {
+		font-size: 1rem;
+	}
+
+	.fertilizer-table {
+		font-size: 12px;
+	}
+
+	.fertilizer-table th,
+	.fertilizer-table td {
+		padding: 0.35rem 0.45rem;
+	}
+
+	.fertilizer-table td.stage-label {
+		white-space: normal;
+		min-width: 6.5rem;
+		max-width: 8.5rem;
+		font-size: 11px;
+		line-height: 1.3;
+		hyphens: auto;
+	}
+
+	.fertilizer-table.product-table th {
+		font-size: 10px;
+		padding: 0.35rem 0.3rem;
+	}
+
+	.fertilizer-table.sources-table {
+		min-width: 34rem;
+	}
+
+	.fertilizer-table.product-table,
+	.fertilizer-table.weekly-application-table {
+		min-width: 64rem;
+	}
+
+	.fertilizer-table.output-table,
+	.fertilizer-table.application-totals-table,
+	.fertilizer-table-wrap > .fertilizer-table {
+		min-width: 32rem;
+	}
+
+	.pct-input input,
+	.weeks-input input,
+	.target-input,
+	.season-total-field input,
+	.row-length-field input {
+		font-size: 16px;
+		min-height: 2.25rem;
+	}
+
+	.season-totals {
+		justify-content: flex-start;
+		gap: 0.65rem 1rem;
+	}
+
+	.row-length-field {
+		flex-shrink: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.toggle-selector button {
+		font-size: 11px;
+		padding: 0.5rem 0.55rem;
+	}
+
+	#unit-selector button {
+		font-size: 10px;
+	}
+}
+
+.spec-card {
+	background: rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
+	border-radius: 8px;
+	padding: 1rem 1.15rem;
+}
+
+.spec-card h3 {
+	font-size: 16px;
+	margin: 0 0 0.75rem;
+	text-align: left;
+}
+
+.spec-card-header h3 {
+	margin: 0;
+	text-align: center;
+}
+
+.spec-card-header.is-spaced {
+	margin-top: 1rem;
+}
+
+.spec-expander {
+	flex-shrink: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	border: 1px solid #444;
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.35);
+	color: #99CCFF;
+	font-size: 1.1rem;
+	line-height: 1;
+	cursor: pointer;
+	transition: color 0.2s ease, background 0.2s ease;
+}
+
+.spec-expander:hover {
+	color: #FF8800;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.spec-collapse-panel.is-collapsed {
+	display: none;
+}
+
+.spec-collapse-panel:not(.is-collapsed) {
+	margin-top: 0.75rem;
+}
+
+.growing-specs-table {
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+.growing-specs-table td:first-child {
+	text-align: left;
+}
+
+.growing-specs-table td.spec-value {
+	text-align: left;
+	color: #eee;
+}
+
+#leaching-factor-value {
+	color: #99CCFF;
+	font-weight: normal;
+}
+
+.storage-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.storage-btn {
+	border-radius: 4px;
+	padding: 0.4rem 1rem;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	transition: background 0.2s ease;
+}
+
+.save-calculator-btn {
+	background: #1a7a3a;
+	color: #fff;
+	border-color: #145f2d;
+}
+
+.save-calculator-btn:hover {
+	background: #22964a;
+}
+
+.load-calculator-btn {
+	background: #2563b8;
+	color: #fff;
+	border-color: #1d4f96;
+}
+
+.load-calculator-btn:hover {
+	background: #2f74d0;
+}
+
+.reset-calculator-btn {
+	background: #920E15;
+	color: #fff;
+	border: 1px solid #720b10;
+}
+
+.reset-calculator-btn:hover {
+	background: #b8121a;
+}
+
+.growing-specs-table td.spec-input-with-unit {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.growing-specs-table .spec-unit {
+	color: #eee;
+	white-space: nowrap;
+}
+
+.growing-specs-table select.spec-select {
+	padding: 0.3rem 0.45rem;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #222;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	max-width: 100%;
+}
+
+.growing-specs-table select.spec-select:focus {
+	outline: 2px solid #99CCFF;
+	border-color: #99CCFF;
+}
+
+.sources-table {
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+.sources-table td:first-child {
+	text-align: left;
+}
+
+.sources-table th.prioritize-header,
+.sources-table td.prioritize-cell {
+	width: 4.5rem;
+	white-space: nowrap;
+}
+
+.prioritize-check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	cursor: pointer;
+}
+
+.prioritize-check input {
+	width: 1rem;
+	height: 1rem;
+	cursor: pointer;
+}
+
+.seasonal-targets-table {
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+.seasonal-targets-table td:first-child {
+	text-align: left;
+}
+
+.target-input {
+	width: 4.5rem;
+	padding: 0.3rem 0.45rem;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #222;
+	text-align: right;
+	font-size: 14px;
+}
+
+.target-input:focus {
+	outline: 2px solid #99CCFF;
+	border-color: #99CCFF;
+}
+
+th[data-nutrient-header],
+.seasonal-targets-table td.stage-label[title],
+.sources-table td.stage-label[title],
+.product-table th[title],
+.season-total-field[title] {
+	cursor: help;
+}
